@@ -299,13 +299,14 @@
 
       <!-- 横向滑动子导航 -->
       <div id="chips-0830" class="chip-scroller hidden">
-        <a href="#us-view-top" class="chip accent">🚨黄仁勋重回CEO</a>
-        <a href="#us-topics" class="chip">🔥焦点深度推演</a>
+        <a href="#us-view-top" class="chip accent">🔴实时实盘</a>
+        <a href="#us-sectors" class="chip">📊6大板块+加密</a>
+        <a href="#us-3day" class="chip">📅美股3日预测</a>
+        <a href="#us-topics" class="chip">🔥焦点深度</a>
         <a href="#us-chart-sec" class="chip">📈美股K线</a>
-        <a href="#us-targets" class="chip">🎯高盛与12大目标价</a>
-        <a href="#us-macro" class="chip">💵联储/美债/CTA</a>
-        <a href="#us-quant" class="chip">🤖Jane Street量化</a>
-        <a href="#us-gurus" class="chip">🧠大咖13F与映射</a>
+        <a href="#us-targets" class="chip">🎯高盛目标价</a>
+        <a href="#us-quant" class="chip">🤖Jane Street</a>
+        <a href="#us-gurus" class="chip">🧠大咖与映射</a>
       </div>
       <div id="chips-1600" class="chip-scroller">
         <a href="#s-sentiment" class="chip accent">🌡️情绪 34分</a>
@@ -332,35 +333,139 @@
     <!-- ====================================================================== -->
     <div id="view-0830" class="view-pane hidden">
 
-      <!-- 置顶：🚨 晚间核弹级重大利好加急更新（2026-11-23 21:55 北京时间官宣） -->
+      <!-- 置顶：🔴 此时此刻美股实盘实时直击（美东 11/23 09:54 ET / 北京时间 22:54） -->
       <section id="us-view-top" class="card" style="border:1.5px solid var(--up);">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-          <span class="tag t-up">🚨 突发核弹利好 · 21:55 官宣加急更新</span>
-          <span class="mono muted" style="font-size:11.5px;">美东 11/23 08:55 ET · 盘前实时报价</span>
+          <span class="tag t-up">🔴 美股实盘直击 · 22:54 北京时间实时更新</span>
+          <span class="mono muted" style="font-size:11.5px;">开盘半小时 · 10Y美债 4.96% · VIX 28.94</span>
         </div>
-        <h2 style="font-size:17.5px;margin:0 0 8px;line-height:1.35;">黄仁勋即刻重回英伟达 CEO &amp; 董事！美政府高层背书「无国安风险」，NVDA 盘前狂飙 <span class="up mono">+29.0%</span>！</h2>
-        <p style="font-size:13px;color:var(--text-2);margin:0 0 12px;">英伟达官网（NVIDIA Newsroom）刚刚正式发布公告：董事会<b>全票一致通过（unanimously）</b>，即刻恢复黄仁勋总裁、CEO 及董事职务；Harvey Jones 继续任董事长，Colette Kress 回归专注 CFO。此前砸掉超 <b>1 万亿美元市值</b> 的最大黑天鹅一夜反转！</p>
+        <h2 style="font-size:17.5px;margin:0 0 8px;line-height:1.35;">黄仁勋复职引爆大盘跳空暴涨，现阶段「大盘高开低走、ANT 逆势转跌、英伟达依然最坚挺 <span class="up mono">+29.7%</span>」！</h2>
+        <p style="font-size:13px;color:var(--text-2);margin:0 0 12px;">英伟达董事会全票即刻恢复黄仁勋 CEO &amp; 董事职务（美政府高层背书「无国安风险」）。开盘半小时多空剧烈换手：<b>纳指 23,927 (+5.79% · 较开盘 -1.30%)</b>、<b>标普 7,194 (+4.10% · 较开盘 -0.46%)</b>、<b>费城半导体 9,412 (+11.94% · 较开盘 -1.92%)</b>、<b>道指 49,321 (+2.44% 低开高走)</b>。</p>
 
-        <!-- 盘前实时引爆矩阵 -->
+        <!-- 实盘核心风向标矩阵 -->
         <div class="grid cols-4 cols-2-mob" style="margin-bottom:12px;">
-          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>NVDA 英伟达</span><span class="tag t-up">核心引爆</span></div><div class="idx-val mono up">$161.97</div><div class="idx-sub mono up"><b>+29.03%</b>（昨$125.5）</div></div>
-          <div class="idx-card"><div class="idx-name"><span>MU 美光科技</span><span class="tag t-up">突破压力</span></div><div class="idx-val mono up">$696.38</div><div class="idx-sub mono up"><b>+17.14%</b>（昨$594.5）</div></div>
-          <div class="idx-card"><div class="idx-name"><span>COHR 光模块</span><span class="tag t-up">CPO映射</span></div><div class="idx-val mono up">$215.08</div><div class="idx-sub mono up"><b>+14.88%</b>（昨$187.2）</div></div>
-          <div class="idx-card"><div class="idx-name"><span>TSM 台积电</span><span class="tag t-up">代工龙头</span></div><div class="idx-val mono up">$365.43</div><div class="idx-sub mono up"><b>+14.66%</b>（昨$318.7）</div></div>
+          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>NVDA 英伟达</span><span class="tag t-up">最坚挺</span></div><div class="idx-val mono up">$162.78</div><div class="idx-sub mono up"><b>+29.67%</b> · 低$156.9强承接</div></div>
+          <div class="idx-card" style="background:var(--down-bg);"><div class="idx-name"><span>ANT Anthropic</span><span class="tag t-down">逆势跌</span></div><div class="idx-val mono down">$88.19</div><div class="idx-sub mono down"><b>-0.81%</b> · 较开盘-5.87%</div></div>
+          <div class="idx-card"><div class="idx-name"><span>^IXIC 纳指</span><span class="tag t-warn">高开低走</span></div><div class="idx-val mono up">23,927</div><div class="idx-sub mono"><b class="up">+5.79%</b> · 较开盘-1.3%</div></div>
+          <div class="idx-card"><div class="idx-name"><span>BTC 比特币</span><span class="tag t-up">共振反弹</span></div><div class="idx-val mono up">$62,641</div><div class="idx-sub mono up"><b>+2.42%</b> · MARA+15.3%</div></div>
         </div>
 
         <div class="grid cols-3">
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">1. 为什么是「核弹级」反转？</div>
-            <div style="font-size:12.5px;color:var(--text-2);">公告最关键的一句话：董事会<b>已听取美国政府最高层意见</b>，确认黄仁勋复职<b>「不构成任何国家安全风险（poses no national security risk）」</b>！加上周末特朗普与财长贝森特双双放行、新设独立国安监督委与首席合规官（CCO），彻底摘掉“灵魂缺失+国安退市/禁令”的死结！</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">1. 为什么 ANT（Anthropic）逆势下跌？</div>
+            <div style="font-size:12.5px;color:var(--text-2);">ANT 高开 $93.69 后急砸至低点 $84.79（逼近 11/19 发行价 <b>$83</b>）现 $88.19(-0.81%)。两大死因：① <b>今日是 IPO 后 T+2（期权最快挂牌首日）</b>，近 2 万亿高估值新股遭遇空头对冲+打新获利盘集中砸盘；② <b>老黄回归抽血！</b> 机构立刻「卖超贵大模型新股 ANT &amp; 卖替代品 AMD/AVGO → 回补最硬算力底座 NVDA」！</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--blue);">2. 华尔街将上演史诗级逼空</div>
-            <div style="font-size:12.5px;color:var(--text-2);">上周对冲基金刚因砸盘 AI 录得一年半最大回撤(-3%)、CTA 近一月狂卖 $570 亿。今日纳指期货飙升 <b>+2.92%</b>（25,865）、标普期货 <b>+2.13%</b>（7,085），空头与踏空量化被迫回补（Short Squeeze），彻底扭转 11 月下行趋势！</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--orange);">2. 为什么大盘有点高开低走？</div>
+            <div style="font-size:12.5px;color:var(--text-2);">① <b>利率与波动警报未解除</b>：10Y 美债盘中反抽至 <b>4.96% (+0.9%)</b>，VIX 仍高达 <b>28.94</b>，压制无差别普涨；② 上周暴跌后短线抄底盘 + 量化做市商开盘借跳空兑现利润；③ 周三 <b>11/25 10月PCE</b> 与感恩节假期前，机构不愿盲目追高全线拉升。</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--orange);">3. 实战价位与防追高纪律</div>
-            <div style="font-size:12.5px;color:var(--text-2);">NVDA 一步越过 MA5($147) 直逼丑闻跳空缺口 <b>$175–$185</b>，中期重看 <b>$200–$220+</b>；但单日暴拉 +29% 后开盘易有获利盘震荡，<b>切忌开盘最高点追高杠杆</b>，回踩 <b>$148–$155</b> 企稳才是更佳上车点；仍有 11/25 PCE 与 12/9 FOMC 扰动。</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">3. 为什么英伟达依然坚挺？</div>
+            <div style="font-size:12.5px;color:var(--text-2);">NVDA 开 $167.04、下探 $156.93 后立刻拉回 <b>$162.78 (+29.67%)</b>，表现远强于 AMD(较开盘-6.1%)、AVGO(-4.2%) 与小盘存储！背后是<b>“国安风险官方排雷 + 估值腰斩修复 + Jane Street/做市商 Gamma 被迫回补”</b>三重硬买盘，<b>$156–$158</b> 成为今晚强弱分水岭！</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 美股 6 大核心板块全景与龙头个股实时分析（含加密货币！） -->
+      <section id="us-sectors">
+        <div class="sec-header">
+          <div class="sec-eyebrow">US 6 SECTORS LIVE · 实时盘面分化全景</div>
+          <h2 class="sec-h2">美股六大板块 &amp; 加密货币实时龙头拆解</h2>
+        </div>
+
+        <div class="card card-tight">
+          <div class="ios-list">
+            <!-- 1. 半导体 -->
+            <div class="ios-row">
+              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 核心</span><b>1. 半导体芯片（费半 ^SOX +11.94%）</b></div><span class="tag t-warn">剧烈分化</span></div>
+              <div class="row-metrics mono">
+                <div><span class="muted">NVDA / TSM</span><br/><b class="up">$162.8 (+29.7%) / $364 (+14.2%)</b></div>
+                <div><span class="muted">ARM / INTC / ASML</span><br/><b class="up">+14.0% / +11.5% / +9.2%</b></div>
+                <div><span class="muted">AMD / AVGO</span><br/><b style="color:var(--orange)">+2.9%(-6.1%开) / +0.9%(-4.2%开)</b></div>
+              </div>
+              <div class="row-note"><b>大师拆解</b>：老黄回归直接逆转“NVDA失位利好AMD/博通”的旧逻辑！资金从 AMD($436.8)/AVGO($307.3) 大幅撤出回流 <b>NVDA + 代工垄断 TSM + 算力云 CRWV(+18.1%)</b>。首选 <b>NVDA(回踩$150-156) &amp; TSM($345支撑)</b>，短期回避高开回落的 AMD。</div>
+            </div>
+
+            <!-- 2. 存储芯片 -->
+            <div class="ios-row">
+              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 高赔率</span><b>2. 存储芯片（高开消化浮筹 · 2027 第一赔率）</b></div><span class="tag t-up">全线+11%~14%</span></div>
+              <div class="row-metrics mono">
+                <div><span class="muted">MU 美光 ⭐</span><br/><b class="up">$672.5 (+13.1%)</b></div>
+                <div><span class="muted">SNDK 闪迪</span><br/><b class="up">$90.2 (+13.8% · 开-8.5%)</b></div>
+                <div><span class="muted">STX / WDC</span><br/><b class="up">$511 (+11.9%) / $292 (+11.7%)</b></div>
+              </div>
+              <div class="row-note"><b>大师拆解</b>：美光开 $690.7 冲 $693.9 后回踩 $666.7 现 $672.5，表现显著抗跌于闪迪(-8.5%较开盘)与希捷(-7.6%较开盘)。高盛看 2027 HBM 涨价 +122%、2027E PE 仅 6x，<b>MU 回踩 $640–$655 是黄金低吸区</b>。</div>
+            </div>
+
+            <!-- 3. 光芯片 / 光模块 -->
+            <div class="ios-row">
+              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 暴走</span><b>3. 光芯片 / 光模块 / AI 网络（明早 A 股 CPO 风向标！）</b></div><span class="tag t-up">全线+11%~18%</span></div>
+              <div class="row-metrics mono">
+                <div><span class="muted">AAOI / LITE</span><br/><b class="up">$38.8 (+17.9%) / $537 (+16.7%)</b></div>
+                <div><span class="muted">MRVL / COHR</span><br/><b class="up">$140 (+14.5%) / $214 (+14.3%)</b></div>
+                <div><span class="muted">CIEN / FN / ANET</span><br/><b class="up">+12.7% / +11.2% / +7.5%</b></div>
+              </div>
+              <div class="row-note"><b>大师拆解</b>：英伟达算力集群扩张最直接受益环节！COHR 叠加 $20 亿回购高开 $232 回踩 $214 仍涨 +14.3%，LITE(光芯片龙头)+16.7%、MRVL(光DSP)+14.5%。但开盘后均回吐 4%–8%，<b>直接印证我们给 A 股 CPO(新易盛/中际/天孚) 明早「不追 9:30 竞价、等 10:00 分歧低吸」的精准预判！</b></div>
+            </div>
+
+            <!-- 4. 医药 / 生物制药 -->
+            <div class="ios-row">
+              <div class="row-top"><div class="row-left"><span class="tag t-blue">★★★★☆ 防御真神</span><b>4. 医药 / 生物制药（大盘回落时资金反而低开高走！）</b></div><span class="tag t-up">稳健走强</span></div>
+              <div class="row-metrics mono">
+                <div><span class="muted">LLY 礼来 ⭐</span><br/><b class="up">$1,367.1 (+1.40% · 低开高走)</b></div>
+                <div><span class="muted">NVO / MRK / ABBV</span><br/><b class="up">+2.54% / +1.17% / +0.77%</b></div>
+                <div><span class="muted">JNJ / UNH</span><br/><b class="down">+0.12% / UNH -3.86%</b></div>
+              </div>
+              <div class="row-note"><b>大师拆解</b>：科技股高开低走之际，<b>礼来 LLY 低开 $1,345 稳步拉升至 $1,367(+1.64%较开盘)</b>、诺和诺德 NVO +2.54%、默沙东/艾伯维全线走高——机构正在用「AI 进攻 + 礼来医药防守」做杠铃对冲！UNH(-3.86%) 医保承压回避。</div>
+            </div>
+
+            <!-- 5. 消费 / 零售 / 端侧 -->
+            <div class="ios-row">
+              <div class="row-top"><div class="row-left"><span class="tag t-blue">★★★★☆ 黑五催化</span><b>5. 消费 / 零售 / 端侧巨头（特斯拉低开高走最强！）</b></div><span class="tag t-up">消费托底</span></div>
+              <div class="row-metrics mono">
+                <div><span class="muted">TSLA 特斯拉 ⭐</span><br/><b class="up">$383.7 (+10.95% · 越走越强)</b></div>
+                <div><span class="muted">MSFT / AMZN / AAPL</span><br/><b class="up">+3.7% / +2.7% / +1.7%</b></div>
+                <div><span class="muted">HD / PG / WMT / COST</span><br/><span>+1.2% / +0.3% / -0.2% / -0.6%</span></div>
+              </div>
+              <div class="row-note"><b>大师拆解</b>：<b>特斯拉 TSLA</b> 开 $374.8 一路拉到 $383.7（较开盘 +2.36%，今日走势最像主升浪的大巨头，叠加上下游机器人共振！）；必选消费 <b>PG(+1.4%较开盘)/KO(+2.0%较开盘)/WMT(+0.9%较开盘)</b> 早盘低开后资金明显回流承接，迎本周黑色星期五消费大考。</div>
+            </div>
+
+            <!-- 6. 加密货币 & 加密概念股 -->
+            <div class="ios-row" style="background:var(--surface-2);margin:4px -15px -4px;padding:12px 15px;border-radius:14px;">
+              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 高弹性共振</span><b>6. 加密货币 &amp; 加密概念股（矿企 + MSTR 暴力领涨！）</b></div><span class="tag t-up">双轮驱动</span></div>
+              <div class="row-metrics mono" style="background:var(--surface);">
+                <div><span class="muted">BTC / ETH / SOL</span><br/><b class="up">$62,641 (+2.4%) / $1,771 (+2.9%) / SOL +7.7%</b></div>
+                <div><span class="muted">MARA / CLSK / RIOT</span><br/><b class="up">+15.3% / +12.4% / +7.3%</b></div>
+                <div><span class="muted">MSTR / HOOD / COIN / IBIT</span><br/><b class="up">+11.3% / +8.9% / +5.2% / +7.3%</b></div>
+              </div>
+              <div class="row-note"><b>大师拆解</b>：风险偏好回归 + 黄金($3,664 +4.2%)/白银($43.5 +5.9%)暴涨，加密全线起飞！<b>SOL(+7.68%)</b> 领跑主流币；美股端 <b>MARA(+15.3% 几乎零回吐) &amp; CLSK(+12.4%)</b> 最强，因为矿企叠加了<b>「比特币反弹 + AI 数据中心电力算力转型」</b>双逻辑；<b>MSTR($86.6 +11.3%)</b> 是 Jane Street Q3 增持 +54% 的核心高波标的（高开 $91.2 回踩 $86.6，支撑 $80 / 压力 $98）。<b>稳健首选 IBIT / COIN，高弹性选 MARA / MSTR（逢回踩做波段、切忌满仓高杠杆）！</b></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 美股未来 3 个交易日精准预测（感恩节假期周！） -->
+      <section id="us-3day">
+        <div class="sec-header">
+          <div class="sec-eyebrow">US MARKET 3-DAY OUTLOOK · 感恩节假期周实战推演</div>
+          <h2 class="sec-h2">美股未来 3 个交易日预测（11/24 → 11/27）</h2>
+        </div>
+
+        <div class="grid cols-3">
+          <div class="card">
+            <span class="tag t-warn">Day 1 · 11/24（周二）</span>
+            <h3 style="font-size:15px;margin:8px 0 6px;">消化跳空缺口 · 分化震荡换手</h3>
+            <p style="font-size:12.5px;color:var(--text-2);margin:0;">今晚暴拉后 VIX 仍在 28.9、美债 4.96%，明晚大概率<b>回踩检验承接</b>：纳指盯 <b>23,300–23,600</b>，NVDA 盯 <b>$150–$156</b> 支撑，MU 盯 <b>$640–$655</b>；重点警惕 <b>ANT 能否守住 $83 发行价</b>（跌破将压制纯软件 AI，但利好硬件+礼来/消费）。</p>
+          </div>
+          <div class="card" style="border:1px solid var(--blue);">
+            <span class="tag t-blue">Day 2 · 11/25（周三 · 决战日）</span>
+            <h3 style="font-size:15px;margin:8px 0 6px;">21:30 10月PCE + 贝森特窗口期</h3>
+            <p style="font-size:12.5px;color:var(--text-2);margin:0;">感恩节前最后完整交易日！<b>① 若 PCE 温和</b> → 美债破 4.85%、VIX 跌回 22 下方，纳指站稳 <b>24,200</b> 开启 12 月主升（NVDA 冲 $175、BTC 冲 $66,000）；<b>② 若 PCE 偏热</b> → 科技股再踩缺口下沿，资金切向 <b>LLY 礼来 / 黄金 / 必选消费</b>。</p>
+          </div>
+          <div class="card">
+            <span class="tag t-up">Day 3 · 11/26休市 → 11/27（周五）</span>
+            <h3 style="font-size:15px;margin:8px 0 6px;">黑五半日市 · 零售消费 &amp; CTA回补</h3>
+            <p style="font-size:12.5px;color:var(--text-2);margin:0;"><b>11/26 周四感恩节休市</b>；11/27 周五美东 13:00 提前收盘。缩量半日市由<b>黑五零售数据（WMT/AMZN/COST/AAPL）</b>及月底 <b>CTA 被动回补</b> 主导，易温和收红。<b>3日总策略：周二周三逢回踩分批低吸 NVDA / MU / COHR / LLY / MARA，不追高开尖刺、不碰破发边缘的 ANT！</b></p>
           </div>
         </div>
       </section>
@@ -375,14 +480,14 @@
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
               <strong style="font-size:15px;">🚀 黄仁勋王者归来：戴维斯双击全拆解</strong>
-              <span class="tag t-up mono">盘前 $161.97 (+29%)</span>
+              <span class="tag t-up mono">实盘 $162.78 (+29.7%)</span>
             </div>
             <div style="font-size:13px;color:var(--text-2);display:flex;flex-direction:column;gap:7px;">
               <div>• <b>11天史诗大反转</b>：11/12 辞职 → 股价从 $243.37 暴跌 -48.4% 至 $125.53（蒸发超 1 万亿美元）→ 11/17 Q3 财报营收 $115.8B(+103%) 炸裂却被治理阴影压制 → 11/21 特朗普力挺 + 11/22 财长贝森特松口 → <b>11/23 08:55 ET 董事会全票复职</b>！</div>
               <div>• <b>治理排雷三件套</b>：① 独立调查继续走完程序、黄仁勋全力配合；② 设立纯独立董事「国家安全与出口管制监督委员会」；③ 全球招聘首任「首席合规官（CCO）」。既拿回最不可替代的灵魂 CEO，又堵住华盛顿与机构的合规担忧！</div>
               <div class="inset-box" style="font-size:12.5px;">
                 <b>英伟达新阶梯推演（$1500亿回购护航）</b>：<br/>
-                <span class="down">• 短线回踩支撑</span>：<b>$148–$155</b>（补部分盘前缺口，不破即强势）<br/>
+                <span class="down">• 短线回踩支撑</span>：<b>$150–$156</b>（实盘下探 $156.9 即拉回，极强！）<br/>
                 <span style="color:var(--orange)">• 第一强压力区</span>：<b>$175–$185</b>（11/9–12 丑闻筹码密集区）<br/>
                 <span class="up">• 中期目标价</span>：基本面 Q4 指引 $130B 叠加灵魂回归，2027 重看 <b>$220–$250</b>！
               </div>
@@ -391,14 +496,14 @@
 
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
-              <strong style="font-size:15px;">💾 美光(MU)盘前飙+17%冲破$684压力！</strong>
-              <span class="tag t-up mono">盘前 $696.38 (+17%)</span>
+              <strong style="font-size:15px;">💾 美光(MU)实盘+13% + ANT破发预警</strong>
+              <span class="tag t-up mono">MU $672.5 (+13.1%)</span>
             </div>
             <div style="font-size:13px;color:var(--text-2);display:flex;flex-direction:column;gap:7px;">
-              <div>• <b>核心错杀加速修复</b>：FY26 营收 $133.2B、毛利率 87%、2027E PE 仅 6x；黄仁勋复职彻底打消“AI 算力资本开支断崖”恐慌，盘前直接拉升 <b>+17.14% 至 $696.38</b>，一步收复第一压力位 <b>$684</b>！</div>
-              <div>• <b>高盛/小摩背书</b>：高盛判 DRAM 紧缺贯穿 <b>2027 至 2028H1</b>，<b>2027 HBM 均价暴涨 +122%</b> 至 $3.7/Gb；同期 AMD 盘前 +7.5%、博通 AVGO +3.5%、台积电 +14.7%，AI 全链估值修复提前启动！</div>
+              <div>• <b>美光错杀修复</b>：FY26 营收 $133.2B、毛利率 87%、2027E PE 仅 6x；实盘冲 $694 后回踩 $672.5，高盛判 DRAM 紧缺贯穿 <b>2027 至 2028H1</b>，<b>2027 HBM 均价暴涨 +122%</b> 至 $3.7/Gb。</div>
+              <div>• <b>⚠️ 新股王 ANT（Anthropic）避坑警报</b>：11/19 史上最大 $813 亿 IPO（发行价 $83），今日 T+2 期权挂牌首日高开 $93.7 急杀至 $84.8 现 $88.2(-0.8%)，资金明显从近 2 万亿估值软件新股回流硬件龙头！</div>
               <div class="inset-box" style="font-size:12.5px;">
-                <b>2027 分月目标路径</b>（新支撑 $640/$585 · 新压力 $745/$787）：<br/>
+                <b>美光 2027 分月目标路径</b>（支撑 $640/$585 · 压力 $700/$787）：<br/>
                 · <b>26.12–27.01</b>：加速冲击 <b>$750~$800</b><br/>
                 · <b>27.03–06</b>：HBM4 放量冲击 <b>$900~$1,050</b><br/>
                 · <b>27 Q3</b>：乐观重测前高 <b>$1,100~$1,200</b>
@@ -626,7 +731,7 @@
         </div>
         <h2 style="font-size:16.5px;margin:0 0 8px;line-height:1.35;">英伟达董事会全票即刻复职黄仁勋！NVDA 盘前狂飙 <span class="up mono">+29.0%</span>，彻底焊死 A 股/港股「切回科技成长」B 浪主升！</h2>
         <div style="font-size:12.5px;color:var(--text-2);margin-bottom:10px;">
-          <b>官方核心干货</b>：美东 11/23 08:55 官宣，董事会听取<b>美国政府最高层意见</b>后确认复职<b>「不构成任何国家安全风险」</b>，同步设立独立国安合规委并招聘首席合规官。盘前引爆全链：<b>NVDA $161.97 (+29.0%)</b> · <b>MU $696.4 (+17.1%)</b> · <b>COHR 光模块 $215.1 (+14.9%)</b> · <b>TSM $365.4 (+14.7%)</b> · <b>纳指期货 +2.92%</b>！
+          <b>🔴 22:54 美股实盘直击</b>：董事会听取美国高层意见确认复职「无国安风险」。开盘半小时大盘略高开低走（10Y美债反抽4.96%）：<b>纳指 +5.79%</b>、<b>NVDA $162.8 (+29.7% 最坚挺)</b>、<b>ANT(Anthropic) 逆势转跌 -0.8%</b>、<b>美光 +13.1%</b>、<b>COHR +14.3%</b>、<b>特斯拉 +11.0% 低开高走</b>、<b>BTC $62,641 / MARA +15.3%</b>！<button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-weight:700;cursor:pointer;padding:0 2px;">点此看美股6大板块/加密/3日预测 →</button>
         </div>
 
         <div class="grid cols-2" style="margin-bottom:10px;">
