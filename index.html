@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0e14" />
+  <title>大师全市场复盘终端 · 2026-11-23</title>
+  <style>
+    /* ================= 100% 自包含零外链奢华财经终端样式（国内外手机4G/5G秒开） ================= */
+    :root, [data-theme="dark"] {
+      --bg: #0a0d14;
+      --bg-glow: radial-gradient(900px 420px at 15% -10%, rgba(212,175,55,0.10), transparent 65%),
+                 radial-gradient(700px 360px at 88% -8%, rgba(59,130,246,0.10), transparent 60%);
+      --surface: #121723;
+      --surface-2: #171e2d;
+      --surface-hover: #1c2538;
+      --border: rgba(255,255,255,0.08);
+      --border-strong: rgba(212,175,55,0.34);
+      --text: #f1f5f9;
+      --text-2: #b8c2d4;
+      --muted: #7c89a1;
+      --gold: #e5c158;
+      --gold-soft: rgba(229,193,88,0.12);
+      --accent: #3b82f6;
+      --accent-soft: rgba(59,130,246,0.14);
+      --up: #f43f5e;
+      --up-soft: rgba(244,63,94,0.13);
+      --up-border: rgba(244,63,94,0.35);
+      --down: #10b981;
+      --down-soft: rgba(16,185,129,0.13);
+      --down-border: rgba(16,185,129,0.35);
+      --warn: #f59e0b;
+      --warn-soft: rgba(245,158,11,0.13);
+      --warn-border: rgba(245,158,11,0.35);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+    [data-theme="light"] {
+      --bg: #f5f2eb;
+      --bg-glow: radial-gradient(850px 380px at 18% -10%, rgba(180,138,34,0.09), transparent 65%),
+                 radial-gradient(700px 340px at 85% -8%, rgba(37,99,235,0.06), transparent 60%);
+      --surface: #ffffff;
+      --surface-2: #faf8f4;
+      --surface-hover: #f2eee5;
+      --border: rgba(20,25,35,0.09);
+      --border-strong: rgba(166,124,24,0.40);
+      --text: #111827;
+      --text-2: #374151;
+      --muted: #6b7280;
+      --gold: #9a7218;
+      --gold-soft: rgba(154,114,24,0.10);
+      --accent: #2563eb;
+      --accent-soft: rgba(37,99,235,0.10);
+      --up: #dc2626;
+      --up-soft: rgba(220,38,38,0.09);
+      --up-border: rgba(220,38,38,0.28);
+      --down: #059669;
+      --down-soft: rgba(5,150,105,0.09);
+      --down-border: rgba(5,150,105,0.28);
+      --warn: #d97706;
+      --warn-soft: rgba(217,119,6,0.10);
+      --warn-border: rgba(217,119,6,0.30);
+      --shadow: 0 6px 20px rgba(17,24,39,0.06);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      background-image: var(--bg-glow);
+      background-attachment: fixed;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 72px;
+    }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-variant-numeric: tabular-nums; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    .gold { color: var(--gold); }
+    .muted { color: var(--muted); }
+    .hidden { display: none !important; }
+
+    /* 顶部玻璃态导航 */
+    .topbar {
+      position: sticky; top: 0; z-index: 40;
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+    .topbar-inner {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 12px; padding: 12px 0 10px;
+    }
+    .brand { display: flex; align-items: center; gap: 11px; }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 11px;
+      background: linear-gradient(135deg, #e5c158, #9a7218);
+      color: #0b0e14; font-weight: 800; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(229,193,88,0.28);
+      flex-shrink: 0;
+    }
+    .brand-title { font-size: 16px; font-weight: 700; letter-spacing: 0.2px; margin: 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .brand-sub { font-size: 12px; color: var(--muted); margin: 2px 0 0; }
+    .live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--down); box-shadow: 0 0 8px var(--down); margin-right: 4px; }
+
+    /* 顶部三档切换 + 主题按钮 */
+    .controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .mode-switch {
+      display: inline-flex; background: var(--surface); padding: 4px;
+      border-radius: 11px; border: 1px solid var(--border); gap: 4px;
+    }
+    .mode-btn {
+      border: 0; background: transparent; color: var(--text-2);
+      padding: 7px 12px; border-radius: 8px; font-size: 12px; font-weight: 600;
+      cursor: pointer; transition: all 0.18s ease; white-space: nowrap;
+    }
+    .mode-btn:hover { color: var(--text); background: var(--surface-hover); }
+    .mode-btn.active {
+      background: linear-gradient(135deg, #e5c158, #c49a2c);
+      color: #0b0e14; box-shadow: 0 2px 10px rgba(229,193,88,0.3);
+    }
+    .theme-btn {
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      padding: 7px 11px; border-radius: 10px; font-size: 12px; cursor: pointer;
+      transition: all 0.18s;
+    }
+    .theme-btn:hover { border-color: var(--border-strong); }
+
+    /* 二级快捷锚点栏 */
+    .anchor-bar {
+      display: flex; align-items: center; gap: 7px; overflow-x: auto;
+      padding: 0 0 10px; scrollbar-width: none;
+    }
+    .anchor-bar::-webkit-scrollbar { display: none; }
+    .anchor-link {
+      text-decoration: none; color: var(--text-2); font-size: 12px; font-weight: 500;
+      padding: 5px 11px; border-radius: 999px; background: var(--surface);
+      border: 1px solid var(--border); white-space: nowrap; transition: all 0.15s;
+    }
+    .anchor-link:hover { color: var(--gold); border-color: var(--border-strong); }
+    .anchor-link.hot { border-color: var(--up-border); color: var(--up); background: var(--up-soft); font-weight: 600; }
+
+    /* 主容器与网格 */
+    main { padding: 20px 0 36px; display: flex; flex-direction: column; gap: 22px; }
+    .sec-head {
+      display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap;
+      gap: 8px; padding-bottom: 10px; border-bottom: 1px solid var(--border); margin-bottom: 14px;
+    }
+    .sec-title { font-size: 16px; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 8px; }
+    .sec-title::before { content: ""; width: 3.5px; height: 16px; border-radius: 3px; background: var(--gold); display: inline-block; }
+    .sec-sub { font-size: 12px; color: var(--muted); }
+
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 18px; box-shadow: var(--shadow);
+    }
+    .card-gold {
+      background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 92%, var(--gold) 8%), var(--surface));
+      border: 1px solid var(--border-strong);
+    }
+    .card-up { border: 1px solid var(--up-border); }
+    .subcard {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 12px; padding: 13px;
+    }
+
+    .grid { display: grid; gap: 14px; }
+    .g-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .g-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .g-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .g-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .g-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .col-4 { grid-column: span 4; }
+    .col-5 { grid-column: span 5; }
+    .col-7 { grid-column: span 7; }
+    .col-8 { grid-column: span 8; }
+
+    /* 徽章与按钮 */
+    .badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap;
+    }
+    .b-up { background: var(--up-soft); color: var(--up); border: 1px solid var(--up-border); }
+    .b-down { background: var(--down-soft); color: var(--down); border: 1px solid var(--down-border); }
+    .b-warn { background: var(--warn-soft); color: var(--warn); border: 1px solid var(--warn-border); }
+    .b-gold { background: var(--gold-soft); color: var(--gold); border: 1px solid var(--border-strong); }
+    .b-blue { background: var(--accent-soft); color: var(--accent); border: 1px solid rgba(59,130,246,0.35); }
+
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; }
+    .pill {
+      border: 1px solid var(--border); background: var(--surface-2); color: var(--text-2);
+      padding: 5px 11px; border-radius: 8px; font-size: 12px; font-weight: 500;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .pill:hover { border-color: var(--border-strong); color: var(--text); }
+    .pill.active { background: var(--gold); color: #0b0e14; border-color: var(--gold); font-weight: 700; }
+
+    /* KPI 卡片 */
+    .kpi {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 13px; padding: 13px 14px; transition: all 0.18s;
+    }
+    .kpi.clickable { cursor: pointer; }
+    .kpi.clickable:hover { border-color: var(--border-strong); transform: translateY(-1px); background: var(--surface-hover); }
+    .kpi-label { font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; }
+    .kpi-val { font-size: 20px; font-weight: 800; margin: 4px 0 2px; letter-spacing: -0.3px; }
+    .kpi-meta { font-size: 11px; color: var(--muted); }
+
+    /* 表格精装 */
+    .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+    th {
+      text-align: left; padding: 10px 10px 10px 4px; color: var(--muted);
+      font-weight: 600; font-size: 11.5px; border-bottom: 1px solid var(--border); white-space: nowrap;
+    }
+    td { padding: 10px 10px 10px 4px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: var(--surface-hover); }
+    .tr-hl { background: var(--up-soft); }
+    .num { text-align: right; }
+
+    /* 情绪进度条 */
+    .bar-track {
+      width: 100%; height: 10px; border-radius: 999px; overflow: hidden;
+      display: flex; background: var(--surface-2); border: 1px solid var(--border);
+    }
+    .stock-btn {
+      width: 100%; text-align: left; padding: 10px 12px; border-radius: 11px;
+      border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
+      cursor: pointer; transition: all 0.15s; margin-bottom: 7px;
+    }
+    .stock-btn:hover { border-color: var(--border-strong); }
+    .stock-btn.active { border-color: var(--gold); background: var(--gold-soft); }
+
+    .quiz-opt {
+      width: 100%; text-align: left; padding: 9px 12px; border-radius: 9px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      font-size: 12.5px; cursor: pointer; transition: all 0.15s; margin-top: 6px;
+    }
+    .quiz-opt:hover { border-color: var(--gold); }
+
+    .link-btn {
+      border: 0; background: none; color: var(--gold); font-weight: 700;
+      text-decoration: underline; cursor: pointer; padding: 0; font-size: inherit;
+    }
+    canvas { display: block; width: 100%; }
+
+    /* 手机底部悬浮快捷导航 */
+    .mobile-dock {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+      padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+      justify-content: space-around; gap: 6px;
+    }
+    .dock-btn {
+      flex: 1; border: 1px solid transparent; background: transparent; color: var(--text-2);
+      padding: 7px 4px; border-radius: 9px; font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .dock-btn.active { background: var(--gold-soft); color: var(--gold); border-color: var(--border-strong); }
+
+    footer { text-align: center; font-size: 12px; color: var(--muted); padding: 20px 0 8px; border-top: 1px solid var(--border); margin-top: 10px; }
+
+    /* 响应式适配手机/平板 */
+    @media (max-width: 980px) {
+      .g-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .g-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .g-3 { grid-template-columns: 1fr; }
+      .g-2 { grid-template-columns: 1fr; }
+      .g-12 { grid-template-columns: 1fr; }
+      .col-4, .col-5, .col-7, .col-8 { grid-column: span 1; }
+    }
+    @media (max-width: 640px) {
+      .mode-switch { display: none; }
+      .mobile-dock { display: flex; }
+      .card { padding: 14px; border-radius: 14px; }
+      .brand-title { font-size: 15px; }
+      .kpi-val { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="topbar">
+    <div class="wrap">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark">策</div>
+          <div>
+            <h1 class="brand-title">
+              大师全球复盘终端
+              <span class="badge b-gold">手机24h云端直连</span>
+            </h1>
+            <p class="brand-sub">
+              <span class="live-dot"></span>2026-11-23（周一）· 累积第 <b style="color:var(--text)">1</b> 期（近15–20日连续数据）· 红涨绿跌
+            </p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="mode-switch">
+            <button id="btn-mode-0830" onclick="switchMode('0830')" class="mode-btn">🌅 08:30 美股深度</button>
+            <button id="btn-mode-1200" onclick="switchMode('1200')" class="mode-btn">☀️ 12:00 午盘精简</button>
+            <button id="btn-mode-1600" onclick="switchMode('1600')" class="mode-btn active">🌆 16:00 全景复盘+教学</button>
+          </div>
+          <button id="themeToggle" onclick="toggleTheme()" class="theme-btn">☀️ 浅色</button>
+        </div>
+      </div>
+
+      <!-- 快捷锚点 -->
+      <nav id="nav-0830" class="anchor-bar hidden">
+        <a href="#us-tldr" class="anchor-link hot">⚡核心观点</a>
+        <a href="#us-special" class="anchor-link">🔥今日自主甄选专题</a>
+        <a href="#us-gs-targets" class="anchor-link">🏛️高盛全球 &amp; 12大美股目标价</a>
+        <a href="#us-index" class="anchor-link">📈美股K线</a>
+        <a href="#us-fed-cta" class="anchor-link">💵美联储/美债/CTA</a>
+        <a href="#us-gurus" class="anchor-link">🧠13F大咖 &amp; A/港映射</a>
+      </nav>
+      <nav id="nav-1600" class="anchor-bar">
+        <a href="#sec-sentiment" class="anchor-link hot">🌡️情绪指数 34分</a>
+        <a href="#cn-tldr" class="anchor-link">⚡核心观点</a>
+        <a href="#sec-commodity" class="anchor-link">🛢️期货涨价映射</a>
+        <a href="#sec-index" class="anchor-link">📊大盘/早盘量/券商</a>
+        <a href="#sec-ths-boards" class="anchor-link">⭐细分板块星级龙头</a>
+        <a href="#sec-top20" class="anchor-link">🏆主力TOP20</a>
+        <a href="#sec-stocks" class="anchor-link">📈龙头K线图谱</a>
+        <a href="#sec-bloggers" class="anchor-link">🎙️12位博主与游资教学</a>
+        <a href="#sec-hk" class="anchor-link">🇭🇰港股恒科企稳</a>
+        <a href="#sec-calendar" class="anchor-link">📅跨月与3日预判</a>
+        <a href="#sec-academy" class="anchor-link">🎓B浪教学+测验</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ====================================================================== -->
+    <!-- ==================== 08:30 早盘美股深度复盘视图 ==================== -->
+    <!-- ====================================================================== -->
+    <section id="view-0830" class="hidden" style="display:flex;flex-direction:column;gap:20px;">
+
+      <!-- 置顶核心观点 -->
+      <div id="us-tldr" class="card card-gold">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span class="badge b-up">🌅 08:30 美股核心观点置顶</span>
+            <strong style="font-size:15px;">美股“三连击”极端宣泄完毕，盘前英伟达+8%引领反抽；高盛仍看2027标普8,700！</strong>
+          </div>
+          <span class="mono muted" style="font-size:12px;">11/25 PCE · 12/1听证会 · 12/9 FOMC</span>
+        </div>
+        <div class="grid g-3">
+          <div class="subcard">
+            <div style="font-weight:700;margin-bottom:5px;" class="gold">1. 为什么暴跌 &amp; 为什么盘前反攻？</div>
+            <div style="font-size:12.5px;color:var(--text-2);">11/12黄仁勋辞职 + SemiAnalysis砍2028 AI开支28% + CTA月卖$570亿，砸出NVDA腰斩(-48%)、美光MU暴跌(-52.6%)。<b>最新转机</b>：特朗普呼吁复职、财长贝森特松口不排除黄仁勋回归，VIX骤降16%、美债10Y跌回4.91%，盘前NVDA暴涨+8%！</div>
+          </div>
+          <div class="subcard">
+            <div style="font-weight:700;margin-bottom:5px;color:var(--warn);">2. 未来两周两大生死节点</div>
+            <div style="font-size:12.5px;color:var(--text-2);">① <b>11/25 21:30 美国10月PCE</b> + CTA惯性余震（高盛测算下周上涨仍可能卖$286亿）；② <b>12/1黄仁勋众议院听证会</b> + 12/9 FOMC加息25bp(90%定价)。两靴子落地后开启2027修复主升。</div>
+          </div>
+          <div class="subcard">
+            <div style="font-weight:700;margin-bottom:5px;" class="up">3. 2027 最强赔率看涨方向</div>
+            <div style="font-size:12.5px;color:var(--text-2);"><b>① 存储超级周期（美光MU回调-52.6%，2027E PE仅6x，高盛看2027 HBM涨价+122%）</b>；② 大型云巨头（MSFT/AMZN/AAPL）；③ 医药防御神盾（礼来LLY 20日+5.8%）；④ AI电力（BE）。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 今日自主甄选美股焦点专题 -->
+      <div id="us-special">
+        <div class="sec-head">
+          <h2 class="sec-title">今日美股自主甄选焦点专题</h2>
+          <span class="sec-sub">每日由大师按消息权重与资金异动自主遴选 · 2026-11-23 精选两题</span>
+        </div>
+        <div class="grid g-2">
+          <div class="card card-up">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+              <strong style="font-size:14.5px;">⚡ 专题一：英伟达黄仁勋辞职 &amp; 12月1日国会听证会推演</strong>
+              <span class="badge b-warn mono">NVDA $125.53 (-48.4%)</span>
+            </div>
+            <div style="font-size:12.5px;color:var(--text-2);display:flex;flex-direction:column;gap:7px;">
+              <div>• <b>事件脉络</b>：11/12黄仁勋辞去CEO/董事，CFO Colette Kress任临时CEO；11/17财报炸裂（Q3 <b>$115.8B</b> +103%、Q4指引 <b>$130B</b>、FY28增速上调至75%），但董事会强硬拒复职+成立国安出口监督委，引爆踩踏。</div>
+              <div>• <b>周末风向剧变</b>：11/21特朗普呼吁重用“天才”黄仁勋，11/22财长贝森特180°松口不排除回归，直接引爆今日盘前暴涨 +8%！</div>
+              <div>• <b>12/1 众议院三大委员会听证会三情景</b>：<br/>
+                <span class="up">① 温和合规过关(55%)</span>：无新禁售罚单 → 放量突破MA5($147)直攻 <b>$175~$190</b>，A股CPO/PCB全线主升；<br/>
+                <span style="color:var(--warn)">② 严厉质询+罚款(30%)</span>：回踩 <b>$115~$120</b> 铁底后凭$1500亿回购修复；<br/>
+                <span class="down">③ 扩大出口禁令(15%)</span>：利空海外链，强催化A股<b>国产算力（中芯/寒武纪/长鑫）</b>！
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border-color:rgba(59,130,246,0.38);">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+              <strong style="font-size:14.5px;">💾 专题二：美光(MU)暴跌-52.6%后的存储周期 &amp; 2027目标价</strong>
+              <span class="badge b-up mono">MU $594.51 (高点$1108)</span>
+            </div>
+            <div style="font-size:12.5px;color:var(--text-2);display:flex;flex-direction:column;gap:7px;">
+              <div>• <b>错杀逻辑</b>：美光FY26营收飙至 <b>$133.2B</b>（Q4 $54.2B、毛利率87%），仅因指引微降至86.25%+常规DRAM Q4趋平遭杀估值，<b>2027E PE跌至约6x</b>！同期STX跌-60%、SNDK跌-68%。</div>
+              <div>• <b>高盛/小摩硬核背书</b>：高盛判断DRAM紧缺贯穿<b>整个2027年至2028H1</b>，<b>2027年HBM混合均价暴涨+122%至$3.7/Gb</b>；小摩看2027 HBM再涨+54%、2028涨+25%；SK海力士2027全年产能已售罄。</div>
+              <div>• <b>支撑/压力 &amp; 2027分月路线图</b>：<br/>
+                · 支撑 <b>$585 / $535</b> · 压力 <b>$684(MA5) / $787(MA20)</b>；<br/>
+                · <b>2026.12–2027.01</b>：FOMC落地修复至 <b>$720~$780</b>；<br/>
+                · <b>2027.03–06</b>：HBM4放量兑现涨价，冲击 <b>$900~$1,050</b>；<br/>
+                · <b>2027 Q3</b>：乐观重测前高 <b>$1,100~$1,200</b>（警惕27H2 NAND先过剩）。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 高盛2027全球市场 + 12大美股目标价/支撑压力表 -->
+      <div id="us-gs-targets" style="display:flex;flex-direction:column;gap:14px;">
+        <div class="sec-head">
+          <h2 class="sec-title">高盛 2027 全球市场评级 &amp; 12 大核心美股目标价/支撑压力表</h2>
+          <span class="sec-sub">Peter Oppenheimer 11/16 报告 + 实盘60日技术位测算</span>
+        </div>
+
+        <div class="grid g-5">
+          <div class="kpi card-up">
+            <div class="kpi-label"><span>🇺🇸 标普500</span><span class="badge b-up">超配</span></div>
+            <div class="kpi-val mono">8,700</div>
+            <div class="kpi-meta">现6,910 · 空间 <b class="up">+25.9%</b></div>
+          </div>
+          <div class="kpi card-up">
+            <div class="kpi-label"><span>🇯🇵 日本TOPIX</span><span class="badge b-up">超配</span></div>
+            <div class="kpi-val mono">4,500</div>
+            <div class="kpi-meta">美元总回报预期 <b class="up">+24%</b></div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label"><span>🇪🇺 欧股STOXX600</span><span class="badge b-down">低配</span></div>
+            <div class="kpi-val mono">700</div>
+            <div class="kpi-meta">欧斯托克50目标 6,700</div>
+          </div>
+          <div class="kpi card-up">
+            <div class="kpi-label"><span>🌏 新兴/中国</span><span class="badge b-up">修复</span></div>
+            <div class="kpi-val mono">+21%</div>
+            <div class="kpi-meta">MSCI EM总回报 · 瑞银看中国EPS+10%</div>
+          </div>
+          <div class="kpi card-gold">
+            <div class="kpi-label"><span>🥇 黄金目标</span><span class="badge b-gold">实物牛</span></div>
+            <div class="kpi-val mono">$5000+</div>
+            <div class="kpi-meta">高盛$5400 · 小摩27底$6600</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="tbl-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>美股核心标的</th>
+                  <th class="num">最新价 / 高点回撤</th>
+                  <th>支撑位</th>
+                  <th>压力位</th>
+                  <th>2027目标价</th>
+                  <th>核心看涨逻辑 &amp; 公司大事（回购/新品/风控）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>NVDA 英伟达</b></td>
+                  <td class="num mono">$125.53 <span class="down">(-48%)</span></td>
+                  <td class="mono down">$120 / $112</td>
+                  <td class="mono" style="color:var(--warn)">$147 / $168</td>
+                  <td class="mono up"><b>$200~$240</b></td>
+                  <td style="color:var(--text-2)">Q3 $115.8B/Q4指引$130B + <b>$1500亿回购</b>；盯12/1黄仁勋听证会，盘前+8%。</td>
+                </tr>
+                <tr class="tr-hl">
+                  <td><b>MU 美光科技 ⭐</b></td>
+                  <td class="num mono">$594.51 <span class="down">(-53%)</span></td>
+                  <td class="mono down">$585 / $535</td>
+                  <td class="mono" style="color:var(--warn)">$684 / $787</td>
+                  <td class="mono up"><b>$950~$1,150</b></td>
+                  <td style="color:var(--text-2)"><b>2027核心存储看涨</b>：高盛看HBM涨价+122%至28H1，2027E PE仅6x！</td>
+                </tr>
+                <tr>
+                  <td><b>LLY 礼来制药 ⭐</b></td>
+                  <td class="num mono">$1,347.1 <span class="up">(-8.7%)</span></td>
+                  <td class="mono down">$1,330 / $1,260</td>
+                  <td class="mono" style="color:var(--warn)">$1,390 / $1,475</td>
+                  <td class="mono up"><b>$1,650~$1,800</b></td>
+                  <td style="color:var(--text-2)">20日逆势 <b>+5.78%</b>！GLP-1全球霸主，高盛精选防御成长第一避风港。</td>
+                </tr>
+                <tr>
+                  <td><b>MSFT 微软</b></td>
+                  <td class="num mono">$484.52 <span class="down">(-13%)</span></td>
+                  <td class="mono down">$480 / $460</td>
+                  <td class="mono" style="color:var(--warn)">$503 / $524</td>
+                  <td class="mono up"><b>$580~$620</b></td>
+                  <td style="color:var(--text-2)">联合Salesforce发<b>Copilotforce</b> + Xbox首发<b>GTA VI</b> + 携手NVDA拓展Windows AI。</td>
+                </tr>
+                <tr>
+                  <td><b>AAPL 苹果</b></td>
+                  <td class="num mono">$342.56 <span class="up">(-5.1%)</span></td>
+                  <td class="mono down">$335 / $310</td>
+                  <td class="mono" style="color:var(--warn)">$350 / $361</td>
+                  <td class="mono up"><b>$385~$410</b></td>
+                  <td style="color:var(--text-2)">彭博曝自研全能AI Agent + PROLED MacBook Pro；轻Capex+巨额回购最抗跌。</td>
+                </tr>
+                <tr>
+                  <td><b>AMZN 亚马逊</b></td>
+                  <td class="num mono">$246.82 <span class="down">(-10%)</span></td>
+                  <td class="mono down">$238 / $229</td>
+                  <td class="mono" style="color:var(--warn)">$258 / $275</td>
+                  <td class="mono up"><b>$300~$330</b></td>
+                  <td style="color:var(--text-2)">Druckenmiller Q3第三大重仓(6.9%) + 高盛首推大型云巨头。</td>
+                </tr>
+                <tr>
+                  <td><b>AVGO / TSM</b></td>
+                  <td class="num mono">$304 / $319</td>
+                  <td class="mono down">$290 / $315</td>
+                  <td class="mono" style="color:var(--warn)">$336 / $353</td>
+                  <td class="mono up"><b>$430 / $460</b></td>
+                  <td style="color:var(--text-2)">博通ASIC替代最大赢家；台积电代工垄断（卖铲子），超跌后性价比极高。</td>
+                </tr>
+                <tr>
+                  <td><b>COHR 光模块</b></td>
+                  <td class="num mono">$187.22 <span class="down">(-58%)</span></td>
+                  <td class="mono down">$175 / $160</td>
+                  <td class="mono" style="color:var(--warn)">$210 / $245</td>
+                  <td class="mono up"><b>$280~$320</b></td>
+                  <td style="color:var(--text-2)">11/19批准 <b>$20亿股票回购</b>，直接点燃全球及A股CPO光模块反攻！</td>
+                </tr>
+                <tr>
+                  <td><b>STX / SNDK</b></td>
+                  <td class="num mono">$457 / $94.4</td>
+                  <td class="mono down">$445 / $90</td>
+                  <td class="mono" style="color:var(--warn)">$558 / $126</td>
+                  <td class="mono up"><b>$720 / $165</b></td>
+                  <td style="color:var(--text-2)">分别为Druckenmiller(9.1%)与Leopold(11.6%)重仓存储标的，高波高弹性。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 美股真实交互K线图 -->
+      <div id="us-index" class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+          <strong id="us-chart-title" style="font-size:14.5px;">美光科技 (MU) · 近15日真实K线 / 均线 / 量能 / MACD</strong>
+          <div class="pill-row">
+            <button onclick="selectUsChart('MU')" id="us-btn-MU" class="pill active">美光 MU ⭐</button>
+            <button onclick="selectUsChart('NVDA')" id="us-btn-NVDA" class="pill">英伟达 NVDA</button>
+            <button onclick="selectUsChart('IXIC')" id="us-btn-IXIC" class="pill">纳斯达克</button>
+            <button onclick="selectUsChart('LLY')" id="us-btn-LLY" class="pill">礼来 LLY</button>
+            <button onclick="selectUsChart('GOLD')" id="us-btn-GOLD" class="pill">COMEX黄金</button>
+          </div>
+        </div>
+        <canvas id="usCanvas" height="270"></canvas>
+        <p id="us-chart-note" style="font-size:12.5px;color:var(--text-2);margin:10px 0 0;"></p>
+      </div>
+
+      <!-- 美联储 / 美债 / CTA量化 -->
+      <div id="us-fed-cta" class="grid g-3">
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <strong>🏛️ 美联储官员发言 &amp; 利率</strong><span class="badge b-down">12/9加息90%</span>
+          </div>
+          <div style="font-size:12.5px;color:var(--text-2);">
+            现利率 <b>3.75%-4.00%</b>；10月纪要鹰派，纽约联储 <b>Williams</b> 支持年内再加一次，理事 <b>Waller(11/20)</b> 强调控通胀；盯新主席 <b>Kevin Warsh</b> 与 <b>11/25 21:30 10月PCE</b>。高盛预计首次降息延至 <b>2027H1</b>。
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <strong>💵 美债收益率曲线</strong><span class="badge b-up">高位回落喘息</span>
+          </div>
+          <div style="font-size:12.5px;color:var(--text-2);">
+            <b>10Y美债：4.912%</b>（较前高5.09%回落-2.77%），短端 4.122%，WTI原油跌至 $81.99(-19.4%/20日)。若PCE温和推动10Y跌破 <b>4.70%</b>，纳指与恒生科技将彻底解放！
+          </div>
+        </div>
+        <div class="card card-gold">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <strong>🤖 高盛/大摩 CTA量化仓位</strong><span class="badge b-warn">净空-$190亿</span>
+          </div>
+          <div style="font-size:12.5px;color:var(--text-2);">
+            近1月CTA抛售 <b>$570亿</b> 转为净空头-$190亿；11/5杠杆ETF单日砸$520亿。高盛11/21模型：下周上涨仍可能惯性卖 <b>$286亿</b>、横盘卖 <b>$658亿</b>，短线防二次回踩，但一旦翻多必爆超级逼空！
+          </div>
+        </div>
+      </div>
+
+      <!-- 华尔街大咖13F + A/港映射 -->
+      <div id="us-gurus" class="grid g-2">
+        <div class="card">
+          <strong style="display:block;margin-bottom:10px;font-size:14.5px;">🧠 华尔街大咖 Key Points（Q3 2026 13F）</strong>
+          <div style="font-size:12.5px;color:var(--text-2);display:flex;flex-direction:column;gap:7px;">
+            <div>• <b>Druckenmiller</b>：重仓 Natera(29.2%)、<b>希捷STX(9.1%存储)</b>、<b>亚马逊(6.9%)</b>，减拥挤GPU加存储与云。</div>
+            <div>• <b>Leopold ($1.6B)</b>：前五占94.2%——SHAZ(27.9%)、<b>Bloom Energy(24.7% AI供电)</b>、Nebius(21.1%)、<b>SanDisk(11.6%)</b>。</div>
+            <div>• <b>Nancy Pelosi</b>：买 <b>Bloom Energy $100 Call(2027-06)</b> + Intel Call；核心底仓GOOGL/AMZN/NVDA/AVGO。</div>
+            <div>• <b>Michael Burry</b>：Scion关停前$11亿做空NVDA/PLTR看跌期权，警告1999泡沫（短线已应验）。</div>
+            <div>• <b>SemiAnalysis vs Tom Lee</b>：前者砍2028 Capex 28%引爆杀跌；后者力挺“AI牛市完好，正向应用与电力扩散”。</div>
+          </div>
+        </div>
+        <div class="card">
+          <strong style="display:block;margin-bottom:10px;font-size:14.5px;">🎯 美股 → A股 &amp; 港股 核心映射</strong>
+          <div style="font-size:12.5px;color:var(--text-2);display:flex;flex-direction:column;gap:7px;">
+            <div><span class="badge b-up">强利好</span> <b>NVDA盘前+8% + Coherent $20亿回购</b> → 光模块(中际/新易盛/天孚)、PCB(胜宏/沪电)。</div>
+            <div><span class="badge b-up">存储牛</span> <b>高盛看2027 HBM涨+122%</b> → A股存储（长鑫科技/兆易创新）。</div>
+            <div><span class="badge b-up">AI电力</span> <b>Pelosi/Leopold双押BE供电</b> → 中国六张网特高压（国电南瑞/特变电工）。</div>
+            <div><span class="badge b-up">应用端侧</span> <b>微软Copilotforce+GTA VI / 苹果AI Agent</b> → 港股网易/腾讯/小米，A股传媒/果链。</div>
+            <div><span class="badge b-warn">听证暗线</span> <b>12/1听证会若加码限制</b> → 强催化国产算力自主可控（中芯A+H/寒武纪）。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================== -->
+    <!-- ==================== 12:00 午盘精简观点视图 ==================== -->
+    <!-- ====================================================================== -->
+    <section id="view-1200" class="hidden" style="display:flex;flex-direction:column;gap:18px;">
+      <div class="card card-gold">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px;">
+          <div>
+            <span class="badge b-up">☀️ 12:00 午盘核心观点置顶（极简实战版）</span>
+            <h2 style="font-size:16px;margin:8px 0 0;">早盘砸出3476“最后一跌”完成深V，防御出逃切向科技成长，下午看震荡走高！</h2>
+          </div>
+          <span class="muted" style="font-size:12px;">去宏观、去教学 · 只留最硬核信号</span>
+        </div>
+        <div class="grid g-2">
+          <div class="subcard">
+            <strong class="gold" style="display:block;margin-bottom:6px;">📌 上午盘面一句话总结</strong>
+            <div style="font-size:13px;color:var(--text-2);">早盘低开砸出 <b>3476.65</b> 新低后全天最大量能涌入承接深V反包。<b>银行(工行-2.66%)/白酒(茅台-3.15%)放量补跌，资金汹涌切入人形机器人(宇树/安培龙/汉威20CM)、光模块(中际/新易盛成交前二)与PCB</b>，B浪反弹火种点燃！</div>
+          </div>
+          <div class="subcard">
+            <strong class="up" style="display:block;margin-bottom:6px;">🎯 下午走势核心预测（13:00–15:00）</strong>
+            <div style="font-size:13px;color:var(--text-2);">下午大概率震荡走高，上证守 <b>3530</b>、创业板站稳MA5(<b>2278</b>)且全天放量破1.5万亿即确认强反包。盯紧<b>东方财富</b>是否助攻，不追20CM高潮票，低吸回踩龙头（拓普/国电南瑞/牧原）。</div>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:14px;">
+          <div class="subcard"><strong style="display:block;margin-bottom:4px;">🔥 上午主线</strong><div style="font-size:12.5px;color:var(--text-2);">人形机器人20CM潮（拓普封板0%套牢盘）；光模块+PCB巨量反包；金银+3%催化银矿。</div></div>
+          <div class="subcard"><strong style="display:block;margin-bottom:4px;">🇭🇰 港股上午</strong><div style="font-size:12.5px;color:var(--text-2);">恒指略穿22,000屠完重牛后缩窄跌幅，恒科探低3395回升；网易+3.6%，旺旺盈利-40%跌逾10%。</div></div>
+          <div class="subcard"><strong style="display:block;margin-bottom:4px;">✍️ 随堂测验</strong><div style="font-size:12.5px;color:var(--text-2);">美股详情看 <b>08:30版</b>。<br/><button class="link-btn" style="margin-top:4px;" onclick="switchMode('1600');setTimeout(()=>document.getElementById('quiz-box').scrollIntoView({behavior:'smooth'}),80);">点击直达今日2道K线测试题 →</button></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================== -->
+    <!-- ==================== 16:00 全市场收盘复盘 + 教学视图 ==================== -->
+    <!-- ====================================================================== -->
+    <div id="view-1600" style="display:flex;flex-direction:column;gap:22px;">
+
+      <!-- ★★★ 第一位：全市场全平台股民情绪指数（0-100分 · 累积走势 · 极简观点） ★★★ -->
+      <section id="sec-sentiment" class="card card-gold">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px;">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span class="badge b-up">🌡️ 全平台股民情绪指数（0–100 累积 · 最置顶）</span>
+            <span class="badge b-gold">冰点初醒 · 左侧安全区</span>
+          </div>
+          <span class="muted" style="font-size:12px;">股吧 / 雪球 / 抖音 / 微博 消极与积极词条占比 · 越近0越冰点</span>
+        </div>
+
+        <div class="grid g-12" style="align-items:center;">
+          <!-- 左：定制奢华半圆仪表盘 + 一句话结论 -->
+          <div class="col-5" style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+              <!-- SVG 情绪仪表盘 -->
+              <svg width="136" height="82" viewBox="0 0 136 82" style="flex-shrink:0;">
+                <defs>
+                  <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#10b981" />
+                    <stop offset="50%" stop-color="#f59e0b" />
+                    <stop offset="100%" stop-color="#f43f5e" />
+                  </linearGradient>
+                </defs>
+                <path d="M 14 70 A 54 54 0 0 1 122 70" fill="none" stroke="rgba(128,128,128,0.22)" stroke-width="11" stroke-linecap="round" />
+                <path d="M 14 70 A 54 54 0 0 1 122 70" fill="none" stroke="url(#gaugeGrad)" stroke-width="11" stroke-linecap="round" stroke-dasharray="170" stroke-dashoffset="112" />
+                <!-- 34分指针位置 -->
+                <circle cx="42" cy="23" r="5.5" fill="#e5c158" stroke="#0b0e14" stroke-width="2" />
+                <text x="68" y="58" text-anchor="middle" fill="currentColor" font-size="24" font-weight="800" class="mono">34</text>
+                <text x="68" y="74" text-anchor="middle" fill="var(--up)" font-size="11" font-weight="700" class="mono">较昨日18 (+16)</text>
+              </svg>
+              <div style="flex:1;min-width:170px;">
+                <div style="font-weight:700;font-size:13.5px;margin-bottom:4px;">💡 言简意赅 · 核心观点</div>
+                <div style="font-size:12.5px;color:var(--text-2);">
+                  刚从昨日 <b>18分绝对冰点</b> 爬升至 <b>34分怀疑期</b>，散户仍以骂“诱多/怕回踩”为主（消极词66%）。<b>20–40分恰是B浪反弹最安全的黄金左侧区</b>，远未到80+分见顶狂热！
+                </div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px;" class="mono">
+                <span class="down"><b>消极词 66%</b>（诱多/割肉/怕回踩）</span>
+                <span class="up"><b>积极词 34%</b>（V反/机器人起飞）</span>
+              </div>
+              <div class="bar-track">
+                <div style="width:66%;background:var(--down);"></div>
+                <div style="width:34%;background:var(--up);"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右：近15日累积情绪折线图 -->
+          <div class="col-7">
+            <div style="display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-bottom:6px;">
+              <span>近 15 日全平台情绪指数累积曲线（11-03 → 11-23）</span>
+              <span>红线 80=过热见顶 · 绿线 20=绝对冰点</span>
+            </div>
+            <canvas id="sentimentCanvas" height="145"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- 置顶核心观点（30秒速览） -->
+      <section id="cn-tldr" class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span class="badge b-warn">⚡ 16:00 收盘核心观点（30秒速览）</span>
+            <strong style="font-size:14.5px;">A股放量1.55万亿完成“防御→成长”切换，B浪火种点燃；港股恒科杀完牛证露底背离</strong>
+          </div>
+          <button onclick="switchMode('0830')" class="pill">🇺🇸 美股/高盛目标价/黄仁勋/MU 看08:30版 →</button>
+        </div>
+        <div class="grid g-4">
+          <div class="subcard"><strong class="up" style="display:block;margin-bottom:4px;">1. 大盘与资金切换</strong><div style="font-size:12.5px;color:var(--text-2);">上证探新低 <b>3476.65</b> 后V反收3538.95，创业板 <b>+3.08%</b> 日线底背离；两市放量 <b>1.55万亿</b>，工行(-2.66%)/茅台(-3.15%)失血切科技！</div></div>
+          <div class="subcard"><strong class="gold" style="display:block;margin-bottom:4px;">2. 最看好 3 大主线</strong><div style="font-size:12.5px;color:var(--text-2);">① <b>人形机器人</b>(拓普0%套牢/三花)；② <b>PCB/CPO+六张网供电</b>(胜宏/沪电/国电南瑞)；③ <b>猪肉防御+银矿金矿</b>(牧原/温氏/兴业银锡)。</div></div>
+          <div class="subcard"><strong style="color:var(--warn);display:block;margin-bottom:4px;">3. 港股恒科企稳条件</strong><div style="font-size:12.5px;color:var(--text-2);">恒科收 <b>3508</b> 露底背离但流动性偏弱，右侧需<b>放量+站周MA5(3733)+美债破4.7%</b>；当前严选<b>小米/中芯HK/网易/腾讯</b>。</div></div>
+          <div class="subcard"><strong class="down" style="display:block;margin-bottom:4px;">4. 期货涨价与3日姿态</strong><div style="font-size:12.5px;color:var(--text-2);">天然气(20日+35.6%)/金银(+3%)/PCB缺货/生猪出清为硬逻辑；未来3天冲高不追，回踩提仓至5~6成！</div></div>
+        </div>
+      </section>
+
+      <!-- 一、中国宏观 & 大宗商品期货涨价映射 -->
+      <section id="sec-commodity">
+        <div class="sec-head">
+          <h2 class="sec-title">一、中国宏观流动性 &amp; 大宗商品期货涨价逻辑映射 A 股</h2>
+          <span class="sec-sub">10月社融 469.16万亿(+7.2%) · M2 +7.1% · 场外大资金净买ETF 5,892亿托底</span>
+        </div>
+        <div class="card">
+          <div class="tbl-wrap">
+            <table>
+              <thead>
+                <tr><th>期货/大宗品种</th><th>最新价 &amp; 涨跌</th><th>20日趋势</th><th>核心涨价 / 降本逻辑</th><th>直接利好 A 股板块与龙头</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><b>🔥 NYMEX天然气</b></td><td class="mono up"><b>$3.527 (+3.4%)</b></td><td class="mono up"><b>+35.6% 主升</b></td><td style="color:var(--text-2)">冬季取暖 + AI数据中心燃气发电需求爆发</td><td><span class="badge b-up">涨价</span> 油气/燃气设备（新天然气、杰瑞股份）</td></tr>
+                <tr><td><b>🥇 COMEX金/银</b></td><td class="mono up"><b>$3622(+3.0%)/$42.4(+3.4%)</b></td><td class="mono down">深蹲反包</td><td style="color:var(--text-2)">12/9 FOMC落地后迎2027 Q1主升（投行看$5000+）</td><td><span class="badge b-up">反转</span> <b>兴业银锡(+5.5%)、山东黄金(+3.9%)、紫金</b></td></tr>
+                <tr><td><b>⚡ PCB覆铜板材料</b></td><td class="mono up"><b>全球短缺预警</b></td><td class="mono up">订单远超出货</td><td style="color:var(--text-2)">全球电子协会预警AI高频PCB严重短缺，提价权强</td><td><span class="badge b-up">缺货</span> <b>胜宏科技(+6.4%)、沪电股份(+3.0%)、东山精密</b></td></tr>
+                <tr><td><b>🥉 铜 / 🐖生猪</b></td><td class="mono up">铜$5.52 · 猪历史低位</td><td class="mono" style="color:var(--warn)">电网刚需/猪企亏损</td><td style="color:var(--text-2)">特高压用铜刚需；养猪全线亏损+通威入主天邦去产能</td><td><span class="badge b-up">拐点</span> 紫金/洛阳钼业；猪肉防御 <b>牧原/温氏</b></td></tr>
+                <tr><td><b>🧪 原油/碳酸锂/纯碱</b></td><td class="mono down">油$81.99(-2.4%) · 锂跌10万</td><td class="mono down">油20日-19.4%</td><td style="color:var(--text-2)">原材料暴跌改善中下游毛利；纯碱10年低位出清</td><td><span class="badge b-warn">降本</span> 储能电芯(宁德时代)、航空、天然碱(远兴)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 二、A股五大指数 + 早盘最大成交量博弈 + 券商哨兵 -->
+      <section id="sec-index">
+        <div class="sec-head">
+          <h2 class="sec-title">二、A股大盘复盘 · 早盘最大成交量博弈 &amp; 券商哨兵监测</h2>
+          <span class="sec-sub">全天 1.55万亿(+1307亿) · 上证/创业板日线MACD底背离</span>
+        </div>
+
+        <div class="grid g-5" style="margin-bottom:14px;">
+          <div class="kpi clickable" onclick="selectIndexChart('SH')"><div class="kpi-label"><span>上证指数</span><span class="gold">看图</span></div><div class="kpi-val mono">3538.95</div><div class="kpi-meta"><span class="up mono">+0.15%</span> · 低3476 · 周MA5 3591</div></div>
+          <div class="kpi"><div class="kpi-label"><span>沪深300</span><span class="badge b-up">底分型</span></div><div class="kpi-val mono">3958.29</div><div class="kpi-meta"><span class="up mono">+0.09%</span> · 周MA5 3994</div></div>
+          <div class="kpi clickable" onclick="selectIndexChart('CSI1000')"><div class="kpi-label"><span>中证1000</span><span class="gold">看图</span></div><div class="kpi-val mono">5812.32</div><div class="kpi-meta"><span class="up mono">+2.90%</span> · 探低5542深V</div></div>
+          <div class="kpi clickable card-up" onclick="selectIndexChart('CYB')"><div class="kpi-label"><span>创业板指 ⭐</span><span class="badge b-up">最强</span></div><div class="kpi-val mono">2280.20</div><div class="kpi-meta"><b class="up mono">+3.08%</b> · 放量反包底背离</div></div>
+          <div class="kpi"><div class="kpi-label"><span>科创50</span><span class="muted">回升</span></div><div class="kpi-val mono">1227.89</div><div class="kpi-meta"><span class="down mono">-0.26%</span> · 低1177 · 周MA5 1230</div></div>
+        </div>
+
+        <div class="grid g-12">
+          <div class="card col-8">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+              <strong id="idx-chart-title" style="font-size:14px;">上证指数 · 近15日真实K线 / 均线 / 成交量 / MACD</strong>
+              <div class="pill-row">
+                <button onclick="selectIndexChart('SH')" id="idx-btn-SH" class="pill active">上证指数</button>
+                <button onclick="selectIndexChart('CYB')" id="idx-btn-CYB" class="pill">创业板指</button>
+                <button onclick="selectIndexChart('CSI1000')" id="idx-btn-CSI1000" class="pill">中证1000</button>
+              </div>
+            </div>
+            <canvas id="indexCanvas" height="275"></canvas>
+            <p id="idx-chart-note" style="font-size:12.5px;color:var(--text-2);margin:8px 0 0;"></p>
+          </div>
+          <div class="col-4" style="display:flex;flex-direction:column;gap:14px;">
+            <div class="card" style="border-color:rgba(59,130,246,0.35);">
+              <strong style="display:block;margin-bottom:6px;font-size:14px;">⏱️ 早盘最大成交量博弈复盘</strong>
+              <div style="font-size:12.5px;color:var(--text-2);">早盘9:30–10:30贡献全天超40%量能，恐慌盘砸出 <b>3476.65</b> 新低却放量承接不跌反拉，银行/白酒同步放量补跌——铁证<b>“主力借恐慌吃血筹+调仓换股”</b>！</div>
+            </div>
+            <div class="card card-gold">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <strong style="font-size:14px;">🚨 券商哨兵监测</strong><span class="badge b-warn">左侧试盘</span>
+              </div>
+              <div class="mono" style="font-size:12px;display:flex;flex-direction:column;gap:6px;margin-bottom:8px;">
+                <div class="subcard" style="padding:8px 10px;display:flex;justify-content:space-between;"><span>东方财富</span><span class="up"><b>18.62 (+1.14% · 量比1.27)</b></span></div>
+                <div class="subcard" style="padding:8px 10px;display:flex;justify-content:space-between;"><span>中信证券</span><span>25.26 <b class="up">金针探底</b></span></div>
+                <div class="subcard" style="padding:8px 10px;display:flex;justify-content:space-between;"><span>证券ETF</span><span class="up">0.984 (+0.31% · 守周MA5)</span></div>
+              </div>
+              <div style="font-size:12px;color:var(--text-2);">全面进攻确认：证券ETF ≥ +3%、东财量比 ≥ 1.8、两市 ≥ 1.7万亿。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 三、同花顺/通达信/东方财富细分板块星级榜 & 龙头清单 -->
+      <section id="sec-ths-boards">
+        <div class="sec-head">
+          <h2 class="sec-title">三、同花顺 / 通达信 / 东方财富重点细分板块星级榜 &amp; 龙头清单</h2>
+          <span class="sec-sub">按资金强度、催化密度与上方套牢盘轻重星级排序</span>
+        </div>
+        <div class="card">
+          <div class="tbl-wrap">
+            <table>
+              <thead>
+                <tr><th>星级</th><th>细分板块（同花顺/通达信/东财）</th><th>资金面</th><th>中军核心龙头（中长线）</th><th>弹性先锋（20CM/连板）</th><th>核心看涨理由</th></tr>
+              </thead>
+              <tbody>
+                <tr class="tr-hl"><td class="up"><b>★★★★★</b></td><td><b>人形机器人 / 物理AI</b></td><td><span class="badge b-up">主攻爆量</span></td><td><b>拓普集团(+10%·0%套牢)、三花智控</b></td><td>宇树(+20%)、安培龙(+20%)、汉威</td><td style="color:var(--text-2)">15日累计成交量斜率第1，多方炮共振，1月CES催化。</td></tr>
+                <tr class="tr-hl"><td class="up"><b>★★★★★</b></td><td><b>PCB电路板 &amp; CPO光模块</b></td><td><span class="badge b-up">巨量反包</span></td><td><b>沪电股份、中际(228亿)、新易盛(206亿)</b></td><td><b>胜宏科技(+6.4%多方炮)</b>、天孚(+13.8%)</td><td style="color:var(--text-2)">全球PCB短缺 + Coherent $20亿回购 + NVDA盘前+8%。</td></tr>
+                <tr><td class="gold"><b>★★★★☆</b></td><td><b>中国六张网（特高压/低空/卫星）</b></td><td><span class="badge b-up">稳步锁仓</span></td><td><b>国电南瑞(套牢仅2.8%)</b>、特变电工</td><td>宗申动力(+3.9%)、中国卫通(金针)</td><td style="color:var(--text-2)">全球AI缺电共振 + 12月经济工作会议与两会刚需。</td></tr>
+                <tr><td class="gold"><b>★★★★☆</b></td><td><b>猪肉养殖 / 农林牧渔（防御）</b></td><td><span class="badge b-up">20日净流&gt;45%</span></td><td><b>牧原股份(套牢7.5%)、温氏股份</b></td><td>天邦食品（通威拟入主）</td><td style="color:var(--text-2)">银行白酒补跌时的最佳逆周期防御，猪周期出清底。</td></tr>
+                <tr><td style="color:var(--warn)"><b>★★★★</b></td><td><b>AI应用 &amp; 传媒 / 贵金属 &amp; 存储</b></td><td><span class="badge b-up">反转升温</span></td><td>紫金矿业、山东黄金、<b>长鑫科技(110亿)</b>、中芯</td><td><b>龙版传媒(+10%)</b>、海天瑞声、<b>兴业银锡(+5.5%)</b></td><td style="color:var(--text-2)">传媒+4%、金银+3%反转、2027 HBM涨价+122%。</td></tr>
+                <tr><td class="muted"><b>★★★</b></td><td><b>券商 / 造船 / 军工航空</b></td><td><span class="badge b-warn">低位蓄势</span></td><td><b>东方财富</b>、中信证券、<b>中国船舶(金针)</b>、沈飞</td><td>航发科技(+6.8%)</td><td style="color:var(--text-2)">券商待放量点火；造船订单排至2028缩量守周MA5。</td></tr>
+                <tr><td class="down"><b>⚠️ 回避</b></td><td><b>银行 / 白酒 / 传统红利</b></td><td><span class="badge b-down">高位派发</span></td><td>工商银行(-2.66%量比1.47)、贵州茅台(-3.15%)</td><td>—</td><td style="color:var(--text-2)">避险资金获利切往科技成长，防银行日线双顶。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 四、近20日主力最坚定 TOP 20 榜单 + 累计量能 + 龙头K线图谱 -->
+      <section id="sec-top20" style="display:flex;flex-direction:column;gap:14px;">
+        <div class="sec-head">
+          <h2 class="sec-title">四、近20日主力最坚定 TOP 20 榜单 · 累计成交量折线 &amp; 龙头K线图谱</h2>
+          <span class="sec-sub">点击榜单带下划线龙头可直达下方K线支撑/压力图谱</span>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <strong style="font-size:14px;">🏆 全市场主力建仓最坚定 TOP 20（近20日净流比 + 估算净额 + 套牢盘 + 形态）</strong>
+            <div class="pill-row" id="top20-filters">
+              <button onclick="filterTop20('ALL')" class="pill active" data-f="ALL">全部20只</button>
+              <button onclick="filterTop20('机器人+AI')" class="pill" data-f="机器人+AI">机器人/物理AI</button>
+              <button onclick="filterTop20('科技板块')" class="pill" data-f="科技板块">CPO/PCB/芯片</button>
+              <button onclick="filterTop20('防御/红利')" class="pill" data-f="防御/红利">猪肉/银行防御</button>
+              <button onclick="filterTop20('中国六张网')" class="pill" data-f="中国六张网">中国六张网</button>
+            </div>
+          </div>
+          <div class="tbl-wrap" style="max-height:360px;overflow-y:auto;">
+            <table>
+              <thead style="position:sticky;top:0;background:var(--surface);z-index:2;">
+                <tr><th>#</th><th>个股</th><th>赛道</th><th class="num">最新价/今涨</th><th class="num">20日涨跌</th><th class="num">20日净流比/净额</th><th class="num">套牢盘</th><th>形态</th><th>基本面与评级</th></tr>
+              </thead>
+              <tbody id="top20-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <strong style="font-size:14px;">📈 细分板块 15 日累计成交量趋势折线图（基准 11-03 = 1x）</strong>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;font-size:11.5px;color:var(--text-2);">
+              <span><b style="color:#f43f5e">━</b> 机器人(拓普)</span>
+              <span><b style="color:#38bdf8">━</b> 光模块(新易盛)</span>
+              <span><b style="color:#f59e0b">━</b> 券商(东财)</span>
+              <span><b style="color:#10b981">━</b> 银行(工行)</span>
+              <span><b style="color:#ec4899">━</b> 猪肉(牧原)</span>
+            </div>
+          </div>
+          <canvas id="cumVolCanvas" height="205"></canvas>
+        </div>
+
+        <div id="sec-stocks" class="grid g-12">
+          <div class="card col-4" style="max-height:530px;overflow-y:auto;padding:12px;" id="stock-list"></div>
+          <div class="card col-8" style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;padding-bottom:10px;border-bottom:1px solid var(--border);">
+              <div>
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                  <strong id="st-title" style="font-size:16px;">拓普集团 (sh601689)</strong>
+                  <span id="st-cat" class="badge b-gold">人形机器人</span>
+                  <span id="st-patterns" style="display:flex;gap:5px;flex-wrap:wrap;"></span>
+                </div>
+                <div id="st-subtitle" class="muted mono" style="font-size:12px;margin-top:4px;"></div>
+              </div>
+              <div style="text-align:right;" class="mono">
+                <div id="st-price" style="font-size:22px;font-weight:800;">52.92</div>
+                <div id="st-chg" class="up" style="font-size:12.5px;font-weight:700;">+10.00%</div>
+              </div>
+            </div>
+            <canvas id="stockCanvas" height="260"></canvas>
+            <div class="grid g-4">
+              <div class="subcard"><div class="muted" style="font-size:11px;">有效回踩支撑位</div><div id="st-support" class="mono down" style="font-size:14px;font-weight:800;margin:3px 0;"></div><div id="st-support-rule" style="font-size:11px;color:var(--text-2);"></div></div>
+              <div class="subcard"><div class="muted" style="font-size:11px;">压力位与压力强弱</div><div id="st-resist" class="mono" style="font-size:14px;font-weight:800;color:var(--warn);margin:3px 0;"></div><div id="st-resist-lvl" style="font-size:11px;color:var(--text-2);"></div></div>
+              <div class="subcard"><div class="muted" style="font-size:11px;">中长线目标价</div><div id="st-target" class="mono up" style="font-size:14px;font-weight:800;margin:3px 0;"></div><div id="st-trapped" style="font-size:11px;color:var(--text-2);"></div></div>
+              <div class="subcard"><div class="muted" style="font-size:11px;">量能与催化</div><div id="st-vol" class="mono" style="font-size:14px;font-weight:800;margin:3px 0;"></div><div id="st-catalyst" style="font-size:11px;color:var(--text-2);"></div></div>
+            </div>
+            <div class="subcard" style="border-color:var(--border-strong);font-size:12.5px;color:var(--text-2);">
+              <b class="gold">🎓 大师教你这只票是怎么选出来的：</b><span id="st-why"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 五、🎙️ 12位指定公众号/抖音博主观点提炼 + 思考维度与游资手法教学 -->
+      <section id="sec-bloggers">
+        <div class="sec-head">
+          <h2 class="sec-title">五、🎙️ 12 位指定公众号/抖音博主复盘提炼 · 思考维度 &amp; 游资手法教学</h2>
+          <span class="sec-sub">严守铁律：未核实当日原文绝不杜撰观点 · 实时拆解游资/主力操盘逻辑</span>
+        </div>
+
+        <div class="card" style="border-color:var(--warn-border);margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:6px;">
+            <strong style="font-size:13.5px;">📌 今日（2026-11-23）抓取说明 &amp; 每日使用指南</strong>
+            <span class="badge b-warn">微信/抖音防爬拦截 · 绝不杜撰当日内容</span>
+          </div>
+          <div style="font-size:12.5px;color:var(--text-2);">
+            微信公众号与抖音均设登录/反爬验证，遵循安全规范不绕过、未核实当日更新绝不编造。以后下午4点前你看到哪几位更新了，只需把<b>文字/字幕/截图丢进对话框</b>，我会立刻按“<b>观点置顶 → 拆解思考维度与游资手法 → 叠加大师大盘判断与未来3天预测</b>”写入云端网站！下方已先建档全部12位博主的核心流派与思维教学：
+          </div>
+        </div>
+
+        <div class="grid g-3" style="margin-bottom:14px;">
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><b>1. 陈学长不吃面 (抖音)</b><span class="badge b-warn">游资接力</span></div><div class="gold" style="font-size:12px;margin-bottom:5px;">《断反的坑，追到龙头却比没追还难受》</div><div style="font-size:12.5px;color:var(--text-2);"><b>教你游资手法</b>：高位连板断板次日反包若板块跟风已掉队，往往是游资借龙头人气<b>拉高自救出货</b>，退潮期绝不盲接断板反包！</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><b>2. 杨宁 &amp; 3. 阿楠实战</b><span class="badge b-warn">主力行为</span></div><div class="gold" style="font-size:12px;margin-bottom:5px;">《主升浪启动前的动作》</div><div style="font-size:12.5px;color:var(--text-2);"><b>教你主力视角</b>：主升浪前三部曲——温和放量建仓 → 砸破均线挖坑缩量洗盘 → 放量阳包阴/多方炮拉离成本区（正是今日<b>拓普/三花</b>实盘！）。</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><b>4. 福盈云姐 (抖音)</b><span class="badge b-warn">分时量价</span></div><div class="gold" style="font-size:12px;margin-bottom:5px;">《尾盘偷袭并非主升浪，地量创16月新低》</div><div style="font-size:12.5px;color:var(--text-2);"><b>教你防骗技术</b>：真主力在<b>早盘量最大时</b>硬接抛压（如今日早盘深V）；下午2:30后偷袭拉尾盘多为弱资金做图，次日极易低开核按钮！</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><b>5. 房平 &amp; 6. 恒晟啄木鸟</b><span class="badge b-warn">科技资金</span></div><div class="gold" style="font-size:12px;margin-bottom:5px;">《科技离底很近》/《长飞光纤(港)资金面》</div><div style="font-size:12.5px;color:var(--text-2);"><b>教你客观数据思维</b>：用超跌乖离率 + A/港硬件资金连续净流入验证左侧底部，不靠情绪猜涨跌。</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><b>7. 屠龙尊主 &amp; 8. 擒龙光神</b><span class="badge b-warn">公众号龙头</span></div><div class="gold" style="font-size:12px;margin-bottom:5px;">题材主线 / 龙头连板晋级战法</div><div style="font-size:12.5px;color:var(--text-2);"><b>教你抓龙逻辑</b>：只做“最强主线+最高辨识度前排”，冰点(18分)试错首板，升温(34分)切中军主升！</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><b>9. 发哥/10. 春春/11. 野人/12. 李大霄</b><span class="badge b-warn">情绪修心</span></div><div class="gold" style="font-size:12px;margin-bottom:5px;">《还有动手的吗》/《交易要修心》</div><div style="font-size:12.5px;color:var(--text-2);"><b>教你情绪逆向</b>：短线客全网问“还有动手的吗”即冰点信号；结合野人/李大霄底部修心定力，完美契合中长线！</div></div>
+        </div>
+
+        <div class="card card-gold">
+          <strong class="gold" style="display:block;margin-bottom:5px;">🧭 融合众家维度后 · 大师最终定调与未来3天预测</strong>
+          <div style="font-size:12.5px;color:var(--text-2);">今日不是尾盘偷袭，而是早盘最惨烈时（3476）放量承接的真切换！游资顶20CM物理AI先锋、机构扫货200亿光模块/拓普中军形成合力。<b>未来3天</b>：周二冲高测3565后必有分歧回踩3510~3525，<b>避开高位断反坑</b>，把子弹全部低吸在回踩5日/周MA5的机构中军（拓普、三花、国电南瑞、牧原、胜宏）上，周三周四上攻周MA5（<b>3591</b>）！</div>
+        </div>
+      </section>
+
+      <!-- 六、🇭🇰 港股 & 恒生科技低位企稳专题 -->
+      <section id="sec-hk">
+        <div class="sec-head">
+          <h2 class="sec-title">六、🇭🇰 港股 &amp; 恒生科技（HSTECH）低位专题：企稳4条铁律 &amp; 严选标的</h2>
+          <span class="sec-sub">恒指 22,383.74 (-0.12%) · 恒生科技 3,508.00 (-0.09%)</span>
+        </div>
+        <div class="grid g-12">
+          <div class="card col-7">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:6px;">
+              <strong style="font-size:14px;">📉 恒生科技 (HSTECH) · 15日真实K线（日线底背离萌芽）</strong>
+              <span class="mono muted" style="font-size:12px;">收3508 · 低3395 · 周MA5 3733</span>
+            </div>
+            <canvas id="hstechCanvas" height="250"></canvas>
+            <p style="font-size:12.5px;color:var(--text-2);margin:8px 0 0;">恒指刺穿22,000屠尽重牛街货，恒科探低3395收下影且DIF(-126.9)高于前低(-135.9)现底背离萌芽，但受美债近5%压制尚未放量。</p>
+          </div>
+          <div class="card col-5" style="display:flex;flex-direction:column;gap:10px;">
+            <strong style="font-size:14px;" class="gold">🚦 恒生科技“真正企稳”的 4 条硬标准</strong>
+            <div style="font-size:12.5px;color:var(--text-2);display:flex;flex-direction:column;gap:6px;">
+              <div><b>① 流动性放量</b>：主板成交重回 <b>1,600~1,800亿港元+</b>，南向连3日净买+外资回补。</div>
+              <div><b>② 技术面站稳</b>：放量收复 <b>日MA5(3633)</b> 与 <b>周MA5(3733)</b>，3日不破3395。</div>
+              <div><b>③ 美债回落</b>：10Y美债有效跌破 <b>4.70%</b>（盯11/25 PCE与12/9 FOMC）。</div>
+              <div><b>④ 权重共振</b>：腾讯/小米/网易/中芯联袂领涨，不再现旺旺(-10%)式业绩雷。</div>
+            </div>
+            <div style="border-top:1px solid var(--border);padding-top:10px;">
+              <strong style="display:block;font-size:13px;margin-bottom:6px;">💎 严选 6 只核心看好港股</strong>
+              <div class="grid g-2" style="gap:8px;font-size:11.5px;">
+                <div class="subcard" style="padding:8px;border-color:var(--up-border);"><b>小米-W (01810) ⭐</b> <span class="mono">27.52</span><br/><span class="muted">套牢仅39%·AI硬件汽车</span></div>
+                <div class="subcard" style="padding:8px;border-color:var(--up-border);"><b>中芯HK (00981) ⭐</b> <span class="mono">48.74</span><br/><span class="muted">20日+6%·缩量踩MA20</span></div>
+                <div class="subcard" style="padding:8px;"><b>网易-S (09999)</b> <span class="mono up">+3.6%</span><br/><span class="muted">159.5·高现金流领涨</span></div>
+                <div class="subcard" style="padding:8px;"><b>腾讯 (00700)</b> <span class="mono">344.0</span><br/><span class="muted">千亿回购·定海神针</span></div>
+                <div class="subcard" style="padding:8px;"><b>美团-W (03690)</b> <span class="mono">66.40</span><br/><span class="muted">今日收金针探底</span></div>
+                <div class="subcard" style="padding:8px;"><b>紫金HK (02899)</b> <span class="mono up">+4.2%</span><br/><span class="muted">24.02·折价+金银铜</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 七、跨月主线 & 未来3天预判 -->
+      <section id="sec-calendar">
+        <div class="sec-head">
+          <h2 class="sec-title">七、跨月主线日历（2026.11 → 2027.03） &amp; 未来 3 天情景推演</h2>
+          <span class="sec-sub">逐月重大会议催化 · 三大概率情景与仓位纪律</span>
+        </div>
+        <div class="grid g-5" style="margin-bottom:14px;">
+          <div class="card card-gold" style="padding:13px;"><b>2026.11 筑底</b><div style="font-size:12px;color:var(--text-2);margin-top:5px;">ETF托底/PCE→机器人(拓普/三花)、PCB/CPO、猪肉。</div></div>
+          <div class="card" style="padding:13px;"><b>2026.12 定调</b><div style="font-size:12px;color:var(--text-2);margin-top:5px;">12/1听证、12/9 FOMC、经济工作会议→券商、六张网、金银。</div></div>
+          <div class="card" style="padding:13px;"><b>2027.01 躁动</b><div style="font-size:12px;color:var(--text-2);margin-top:5px;">CES 2027、年报预告、社融开门红→AI硬件、机器人、造船。</div></div>
+          <div class="card" style="padding:13px;"><b>2027.02 春节</b><div style="font-size:12px;color:var(--text-2);margin-top:5px;">春节档、美Q4财报→AI应用传媒、黄金主升、猪肉反转。</div></div>
+          <div class="card" style="padding:13px;"><b>2027.03 两会</b><div style="font-size:12px;color:var(--text-2);margin-top:5px;">两会预算、联储转鸽预期→六张网、军工、国产芯片。</div></div>
+        </div>
+        <div class="grid g-3">
+          <div class="card card-up"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><b>基准：B浪确认与回踩蓄势</b><span class="badge b-up">60%</span></div><div style="font-size:12.5px;color:var(--text-2);">周二冲高测3565后回踩3510~3525确认底分型，银行继续回落，周三周四攻周MA5(3591)与成本3626。策略：回踩低吸至5~6成。</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><b>强势：券商点火放量逼空</b><span class="badge b-warn">25%</span></div><div style="font-size:12.5px;color:var(--text-2);">成交破1.75万亿、东财+5%/证券ETF+3%吞没3591直指3680~3700。策略：沿5日线持股让利润奔跑。</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><b>弱势：外盘反复二次探W底</b><span class="badge b-down">15%</span></div><div style="font-size:12.5px;color:var(--text-2);">若11/25 PCE超预期，回踩3476~3490构筑扎实W双底（右底缩量最佳）。策略：留3成现金分批接筹。</div></div>
+        </div>
+      </section>
+
+      <!-- 八、每日中长线系统教学 + 2道交互K线测验 -->
+      <section id="sec-academy">
+        <div class="sec-head">
+          <h2 class="sec-title">八、中长线系统教学 · 第1课：《如何判断筑底结束 &amp; B浪开启？》</h2>
+          <span class="sec-sub">波浪 · 利弗莫尔 · 江恩 · 缠论实盘融合 + 每日2道K线测试题</span>
+        </div>
+        <div class="grid g-12">
+          <div class="card col-7">
+            <strong style="display:block;font-size:14px;margin-bottom:8px;">📐 实盘图解：创业板指今日“创新低(2188) + MACD日线底背驰”</strong>
+            <canvas id="teachCanvas" height="245"></canvas>
+            <div style="font-size:12.5px;color:var(--text-2);margin-top:10px;">
+              <b>四大理论口诀</b>：① <b>波浪+缠论</b>：价格新低(2188&lt;2376)但DIF抬高(-153&gt;-207)且红柱翻红 = 标准日线底背驰，A浪杀跌动能枯竭；② <b>利弗莫尔+江恩多周期</b>：周/月线看3450–3500 ETF大底，日线等放量反包，15m/30m/60m等明日回踩阳线中位（上证3510/创业板2238）低吸，绝不追高！
+            </div>
+          </div>
+          <div id="quiz-box" class="card card-gold col-5" style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong style="font-size:14.5px;">✍️ 今日 2 道 K 线随堂测验</strong>
+              <span id="quiz-score" class="badge b-gold mono">得分：0 / 2</span>
+            </div>
+            <div class="subcard">
+              <div style="font-weight:700;font-size:12.5px;">题1（拓普/三花）：阳 → 缩量阴 → 放量涨停反包且套牢盘0%？</div>
+              <button onclick="answerQuiz(1,'A')" class="quiz-opt">A. 乌云盖顶立刻清仓</button>
+              <button onclick="answerQuiz(1,'B')" class="quiz-opt">B. 经典“多方炮+放量反包”，等回踩5日线/阳线中位低吸</button>
+              <div id="q1-fb" class="hidden" style="margin-top:8px;padding:8px;border-radius:8px;font-size:12px;"></div>
+            </div>
+            <div class="subcard">
+              <div style="font-weight:700;font-size:12.5px;">题2（工行 vs 创业板）：银行新高次日放量-2.66%大阴 + 创业板放量底背离+3%？</div>
+              <button onclick="answerQuiz(2,'A')" class="quiz-opt">A. 防御派发 → 成长高低切换实锤，银行防阶段双顶</button>
+              <button onclick="answerQuiz(2,'B')" class="quiz-opt">B. 满仓抄底银行，科技全面崩盘</button>
+              <div id="q2-fb" class="hidden" style="margin-top:8px;padding:8px;border-radius:8px;font-size:12px;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      免责声明：本复盘终端与中长线系统教学仅供投资研究与学习参考，不构成任何具体证券买卖承诺。股市有风险，入市需严守风控纪律。
+    </footer>
+  </main>
+
+  <!-- 手机端底部悬浮一键切换栏 -->
+  <div class="mobile-dock">
+    <button id="dock-0830" onclick="switchMode('0830')" class="dock-btn">🌅 08:30美股</button>
+    <button id="dock-1200" onclick="switchMode('1200')" class="dock-btn">☀️ 12:00午盘</button>
+    <button id="dock-1600" onclick="switchMode('1600')" class="dock-btn active">🌆 16:00全景</button>
+  </div>
+
+  <script>
+    const SENTIMENT_HISTORY = [
+      ["11-03",52],["11-04",64],["11-05",68],["11-06",55],["11-09",58],
+      ["11-10",60],["11-11",65],["11-12",56],["11-13",46],["11-16",38],
+      ["11-17",31],["11-18",29],["11-19",24],["11-20",18],["11-23",34]
+    ];
+
+    const US_CHARTS = {
+      MU:{n:"美光科技 (MU)",c:594.51,chg:-13.89,vwap:768.65,wma5:null,note:"美光从$1,108.7暴跌-52.6%至$594.51，放量砸低$585.25；高盛看2027 HBM涨+122%延续至2028H1、2027E PE仅6x，重点盯$585/$535支撑与2027年3-6月冲击$900-$1,050波段！",b:[["11-02",890.54,833.59,892.08,829.24,29.9,912.92,939.09,-30.5,-25.23,-10.54],["11-03",859.93,855.1,871.49,845.25,21.3,898.19,929.57,-32.77,-26.74,-12.05],["11-04",823.0,795.23,853.34,782.0,35.9,860.59,914.93,-38.95,-29.18,-19.53],["11-05",752.69,656.39,761.81,650.0,77.9,805.01,895.96,-54.42,-34.23,-40.38],["11-06",708.35,690.0,724.8,676.0,44.9,766.06,879.01,-63.24,-40.03,-46.41],["11-09",703.18,733.15,744.74,689.65,32.2,745.97,866.21,-65.98,-45.22,-41.53],["11-10",717.45,725.11,745.64,699.63,28.4,719.98,854.81,-68.03,-49.78,-36.49],["11-11",777.14,811.3,827.58,763.05,36.7,723.19,849.67,-61.98,-52.22,-19.51],["11-12",769.31,798.44,799.7,764.57,27.6,751.6,843.03,-57.55,-53.29,-8.53],["11-13",782.69,778.31,796.18,750.25,27.9,769.26,838.0,-55.04,-53.64,-2.8],["11-16",734.16,719.02,739.12,716.38,27.1,766.44,828.71,-57.17,-54.34,-5.66],["11-17",726.2,712.42,726.99,666.88,33.5,763.9,819.52,-58.72,-55.22,-7.0],["11-18",718.5,705.27,722.96,687.33,27.5,742.69,809.1,-59.83,-56.14,-7.38],["11-19",740.33,690.44,760.01,689.28,35.4,721.09,800.8,-61.2,-57.15,-8.1],["11-20",665.46,594.51,669.0,585.25,59.1,684.33,786.65,-69.23,-59.57,-19.33]]},
+      NVDA:{n:"英伟达 (NVDA)",c:125.53,chg:-14.01,vwap:168.41,wma5:null,note:"11/12黄仁勋辞职后腰斩-48.4%，周末特朗普与财长释放积极风声，11/23盘前暴涨+8%，盯12/1众议院三大委员会听证会！",b:[["11-02",207.53,202.06,209.98,201.66,119.3,210.74,219.62,-4.48,-2.66,-3.63],["11-03",207.96,206.69,209.14,205.93,91.9,208.49,217.99,-4.69,-3.07,-3.24],["11-04",203.5,200.13,206.79,199.68,149.0,205.44,216.12,-5.32,-3.52,-3.61],["11-05",196.07,181.6,196.25,181.46,306.1,199.02,213.68,-7.23,-4.26,-5.95],["11-06",191.1,186.64,194.9,185.22,180.2,195.42,211.55,-8.25,-5.06,-6.38],["11-09",173.07,178.67,179.92,170.24,462.7,190.75,209.16,-9.59,-5.96,-7.25],["11-10",173.97,168.89,174.69,165.89,429.3,183.19,206.18,-11.3,-7.03,-8.54],["11-11",172.8,173.73,177.54,170.77,339.2,177.91,203.81,-12.13,-8.05,-8.17],["11-12",151.01,166.19,167.14,148.8,747.7,174.82,201.25,-13.25,-9.09,-8.32],["11-13",169.91,162.85,170.0,158.39,365.8,170.07,198.69,-14.24,-10.12,-8.23],["11-16",159.02,156.14,163.2,155.01,333.8,165.56,195.64,-15.39,-11.17,-8.42],["11-17",156.9,155.46,158.19,150.33,407.0,162.87,192.59,-16.16,-12.17,-7.98],["11-18",159.19,150.96,159.7,150.4,349.8,158.32,189.04,-16.95,-13.13,-7.64],["11-19",152.92,145.98,158.13,145.71,322.9,154.28,185.73,-17.77,-14.06,-7.42],["11-20",143.52,125.53,143.73,124.5,626.4,146.81,181.46,-19.84,-15.21,-9.25]]},
+      IXIC:{n:"纳斯达克综合 (IXIC)",c:22617.73,chg:-5.28,vwap:25076.61,wma5:null,note:"偏离MA20达10%极端超卖，盘前反抽看MA5(23,953)压力，防CTA惯性余震。",b:[["11-02",25600.17,25164.31,25799.46,25145.95,914.6,25962.74,26560.0,-282.63,-136.69,-291.88],["11-03",25246.63,25372.01,25474.46,25246.63,834.7,25741.58,26448.61,-321.07,-173.57,-295.01],["11-04",25652.78,25736.51,26048.83,25602.14,995.3,25578.91,26358.5,-318.46,-202.55,-231.82],["11-05",25558.11,24315.0,25559.03,24262.14,1283.4,25204.97,26214.59,-426.17,-247.27,-357.8],["11-06",24602.48,24579.43,24825.55,24507.63,1062.2,25033.45,26075.25,-484.62,-294.74,-379.75],["11-09",24777.44,25253.14,25354.3,24762.57,918.8,25051.22,25975.61,-471.14,-330.02,-282.24],["11-10",25047.45,25065.87,25286.83,24816.1,814.6,24989.99,25868.69,-470.15,-358.05,-224.21],["11-11",25448.8,25466.19,25649.85,25326.69,1121.1,24935.93,25807.35,-432.08,-372.85,-118.46],["11-12",25092.11,25366.09,25597.22,25068.28,1033.7,25146.14,25740.01,-405.32,-379.35,-51.94],["11-13",25408.0,25136.27,25423.09,24872.41,869.1,25257.51,25689.82,-398.06,-383.09,-29.95],["11-16",24853.35,24509.76,24882.04,24460.28,920.9,25108.84,25593.76,-437.82,-394.04,-87.57],["11-17",24528.06,24328.38,24547.66,23989.09,967.9,24961.34,25488.94,-478.45,-410.92,-135.06],["11-18",24486.18,24429.88,24538.78,24225.3,826.1,24754.08,25375.29,-496.73,-428.08,-137.3],["11-19",24809.05,23879.2,24939.62,23870.7,1055.9,24456.7,25268.81,-549.33,-452.33,-193.99],["11-20",23592.67,22617.73,23837.76,22513.01,1247.0,23952.99,25101.93,-684.9,-498.84,-372.11]]},
+      LLY:{n:"礼来制药 (LLY)",c:1347.11,chg:-0.3,vwap:1390.68,wma5:null,note:"20日逆势+5.78%的医药避风港真神，缩量回踩$1,340企稳，2027上看$1,650~$1,800。",b:[["11-02",1393.15,1410.99,1421.99,1382.02,37.3,1354.49,1259.4,51.63,34.52,34.22],["11-03",1399.63,1409.38,1437.0,1393.47,28.4,1379.98,1272.0,55.29,38.68,33.23],["11-04",1440.0,1417.99,1445.96,1401.59,36.4,1405.92,1283.46,58.22,42.59,31.26],["11-05",1434.0,1364.73,1453.0,1364.73,48.8,1404.13,1293.22,55.59,45.19,20.81],["11-06",1350.45,1354.0,1377.28,1333.22,38.0,1391.42,1301.95,52.05,46.56,10.98],["11-09",1365.4,1411.95,1419.67,1364.58,40.3,1391.61,1313.42,53.3,47.91,10.79],["11-10",1408.49,1432.29,1438.88,1400.0,30.2,1396.19,1326.71,55.3,49.38,11.82],["11-11",1418.08,1437.29,1440.47,1414.37,18.7,1400.05,1338.14,56.63,50.83,11.59],["11-12",1446.55,1427.28,1460.0,1427.28,24.1,1412.56,1346.92,56.23,51.91,8.63],["11-13",1429.91,1443.5,1449.64,1419.77,20.8,1430.46,1356.24,56.57,52.84,7.45],["11-16",1453.75,1431.67,1475.25,1427.66,32.1,1434.41,1365.81,55.25,53.33,3.85],["11-17",1416.0,1415.55,1432.28,1401.66,26.4,1431.06,1372.41,52.3,53.12,-1.65],["11-18",1407.93,1382.75,1423.11,1380.0,28.8,1420.15,1378.01,46.77,51.85,-10.16],["11-19",1369.38,1351.12,1382.0,1341.46,32.0,1404.92,1380.23,39.39,49.36,-19.94],["11-20",1362.38,1347.11,1372.05,1341.76,35.4,1385.64,1383.91,32.83,46.05,-26.44]]},
+      GOLD:{n:"COMEX黄金 (GC=F)",c:3621.7,chg:3.02,vwap:3928.64,wma5:null,note:"今日暴涨+3.02%反包，12/9 FOMC落地后迎2027主升，高盛/小摩看$5,000~$6,600。",b:[["11-03",3960.5,3940.4,3981.7,3904.1,16.3,3978.38,4093.34,-87.55,-80.23,-14.64],["11-04",3940.8,4073.0,4081.2,3928.2,23.3,3982.66,4089.96,-77.71,-79.73,4.03],["11-05",4075.4,4113.5,4155.8,4067.0,21.6,3999.08,4087.78,-65.89,-76.96,22.14],["11-06",4098.5,4074.9,4116.2,4035.1,17.8,4034.28,4080.72,-58.95,-73.36,28.81],["11-09",4074.3,4114.5,4157.7,4062.5,19.1,4063.26,4076.91,-49.69,-68.62,37.87],["11-10",4149.0,4030.2,4156.2,4020.8,19.6,4081.22,4069.55,-48.59,-64.62,32.06],["11-11",4043.7,4000.5,4074.7,3989.6,13.2,4066.72,4064.18,-49.54,-61.6,24.12],["11-12",3994.0,3885.3,4005.9,3856.7,22.9,4021.08,4049.95,-58.91,-61.06,4.3],["11-13",3883.3,3886.3,3927.2,3871.1,15.6,3983.36,4035.2,-65.51,-61.95,-7.11],["11-16",3869.7,3853.0,3904.3,3835.2,16.4,3931.06,4019.85,-72.58,-64.08,-17.0],["11-17",3859.5,3864.2,3894.0,3839.2,16.0,3897.86,4005.93,-76.4,-66.54,-19.72],["11-18",3855.2,3741.9,3859.3,3721.8,24.4,3846.14,3985.53,-88.28,-70.89,-34.78],["11-19",3730.3,3685.5,3759.5,3620.6,20.4,3806.18,3966.78,-101.08,-76.93,-48.31],["11-20",3633.8,3515.4,3638.1,3502.9,20.4,3732.0,3942.16,-123.53,-86.25,-74.56],["11-23",3570.5,3621.7,3636.4,3552.3,10.0,3685.74,3921.32,-131.23,-95.25,-71.97]]}
+    };
+
+    const CN_INDICES = {
+      SH:{n:"上证指数",c:3538.95,chg:0.15,vwap:3625.91,wma5:3591.06,note:"早盘探新低3476.65后V反收3538.95，构成日线MACD底背离；上方看MA5(3565)、周MA5(3591)与主力成本(3626)。",b:[["11-03",3624.58,3608.1,3624.58,3580.38,536.8,3635.61,3715.43,-65.32,-60.24,-10.15],["11-04",3605.39,3686.17,3686.17,3590.8,599.4,3636.55,3707.63,-59.23,-60.04,1.62],["11-05",3646.57,3689.91,3701.59,3646.57,571.3,3644.25,3701.53,-53.49,-58.73,10.48],["11-06",3612.15,3649.18,3660.49,3610.2,477.0,3654.28,3693.3,-51.63,-57.31,11.36],["11-09",3659.02,3660.79,3679.09,3653.05,427.7,3658.83,3686.48,-48.66,-55.58,13.85],["11-10",3682.04,3663.72,3683.73,3660.72,404.9,3669.95,3679.62,-45.54,-53.57,16.06],["11-11",3655.66,3680.64,3689.65,3650.31,433.1,3668.85,3675.29,-41.23,-51.1,19.75],["11-12",3673.06,3655.83,3699.58,3647.44,496.5,3662.03,3672.71,-39.36,-48.76,18.79],["11-13",3658.72,3634.35,3669.44,3623.84,472.3,3659.07,3668.61,-39.16,-46.84,15.35],["11-16",3611.54,3602.57,3623.12,3586.57,461.6,3647.42,3662.2,-41.1,-45.69,9.18],["11-17",3585.67,3584.58,3604.98,3565.59,444.1,3631.59,3654.66,-43.58,-45.27,3.38],["11-18",3596.55,3587.83,3596.55,3560.45,423.9,3613.03,3648.4,-44.77,-45.17,0.8],["11-19",3583.12,3577.62,3584.28,3547.94,412.9,3597.39,3644.38,-46.0,-45.34,-1.34],["11-20",3527.3,3533.79,3538.27,3500.83,499.7,3577.28,3636.54,-49.94,-46.26,-7.37],["11-23",3503.52,3538.95,3544.6,3476.65,512.2,3564.55,3628.61,-52.05,-47.41,-9.27]]},
+      CYB:{n:"创业板指",c:2280.2,chg:3.08,vwap:2448.79,wma5:2359.45,note:"今日最强旗手！+3.08%放量反包站上MA5(2278)，日线MACD红柱翻红+底背离共振，下看周MA5(2359)。",b:[["11-03",2429.77,2391.65,2471.9,2376.39,182.8,2483.27,2730.18,-207.24,-192.36,-29.76],["11-04",2399.46,2544.73,2559.09,2376.28,223.2,2465.26,2700.66,-195.58,-193.0,-5.15],["11-05",2493.73,2566.8,2625.98,2493.67,225.3,2475.1,2677.16,-182.45,-190.89,16.87],["11-06",2438.72,2465.23,2506.97,2438.72,181.7,2485.42,2648.26,-178.19,-188.35,20.31],["11-09",2494.63,2458.56,2511.71,2458.01,165.4,2485.39,2622.99,-173.36,-185.35,23.99],["11-10",2518.44,2494.4,2520.01,2487.56,174.5,2505.94,2599.8,-164.74,-181.23,32.99],["11-11",2490.1,2572.07,2580.34,2490.1,184.1,2511.41,2585.06,-149.91,-174.97,50.12],["11-12",2559.16,2509.43,2620.25,2508.29,196.9,2499.94,2571.38,-141.58,-168.29,53.42],["11-13",2525.39,2426.08,2528.99,2417.22,170.4,2492.11,2554.06,-140.09,-162.65,45.12],["11-16",2395.52,2320.02,2398.19,2308.9,152.9,2464.4,2532.75,-145.78,-159.28,26.98],["11-17",2299.97,2292.2,2343.15,2263.74,157.9,2423.96,2510.4,-150.81,-157.58,13.55],["11-18",2306.12,2311.62,2329.91,2265.76,148.4,2371.87,2491.24,-151.47,-156.36,9.78],["11-19",2290.21,2293.34,2315.78,2271.99,140.0,2328.65,2477.06,-151.72,-155.43,7.42],["11-20",2244.06,2212.13,2263.3,2212.13,165.2,2285.86,2453.47,-156.67,-155.68,-1.99],["11-23",2195.52,2280.2,2297.73,2188.45,188.3,2277.9,2435.56,-153.34,-155.21,3.75]]},
+      CSI1000:{n:"中证1000",c:5812.32,chg:2.9,vwap:6331.02,wma5:6096.96,note:"中小盘深V狂拉+2.90%，放量吞没恐慌抛压。",b:[["11-09",6540,6565,6590,6510,19233,6477.65,6587.05,-212.4,-247.72,70.63],["11-10",6590.4,6579.36,6625.52,6560.59,19579,6549.28,6564.85,-192.18,-236.61,88.86],["11-11",6555.14,6669.55,6681.87,6541.34,20378,6580.83,6553.07,-166.96,-222.68,111.45],["11-12",6662.67,6537.84,6723.8,6537.84,23049,6558.37,6546.03,-155.8,-209.31,107.01],["11-13",6554.06,6357.26,6581.35,6341.45,20313,6528.75,6529.8,-159.69,-199.38,79.39],["11-16",6310.58,6164.62,6310.58,6136.83,18398,6461.73,6503.11,-176.28,-194.76,36.97],["11-17",6111.05,6092.39,6225.56,6055.73,18590,6364.33,6469.39,-193.03,-194.41,2.77],["11-18",6124.1,6052.82,6144.68,5975.36,17721,6240.99,6433.02,-207.11,-196.96,-20.32],["11-19",6033.49,5938.9,6033.49,5913.05,16668,6121.2,6401.05,-224.87,-202.54,-44.67],["11-20",5826.37,5648.63,5841.42,5648.63,19678,5979.47,6346.75,-259.38,-213.91,-90.95],["11-23",5563.29,5812.32,5841.18,5541.97,21350,5909.01,6305.83,-270.4,-225.21,-90.39]]},
+      HSTECH:{n:"恒生科技指数",c:3508.0,chg:-0.09,vwap:3842.6,wma5:3733.09,b:[["11-03",3853.17,3867.73,3898.71,3832.93,46982,3811.98,3988.14,-135.9,-134.84,-2.14],["11-04",3848.21,3936.02,3939.53,3796.23,50390,3828.44,3973.79,-122.07,-132.28,20.43],["11-05",3992.39,4154.29,4168.42,3988.81,104186,3910.47,3971.78,-92.42,-124.31,63.77],["11-06",4025.22,4078.23,4147.64,4014.72,70309,3975.14,3972.02,-74.21,-114.29,80.16],["11-09",4119.98,4040.73,4158.88,4033.87,42126,4015.4,3964.16,-62.09,-103.85,83.52],["11-10",4072.44,4084.45,4109.03,4055.1,47509,4058.74,3959.91,-48.4,-92.76,88.72],["11-11",4045.3,4027.06,4057.47,4014.87,48399,4076.95,3954.43,-41.7,-82.55,81.7],["11-12",3995.0,3931.93,3998.36,3918.42,65491,4032.48,3942.3,-43.56,-74.75,62.38],["11-13",3918.21,3813.19,3938.39,3802.84,66286,3979.47,3929.91,-54.0,-70.6,33.21],["11-16",3828.81,3801.64,3851.36,3797.08,46024,3931.65,3914.58,-62.48,-68.98,12.99],["11-17",3760.33,3758.17,3799.52,3715.15,66711,3866.4,3900.2,-71.88,-69.56,-4.65],["11-18",3751.58,3736.33,3762.44,3695.0,50222,3808.25,3887.28,-80.17,-71.68,-16.98],["11-19",3699.93,3649.14,3699.93,3630.46,87496,3751.69,3880.03,-92.7,-75.89,-33.64],["11-20",3541.5,3511.14,3551.77,3482.41,72568,3691.28,3862.01,-112.48,-83.2,-58.55],["11-23",3443.76,3508.0,3524.74,3395.38,68678,3632.56,3844.53,-126.94,-91.95,-69.98]]}
+    };
+
+    const TOP20 = [
+      {r:1,sym:"sh605577",n:"龙版传媒",m:"AI应用+传媒",s:"出版传媒",c:17.81,chg:10.01,chg20:40.9,netR:48.4,netYi:61.5,trap:10.2,pat:"量价齐升·3日异动",note:"AI+传媒空间标杆"},
+      {r:2,sym:"sh601689",n:"拓普集团",m:"机器人+AI",s:"人形机器人",c:52.92,chg:10.0,chg20:20.27,netR:22.2,netYi:73.2,trap:0.0,pat:"多方炮+放量反包",note:"⭐首选：0%套牢盘铁龙"},
+      {r:3,sym:"sh688981",n:"中芯国际",m:"科技板块",s:"芯片半导体",c:121.6,chg:-3.08,chg20:18.32,netR:19.3,netYi:216.9,trap:23.1,pat:"强势回踩洗盘",note:"国产晶圆核心·20日+217亿"},
+      {r:4,sym:"sz300498",n:"温氏股份",m:"防御/红利",s:"猪肉养殖",c:17.46,chg:-0.17,chg20:10.23,netR:50.6,netYi:84.4,trap:8.6,pat:"逆势走牛",note:"20日净流比+50.6%"},
+      {r:5,sym:"sh688836",n:"宇树科技",m:"机器人+AI",s:"人形机器人",c:708.0,chg:20.0,chg20:5.36,netR:39.0,netYi:342.0,trap:7.6,pat:"20CM涨停",note:"具身智能人气龙·等分歧"},
+      {r:6,sym:"sz002714",n:"牧原股份",m:"防御/红利",s:"猪肉养殖",c:45.38,chg:1.18,chg20:9.24,netR:46.9,netYi:173.3,trap:7.5,pat:"踩周MA5反弹",note:"⭐防御首选·套牢7.5%"},
+      {r:7,sym:"sh600406",n:"国电南瑞",m:"中国六张网",s:"特高压电网",c:24.92,chg:-0.08,chg20:3.92,netR:28.9,netYi:77.4,trap:2.8,pat:"缩量横盘",note:"⭐压舱石·套牢仅2.8%"},
+      {r:8,sym:"sh600519",n:"贵州茅台",m:"防御/消费",s:"白酒",c:1439.0,chg:-3.15,chg20:6.59,netR:42.5,netYi:569.4,trap:26.0,pat:"放量补跌",note:"等12月消费政策右侧"},
+      {r:9,sym:"sh601919",n:"中远海控",m:"周期/航运",s:"航运红利",c:17.64,chg:-0.51,chg20:7.82,netR:20.4,netYi:66.0,trap:15.3,pat:"稳健多头",note:"高分红现金牛底仓"},
+      {r:10,sym:"sz301413",n:"安培龙",m:"机器人+AI",s:"物理AI传感",c:74.76,chg:20.0,chg20:19.52,netR:9.5,netYi:23.3,trap:28.0,pat:"20CM涨停",note:"力传感器急先锋"},
+      {r:11,sym:"sz002050",n:"三花智控",m:"机器人+AI",s:"人形机器人",c:33.88,chg:7.9,chg20:-1.54,netR:24.1,netYi:115.7,trap:65.0,pat:"多方炮+反包",note:"⭐核心·与拓普双龙共振"},
+      {r:12,sym:"sh601398",n:"工商银行",m:"防御/红利",s:"银行风向标",c:9.15,chg:-2.66,chg20:6.64,netR:2.9,netYi:30.5,trap:2.3,pat:"⚠️高位放量阴",note:"反向指标·防阶段双顶"},
+      {r:13,sym:"sz300059",n:"东方财富",m:"券商哨兵",s:"金融券商",c:18.62,chg:1.14,chg20:0.38,netR:34.1,netYi:257.8,trap:45.7,pat:"均线粘合",note:"20日净流+258亿待突破"},
+      {r:14,sym:"sz002371",n:"北方华创",m:"科技板块",s:"芯片设备",c:541.09,chg:-6.55,chg20:4.66,netR:30.0,netYi:376.8,trap:77.4,pat:"高切低深踩",note:"待止跌企稳再低吸"},
+      {r:15,sym:"sz300007",n:"汉威科技",m:"机器人+AI",s:"物理AI传感",c:36.1,chg:20.01,chg20:-3.27,netR:7.9,netYi:23.6,trap:43.7,pat:"20CM反包",note:"柔性电子皮肤高弹性"},
+      {r:16,sym:"sh600089",n:"特变电工",m:"中国六张网",s:"特高压电网",c:18.13,chg:0.17,chg20:1.85,netR:5.2,netYi:12.7,trap:47.1,pat:"低位企稳",note:"特高压出海·低估安全"},
+      {r:17,sym:"sz002463",n:"沪电股份",m:"科技板块",s:"PCB",c:82.7,chg:2.96,chg20:-16.38,netR:5.9,netYi:88.9,trap:70.6,pat:"5日+11.8%",note:"⭐PCB绩优龙头·缺货受益"},
+      {r:18,sym:"sh600150",n:"中国船舶",m:"高端制造",s:"造船",c:34.3,chg:-0.58,chg20:-2.47,netR:3.0,netYi:17.7,trap:76.1,pat:"金针探底",note:"守周MA5·订单至2028"},
+      {r:19,sym:"sz300394",n:"天孚通信",m:"科技板块",s:"光模块CPO",c:116.3,chg:13.82,chg20:-40.96,netR:-7.5,netYi:-96.3,trap:87.4,pat:"多方炮暴拉",note:"85亿反包·超跌高弹"},
+      {r:20,sym:"sz300502",n:"新易盛",m:"科技板块",s:"光模块CPO",c:181.36,chg:9.92,chg20:-27.94,netR:-4.1,netYi:-122.0,trap:75.6,pat:"205亿反包",note:"成交第2·收复周MA5"}
+    ];
+
+    const STOCKS = [
+      {sym:"sh601689",n:"拓普集团",cat:"人形机器人",c:52.92,chg:10.0,vwap:47.76,wma5:47.82,trap:0.0,vr:1.46,pat:["多方炮","放量反包"],sup:"49.44 / 47.82",supRule:"日MA5强势回踩；周MA5+成本47.8铁底",res:"55.00 / 60.00",resLvl:"套牢盘 0.0%，压力极轻",target:"62.0 ~ 68.0",catText:"12月会议+1月CES",why:"大盘暴跌半月逆势沿20日线爬升、20日净流+73亿，11/19阳→11/20缩阴→11/23放量涨停成教科书多方炮！",b:[["11-03",43.9,43.42,44.75,43.2,17.8,44.32,42.7,-0.12,-0.44,0.64],["11-04",43.5,45.51,45.69,42.76,31.2,44.14,42.65,0.04,-0.34,0.77],["11-05",44.99,45.79,46.58,44.27,30.5,44.4,42.79,0.19,-0.24,0.85],["11-06",43.8,44.71,45.62,43.51,21.8,44.73,42.87,0.22,-0.15,0.73],["11-09",45.4,46.7,47.7,45.38,33.7,45.23,43.13,0.4,-0.04,0.87],["11-10",47.33,48.42,49.44,47.33,38.4,46.23,43.52,0.67,0.1,1.13],["11-11",48.4,51.25,51.7,48.25,61.3,47.37,44.1,1.1,0.3,1.59],["11-12",51.5,50.55,52.5,50.26,46.2,48.33,44.74,1.37,0.52,1.71],["11-13",50.6,50.28,51.86,49.88,26.8,49.44,45.26,1.54,0.72,1.65],["11-16",49.7,49.65,50.82,48.31,33.7,50.03,45.72,1.61,0.9,1.43],["11-17",49.36,48.6,49.81,47.7,28.2,50.07,46.04,1.56,1.03,1.06],["11-18",48.8,48.11,49.48,47.19,23.1,49.44,46.33,1.47,1.12,0.7],["11-19",48.7,49.44,51.29,48.15,45.3,49.22,46.68,1.48,1.19,0.58],["11-20",48.96,48.11,49.98,47.89,34.5,48.78,46.85,1.37,1.23,0.29],["11-23",48.5,52.92,52.92,47.75,54.3,49.44,47.29,1.65,1.31,0.68]]},
+      {sym:"sz002050",n:"三花智控",cat:"人形机器人",c:33.88,chg:7.9,vwap:34.28,wma5:33.41,trap:65.0,vr:1.64,pat:["多方炮","放量反包"],sup:"33.41 / 32.60",supRule:"回踩周MA5(33.41)缩量企稳",res:"34.30 / 36.70",resLvl:"34.3为20日成本线，突破看36.7",target:"39.5 ~ 43.0",catText:"Optimus执行器双龙共振",why:"量比1.64一阳吞四阴重站周MA5，20日净流+115.7亿，与拓普同日触发多方炮！",b:[["11-03",33.45,33.02,34.06,32.85,40.4,33.99,33.34,-0.29,-0.41,0.24],["11-04",33.03,34.57,34.6,32.41,81.1,33.77,33.28,-0.2,-0.37,0.34],["11-05",34.0,34.88,35.3,33.83,68.7,33.85,33.33,-0.1,-0.31,0.43],["11-06",33.4,33.67,34.4,33.4,44.8,33.93,33.33,-0.12,-0.27,0.32],["11-09",34.2,34.24,35.55,34.1,61.8,34.08,33.4,-0.08,-0.23,0.3],["11-10",34.66,35.35,36.47,34.61,94.7,34.54,33.55,0.03,-0.18,0.43],["11-11",35.1,36.35,36.7,35.03,107.5,34.9,33.8,0.2,-0.1,0.61],["11-12",36.25,34.61,36.27,34.44,91.1,34.84,34.0,0.19,-0.04,0.48],["11-13",34.6,34.87,35.85,34.6,62.1,35.08,34.18,0.21,0.01,0.4],["11-16",34.69,33.63,34.69,33.21,52.4,34.96,34.23,0.11,0.03,0.17],["11-17",33.35,32.88,34.07,32.58,49.0,34.47,34.22,-0.02,0.02,-0.07],["11-18",33.2,32.29,33.3,31.95,39.2,33.66,34.19,-0.17,-0.02,-0.3],["11-19",32.3,32.54,33.34,31.96,44.7,33.24,34.17,-0.27,-0.07,-0.4],["11-20",31.9,31.4,32.45,31.4,48.4,32.55,33.98,-0.43,-0.14,-0.58],["11-23",31.01,33.88,34.29,31.01,88.5,32.6,33.96,-0.36,-0.18,-0.34]]},
+      {sym:"sh600406",n:"国电南瑞",cat:"中国六张网",c:24.92,chg:-0.08,vwap:23.87,wma5:24.03,trap:2.8,vr:0.86,pat:["缩量横盘","多头排列"],sup:"24.03 / 23.82",supRule:"周MA5+MA20+成本三线合一铁底",res:"25.20 / 27.50",resLvl:"套牢盘仅 2.8%，压力极轻",target:"28.5 ~ 31.0",catText:"特高压+AI算力供电",why:"大盘暴跌时逆势突破后沿5日线缩量洗盘，上方套牢盘仅2.8%，最适合小白的稳健底仓！",b:[["11-03",23.48,23.87,23.87,23.36,50.8,23.44,23.03,0.29,0.23,0.14],["11-04",23.97,23.7,23.98,23.57,44.6,23.51,23.09,0.3,0.24,0.12],["11-05",23.65,23.53,23.78,23.32,51.2,23.56,23.12,0.29,0.25,0.08],["11-06",23.68,23.86,24.0,23.33,68.2,23.7,23.19,0.31,0.26,0.09],["11-09",23.89,23.68,23.95,23.58,31.3,23.73,23.24,0.3,0.27,0.06],["11-10",23.61,23.4,23.68,23.37,27.1,23.63,23.28,0.27,0.27,0.0],["11-11",23.42,23.1,23.48,23.05,38.9,23.51,23.33,0.22,0.26,-0.08],["11-12",23.08,23.18,23.18,22.82,42.6,23.44,23.36,0.19,0.25,-0.12],["11-13",23.0,23.26,23.44,22.93,27.5,23.32,23.39,0.16,0.23,-0.14],["11-16",23.18,24.19,24.28,23.01,113.1,23.43,23.45,0.21,0.23,-0.02],["11-17",24.39,24.5,24.59,24.19,96.1,23.65,23.53,0.28,0.24,0.09],["11-18",24.85,24.6,24.85,24.34,69.6,23.95,23.62,0.34,0.26,0.16],["11-19",24.44,24.84,24.9,24.41,59.8,24.28,23.7,0.39,0.28,0.22],["11-20",24.61,24.94,24.94,24.38,72.5,24.61,23.77,0.44,0.32,0.25],["11-23",24.81,24.92,24.92,24.4,61.9,24.76,23.82,0.47,0.35,0.25]]},
+      {sym:"sz002714",n:"牧原股份",cat:"猪肉防御",c:45.38,chg:1.18,vwap:43.58,wma5:44.17,trap:7.5,vr:0.98,pat:["回踩周MA5反弹","低套牢"],sup:"44.17 / 43.58",supRule:"周MA5与20日成本双重有效防线",res:"46.60 / 50.00",resLvl:"套牢盘仅 7.5%，前高压力极轻",target:"52.0 ~ 58.0",catText:"产能出清+通威并购天邦",why:"20日净流比+46.9%(+173亿)，银行白酒补跌时逆势连收两阳，最优质逆周期防御！",b:[["11-03",41.41,43.01,43.16,41.0,66.3,41.27,41.3,0.06,-0.03,0.18],["11-04",43.0,43.13,43.5,42.68,44.3,41.82,41.34,0.19,0.01,0.35],["11-05",43.1,43.75,43.85,42.78,40.9,42.34,41.47,0.34,0.08,0.52],["11-06",43.43,44.4,44.98,43.4,50.1,43.14,41.63,0.5,0.16,0.68],["11-09",44.41,44.55,45.05,44.12,33.9,43.77,41.77,0.64,0.26,0.76],["11-10",44.29,44.57,44.69,44.1,21.9,44.08,41.95,0.74,0.35,0.77],["11-11",44.5,44.11,44.78,44.02,31.2,44.28,42.11,0.77,0.44,0.67],["11-12",43.91,44.61,44.78,43.71,37.4,44.45,42.36,0.83,0.52,0.63],["11-13",44.6,45.84,46.0,44.23,59.1,44.74,42.59,0.96,0.61,0.71],["11-16",45.9,46.3,46.59,45.62,52.8,45.09,42.85,1.09,0.7,0.78],["11-17",45.99,45.82,46.18,45.41,33.7,45.34,43.1,1.15,0.79,0.71],["11-18",45.81,45.57,45.81,45.08,31.7,45.63,43.28,1.15,0.86,0.58],["11-19",45.37,44.45,45.57,44.04,43.0,45.6,43.4,1.06,0.9,0.31],["11-20",44.15,44.85,44.99,43.8,40.9,45.4,43.56,1.0,0.92,0.16],["11-23",44.52,45.38,45.5,44.29,36.4,45.21,43.76,0.99,0.94,0.1]]},
+      {sym:"sz300476",n:"胜宏科技",cat:"PCB缺货",c:115.1,chg:6.36,vwap:131.97,wma5:121.98,trap:88.4,vr:1.28,pat:["多方炮","平底双针"],sup:"111.38 / 105.00",supRule:"回踩日MA5有效；105.0双针铁底",res:"122.0 / 132.0",resLvl:"周MA5上方套牢偏重，看超跌波段",target:"135 ~ 148",catText:"全球PCB严重短缺",why:"11/17与今日双踩105.0构筑平底双针+MACD金叉+多方炮，缺货涨价与双底共振！",b:[["11-03",132.0,122.71,134.99,121.65,45.6,147.49,179.44,-21.63,-16.78,-9.7],["11-04",125.77,135.24,135.99,118.67,54.0,138.48,175.68,-22.21,-17.86,-8.69],["11-05",128.01,135.0,139.3,128.01,42.8,133.4,172.12,-22.43,-18.78,-7.31],["11-06",122.4,124.31,126.8,119.0,38.1,130.46,168.2,-23.2,-19.66,-7.08],["11-09",128.25,131.42,137.48,126.8,43.1,129.74,164.93,-22.98,-20.32,-5.3],["11-10",138.0,132.8,138.9,131.61,33.1,131.75,161.62,-22.43,-20.75,-3.36],["11-11",132.45,145.97,148.32,132.45,51.1,133.9,159.16,-20.69,-20.73,0.09],["11-12",142.26,137.8,151.9,137.31,56.1,134.46,156.75,-19.75,-20.54,1.58],["11-13",137.0,123.24,139.18,122.0,55.1,134.25,153.81,-19.94,-20.42,0.95],["11-16",118.04,109.02,120.36,108.5,43.5,129.77,150.42,-21.0,-20.53,-0.94],["11-17",107.14,106.88,111.96,105.0,36.1,124.58,146.53,-21.76,-20.78,-1.97],["11-18",113.91,113.74,115.55,109.87,42.5,118.14,142.82,-21.57,-20.94,-1.26],["11-19",111.5,112.96,114.5,110.33,26.8,113.17,139.57,-21.23,-21.0,-0.46],["11-20",110.1,108.22,112.8,108.22,27.7,110.16,135.81,-21.1,-21.02,-0.17],["11-23",106.62,115.1,116.2,105.0,45.8,111.38,132.16,-20.21,-20.86,1.29]]},
+      {sym:"sz300502",n:"新易盛",cat:"光模块CPO",c:181.36,chg:9.92,vwap:188.89,wma5:180.41,trap:75.6,vr:1.26,pat:["205亿反包","底背离"],sup:"180.4 / 166.3",supRule:"回踩172-176不破日MA5有效",res:"190.2 / 225.0",resLvl:"190元附近20日线压力较重",target:"220 ~ 245",catText:"Coherent回购+NVDA+8%",why:"11/19创低152时MACD底背离，今日205亿全市场成交第2收复周MA5！",b:[["11-03",185.0,173.36,190.19,171.6,96.8,209.21,286.75,-52.9,-43.53,-18.73],["11-04",176.0,196.5,199.98,172.0,114.2,197.15,277.12,-52.63,-45.35,-14.56],["11-05",184.0,185.61,192.4,177.64,117.9,188.59,267.48,-52.7,-46.82,-11.75],["11-06",166.0,172.1,178.0,161.16,90.4,183.81,257.57,-53.22,-48.1,-10.24],["11-09",175.0,176.0,184.12,169.01,77.4,180.71,248.99,-52.72,-49.02,-7.38],["11-10",188.01,183.8,191.51,183.04,87.1,182.8,240.62,-51.1,-49.44,-3.32],["11-11",187.3,215.0,216.35,187.3,124.9,186.5,234.83,-46.76,-48.9,4.29],["11-12",212.5,205.58,225.0,204.9,119.2,190.5,229.81,-43.58,-47.84,8.52],["11-13",209.96,187.58,212.5,186.0,100.8,193.59,223.84,-42.02,-46.68,9.3],["11-16",182.77,166.8,183.7,165.0,90.5,191.75,216.78,-41.99,-45.74,7.5],["11-17",163.62,160.0,167.46,155.24,87.6,186.99,209.87,-42.02,-44.99,5.95],["11-18",162.01,158.21,163.35,155.3,80.4,175.63,203.07,-41.71,-44.34,5.25],["11-19",153.05,167.06,171.08,152.0,90.2,167.93,198.53,-40.29,-43.53,6.48],["11-20",160.01,165.0,170.96,158.31,89.0,163.41,193.73,-38.88,-42.6,7.44],["11-23",165.24,181.36,183.6,165.24,117.4,166.33,190.21,-36.02,-41.28,10.52]]},
+      {sym:"sz300059",n:"东方财富",cat:"券商哨兵",c:18.62,chg:1.14,vwap:18.51,wma5:18.34,trap:45.7,vr:1.27,pat:["均线粘合","温和放量"],sup:"18.34 / 17.91",supRule:"周MA5有效，17.91下影铁底",res:"19.50 / 21.00",resLvl:"19.50前高为中等压力",target:"22.5 ~ 25.0",catText:"1.55万亿成交+12月旗手",why:"日线MA5/MA20极度粘合+20日主力净流+258亿，破19.50鸣枪主升！",b:[["11-03",18.5,18.86,18.98,18.5,328.2,18.23,18.07,-0.01,-0.11,0.2],["11-04",18.85,19.2,19.5,18.61,379.3,18.47,18.14,0.06,-0.08,0.28],["11-05",19.05,18.98,19.17,18.88,262.8,18.67,18.23,0.11,-0.04,0.29],["11-06",18.66,18.78,19.04,18.63,172.9,18.91,18.27,0.12,-0.01,0.26],["11-09",18.9,18.78,19.0,18.75,109.5,18.92,18.31,0.13,0.02,0.23],["11-10",18.94,18.78,18.98,18.65,128.5,18.9,18.35,0.14,0.04,0.19],["11-11",18.7,18.56,18.75,18.5,142.1,18.78,18.38,0.13,0.06,0.13],["11-12",18.54,18.23,18.61,18.23,165.5,18.63,18.38,0.09,0.07,0.04],["11-13",18.22,18.29,18.42,18.16,149.4,18.53,18.38,0.06,0.07,-0.01],["11-16",18.27,18.33,18.42,18.12,149.8,18.44,18.4,0.04,0.06,-0.03],["11-17",18.3,18.37,18.42,18.08,161.9,18.36,18.42,0.03,0.06,-0.05],["11-18",18.3,18.38,18.42,18.17,132.4,18.32,18.44,0.02,0.05,-0.05],["11-19",18.37,18.37,18.41,18.22,122.1,18.35,18.47,0.02,0.04,-0.05],["11-20",18.21,18.41,18.49,17.91,224.6,18.37,18.46,0.01,0.04,-0.05],["11-23",18.45,18.62,18.67,18.38,218.3,18.43,18.47,0.03,0.04,-0.01]]},
+      {sym:"sz000426",n:"兴业银锡",cat:"白银周期",c:19.65,chg:5.53,vwap:22.85,wma5:21.75,trap:95.9,vr:1.14,pat:["放量反包"],sup:"18.38 / 18.80",supRule:"今日低点18.38针尖底",res:"21.75 / 22.90",resLvl:"周MA5上方套牢偏重，宜波段",target:"24.5 ~ 27.0",catText:"白银+3.38%+FOMC拐点",why:"白银深蹲20%后放量+5.53%阳包阴，A股最纯正高弹性银矿，埋伏2027Q1主升！",b:[["11-03",23.06,21.75,23.2,21.69,61.0,23.45,27.54,-2.93,-2.54,-0.78],["11-04",21.91,23.94,23.94,21.53,81.1,23.13,27.16,-2.83,-2.6,-0.47],["11-05",25.2,25.83,26.34,24.9,115.8,23.44,26.93,-2.57,-2.59,0.04],["11-06",24.53,24.68,25.68,24.53,65.3,23.78,26.57,-2.43,-2.56,0.26],["11-09",25.17,24.32,25.39,24.25,48.5,24.1,26.27,-2.32,-2.51,0.38],["11-10",24.88,24.6,25.05,24.4,42.3,24.67,26.0,-2.19,-2.45,0.52],["11-11",23.9,24.9,24.92,23.78,45.1,24.87,25.78,-2.03,-2.36,0.67],["11-12",24.39,23.68,24.89,23.65,49.8,24.44,25.57,-1.99,-2.29,0.61],["11-13",23.81,22.84,23.98,22.73,42.9,24.07,25.29,-1.99,-2.23,0.47],["11-16",22.22,20.89,22.28,20.78,66.3,23.38,24.9,-2.13,-2.21,0.16],["11-17",20.74,21.07,21.7,20.05,57.7,22.68,24.53,-2.2,-2.21,0.01],["11-18",20.8,20.12,20.8,19.58,67.9,21.72,24.09,-2.31,-2.23,-0.16],["11-19",19.99,19.81,20.2,19.34,51.0,20.95,23.7,-2.39,-2.26,-0.26],["11-20",19.0,18.62,19.08,18.45,58.9,20.1,23.25,-2.52,-2.31,-0.42],["11-23",18.68,19.65,19.79,18.38,69.2,19.85,22.9,-2.51,-2.35,-0.32]]},
+      {sym:"sh601398",n:"工商银行 ⚠️",cat:"双顶风向标",c:9.15,chg:-2.66,vwap:8.72,wma5:8.92,trap:2.3,vr:1.47,pat:["高位放量阴","防双顶"],sup:"8.92 / 8.72",supRule:"跌破9.00确认阶段双顶",res:"9.49",resLvl:"避险资金正在获利撤退",target:"短线回避",catText:"反向指标：银行弱=成长强",why:"11/20创9.49新高后今日量比1.47收-2.66%大阴线，避险资金换仓铁证！",b:[["11-03",8.75,8.59,8.77,8.32,648.4,8.67,8.44,0.18,0.17,0.01],["11-04",8.54,8.41,8.56,8.37,581.9,8.64,8.45,0.15,0.17,-0.03],["11-05",8.38,8.35,8.4,8.17,621.3,8.56,8.46,0.13,0.16,-0.07],["11-06",8.38,8.44,8.44,8.26,483.2,8.5,8.48,0.11,0.15,-0.08],["11-09",8.36,8.61,8.61,8.34,361.1,8.48,8.5,0.11,0.14,-0.06],["11-10",8.53,8.6,8.63,8.51,215.0,8.48,8.51,0.11,0.14,-0.05],["11-11",8.63,8.53,8.7,8.53,283.3,8.51,8.52,0.1,0.13,-0.05],["11-12",8.51,8.69,8.7,8.47,355.0,8.57,8.54,0.11,0.13,-0.04],["11-13",8.65,8.85,8.86,8.65,352.0,8.66,8.56,0.12,0.13,-0.0],["11-16",8.83,9.05,9.05,8.82,371.3,8.74,8.59,0.15,0.13,0.04],["11-17",9.05,9.06,9.07,8.93,347.9,8.84,8.63,0.17,0.14,0.06],["11-18",9.03,9.06,9.1,8.97,285.9,8.94,8.66,0.19,0.15,0.07],["11-19",9.07,9.1,9.1,9.0,241.9,9.02,8.68,0.2,0.16,0.08],["11-20",9.09,9.4,9.49,9.04,485.9,9.13,8.74,0.23,0.17,0.11],["11-23",9.28,9.15,9.37,9.08,566.4,9.15,8.76,0.23,0.18,0.09]]}
+    ];
+
+    let currentMode = '1600', activeUsKey = 'MU', activeIdxKey = 'SH', activeStockIdx = 0, quizAnswers = {};
+
+    function getThemeColors() {
+      const cs = getComputedStyle(document.documentElement);
+      return {
+        muted: cs.getPropertyValue('--muted').trim() || '#7c89a1',
+        border: cs.getPropertyValue('--border').trim() || 'rgba(255,255,255,0.08)',
+        up: cs.getPropertyValue('--up').trim() || '#f43f5e',
+        down: cs.getPropertyValue('--down').trim() || '#10b981',
+        gold: cs.getPropertyValue('--gold').trim() || '#e5c158',
+        ma5: '#f59e0b', ma20: '#a855f7', vwap: '#38bdf8', wma5: '#34d399'
+      };
+    }
+
+    function toggleTheme() {
+      const el = document.documentElement;
+      const isDark = el.getAttribute('data-theme') !== 'light';
+      el.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      document.getElementById('themeToggle').textContent = isDark ? '🌙 深色' : '☀️ 浅色';
+      setTimeout(redrawAll, 30);
+    }
+
+    function setupCanvas(canvas) {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      const w = Math.max(280, rect.width || canvas.parentElement.clientWidth || 600);
+      const h = parseInt(canvas.getAttribute('height'), 10) || 260;
+      canvas.width = w * dpr; canvas.height = h * dpr; canvas.style.height = h + 'px';
+      const ctx = canvas.getContext('2d'); ctx.scale(dpr, dpr);
+      return { ctx, w, h };
+    }
+
+    function drawSentimentChart() {
+      const canvas = document.getElementById('sentimentCanvas');
+      if (!canvas || canvas.offsetParent === null) return;
+      const { ctx, w, h } = setupCanvas(canvas);
+      const C = getThemeColors();
+      const padL = 30, padR = 14, padT = 14, padB = 20, plotW = w - padL - padR, plotH = h - padT - padB;
+      const n = SENTIMENT_HISTORY.length;
+      const xAt = i => padL + (i / (n - 1)) * plotW, yAt = v => padT + (1 - v / 100) * plotH;
+
+      ctx.save(); ctx.setLineDash([4, 3]); ctx.lineWidth = 1;
+      ctx.strokeStyle = 'rgba(244,63,94,0.55)'; ctx.beginPath(); ctx.moveTo(padL, yAt(80)); ctx.lineTo(w - padR, yAt(80)); ctx.stroke();
+      ctx.strokeStyle = 'rgba(16,185,129,0.65)'; ctx.beginPath(); ctx.moveTo(padL, yAt(20)); ctx.lineTo(w - padR, yAt(20)); ctx.stroke();
+      ctx.restore();
+
+      ctx.fillStyle = C.muted; ctx.font = '10px monospace';
+      [100, 80, 50, 20, 0].forEach(v => ctx.fillText(String(v), 4, yAt(v) + 3));
+
+      const grad = ctx.createLinearGradient(0, padT, 0, padT + plotH);
+      grad.addColorStop(0, 'rgba(229,193,88,0.26)'); grad.addColorStop(1, 'rgba(16,185,129,0.03)');
+      ctx.beginPath();
+      SENTIMENT_HISTORY.forEach((p, i) => { if (i === 0) ctx.moveTo(xAt(i), yAt(p[1])); else ctx.lineTo(xAt(i), yAt(p[1])); });
+      ctx.lineTo(xAt(n - 1), yAt(0)); ctx.lineTo(xAt(0), yAt(0)); ctx.closePath();
+      ctx.fillStyle = grad; ctx.fill();
+
+      ctx.strokeStyle = C.gold; ctx.lineWidth = 2.4; ctx.beginPath();
+      SENTIMENT_HISTORY.forEach((p, i) => { if (i === 0) ctx.moveTo(xAt(i), yAt(p[1])); else ctx.lineTo(xAt(i), yAt(p[1])); });
+      ctx.stroke();
+
+      SENTIMENT_HISTORY.forEach((p, i) => {
+        const x = xAt(i), y = yAt(p[1]);
+        if (i === n - 2 || i === n - 1 || i === 2) {
+          ctx.fillStyle = p[1] <= 20 ? C.down : (i === n - 1 ? C.up : C.gold);
+          ctx.beginPath(); ctx.arc(x, y, 4, 0, Math.PI * 2); ctx.fill();
+          ctx.font = 'bold 10.5px monospace';
+          ctx.fillText(p[1] + (i === n - 2 ? '冰点' : (i === n - 1 ? '今' : '')), x - 14, y - 7);
+        }
+        if (i === 0 || i === n - 1 || i % 3 === 0) {
+          ctx.fillStyle = C.muted; ctx.font = '10px monospace';
+          ctx.fillText(p[0], x - 14, h - 4);
+        }
+      });
+    }
+
+    function drawKlineChart(canvasId, item, annotateDiv = false, divLabel = '') {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas || !item || !item.b || canvas.offsetParent === null) return;
+      const { ctx, w, h } = setupCanvas(canvas);
+      const C = getThemeColors();
+      const bars = item.b, n = bars.length;
+      const padL = 50, padR = 12, padT = 12, padB = 20;
+      const plotW = w - padL - padR, kTop = padT, kH = h * 0.50, vTop = kTop + kH + 10, vH = h * 0.16, mTop = vTop + vH + 12, mH = h - mTop - padB;
+      let minP = Infinity, maxP = -Infinity, maxV = 0, maxM = 0.01;
+      bars.forEach(b => {
+        minP = Math.min(minP, b[4], b[6] || b[4], b[7] || b[4]); maxP = Math.max(maxP, b[3], b[6] || b[3], b[7] || b[3]);
+        maxV = Math.max(maxV, b[5]); maxM = Math.max(maxM, Math.abs(b[8] || 0), Math.abs(b[9] || 0), Math.abs(b[10] || 0));
+      });
+      if (item.vwap) { minP = Math.min(minP, item.vwap); maxP = Math.max(maxP, item.vwap); }
+      if (item.wma5) { minP = Math.min(minP, item.wma5); maxP = Math.max(maxP, item.wma5); }
+      const pPad = (maxP - minP) * 0.08 || 1; minP -= pPad; maxP += pPad;
+      const xAt = i => padL + (i + 0.5) * (plotW / n), yP = p => kTop + (maxP - p) / (maxP - minP) * kH;
+
+      ctx.strokeStyle = C.border; ctx.lineWidth = 0.8; ctx.fillStyle = C.muted; ctx.font = '10px monospace';
+      for (let g = 0; g <= 3; g++) {
+        const y = kTop + (kH / 3) * g, val = maxP - ((maxP - minP) / 3) * g;
+        ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(w - padR, y); ctx.stroke();
+        ctx.fillText(val >= 1000 ? val.toFixed(0) : val.toFixed(2), 4, y + 3);
+      }
+      ctx.beginPath(); ctx.moveTo(padL, vTop - 4); ctx.lineTo(w - padR, vTop - 4); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(padL, mTop - 5); ctx.lineTo(w - padR, mTop - 5); ctx.stroke();
+      ctx.fillText('VOL', 6, vTop + 10); ctx.fillText('MACD', 4, mTop + 10);
+
+      if (item.vwap) { ctx.save(); ctx.setLineDash([4, 3]); ctx.strokeStyle = C.vwap; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(padL, yP(item.vwap)); ctx.lineTo(w - padR, yP(item.vwap)); ctx.stroke(); ctx.restore(); }
+      if (item.wma5) { ctx.save(); ctx.setLineDash([2, 2]); ctx.strokeStyle = C.wma5; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(padL, yP(item.wma5)); ctx.lineTo(w - padR, yP(item.wma5)); ctx.stroke(); ctx.restore(); }
+
+      const bw = Math.max(4, Math.min(18, (plotW / n) * 0.56));
+      bars.forEach((b, i) => {
+        const x = xAt(i), col = b[2] >= b[1] ? C.up : C.down;
+        ctx.strokeStyle = col; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(x, yP(b[3])); ctx.lineTo(x, yP(b[4])); ctx.stroke();
+        ctx.fillStyle = col; ctx.fillRect(x - bw / 2, Math.min(yP(b[1]), yP(b[2])), bw, Math.max(1.5, Math.abs(yP(b[2]) - yP(b[1]))));
+        ctx.globalAlpha = 0.72; ctx.fillRect(x - bw / 2, vTop + vH - (b[5] / (maxV || 1)) * vH, bw, (b[5] / (maxV || 1)) * vH); ctx.globalAlpha = 1;
+        if (i === 0 || i === n - 1 || i % Math.max(1, Math.floor(n / 5)) === 0) { ctx.fillStyle = C.muted; ctx.fillText(b[0], x - 14, h - 5); }
+      });
+
+      const drawL = (idx, color) => { ctx.strokeStyle = color; ctx.lineWidth = 1.5; ctx.beginPath(); let st = false; bars.forEach((b, i) => { if (b[idx] == null) return; const x = xAt(i), y = yP(b[idx]); if (!st) { ctx.moveTo(x, y); st = true; } else ctx.lineTo(x, y); }); ctx.stroke(); };
+      drawL(6, C.ma5); drawL(7, C.ma20);
+
+      const mMid = mTop + mH / 2;
+      ctx.strokeStyle = C.border; ctx.lineWidth = 0.8; ctx.beginPath(); ctx.moveTo(padL, mMid); ctx.lineTo(w - padR, mMid); ctx.stroke();
+      bars.forEach((b, i) => { const x = xAt(i), val = b[10] || 0, mh = (val / maxM) * (mH * 0.45); ctx.fillStyle = val >= 0 ? C.up : C.down; ctx.fillRect(x - bw * 0.35, val >= 0 ? mMid - mh : mMid, bw * 0.7, Math.max(1, Math.abs(mh))); });
+      const drawM = (idx, color) => { ctx.strokeStyle = color; ctx.lineWidth = 1.2; ctx.beginPath(); bars.forEach((b, i) => { const x = xAt(i), y = mMid - ((b[idx] || 0) / maxM) * (mH * 0.45); if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }); ctx.stroke(); };
+      drawM(8, '#38bdf8'); drawM(9, '#f59e0b');
+
+      if (annotateDiv && n >= 15) {
+        ctx.save(); ctx.strokeStyle = C.up; ctx.lineWidth = 1.8; ctx.setLineDash([4, 2]);
+        ctx.beginPath(); ctx.moveTo(xAt(0), yP(bars[0][4])); ctx.lineTo(xAt(n - 1), yP(bars[n - 1][4])); ctx.stroke();
+        ctx.strokeStyle = C.down;
+        ctx.beginPath(); ctx.moveTo(xAt(0), mMid - (bars[0][8] / maxM) * (mH * 0.45)); ctx.lineTo(xAt(n - 1), mMid - (bars[n - 1][8] / maxM) * (mH * 0.45)); ctx.stroke(); ctx.restore();
+        ctx.fillStyle = C.up; ctx.font = 'bold 11px sans-serif'; ctx.fillText('价格创新低 ↘', xAt(Math.floor(n * 0.46)), yP(bars[n - 1][4]) - 8);
+        ctx.fillStyle = C.down; ctx.fillText(divLabel || 'MACD DIF抬高 ↗ (底背驰)', xAt(Math.floor(n * 0.30)), mTop + 12);
+      }
+    }
+
+    function drawCumVolChart() {
+      const canvas = document.getElementById('cumVolCanvas');
+      if (!canvas || canvas.offsetParent === null) return;
+      const { ctx, w, h } = setupCanvas(canvas);
+      const C = getThemeColors();
+      const getCum = sym => { const st = STOCKS.find(s => s.sym === sym); if (!st) return []; let acc = 0, base = st.b[0][5] || 1; return st.b.map(x => { acc += x[5]; return acc / base; }); };
+      const dates = STOCKS[0].b.map(x => x[0]);
+      const series = [
+        {color:'#f43f5e',vals:getCum('sh601689')},{color:'#38bdf8',vals:getCum('sz300502')},
+        {color:'#f59e0b',vals:getCum('sz300059')},{color:'#10b981',vals:getCum('sh601398')},{color:'#ec4899',vals:getCum('sz002714')}
+      ];
+      let maxY = 1; series.forEach(s => s.vals.forEach(v => maxY = Math.max(maxY, v))); maxY *= 1.08;
+      const padL = 38, padR = 14, padT = 12, padB = 22, plotW = w - padL - padR, plotH = h - padT - padB, n = dates.length;
+      const xAt = i => padL + (i / (n - 1)) * plotW, yAt = v => padT + (1 - v / maxY) * plotH;
+      ctx.strokeStyle = C.border; ctx.lineWidth = 0.8; ctx.fillStyle = C.muted; ctx.font = '10px monospace';
+      for (let g = 0; g <= 4; g++) { const y = padT + (plotH / 4) * g; ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(w - padR, y); ctx.stroke(); ctx.fillText((maxY * (1 - g / 4)).toFixed(0) + 'x', 4, y + 3); }
+      series.forEach(s => { ctx.strokeStyle = s.color; ctx.lineWidth = 2.3; ctx.beginPath(); s.vals.forEach((v, i) => { if (i === 0) ctx.moveTo(xAt(i), yAt(v)); else ctx.lineTo(xAt(i), yAt(v)); }); ctx.stroke(); ctx.fillStyle = s.color; ctx.beginPath(); ctx.arc(xAt(n - 1), yAt(s.vals[n - 1]), 3.8, 0, Math.PI * 2); ctx.fill(); });
+      ctx.fillStyle = C.muted; dates.forEach((d, i) => { if (i === 0 || i === n - 1 || i % 3 === 0) ctx.fillText(d, xAt(i) - 14, h - 6); });
+    }
+
+    function selectUsChart(key) {
+      activeUsKey = key;
+      ['MU','NVDA','IXIC','LLY','GOLD'].forEach(k => { const b = document.getElementById('us-btn-' + k); if (b) b.classList.toggle('active', k === key); });
+      const d = US_CHARTS[key];
+      document.getElementById('us-chart-title').textContent = `${d.n} · 近15日真实K线 / 均线 / 量能 / MACD`;
+      document.getElementById('us-chart-note').textContent = d.note;
+      drawKlineChart('usCanvas', d, false);
+    }
+
+    function selectIndexChart(key) {
+      activeIdxKey = key;
+      ['SH','CYB','CSI1000'].forEach(k => { const b = document.getElementById('idx-btn-' + k); if (b) b.classList.toggle('active', k === key); });
+      const d = CN_INDICES[key];
+      document.getElementById('idx-chart-title').textContent = `${d.n} · 近15日真实K线 / 均线 / 成交量 / MACD`;
+      document.getElementById('idx-chart-note').textContent = d.note;
+      drawKlineChart('indexCanvas', d, false);
+    }
+
+    function filterTop20(cat) {
+      document.querySelectorAll('#top20-filters button').forEach(b => b.classList.toggle('active', b.dataset.f === cat));
+      const list = cat === 'ALL' ? TOP20 : TOP20.filter(x => x.m === cat);
+      document.getElementById('top20-tbody').innerHTML = list.map(x => {
+        const hasChart = STOCKS.findIndex(s => s.sym === x.sym);
+        return `<tr>
+          <td class="mono"><b>#${String(x.r).padStart(2,'0')}</b></td>
+          <td style="white-space:nowrap;">${hasChart >= 0 ? `<button onclick="jumpToStock(${hasChart})" class="link-btn">${x.n}</button>` : `<b>${x.n}</b>`} <span class="mono muted" style="font-size:10.5px;">${x.sym}</span></td>
+          <td style="white-space:nowrap;"><span class="badge b-gold">${x.s}</span></td>
+          <td class="num mono" style="white-space:nowrap;">${x.c.toFixed(2)} <span class="${x.chg>=0?'up':'down'}">(${x.chg>=0?'+':''}${x.chg.toFixed(1)}%)</span></td>
+          <td class="num mono ${x.chg20>=0?'up':'down'}">${x.chg20>=0?'+':''}${x.chg20.toFixed(1)}%</td>
+          <td class="num mono ${x.netR>=0?'up':'down'}" style="white-space:nowrap;">${x.netR>=0?'+':''}${x.netR}% / ${x.netYi>=0?'+':''}${x.netYi}亿</td>
+          <td class="num mono ${x.trap<=15?'up':''}">${x.trap<=15?'<b>'+x.trap+'%</b>':x.trap+'%'}</td>
+          <td style="white-space:nowrap;font-size:11.5px;">${x.pat}</td>
+          <td style="color:var(--text-2);">${x.note}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    function jumpToStock(idx) { selectStock(idx); document.getElementById('sec-stocks').scrollIntoView({ behavior:'smooth' }); }
+
+    function renderStockList() {
+      document.getElementById('stock-list').innerHTML = STOCKS.map((s, idx) => `
+        <button onclick="selectStock(${idx})" class="stock-btn ${idx === activeStockIdx ? 'active' : ''}">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-weight:700;font-size:13px;">${s.n} <span class="mono muted" style="font-weight:400;font-size:11px;">${s.sym}</span></span>
+            <span class="mono ${s.chg>=0?'up':'down'}" style="font-weight:700;font-size:12.5px;">${s.c} (${s.chg>=0?'+':''}${s.chg}%)</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:11px;" class="muted">
+            <span>${s.cat} · 套牢 ${s.trap}%</span><span>${s.pat[0]||''}</span>
+          </div>
+        </button>`).join('');
+    }
+
+    function selectStock(idx) {
+      activeStockIdx = idx; const s = STOCKS[idx]; renderStockList();
+      document.getElementById('st-title').textContent = `${s.n} (${s.sym})`;
+      document.getElementById('st-cat').textContent = s.cat;
+      document.getElementById('st-patterns').innerHTML = s.pat.map(p => `<span class="badge ${s.chg>=0?'b-up':'b-warn'}">${p}</span>`).join('');
+      document.getElementById('st-subtitle').textContent = `20日主力成本 ${s.vwap} · 周线MA5 ${s.wma5} · 量比 ${s.vr}`;
+      document.getElementById('st-price').textContent = s.c.toFixed(2);
+      const chgEl = document.getElementById('st-chg'); chgEl.textContent = `${s.chg>=0?'+':''}${s.chg.toFixed(2)}%`; chgEl.className = s.chg>=0?'up':'down';
+      document.getElementById('st-support').textContent = s.sup; document.getElementById('st-support-rule').textContent = s.supRule;
+      document.getElementById('st-resist').textContent = s.res; document.getElementById('st-resist-lvl').textContent = s.resLvl;
+      document.getElementById('st-target').textContent = s.target; document.getElementById('st-trapped').textContent = `上方套牢盘：${s.trap}%`;
+      document.getElementById('st-vol').textContent = `量比 ${s.vr}x`; document.getElementById('st-catalyst').textContent = s.catText;
+      document.getElementById('st-why').textContent = s.why;
+      drawKlineChart('stockCanvas', s, false);
+    }
+
+    function switchMode(mode) {
+      currentMode = mode;
+      ['0830','1200','1600'].forEach(m => {
+        document.getElementById('view-' + m).classList.toggle('hidden', m !== mode);
+        document.getElementById('btn-mode-' + m).classList.toggle('active', m === mode);
+        const dock = document.getElementById('dock-' + m);
+        if (dock) dock.classList.toggle('active', m === mode);
+      });
+      document.getElementById('nav-0830').classList.toggle('hidden', mode !== '0830');
+      document.getElementById('nav-1600').classList.toggle('hidden', mode !== '1600');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(redrawAll, 40);
+    }
+
+    function answerQuiz(qNum, choice) {
+      const ok = (qNum === 1 && choice === 'B') || (qNum === 2 && choice === 'A');
+      quizAnswers[qNum] = ok;
+      const fb = document.getElementById(`q${qNum}-fb`); fb.classList.remove('hidden');
+      fb.style.background = ok ? 'var(--up-soft)' : 'var(--warn-soft)';
+      fb.style.border = ok ? '1px solid var(--up-border)' : '1px solid var(--warn-border)';
+      fb.innerHTML = qNum === 1
+        ? (ok ? '🎉 <b>回答正确！</b> 缩量阴洗盘后放量涨停反包是经典多方炮，等回踩低吸！' : '💡 <b>再想想！</b> 选B，这是主力洗盘结束加速的多方炮形态。')
+        : (ok ? '🎉 <b>完全掌握！</b> 银行放量收阴+成长底背离反包 = 高低切换实锤！' : '💡 <b>复盘提示！</b> 选A，新高次日放量长阴是避险资金兑现切成长。');
+      document.getElementById('quiz-score').textContent = `得分：${(quizAnswers[1]?1:0)+(quizAnswers[2]?1:0)} / 2`;
+    }
+
+    function redrawAll() {
+      if (currentMode === '0830') {
+        selectUsChart(activeUsKey);
+      } else if (currentMode === '1600') {
+        drawSentimentChart();
+        selectIndexChart(activeIdxKey);
+        selectStock(activeStockIdx);
+        drawCumVolChart();
+        drawKlineChart('hstechCanvas', CN_INDICES.HSTECH, true, 'DIF抬高 ↗ (恒科日线底背离萌芽)');
+        drawKlineChart('teachCanvas', CN_INDICES.CYB, true, 'DIF抬高 ↗ (创业板日线底背驰!)');
+      }
+    }
+
+    window.addEventListener('load', () => { filterTop20('ALL'); redrawAll(); });
+    window.addEventListener('resize', () => { clearTimeout(window._rt); window._rt = setTimeout(redrawAll, 120); });
+  </script>
+</body>
+</html>
