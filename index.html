@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="theme-color" content="#f5f5f7" id="metaTheme" />
-  <title>大师复盘 · 2026-11-23</title>
+  <title>大师复盘 · 2026-11-24 早盘</title>
   <style>
     /* ================ Apple / iPhone 原生级设计体系（零外链 · 手机零溢出 · 极致清晰） ================ */
     :root, [data-theme="light"] {
@@ -283,7 +283,7 @@
       <div class="nav-top">
         <div class="nav-title-wrap">
           <h1 class="nav-title">大师复盘终端</h1>
-          <div class="nav-sub">2026-11-23 周一 · 累积第1期 · 红涨绿跌</div>
+          <div class="nav-sub">2026-11-24 周二 · 累积第2期(早盘) · 红涨绿跌</div>
         </div>
         <button id="themeBtn" onclick="toggleTheme()" class="icon-btn">🌙 深色</button>
       </div>
@@ -291,15 +291,15 @@
       <!-- Apple 原生三档分段切换器 -->
       <div class="seg-wrap">
         <div class="seg-control">
-          <button id="seg-0830" onclick="switchMode('0830')" class="seg-btn">08:30 美股深度</button>
+          <button id="seg-0830" onclick="switchMode('0830')" class="seg-btn active">08:30 美股深度</button>
           <button id="seg-1200" onclick="switchMode('1200')" class="seg-btn">12:00 午盘精简</button>
-          <button id="seg-1600" onclick="switchMode('1600')" class="seg-btn active">16:00 收盘全景</button>
+          <button id="seg-1600" onclick="switchMode('1600')" class="seg-btn">16:00 收盘全景</button>
         </div>
       </div>
 
       <!-- 横向滑动子导航 -->
-      <div id="chips-0830" class="chip-scroller hidden">
-        <a href="#us-view-top" class="chip accent">🔴实时实盘</a>
+      <div id="chips-0830" class="chip-scroller">
+        <a href="#us-view-top" class="chip accent">⚡收盘结论</a>
         <a href="#us-sectors" class="chip">📊6大板块+加密</a>
         <a href="#us-3day" class="chip">📅美股3日预测</a>
         <a href="#us-topics" class="chip">🔥焦点深度</a>
@@ -308,7 +308,7 @@
         <a href="#us-quant" class="chip">🤖Jane Street</a>
         <a href="#us-gurus" class="chip">🧠大咖与映射</a>
       </div>
-      <div id="chips-1600" class="chip-scroller">
+      <div id="chips-1600" class="chip-scroller hidden">
         <a href="#s-sentiment" class="chip accent">🌡️情绪 34分</a>
         <a href="#s-breaking-jensen" class="chip" style="background:var(--up-bg);color:var(--up);">🚨黄仁勋重回CEO</a>
         <a href="#s-tldr" class="chip">⚡核心观点</a>
@@ -331,141 +331,147 @@
     <!-- ====================================================================== -->
     <!-- ==================== 08:30 早盘美股深度视图 ==================== -->
     <!-- ====================================================================== -->
-    <div id="view-0830" class="view-pane hidden">
+    <div id="view-0830" class="view-pane">
 
-      <!-- 置顶：🔴 此时此刻美股实盘实时直击（美东 11/23 09:54 ET / 北京时间 22:54） -->
+      <!-- 置顶：🌅 08:30 早盘 · 美股 11/23 收盘终极版（北京时间 11/24 05:00 收盘） -->
       <section id="us-view-top" class="card" style="border:1.5px solid var(--up);">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-          <span class="tag t-up">🔴 美股实盘直击 · 22:54 北京时间实时更新</span>
-          <span class="mono muted" style="font-size:11.5px;">开盘半小时 · 10Y美债 4.96% · VIX 28.94</span>
+          <span class="tag t-up">🌅 08:30 早盘 · 美股 11/23 收盘终极版</span>
+          <span class="mono muted" style="font-size:11.5px;">10Y 4.92% · VIX 26.62 (-25.8%) · 美元 104.3</span>
         </div>
-        <h2 style="font-size:17.5px;margin:0 0 8px;line-height:1.35;">黄仁勋复职引爆大盘跳空暴涨，现阶段「大盘高开低走、ANT 逆势转跌、英伟达依然最坚挺 <span class="up mono">+29.7%</span>」！</h2>
-        <p style="font-size:13px;color:var(--text-2);margin:0 0 12px;">英伟达董事会全票即刻恢复黄仁勋 CEO &amp; 董事职务（美政府高层背书「无国安风险」）。开盘半小时多空剧烈换手：<b>纳指 23,927 (+5.79% · 较开盘 -1.30%)</b>、<b>标普 7,194 (+4.10% · 较开盘 -0.46%)</b>、<b>费城半导体 9,412 (+11.94% · 较开盘 -1.92%)</b>、<b>道指 49,321 (+2.44% 低开高走)</b>。</p>
+        <h2 style="font-size:17.5px;margin:0 0 8px;line-height:1.35;">⚡30秒结论：黄仁勋复职引爆史诗反弹，纳指 <span class="up mono">+6.51%</span>、标普 <span class="up mono">+4.73%</span>（2025年4月以来最佳单日）；但这是「超跌反弹第一棒」，今天 A股/港股是<b>高开兑现日，不是追高日</b>！</h2>
+        <p style="font-size:13px;color:var(--text-2);margin:0 0 12px;">收盘：<b>纳指 24,089.56</b>、<b>标普 7,237.17</b>、<b>道指 49,595.31 (+1,448点 +3.01%)</b>、<b>费城半导体 9,588 (+14.03%)</b>，一天收复上周暴跌（2008年以来最差周之一）的一半以上。<b>NVDA 收 $165.05 (+31.48%)</b>，单日市值约 +$9,500亿，接近 2000年以来最佳单日；<b>ANT 逆势 -1.43%</b> 守住 $83 发行价。</p>
 
-        <!-- 实盘核心风向标矩阵 -->
         <div class="grid cols-4 cols-2-mob" style="margin-bottom:12px;">
-          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>NVDA 英伟达</span><span class="tag t-up">最坚挺</span></div><div class="idx-val mono up">$162.78</div><div class="idx-sub mono up"><b>+29.67%</b> · 低$156.9强承接</div></div>
-          <div class="idx-card" style="background:var(--down-bg);"><div class="idx-name"><span>ANT Anthropic</span><span class="tag t-down">逆势跌</span></div><div class="idx-val mono down">$88.19</div><div class="idx-sub mono down"><b>-0.81%</b> · 较开盘-5.87%</div></div>
-          <div class="idx-card"><div class="idx-name"><span>^IXIC 纳指</span><span class="tag t-warn">高开低走</span></div><div class="idx-val mono up">23,927</div><div class="idx-sub mono"><b class="up">+5.79%</b> · 较开盘-1.3%</div></div>
-          <div class="idx-card"><div class="idx-name"><span>BTC 比特币</span><span class="tag t-up">共振反弹</span></div><div class="idx-val mono up">$62,641</div><div class="idx-sub mono up"><b>+2.42%</b> · MARA+15.3%</div></div>
+          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>NVDA 英伟达</span><span class="tag t-up">史诗级</span></div><div class="idx-val mono up">$165.05</div><div class="idx-sub mono up"><b>+31.48%</b> · 日内$156.9–$171.5</div></div>
+          <div class="idx-card"><div class="idx-name"><span>^IXIC 纳指</span><span class="tag t-warn">仍在MA20下</span></div><div class="idx-val mono up">24,090</div><div class="idx-sub mono"><b class="up">+6.51%</b> · MA20 24,998</div></div>
+          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>MU 美光</span><span class="tag t-up">放量+72%</span></div><div class="idx-val mono up">$707.70</div><div class="idx-sub mono up"><b>+19.04%</b> · 站上MA5</div></div>
+          <div class="idx-card" style="background:var(--down-bg);"><div class="idx-name"><span>ANT Anthropic</span><span class="tag t-down">被抽血</span></div><div class="idx-val mono down">$87.64</div><div class="idx-sub mono down"><b>-1.43%</b> · 低$84.65 盘后$87.93</div></div>
         </div>
 
         <div class="grid cols-3">
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">1. 为什么 ANT（Anthropic）逆势下跌？</div>
-            <div style="font-size:12.5px;color:var(--text-2);">ANT 高开 $93.69 后急砸至低点 $84.79（逼近 11/19 发行价 <b>$83</b>）现 $88.19(-0.81%)。两大死因：① <b>今日是 IPO 后 T+2（期权最快挂牌首日）</b>，近 2 万亿高估值新股遭遇空头对冲+打新获利盘集中砸盘；② <b>老黄回归抽血！</b> 机构立刻「卖超贵大模型新股 ANT &amp; 卖替代品 AMD/AVGO → 回补最硬算力底座 NVDA」！</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">1. 今晨最重要的一句话（给 A股/港股）</div>
+            <div style="font-size:12.5px;color:var(--text-2);">美股这根跳空大阳＝<b>情绪修复 + 空头回补 + 期权 Gamma 逼空</b>，还不是新主升确认：纳指收在 MA20(24,998) 下方，NVDA 收在 MA20($178.9) 下方。对 A股：CPO/PCB/存储/机器人<b>今天大概率高开</b>，正确动作是<b>持仓者冲高兑现 1/3、空仓者等 10:00 后分歧低吸</b>。</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--orange);">2. 为什么大盘有点高开低走？</div>
-            <div style="font-size:12.5px;color:var(--text-2);">① <b>利率与波动警报未解除</b>：10Y 美债盘中反抽至 <b>4.96% (+0.9%)</b>，VIX 仍高达 <b>28.94</b>，压制无差别普涨；② 上周暴跌后短线抄底盘 + 量化做市商开盘借跳空兑现利润；③ 周三 <b>11/25 10月PCE</b> 与感恩节假期前，机构不愿盲目追高全线拉升。</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--orange);">2. 为什么收盘没有涨在最高点？</div>
+            <div style="font-size:12.5px;color:var(--text-2);">纳指开 24,270 → 收 24,090，标普收盘≈开盘：① <b>10Y 美债 4.92% 没降</b>，12/9 加息概率仍约 <b>93.5%</b>；② 美元指数 <b>+0.49% 至 104.3</b>；③ 软件股被并购拖累（<b>CRWD 换股收购 ZS，CRWD -8.9%</b>）；④ 资金从 ANT 等高估值新股撤出，只集中买硬件龙头。</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">3. 为什么英伟达依然坚挺？</div>
-            <div style="font-size:12.5px;color:var(--text-2);">NVDA 开 $167.04、下探 $156.93 后立刻拉回 <b>$162.78 (+29.67%)</b>，表现远强于 AMD(较开盘-6.1%)、AVGO(-4.2%) 与小盘存储！背后是<b>“国安风险官方排雷 + 估值腰斩修复 + Jane Street/做市商 Gamma 被迫回补”</b>三重硬买盘，<b>$156–$158</b> 成为今晚强弱分水岭！</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">3. 为什么 NVDA 是全场最强？</div>
+            <div style="font-size:12.5px;color:var(--text-2);">成交 <b>7.76 亿股</b>（天量），收盘 <b>$165.05</b> 一举站上 MA5($148.6)、贴近 20日成本线 <b>$167.3</b>。三重买盘：<b>国安风险官方排雷（特朗普称「我的干预非常重要」）+ 估值腰斩修复 + 做市商 Gamma 回补</b>。今晚胜负手：<b>$167–$171.5 能否站稳</b>。</div>
           </div>
         </div>
       </section>
 
-      <!-- 美股 6 大核心板块全景与龙头个股实时分析（含加密货币！） -->
+      <!-- 美股 6 大核心板块 + 加密货币收盘全景 -->
       <section id="us-sectors">
         <div class="sec-header">
-          <div class="sec-eyebrow">US 6 SECTORS LIVE · 实时盘面分化全景</div>
-          <h2 class="sec-h2">美股六大板块 &amp; 加密货币实时龙头拆解</h2>
+          <div class="sec-eyebrow">US 6 SECTORS + CRYPTO · 11/23 收盘全景</div>
+          <h2 class="sec-h2">美股六大板块 &amp; 加密货币收盘龙头拆解</h2>
         </div>
 
         <div class="card card-tight">
           <div class="ios-list">
             <!-- 1. 半导体 -->
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 核心</span><b>1. 半导体芯片（费半 ^SOX +11.94%）</b></div><span class="tag t-warn">剧烈分化</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 核心</span><b>1. 半导体芯片（费半 ^SOX 9,588 +14.03%）</b></div><span class="tag t-warn">龙头强·替代弱</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">NVDA / TSM</span><br/><b class="up">$162.8 (+29.7%) / $364 (+14.2%)</b></div>
-                <div><span class="muted">ARM / INTC / ASML</span><br/><b class="up">+14.0% / +11.5% / +9.2%</b></div>
-                <div><span class="muted">AMD / AVGO</span><br/><b style="color:var(--orange)">+2.9%(-6.1%开) / +0.9%(-4.2%开)</b></div>
+                <div><span class="muted">NVDA / TSM</span><br/><b class="up">$165.05 (+31.5%) / $363.6 (+14.1%)</b></div>
+                <div><span class="muted">INTC / ARM / ASML</span><br/><b class="up">+16.3% / +16.1% / +9.3%</b></div>
+                <div><span class="muted">AMD / AVGO</span><br/><b style="color:var(--orange)">$453.5 (+6.9%) / $313.6 (+3.0%)</b></div>
               </div>
-              <div class="row-note"><b>大师拆解</b>：老黄回归直接逆转“NVDA失位利好AMD/博通”的旧逻辑！资金从 AMD($436.8)/AVGO($307.3) 大幅撤出回流 <b>NVDA + 代工垄断 TSM + 算力云 CRWV(+18.1%)</b>。首选 <b>NVDA(回踩$150-156) &amp; TSM($345支撑)</b>，短期回避高开回落的 AMD。</div>
+              <div class="row-note"><b>大师拆解</b>：老黄回归直接逆转「NVDA 失位→利好 AMD/博通」的旧逻辑。AMD 开 $476 收 $453（日内回吐 -4.8%），AVGO 仍在 MA5($332) 下方——资金在<b>卖替代品、买正主</b>。首选 <b>NVDA（回踩 $157–$160）&amp; TSM（支撑 $351 MA5 / 压力 $389 MA20）</b>，AMD/AVGO 等站回 MA5 再说。</div>
             </div>
 
-            <!-- 2. 存储芯片 -->
+            <!-- 2. 存储 -->
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 高赔率</span><b>2. 存储芯片（高开消化浮筹 · 2027 第一赔率）</b></div><span class="tag t-up">全线+11%~14%</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 高赔率</span><b>2. 存储芯片（美光放量领涨 · 2027 第一赔率）</b></div><span class="tag t-up">MU +19%</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">MU 美光 ⭐</span><br/><b class="up">$672.5 (+13.1%)</b></div>
-                <div><span class="muted">SNDK 闪迪</span><br/><b class="up">$90.2 (+13.8% · 开-8.5%)</b></div>
-                <div><span class="muted">STX / WDC</span><br/><b class="up">$511 (+11.9%) / $292 (+11.7%)</b></div>
+                <div><span class="muted">MU 美光 ⭐</span><br/><b class="up">$707.70 (+19.04%)</b></div>
+                <div><span class="muted">WDC / STX</span><br/><b class="up">$297.3 (+13.8%) / $520.1 (+13.8%)</b></div>
+                <div><span class="muted">SNDK 闪迪</span><br/><b class="down">$87.7（冲$99回落 -11%）</b></div>
               </div>
-              <div class="row-note"><b>大师拆解</b>：美光开 $690.7 冲 $693.9 后回踩 $666.7 现 $672.5，表现显著抗跌于闪迪(-8.5%较开盘)与希捷(-7.6%较开盘)。高盛看 2027 HBM 涨价 +122%、2027E PE 仅 6x，<b>MU 回踩 $640–$655 是黄金低吸区</b>。</div>
+              <div class="row-note"><b>大师拆解</b>：美光成交 <b>4,940 万股，较三个月均量 +72%</b>——这是真金白银的放量，不是空涨；花旗称「AI 基建开支担忧被夸大」再添一把火。<b>MU 站上 MA5($682)</b>，上方压力 <b>20日成本 $759 / MA20 $777</b>，支撑 <b>$682 / $667(昨日低点)</b>。闪迪冲高回落最弱，说明资金只抱龙头。</div>
             </div>
 
-            <!-- 3. 光芯片 / 光模块 -->
+            <!-- 3. 光芯片 -->
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 暴走</span><b>3. 光芯片 / 光模块 / AI 网络（明早 A 股 CPO 风向标！）</b></div><span class="tag t-up">全线+11%~18%</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 弹性王</span><b>3. 光芯片 / 光模块 / AI 网络（今天 A股 CPO 风向标）</b></div><span class="tag t-up">+13%~18%</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">AAOI / LITE</span><br/><b class="up">$38.8 (+17.9%) / $537 (+16.7%)</b></div>
-                <div><span class="muted">MRVL / COHR</span><br/><b class="up">$140 (+14.5%) / $214 (+14.3%)</b></div>
-                <div><span class="muted">CIEN / FN / ANET</span><br/><b class="up">+12.7% / +11.2% / +7.5%</b></div>
+                <div><span class="muted">MRVL / LITE</span><br/><b class="up">$144.7 (+18.4%) / $544.4 (+18.2%)</b></div>
+                <div><span class="muted">AAOI / FN / COHR</span><br/><b class="up">+17.5% / +15.5% / +15.3%</b></div>
+                <div><span class="muted">CIEN / ANET</span><br/><b class="up">+13.0% / +6.4%</b></div>
               </div>
-              <div class="row-note"><b>大师拆解</b>：英伟达算力集群扩张最直接受益环节！COHR 叠加 $20 亿回购高开 $232 回踩 $214 仍涨 +14.3%，LITE(光芯片龙头)+16.7%、MRVL(光DSP)+14.5%。但开盘后均回吐 4%–8%，<b>直接印证我们给 A 股 CPO(新易盛/中际/天孚) 明早「不追 9:30 竞价、等 10:00 分歧低吸」的精准预判！</b></div>
+              <div class="row-note"><b>大师拆解</b>：涨幅全场第一梯队，但<b>全部收在开盘价下方</b>（COHR 开 $232 收 $215.8，LITE 开 $564 收 $544）。这就是给 A股的剧本：<b>新易盛/中际旭创/天孚通信今天高开后极易冲高回落</b>，不追 9:30 竞价，等 10:00–10:30 回踩分时均线不破再低吸。</div>
             </div>
 
-            <!-- 4. 医药 / 生物制药 -->
+            <!-- 4. 医药 -->
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-blue">★★★★☆ 防御真神</span><b>4. 医药 / 生物制药（大盘回落时资金反而低开高走！）</b></div><span class="tag t-up">稳健走强</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-blue">★★★★☆ 防守</span><b>4. 医药 / 生物制药（科技狂欢日照样收红）</b></div><span class="tag t-up">稳健</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">LLY 礼来 ⭐</span><br/><b class="up">$1,367.1 (+1.40% · 低开高走)</b></div>
-                <div><span class="muted">NVO / MRK / ABBV</span><br/><b class="up">+2.54% / +1.17% / +0.77%</b></div>
-                <div><span class="muted">JNJ / UNH</span><br/><b class="down">+0.12% / UNH -3.86%</b></div>
+                <div><span class="muted">LLY 礼来 ⭐</span><br/><b class="up">$1,364.6 (+1.30%)</b></div>
+                <div><span class="muted">NVO / MRK / ABBV</span><br/><b class="up">+3.5% / +1.3% / +0.8%</b></div>
+                <div><span class="muted">JNJ / UNH</span><br/><b class="down">-0.2% / -1.1%（低开高走）</b></div>
               </div>
-              <div class="row-note"><b>大师拆解</b>：科技股高开低走之际，<b>礼来 LLY 低开 $1,345 稳步拉升至 $1,367(+1.64%较开盘)</b>、诺和诺德 NVO +2.54%、默沙东/艾伯维全线走高——机构正在用「AI 进攻 + 礼来医药防守」做杠铃对冲！UNH(-3.86%) 医保承压回避。</div>
+              <div class="row-note"><b>大师拆解</b>：礼来 20日逆势 <b>+6.7%</b>，昨夜冲 $1,381.7 后收 $1,364.6，仍略低于 MA5($1,372)——机构在用「AI 进攻 + 礼来防守」做杠铃。UNH 从 $319 拉回 $336，医保股止跌迹象。礼来低吸区 <b>$1,330–$1,345</b>。</div>
             </div>
 
-            <!-- 5. 消费 / 零售 / 端侧 -->
+            <!-- 5. 消费 / 科技巨头 -->
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-blue">★★★★☆ 黑五催化</span><b>5. 消费 / 零售 / 端侧巨头（特斯拉低开高走最强！）</b></div><span class="tag t-up">消费托底</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-blue">★★★★☆ 黑五</span><b>5. 消费 / 科技巨头 / AI 软件</b></div><span class="tag t-warn">分化</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">TSLA 特斯拉 ⭐</span><br/><b class="up">$383.7 (+10.95% · 越走越强)</b></div>
-                <div><span class="muted">MSFT / AMZN / AAPL</span><br/><b class="up">+3.7% / +2.7% / +1.7%</b></div>
-                <div><span class="muted">HD / PG / WMT / COST</span><br/><span>+1.2% / +0.3% / -0.2% / -0.6%</span></div>
+                <div><span class="muted">TSLA 特斯拉 ⭐</span><br/><b class="up">$385.5 (+11.46%)</b></div>
+                <div><span class="muted">META / GOOGL / AMZN</span><br/><b class="up">+6.6% / +6.3% / +3.5%</b></div>
+                <div><span class="muted">AAPL / MSFT / COST</span><br/><span>+1.9% / +1.7% / -0.4%</span></div>
               </div>
-              <div class="row-note"><b>大师拆解</b>：<b>特斯拉 TSLA</b> 开 $374.8 一路拉到 $383.7（较开盘 +2.36%，今日走势最像主升浪的大巨头，叠加上下游机器人共振！）；必选消费 <b>PG(+1.4%较开盘)/KO(+2.0%较开盘)/WMT(+0.9%较开盘)</b> 早盘低开后资金明显回流承接，迎本周黑色星期五消费大考。</div>
+              <div class="row-note"><b>大师拆解</b>：<b>特斯拉收在 MA20($384.5) 上方，七巨头里形态最好</b>（机器人逻辑共振 A股拓普/三花）。微软开 $506 收 $492.5，几乎收在最低点，偏弱。AI 软件里 <b>CRWV +22.3%、PLTR +11.1%</b>，但 <b>CRWD -8.9%</b>（发起史上最大网安并购被砸）。必选消费 WMT +1.3%、KO -1.1%，迎接周五黑五大考。</div>
             </div>
 
-            <!-- 6. 加密货币 & 加密概念股 -->
+            <!-- 6. 加密 -->
             <div class="ios-row" style="background:var(--surface-2);margin:4px -15px -4px;padding:12px 15px;border-radius:14px;">
-              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 高弹性共振</span><b>6. 加密货币 &amp; 加密概念股（矿企 + MSTR 暴力领涨！）</b></div><span class="tag t-up">双轮驱动</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-warn">★★★☆☆ 落后</span><b>6. 加密货币 &amp; 加密概念股（冲高回落·跟涨不领涨）</b></div><span class="tag t-warn">收在日内低位</span></div>
               <div class="row-metrics mono" style="background:var(--surface);">
-                <div><span class="muted">BTC / ETH / SOL</span><br/><b class="up">$62,641 (+2.4%) / $1,771 (+2.9%) / SOL +7.7%</b></div>
-                <div><span class="muted">MARA / CLSK / RIOT</span><br/><b class="up">+15.3% / +12.4% / +7.3%</b></div>
-                <div><span class="muted">MSTR / HOOD / COIN / IBIT</span><br/><b class="up">+11.3% / +8.9% / +5.2% / +7.3%</b></div>
+                <div><span class="muted">BTC / ETH / SOL</span><br/><b>$61,182 / $1,709 / $72.0</b></div>
+                <div><span class="muted">CLSK / MARA / MSTR</span><br/><b class="up">+13.1% / +9.6% / +8.5%</b></div>
+                <div><span class="muted">HOOD / COIN / IBIT</span><br/><b class="up">+8.4% / +6.7% / +4.9%</b></div>
               </div>
-              <div class="row-note"><b>大师拆解</b>：风险偏好回归 + 黄金($3,664 +4.2%)/白银($43.5 +5.9%)暴涨，加密全线起飞！<b>SOL(+7.68%)</b> 领跑主流币；美股端 <b>MARA(+15.3% 几乎零回吐) &amp; CLSK(+12.4%)</b> 最强，因为矿企叠加了<b>「比特币反弹 + AI 数据中心电力算力转型」</b>双逻辑；<b>MSTR($86.6 +11.3%)</b> 是 Jane Street Q3 增持 +54% 的核心高波标的（高开 $91.2 回踩 $86.6，支撑 $80 / 压力 $98）。<b>稳健首选 IBIT / COIN，高弹性选 MARA / MSTR（逢回踩做波段、切忌满仓高杠杆）！</b></div>
+              <div class="row-note"><b>大师拆解</b>：比特币盘中冲到 $62,641 后回落到 <b>$61,182</b>，20日仍 <b>-20%</b>、远低于 MA20($69,320)。加密股虽然收红，但<b>几乎全部收在日内最低点附近</b>（MSTR 开 $91.2 收 $84.4）——说明风险偏好回来了，但资金没把加密当主线。<b>BTC 站回 $66,000 前只做 IBIT/COIN 小仓位，不追 MSTR/矿股</b>。</div>
             </div>
           </div>
         </div>
+
+        <div class="grid cols-4 cols-2-mob" style="margin-top:12px;">
+          <div class="idx-card"><div class="idx-name"><span>🥇 COMEX 黄金</span><span class="tag t-up">反弹</span></div><div class="idx-val mono up">$3,644</div><div class="idx-sub mono up"><b>+3.7%</b> · 20日-9.8%</div></div>
+          <div class="idx-card"><div class="idx-name"><span>🥈 白银</span><span class="tag t-up">弹性</span></div><div class="idx-val mono up">$43.46</div><div class="idx-sub mono up"><b>+5.9%</b> · NEM+6.4%</div></div>
+          <div class="idx-card"><div class="idx-name"><span>🛢️ WTI 原油</span><span class="tag t-down">回落</span></div><div class="idx-val mono down">$80.48</div><div class="idx-sub mono down"><b>-4.2%</b> · 通胀降温</div></div>
+          <div class="idx-card"><div class="idx-name"><span>🔶 COMEX 铜</span><span class="tag t-up">修复</span></div><div class="idx-val mono up">$5.61</div><div class="idx-sub mono up"><b>+2.5%</b> · 映射紫金/洛钼</div></div>
+        </div>
       </section>
 
-      <!-- 美股未来 3 个交易日精准预测（感恩节假期周！） -->
+      <!-- 美股未来 3 个交易日预测 -->
       <section id="us-3day">
         <div class="sec-header">
-          <div class="sec-eyebrow">US MARKET 3-DAY OUTLOOK · 感恩节假期周实战推演</div>
+          <div class="sec-eyebrow">US MARKET 3-DAY OUTLOOK · 感恩节假期周</div>
           <h2 class="sec-h2">美股未来 3 个交易日预测（11/24 → 11/27）</h2>
         </div>
 
         <div class="grid cols-3">
           <div class="card">
-            <span class="tag t-warn">Day 1 · 11/24（周二）</span>
-            <h3 style="font-size:15px;margin:8px 0 6px;">消化跳空缺口 · 分化震荡换手</h3>
-            <p style="font-size:12.5px;color:var(--text-2);margin:0;">今晚暴拉后 VIX 仍在 28.9、美债 4.96%，明晚大概率<b>回踩检验承接</b>：纳指盯 <b>23,300–23,600</b>，NVDA 盯 <b>$150–$156</b> 支撑，MU 盯 <b>$640–$655</b>；重点警惕 <b>ANT 能否守住 $83 发行价</b>（跌破将压制纯软件 AI，但利好硬件+礼来/消费）。</p>
+            <span class="tag t-warn">Day 1 · 11/24（周二）· 震荡消化 60%</span>
+            <h3 style="font-size:15px;margin:8px 0 6px;">跳空次日：回踩检验承接</h3>
+            <p style="font-size:12.5px;color:var(--text-2);margin:0;">暴涨次日通常先消化获利盘。<b>纳指</b>支撑 <b>23,795（昨日低点）/ 23,600</b>，压力 <b>24,354（昨日高点）/ 25,000（MA20）</b>；<b>NVDA</b> 支撑 <b>$156.9 / $148.6(MA5)</b>，压力 <b>$171.5 / $178.9(MA20)</b>。<b>NVDA 守住 $160 = 机构真买，跌破 $156.9 = 反弹只是空头回补</b>。ANT 若破 $84.65 将直测 $83 发行价。</p>
           </div>
           <div class="card" style="border:1px solid var(--blue);">
-            <span class="tag t-blue">Day 2 · 11/25（周三 · 决战日）</span>
-            <h3 style="font-size:15px;margin:8px 0 6px;">21:30 10月PCE + 贝森特窗口期</h3>
-            <p style="font-size:12.5px;color:var(--text-2);margin:0;">感恩节前最后完整交易日！<b>① 若 PCE 温和</b> → 美债破 4.85%、VIX 跌回 22 下方，纳指站稳 <b>24,200</b> 开启 12 月主升（NVDA 冲 $175、BTC 冲 $66,000）；<b>② 若 PCE 偏热</b> → 科技股再踩缺口下沿，资金切向 <b>LLY 礼来 / 黄金 / 必选消费</b>。</p>
+            <span class="tag t-blue">Day 2 · 11/25（周三）· 决战日</span>
+            <h3 style="font-size:15px;margin:8px 0 6px;">21:30 公布 10月 PCE 物价</h3>
+            <p style="font-size:12.5px;color:var(--text-2);margin:0;">感恩节前最后一个完整交易日。<b>① PCE 温和</b> → 10Y 跌破 4.85%、VIX 回落到 22 以下，纳指挑战 <b>MA20 25,000</b>，NVDA 看 <b>$171–$179</b>，MU 看 <b>$759–$777</b>；<b>② PCE 偏热</b> → 12/9 加息定价拉满，科技股回补缺口到 <b>纳指 23,300–23,600</b>，资金切向 <b>礼来/黄金/必选消费</b>。</p>
           </div>
           <div class="card">
-            <span class="tag t-up">Day 3 · 11/26休市 → 11/27（周五）</span>
-            <h3 style="font-size:15px;margin:8px 0 6px;">黑五半日市 · 零售消费 &amp; CTA回补</h3>
-            <p style="font-size:12.5px;color:var(--text-2);margin:0;"><b>11/26 周四感恩节休市</b>；11/27 周五美东 13:00 提前收盘。缩量半日市由<b>黑五零售数据（WMT/AMZN/COST/AAPL）</b>及月底 <b>CTA 被动回补</b> 主导，易温和收红。<b>3日总策略：周二周三逢回踩分批低吸 NVDA / MU / COHR / LLY / MARA，不追高开尖刺、不碰破发边缘的 ANT！</b></p>
+            <span class="tag t-up">Day 3 · 11/26 休市 → 11/27（周五）</span>
+            <h3 style="font-size:15px;margin:8px 0 6px;">黑五半日市 · 缩量偏暖</h3>
+            <p style="font-size:12.5px;color:var(--text-2);margin:0;"><b>11/26 周四感恩节休市</b>；11/27 周五美东 13:00（北京时间 02:00）提前收盘。半日市成交清淡，由<b>黑五零售数据（WMT/AMZN/COST/AAPL）</b>和月底再平衡主导，偏温和收红。<b>3日总策略：只在回踩时分批买 NVDA / MU / TSM / LLY；不追高开、不碰 ANT 破发边缘、不重仓加密股。</b></p>
           </div>
         </div>
       </section>
@@ -474,72 +480,87 @@
       <section id="us-topics">
         <div class="sec-header">
           <div class="sec-eyebrow">DAILY FOCUS · 每日自主动态甄选</div>
-          <h2 class="sec-h2">今日美股焦点专题（2026-11-23 重磅更新）</h2>
+          <h2 class="sec-h2">今日美股焦点专题（11/24 早盘甄选 3 个）</h2>
         </div>
-        <div class="grid cols-2">
+        <div class="grid cols-3">
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
-              <strong style="font-size:15px;">🚀 黄仁勋王者归来：戴维斯双击全拆解</strong>
-              <span class="tag t-up mono">实盘 $162.78 (+29.7%)</span>
+              <strong style="font-size:15px;">🚀 NVDA +31.48% 之后的下一战场</strong>
+              <span class="tag t-up mono">$165.05</span>
             </div>
             <div style="font-size:13px;color:var(--text-2);display:flex;flex-direction:column;gap:7px;">
-              <div>• <b>11天史诗大反转</b>：11/12 辞职 → 股价从 $243.37 暴跌 -48.4% 至 $125.53（蒸发超 1 万亿美元）→ 11/17 Q3 财报营收 $115.8B(+103%) 炸裂却被治理阴影压制 → 11/21 特朗普力挺 + 11/22 财长贝森特松口 → <b>11/23 08:55 ET 董事会全票复职</b>！</div>
-              <div>• <b>治理排雷三件套</b>：① 独立调查继续走完程序、黄仁勋全力配合；② 设立纯独立董事「国家安全与出口管制监督委员会」；③ 全球招聘首任「首席合规官（CCO）」。既拿回最不可替代的灵魂 CEO，又堵住华盛顿与机构的合规担忧！</div>
+              <div>• <b>11天大反转</b>：11/12 辞职 → 从 $243.37 跌到 $125.53 → <b>11/23 董事会全票复职</b>，一天涨回 +31.48%，但<b>仍比丑闻前低约 32%</b>。</div>
+              <div>• <b>隐忧要记住</b>：彭博称董事会周日下午在白宫压力下决定、高管「最后一刻」才知情；Fortune 指 <b>SEC 调查</b>仍在进行，CFO Colette Kress 受关注；公司治理专家意见分裂。</div>
               <div class="inset-box" style="font-size:12.5px;">
-                <b>英伟达新阶梯推演（$1500亿回购护航）</b>：<br/>
-                <span class="down">• 短线回踩支撑</span>：<b>$150–$156</b>（实盘下探 $156.9 即拉回，极强！）<br/>
-                <span style="color:var(--orange)">• 第一强压力区</span>：<b>$175–$185</b>（11/9–12 丑闻筹码密集区）<br/>
-                <span class="up">• 中期目标价</span>：基本面 Q4 指引 $130B 叠加灵魂回归，2027 重看 <b>$220–$250</b>！
+                <span class="down">• 支撑</span>：<b>$156.9（昨日低）/ $148.6（MA5）</b><br/>
+                <span style="color:var(--orange)">• 压力</span>：<b>$171.5（昨日高）/ $178.9（MA20）/ $185</b><br/>
+                <span class="up">• 2027 目标</span>：<b>$220–$250</b>（Q4 指引 $130B + $1,500亿回购）
               </div>
             </div>
           </div>
 
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
-              <strong style="font-size:15px;">💾 美光(MU)实盘+13% + ANT破发预警</strong>
-              <span class="tag t-up mono">MU $672.5 (+13.1%)</span>
+              <strong style="font-size:15px;">💾 美光放量 +19% vs ANT 被抽血</strong>
+              <span class="tag t-up mono">MU $707.7</span>
             </div>
             <div style="font-size:13px;color:var(--text-2);display:flex;flex-direction:column;gap:7px;">
-              <div>• <b>美光错杀修复</b>：FY26 营收 $133.2B、毛利率 87%、2027E PE 仅 6x；实盘冲 $694 后回踩 $672.5，高盛判 DRAM 紧缺贯穿 <b>2027 至 2028H1</b>，<b>2027 HBM 均价暴涨 +122%</b> 至 $3.7/Gb。</div>
-              <div>• <b>⚠️ 新股王 ANT（Anthropic）避坑警报</b>：11/19 史上最大 $813 亿 IPO（发行价 $83），今日 T+2 期权挂牌首日高开 $93.7 急杀至 $84.8 现 $88.2(-0.8%)，资金明显从近 2 万亿估值软件新股回流硬件龙头！</div>
+              <div>• <b>美光</b>：放量 +72% 收 $707.70，花旗称 AI 开支担忧被夸大；高盛判断 DRAM 紧缺贯穿 2027 至 2028H1，2027 HBM 均价 +122%。</div>
+              <div>• <b>ANT（Anthropic）</b>：11/19 以 $83 发行（史上最大 $813亿 IPO），首日收 $97.17，11/20 -8.5%，11/23 再 -1.43% 收 $87.64。昨日<b>期权首日上市 + 2倍杠杆多空 ETF 上线</b>，波动被放大，资金明显从软件新股流向硬件龙头。</div>
               <div class="inset-box" style="font-size:12.5px;">
-                <b>美光 2027 分月目标路径</b>（支撑 $640/$585 · 压力 $700/$787）：<br/>
-                · <b>26.12–27.01</b>：加速冲击 <b>$750~$800</b><br/>
-                · <b>27.03–06</b>：HBM4 放量冲击 <b>$900~$1,050</b><br/>
-                · <b>27 Q3</b>：乐观重测前高 <b>$1,100~$1,200</b>
+                <b>美光 2027 目标路径</b>（支撑 $682/$667 · 压力 $759/$777）：<br/>
+                · <b>26.12–27.01</b>：收复 MA20 后看 <b>$800–$850</b><br/>
+                · <b>27.03–06</b>：HBM4 放量看 <b>$900–$1,050</b><br/>
+                · <b>27 Q3</b>：乐观重测前高 <b>$1,100</b> 附近
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
+              <strong style="font-size:15px;">🛡️ CrowdStrike $439亿换股收购 Zscaler</strong>
+              <span class="tag t-down mono">CRWD -8.9%</span>
+            </div>
+            <div style="font-size:13px;color:var(--text-2);display:flex;flex-direction:column;gap:7px;">
+              <div>• <b>条款</b>：每股 ZS 换 <b>1.135 股 CRWD</b>，按 11/20 收盘溢价约 34%；史上最大网络安全并购，预计 <b>2027年8月–2028年1月</b>完成。</div>
+              <div>• <b>市场反应</b>：收购方 <b>CRWD -8.92% 收 $208.97</b>（股权被稀释）、被收购方 <b>ZS +17.67% 收 $229.24</b>。同日 CRWD Q3 营收 $15.8亿(+28%)、净新增 ARR $4.19亿创纪录(+58%)。</div>
+              <div class="inset-box" style="font-size:12.5px;">
+                <b>小白要学的规律</b>：换股并购时，<b>收购方常跌、被收购方涨向报价</b>。<br/>
+                <b>A股映射</b>：网络安全（奇安信/深信服/启明星辰）有情绪催化，但属于<b>二线方向</b>，不作为今天主线。
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 美股实时交互 K 线图 -->
+      <!-- 美股交互 K 线图 -->
       <section id="us-chart-sec" class="card">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:8px;">
-          <strong id="us-chart-title" style="font-size:15px;">美光科技 (MU) · 15日K线</strong>
+          <strong id="us-chart-title" style="font-size:15px;">英伟达 (NVDA) · 15日K线</strong>
           <span id="us-chart-meta" class="mono muted" style="font-size:12px;"></span>
         </div>
         <div class="chip-scroller" style="padding:0 0 10px;">
-          <button onclick="selectUsChart('MU')" id="us-btn-MU" class="chip active">美光 MU</button>
-          <button onclick="selectUsChart('NVDA')" id="us-btn-NVDA" class="chip">英伟达 NVDA</button>
+          <button onclick="selectUsChart('NVDA')" id="us-btn-NVDA" class="chip active">英伟达 NVDA</button>
+          <button onclick="selectUsChart('MU')" id="us-btn-MU" class="chip">美光 MU</button>
           <button onclick="selectUsChart('IXIC')" id="us-btn-IXIC" class="chip">纳斯达克</button>
           <button onclick="selectUsChart('LLY')" id="us-btn-LLY" class="chip">礼来 LLY</button>
+          <button onclick="selectUsChart('BTC')" id="us-btn-BTC" class="chip">比特币 BTC</button>
           <button onclick="selectUsChart('GOLD')" id="us-btn-GOLD" class="chip">COMEX黄金</button>
         </div>
         <div class="chart-box"><canvas id="usCanvas"></canvas></div>
         <p id="us-chart-note" style="font-size:12.5px;color:var(--text-2);margin:10px 0 0;"></p>
       </section>
 
-      <!-- 高盛2027全球评级 + 12大美股目标价/支撑压力卡片流（手机零挤压！） -->
+      <!-- 高盛2027全球评级 + 12大美股目标价/支撑压力卡片流 -->
       <section id="us-targets">
         <div class="sec-header">
           <div class="sec-eyebrow">GOLDMAN SACHS &amp; WALL STREET 2027</div>
-          <h2 class="sec-h2">高盛全球目标价 &amp; 重点美股支撑/压力</h2>
+          <h2 class="sec-h2">高盛全球目标价 &amp; 重点美股支撑/压力（11/23 收盘更新）</h2>
         </div>
 
         <div class="grid cols-4 cols-2-mob" style="margin-bottom:12px;">
-          <div class="idx-card"><div class="idx-name"><span>🇺🇸 标普500</span><span class="tag t-up">超配</span></div><div class="idx-val mono">8,700</div><div class="idx-sub">现6,910 · <b class="up">+25.9%</b></div></div>
-          <div class="idx-card"><div class="idx-name"><span>🇯🇵 日经TOPIX</span><span class="tag t-up">超配</span></div><div class="idx-val mono">4,500</div><div class="idx-sub">美元总回报 <b class="up">+24%</b></div></div>
+          <div class="idx-card"><div class="idx-name"><span>🇺🇸 标普500</span><span class="tag t-up">超配</span></div><div class="idx-val mono">8,700</div><div class="idx-sub">现7,237 · <b class="up">+20.2%</b></div></div>
+          <div class="idx-card"><div class="idx-name"><span>🇯🇵 日经TOPIX</span><span class="tag t-up">超配</span></div><div class="idx-val mono">4,500</div><div class="idx-sub">今早日经 <b class="up">+2.4%</b></div></div>
           <div class="idx-card"><div class="idx-name"><span>🇪🇺 欧股600</span><span class="tag t-down">低配</span></div><div class="idx-val mono">700</div><div class="idx-sub">欧50目标 6,700</div></div>
           <div class="idx-card"><div class="idx-name"><span>🥇 黄金目标</span><span class="tag t-warn">实物牛</span></div><div class="idx-val mono">$5000+</div><div class="idx-sub">高盛$5400·小摩$6600</div></div>
         </div>
@@ -549,86 +570,89 @@
         </div>
       </section>
 
-      <!-- 美联储 / 美债 / CTA 量化资金 -->
+      <!-- 美联储 / 美债 / CTA -->
       <section id="us-macro">
         <div class="sec-header">
           <div class="sec-eyebrow">FED · TREASURY · CTA FLOWS</div>
-          <h2 class="sec-h2">美联储发言 · 美债收益率 · CTA仓位</h2>
+          <h2 class="sec-h2">美联储 · 美债收益率 · 波动率 · CTA仓位</h2>
         </div>
         <div class="grid cols-3">
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <strong>🏛️ 美联储与利率</strong><span class="tag t-down">12/9加息90%</span>
+              <strong>🏛️ 美联储与利率</strong><span class="tag t-down">12/9加息≈93.5%</span>
             </div>
-            <div style="font-size:13px;color:var(--text-2);">现利率 <b>3.75%-4.00%</b>；纽约联储 Williams 支持年内再加息，理事 Waller(11/20)偏鹰；紧盯新主席 Kevin Warsh 及 <b>11/25 21:30 10月PCE</b>。高盛预计首次降息延至 <b>2027H1</b>。</div>
+            <div style="font-size:13px;color:var(--text-2);">现利率 <b>3.75%-4.00%</b>；CME 期货定价 12/9 加息 25bp 概率约 <b>93.5%</b>（上周 Waller 甚至提过 50bp）。昨夜大涨<b>没有改变加息预期</b>，所以 11/25 的 PCE 是本周最大变量。高盛预计首次降息推迟到 <b>2027H1</b>。</div>
           </div>
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <strong>💵 美债收益率</strong><span class="tag t-up">回落喘息</span>
+              <strong>💵 美债 &amp; 美元</strong><span class="tag t-warn">高位横盘</span>
             </div>
-            <div style="font-size:13px;color:var(--text-2);"><b>10Y美债 4.912%</b>（自5.09%回落-2.77%），短端 4.122%；原油跌至$81.99(-19.4%/20日)缓解通胀。10Y跌破 <b>4.70%</b> 即解放全球科技与港股！</div>
+            <div style="font-size:13px;color:var(--text-2);"><b>10Y 4.92%</b>（+0.1%）、5Y 4.73%、3个月 4.15%、30Y 约 5.31%；<b>美元指数 104.32 (+0.49%)</b>。原油跌到 <b>$80.5</b> 缓解通胀压力。<b>10Y 跌破 4.70%</b> 才能真正解放全球科技股和港股估值。</div>
           </div>
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <strong>🤖 高盛CTA量化</strong><span class="tag t-warn">净空 -$190亿</span>
+              <strong>🤖 VIX &amp; CTA</strong><span class="tag t-up">恐慌退潮</span>
             </div>
-            <div style="font-size:13px;color:var(--text-2);">近1月CTA抛售 <b>$570亿</b> 翻为净空头-$190亿；11/5杠杆ETF砸盘$520亿。下周即便上涨模型仍可能卖 <b>$286亿</b>（横盘卖$658亿），短线防二次回踩，翻多后必爆逼空。</div>
+            <div style="font-size:13px;color:var(--text-2);">VIX 从 35.89 暴降到 <b>26.62 (-25.8%)</b>，但仍高于 20 的「正常线」。高盛上周模型显示 CTA 净空约 <b>-$190亿</b>：昨夜大涨触发空头回补，但纳指仍在 MA20 下方，<b>趋势模型还没翻多</b>；站上 25,000 才会出现 CTA 被动买入的第二波。</div>
           </div>
         </div>
       </section>
 
-      <!-- 美股顶级量化与做市商追踪（Jane Street / Citadel / HRT / 多策略对冲基金） -->
+      <!-- Jane Street / 美股量化与期权 Gamma -->
       <section id="us-quant">
         <div class="sec-header">
           <div class="sec-eyebrow">US QUANT &amp; MARKET MAKERS · 华尔街顶级量化追踪</div>
-          <h2 class="sec-h2">Jane Street 简街 &amp; 美股量化/期权 Gamma 监控</h2>
+          <h2 class="sec-h2">Jane Street 简街 &amp; 美股量化/期权 Gamma 复盘</h2>
         </div>
 
         <div class="grid cols-4 cols-2-mob" style="margin-bottom:12px;">
           <div class="idx-card"><div class="idx-name"><span>Jane Street 2026营收</span><span class="tag t-up">霸主</span></div><div class="idx-val mono up">$400亿+</div><div class="idx-sub">占三巨头总收入 <b>62%</b></div></div>
           <div class="idx-card"><div class="idx-name"><span>Q3 持仓 NVDA正股</span><span class="tag t-up">+101.8%</span></div><div class="idx-val mono up">$54.4亿</div><div class="idx-sub">2,383万股 · 第2大持仓</div></div>
-          <div class="idx-card"><div class="idx-name"><span>NVDA 期权双边敞口</span><span class="tag t-warn">Gamma</span></div><div class="idx-val mono">$410亿</div><div class="idx-sub">Call $171亿 · Put $240亿</div></div>
-          <div class="idx-card"><div class="idx-name"><span>AI 自建算力投入</span><span class="tag t-blue">军备赛</span></div><div class="idx-val mono">$190亿</div><div class="idx-sub">算力=新时代高频专线</div></div>
+          <div class="idx-card"><div class="idx-name"><span>NVDA 昨夜成交</span><span class="tag t-warn">天量</span></div><div class="idx-val mono">7.76亿股</div><div class="idx-sub">11/20 为 6.26 亿股</div></div>
+          <div class="idx-card"><div class="idx-name"><span>ANT 昨夜成交</span><span class="tag t-blue">期权首日</span></div><div class="idx-val mono">2.53亿股</div><div class="idx-sub">高 $94.2 → 收 $87.6</div></div>
         </div>
 
         <div class="card card-tight">
           <div class="ios-list">
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><b>🏛️ Jane Street（简街 · Q3 2026 13F，11/12披露）</b><span class="tag t-up">半导体AI重仓</span></div><span class="mono muted">总敞口 $1.19万亿</span></div>
-              <div class="row-note">不含期权持股 <b>$1,071亿</b>；Q3 <b>Top 3 加仓清一色为芯片 AI：SOXX、NVDA(+101.8%)、AVGO</b>；同时 MSTR 加仓 <b>+54%</b>（期权对冲量达正股3倍）并重仓 IBIT。虽 7 月罕见单月亏 $150 亿，截至 8 月中旬全年交易收入仍破 $400 亿，远超 HRT($123亿) 与 Citadel Securities($122亿)。</div>
+              <div class="row-top"><div class="row-left"><b>⚡ 昨夜复盘：Gamma 逼空如何推动 NVDA +31%</b><span class="tag t-up">小白必懂</span></div></div>
+              <div class="row-note">Jane Street / Citadel Securities 是<b>做市商</b>（保持 Delta 中性，不赌方向）。NVDA 暴跌期间市场囤积了大量看跌期权（仅 Jane Street 13F 就列示 <b>1.05 亿股名义 Put / 7,476 万股 Call</b>）。复职消息一出，Put 迅速作废、Call 变成实值，做市商只能<b>在二级市场买入 NVDA 正股与 SOXX/QQQ 对冲</b>——这就是开盘就有人「机械追买」的原因。<b>但 Gamma 买盘是一次性的</b>，今天起要看真实机构资金能否接力。</div>
             </div>
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><b>⚡ 今晚实战核弹：Jane Street 期权 Gamma 逼空机制！</b><span class="tag t-up">小白必懂</span></div></div>
-              <div class="row-note">Jane Street / Citadel Securities 不是赌方向的散户，而是<b>美股 ETF 套利 + 期权做市商</b>（保持 Delta 中性）。此前 NVDA 暴跌时做市商囤积了天量 Put（仅 Jane Street 13F 就列示 <b>1.05 亿股名义 Put / 7,476 万股 Call</b>）；今晚黄仁勋重回 CEO 致 NVDA 跳空暴涨 <b>+29%</b>，大量虚值 Put 归零、Call 变实值，做市商必须<b>被迫在二级市场疯狂买入 NVDA 正股与 SOXX/QQQ 期货对冲 Delta</b>——这就是开盘后「越涨越有人机械追买（Gamma Squeeze）」的底层推手！</div>
+              <div class="row-top"><div class="row-left"><b>🏛️ Jane Street（Q3 2026 13F，11/12 披露）</b><span class="tag t-up">半导体AI重仓</span></div><span class="mono muted">总敞口 $1.19万亿</span></div>
+              <div class="row-note">不含期权持股 <b>$1,071亿</b>；Q3 前三大加仓全部是芯片 AI：<b>SOXX、NVDA(+101.8%)、AVGO</b>；MSTR 加仓 <b>+54%</b> 并重仓 IBIT。昨夜 <b>SOX +14%、NVDA +31%</b> 直接让这批仓位大幅回血；而 MSTR 收在日内低位，说明加密方向的量化买盘偏弱。</div>
             </div>
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><b>🤖 Citadel / HRT / 多策略对冲基金（Millennium · Two Sigma · DE Shaw）</b><span class="tag t-warn">回补在即</span></div></div>
-              <div class="row-note">截至 11/20 当周，全球对冲基金净值单周回撤超 <b>-3%</b>（创 2025年4月以来一年半最大单周跌幅），CTA 近一月机械净卖 $570 亿。随着今晚纳指期货重返 25,865(+2.9%)、标普重返 7,085(+2.1%)，量化空头与多策略止损盘将转为<b>被动回补买盘</b>，但同时需防范美股尾盘获利做市盘回吐。</div>
+              <div class="row-top"><div class="row-left"><b>🤖 Citadel / HRT / 多策略基金（Millennium · Two Sigma · DE Shaw）</b><span class="tag t-warn">回补未完</span></div></div>
+              <div class="row-note">截至 11/20 当周，全球对冲基金净值单周回撤超 <b>-3%</b>（2025年4月以来最大）。昨夜纳指 +6.5% 属于<b>止损空头 + 多策略减仓后的被动回补</b>；由于纳指仍在 MA20 下方、VIX 仍高于 26，<b>量化与 CTA 的系统性加仓要等 PCE 后</b>，这也是为什么今晚易震荡。</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 华尔街大咖13F & A/港跨市场映射 -->
+      <!-- 华尔街大咖 & 今日 A股/港股开盘映射 -->
       <section id="us-gurus" class="grid cols-2">
         <div class="card">
-          <strong style="display:block;font-size:15px;margin-bottom:10px;">🧠 华尔街顶级大咖（Q3 13F）</strong>
+          <strong style="display:block;font-size:15px;margin-bottom:10px;">🧠 华尔街大咖 &amp; 关键人物</strong>
           <div class="ios-list" style="font-size:12.5px;color:var(--text-2);">
-            <div class="ios-row"><div><b>Druckenmiller</b>：重仓 Natera(29%)、<b>希捷STX(9.1%存储)</b>、<b>亚马逊(6.9%)</b>，减拥挤GPU。</div></div>
-            <div class="ios-row"><div><b>Leopold ($1.6B)</b>：SHAZ(28%)、<b>Bloom Energy(24.7% AI电力)</b>、Nebius(21%)、<b>SanDisk(11.6%)</b>。</div></div>
-            <div class="ios-row"><div><b>Nancy Pelosi</b>：买 <b>BE $100 Call(2027-06)</b> + Intel Call；底仓稳握GOOGL/AMZN/NVDA/AVGO。</div></div>
-            <div class="ios-row"><div><b>Michael Burry</b>：关停前$11亿做空NVDA/PLTR，警告1999泡沫（短线已被11月杀跌印证）。</div></div>
-            <div class="ios-row"><div><b>SemiAnalysis vs Tom Lee</b>：前者砍2028 Capex 28%；后者力挺“AI结构性牛市完好”。</div></div>
+            <div class="ios-row"><div><b>特朗普（11/23 CNBC）</b>：「我相信我的干预非常重要」，政府已向英伟达保证黄仁勋复职无国安问题——<b>政策兜底 AI 龙头</b>。</div></div>
+            <div class="ios-row"><div><b>花旗</b>：AI 基建开支担忧被夸大，直接带动美光 +19%、西数/希捷 +13.8%。</div></div>
+            <div class="ios-row"><div><b>Druckenmiller</b>：Q3 重仓 Natera(29%)、<b>希捷STX(9.1%)</b>、<b>亚马逊(6.9%)</b>——昨夜 STX +13.8%。</div></div>
+            <div class="ios-row"><div><b>Leopold ($1.6B)</b>：SHAZ(28%)、<b>Bloom Energy(24.7% AI电力)</b>、Nebius(21%)、SanDisk(11.6%)。</div></div>
+            <div class="ios-row"><div><b>Michael Burry</b>：关停前做空 NVDA/PLTR 警告泡沫——昨夜 NVDA +31%、PLTR +11% 让空头集中回补。</div></div>
           </div>
         </div>
-        <div class="card">
-          <strong style="display:block;font-size:15px;margin-bottom:10px;">🎯 美股 → A股 / 港股直接映射</strong>
+        <div class="card" style="border:1.5px solid var(--up);">
+          <strong style="display:block;font-size:15px;margin-bottom:10px;">🎯 今天 11/24 09:30 A股 / 港股开盘作战图</strong>
           <div class="ios-list" style="font-size:12.5px;color:var(--text-2);">
-            <div class="ios-row"><div><span class="tag t-up">核弹利好</span> <b>黄仁勋复职 NVDA+29% + COHR+15%</b> → 光模块(中际/新易盛/天孚)、PCB(胜宏/沪电)、机器人(拓普/三花)。</div></div>
-            <div class="ios-row"><div><span class="tag t-up">存储牛</span> <b>美光+17% + 高盛看2027 HBM涨+122%</b> → A股存储芯片（兆易创新/澜起科技）。</div></div>
-            <div class="ios-row"><div><span class="tag t-up">AI电力</span> <b>Pelosi/Leopold双押BE</b> → 中国六张网特高压（国电南瑞/特变电工）。</div></div>
-            <div class="ios-row"><div><span class="tag t-up">应用端侧</span> <b>微软Copilotforce/GTA VI + 苹果Agent</b> → 网易/腾讯/小米、传媒/果链。</div></div>
-            <div class="ios-row"><div><span class="tag t-blue">量化共振</span> <b>美股做市商 Gamma 回补 + 纳指期货+2.9%</b> → 明早港股恒科与A股中小盘量化指增全面回血！</div></div>
+            <div class="ios-row"><div><span class="tag t-up">T0 光模块</span> <b>LITE/MRVL +18%、COHR +15%</b> → 新易盛、中际旭创、天孚通信。预计高开 3%–7%，<b>不追竞价</b>；新易盛回踩 <b>172–176</b> 不破再考虑。</div></div>
+            <div class="ios-row"><div><span class="tag t-up">T0 PCB/算力</span> <b>SOX +14%、NVDA +31%</b> → 胜宏科技、沪电股份、工业富联。胜宏守 <b>111.4（MA5）</b>即强，冲 122 附近先减仓。</div></div>
+            <div class="ios-row"><div><span class="tag t-up">T1 存储</span> <b>MU +19% 放量</b> → 兆易创新、澜起科技、江波龙；港股看 <b>中芯国际/华虹</b>。</div></div>
+            <div class="ios-row"><div><span class="tag t-up">T1 机器人</span> <b>TSLA +11.5% 站上 MA20</b> → 拓普集团（支撑 49.4）、三花智控（支撑 33.4）。昨日涨停的票今天<b>看分歧不看一致</b>。</div></div>
+            <div class="ios-row"><div><span class="tag t-blue">金银</span> <b>黄金 +3.7%、白银 +5.9%、NEM +6.4%</b> → 山东黄金、紫金矿业、兴业银锡（支撑 18.38）。</div></div>
+            <div class="ios-row"><div><span class="tag t-blue">港股恒科</span> <b>KWEB +3.3%、FXI +1.3%、日经今早 +2.4%</b> → 恒科（昨收 3,508）望高开测 <b>3,560–3,630</b>；<b>放量站上 MA5(3,633) 才算企稳</b>，否则仍是反抽。</div></div>
+            <div class="ios-row"><div><span class="tag t-down">承压</span> <b>银行/白酒</b>（工行昨日放量阴线，防双顶）；美股网安 CRWD -8.9% 提示并购方承压。</div></div>
+            <div class="ios-row"><div><span class="tag t-warn">铁律</span> <b>① 9:15–9:25 只看不买；② 9:30–10:00 冲高过猛先兑现 1/3；③ 10:00–10:30 回踩分时均线不破 + 量能承接再低吸；④ 单只不超过总仓 20%。</b></div></div>
           </div>
         </div>
       </section>
@@ -667,7 +691,7 @@
     <!-- ====================================================================== -->
     <!-- ==================== 16:00 全市场收盘复盘 + 教学视图 ==================== -->
     <!-- ====================================================================== -->
-    <div id="view-1600" class="view-pane">
+    <div id="view-1600" class="view-pane hidden">
 
       <!-- ★★★ 最顶部第一位：全市场全平台股民情绪指数（0-100分 · 累积走势 · 极简观点） ★★★ -->
       <section id="s-sentiment" class="card">
@@ -726,12 +750,12 @@
       <!-- ★★★ 晚间21:55突发重大利好加急更新：黄仁勋重回英伟达CEO ★★★ -->
       <section id="s-breaking-jensen" class="card" style="border:1.5px solid var(--up);">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
-          <span class="tag t-up">🚨 21:55 重大利好加急 · 黄仁勋重回 CEO！</span>
+          <span class="tag t-up">🚨 黄仁勋重回 CEO · 美股已收盘（NVDA +31.48%）</span>
           <button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-size:12.5px;font-weight:600;cursor:pointer;padding:0;">查看美股完整拆解 →</button>
         </div>
         <h2 style="font-size:16.5px;margin:0 0 8px;line-height:1.35;">英伟达董事会全票即刻复职黄仁勋！NVDA 盘前狂飙 <span class="up mono">+29.0%</span>，彻底焊死 A 股/港股「切回科技成长」B 浪主升！</h2>
         <div style="font-size:12.5px;color:var(--text-2);margin-bottom:10px;">
-          <b>🔴 22:54 美股实盘直击</b>：董事会听取美国高层意见确认复职「无国安风险」。开盘半小时大盘略高开低走（10Y美债反抽4.96%）：<b>纳指 +5.79%</b>、<b>NVDA $162.8 (+29.7% 最坚挺)</b>、<b>ANT(Anthropic) 逆势转跌 -0.8%</b>、<b>美光 +13.1%</b>、<b>COHR +14.3%</b>、<b>特斯拉 +11.0% 低开高走</b>、<b>BTC $62,641 / MARA +15.3%</b>！<button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-weight:700;cursor:pointer;padding:0 2px;">点此看美股6大板块/加密/3日预测 →</button>
+          <b>✅ 11/23 美股最终收盘（北京时间 11/24 05:00）</b>：<b>纳指 +6.51%</b>、<b>标普 +4.73%</b>、<b>费半 +14.03%</b>、<b>NVDA $165.05 (+31.48%)</b>、<b>美光 +19.04%</b>、<b>COHR +15.3%</b>、<b>特斯拉 +11.46%</b>、<b>ANT -1.43%</b>、<b>BTC $61,182</b>。<button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-weight:700;cursor:pointer;padding:0 2px;">点此看美股6大板块/加密/3日预测 →</button>
         </div>
 
         <div class="grid cols-2" style="margin-bottom:10px;">
@@ -1150,9 +1174,9 @@
 
   <!-- iPhone 专属底部 Tab Bar -->
   <nav class="ios-tabbar">
-    <button id="tab-0830" onclick="switchMode('0830')" class="tab-item"><span class="ico">🌅</span><span>08:30 美股</span></button>
+    <button id="tab-0830" onclick="switchMode('0830')" class="tab-item active"><span class="ico">🌅</span><span>08:30 美股</span></button>
     <button id="tab-1200" onclick="switchMode('1200')" class="tab-item"><span class="ico">☀️</span><span>12:00 午盘</span></button>
-    <button id="tab-1600" onclick="switchMode('1600')" class="tab-item active"><span class="ico">🌆</span><span>16:00 全景</span></button>
+    <button id="tab-1600" onclick="switchMode('1600')" class="tab-item"><span class="ico">🌆</span><span>16:00 全景</span></button>
   </nav>
 
   <script>
@@ -1163,23 +1187,27 @@
     ];
 
     const US_STOCKS_LIST = [
-      {t:"NVDA 英伟达 🔥复职暴涨",p:"盘前 $161.97 (+29%)",dd:"较昨收$125.5",sup:"$148 / $138",res:"$175 / $185",tgt:"$220~$250",note:"🚨21:55官宣董事会全票即刻复职黄仁勋！美高层背书无国安风险+Q4指引$130B+$1500亿回购，戴维斯双击！"},
-      {t:"MU 美光科技 ⭐",p:"盘前 $696.38 (+17%)",dd:"冲破$684压力",sup:"$640 / $585",res:"$745 / $787",tgt:"$950~$1,150",note:"老黄复职引爆AI存储修复！高盛看2027 HBM涨+122%延续至28H1，2027E PE仅6x。"},
-      {t:"COHR Coherent光模块",p:"盘前 $215.08 (+15%)",dd:"CPO领涨",sup:"$195 / $180",res:"$230 / $255",tgt:"$280~$320",note:"叠加$20亿股票回购+老黄回归，明天直接强映射A股新易盛/中际旭创/天孚通信！"},
-      {t:"TSM 台积电 / AVGO 博通",p:"盘前 $365 / $315",dd:"+14.7% / +3.5%",sup:"$335 / $298",res:"$385 / $336",tgt:"$460 / $430",note:"台积电代工绝对垄断盘前大涨+14.7%；博通ASIC与NVDA共振修复。"},
-      {t:"LLY 礼来制药 ⭐",p:"$1,347.1",dd:"-8.7%",sup:"$1,330 / $1,260",res:"$1,390 / $1,475",tgt:"$1,650~$1,800",note:"20日逆势+5.78%！GLP-1霸主，高盛首选防御成长第一避风港。"},
-      {t:"MSFT 微软",p:"$484.52",dd:"-13.3%",sup:"$480 / $460",res:"$503 / $524",tgt:"$580~$620",note:"联合Salesforce发Copilotforce + Xbox首发GTA VI + 携手NVDA拓展Windows AI。"},
-      {t:"AAPL 苹果",p:"$342.56",dd:"-5.1%",sup:"$335 / $310",res:"$350 / $361",tgt:"$385~$410",note:"彭博曝自研全能AI Agent + PROLED MacBook Pro；轻Capex+巨额回购最抗跌。"},
-      {t:"AMZN 亚马逊",p:"$246.82",dd:"-10.4%",sup:"$238 / $229",res:"$258 / $275",tgt:"$300~$330",note:"Druckenmiller Q3第三大重仓(6.9%)，高盛首推大型云巨头。"},
-      {t:"STX 希捷 / SNDK 闪迪",p:"$457 / $94.4",dd:"-60% / -68%",sup:"$445 / $90",res:"$558 / $126",tgt:"$720 / $165",note:"分别为Druckenmiller(9.1%)与Leopold(11.6%)重仓存储标的，高波高弹。"}
+      {t:"NVDA 英伟达 🔥复职首日",p:"$165.05 (+31.48%)",dd:"-32.2%",sup:"$156.9 / $148.6",res:"$171.5 / $178.9",tgt:"$220~$250",note:"单日市值+$9,500亿、成交7.76亿股；收盘贴近20日成本$167.3。今晚守$160=机构真买，破$156.9=仅空头回补。隐忧：SEC调查仍在。"},
+      {t:"MU 美光科技 ⭐",p:"$707.70 (+19.04%)",dd:"-36.2%",sup:"$682 / $667",res:"$759 / $777",tgt:"$950~$1,100",note:"放量+72%站上MA5，花旗称AI开支担忧被夸大；高盛看2027 HBM均价+122%、2027E PE仅约6x。"},
+      {t:"COHR / LITE 光模块双雄",p:"$215.81 / $544.38",dd:"-36.9% / -52.4%",sup:"$208 / $530",res:"$234.8 / $574.7",tgt:"$300 / $800",note:"+15.3% / +18.2%，但都收在开盘价下方（冲高回落）→ A股CPO今天高开易回落，等分歧再低吸。"},
+      {t:"TSM 台积电 / AVGO 博通",p:"$363.6 / $313.55",dd:"-25.4% / -17.7%",sup:"$351 / $305",res:"$389 / $332",tgt:"$460 / $430",note:"台积电+14.1%站上MA5；博通仅+3.0%仍在MA5下方——资金买正主NVDA、卖ASIC替代逻辑。"},
+      {t:"LLY 礼来制药 ⭐",p:"$1,364.6 (+1.30%)",dd:"-7.5%",sup:"$1,345 / $1,330",res:"$1,382 / $1,475",tgt:"$1,650~$1,800",note:"20日逆势+6.7%的防守真神，GLP-1霸主；PCE偏热时资金首选避风港。"},
+      {t:"TSLA 特斯拉 🤖",p:"$385.46 (+11.46%)",dd:"-6.9%",sup:"$374 / $372",res:"$394 / $414",tgt:"$450~$500",note:"七巨头中唯一站上MA20($384.5)的强势形态，Optimus机器人逻辑映射A股拓普/三花。"},
+      {t:"MSFT 微软",p:"$492.50 (+1.65%)",dd:"-11.9%",sup:"$481 / $460",res:"$509 / $521",tgt:"$580~$620",note:"开$506收$492.5几乎收最低，偏弱；仍在MA5/MA20下方，等站回$509再看。"},
+      {t:"AAPL 苹果",p:"$349.08 (+1.90%)",dd:"-3.3%",sup:"$345 / $335",res:"$353 / $361",tgt:"$385~$410",note:"轻Capex+巨额回购最抗跌，距3月高点仅-3.3%，黑五销售是本周催化。"},
+      {t:"AMZN 亚马逊",p:"$255.39 (+3.47%)",dd:"-7.2%",sup:"$251 / $238",res:"$262.5 / $275",tgt:"$300~$330",note:"Druckenmiller Q3重仓(6.9%)，黑五+AWS双催化；站回MA20($257.7)转强。"},
+      {t:"ANT Anthropic ⚠️",p:"$87.64 (-1.43%)",dd:"-23.9%",sup:"$84.65 / $83(发行价)",res:"$94.2 / $97.2",tgt:"观望",note:"期权首日+2倍杠杆ETF上线放大波动；资金从软件新股流向硬件龙头。跌破$83=破发，压制AI软件情绪。"},
+      {t:"MSTR / IBIT 加密双标",p:"$84.40 / $34.62",dd:"-50.7% / -29.9%",sup:"$78 / $32.6",res:"$91.4 / $36.4",tgt:"$130 / $46",note:"+8.5% / +4.9%但均收在日内低位；BTC站回$66,000前轻仓，稳健选IBIT。"},
+      {t:"STX 希捷 / WDC 西数",p:"$520.1 / $297.25",dd:"-45.0% / -40.0%",sup:"$504 / $285",res:"$554 / $314",tgt:"$720 / $420",note:"双双+13.8%站上MA5；Druckenmiller重仓希捷(9.1%)，存储涨价周期高弹性标的。"}
     ];
 
     const US_CHARTS = {
-      MU:{n:"美光科技 (MU)",c:594.51,chg:-13.89,vwap:768.65,wma5:null,note:"🔥11/23盘前已飙升至$696.38（+17.14%）一步突破$684强压力！高盛看2027 HBM涨+122%、PE仅6x，2027年3-6月看$900-$1,050！",b:[["11-02",890.54,833.59,892.08,829.24,29.9,912.92,939.09,-30.5,-25.23,-10.54],["11-03",859.93,855.1,871.49,845.25,21.3,898.19,929.57,-32.77,-26.74,-12.05],["11-04",823.0,795.23,853.34,782.0,35.9,860.59,914.93,-38.95,-29.18,-19.53],["11-05",752.69,656.39,761.81,650.0,77.9,805.01,895.96,-54.42,-34.23,-40.38],["11-06",708.35,690.0,724.8,676.0,44.9,766.06,879.01,-63.24,-40.03,-46.41],["11-09",703.18,733.15,744.74,689.65,32.2,745.97,866.21,-65.98,-45.22,-41.53],["11-10",717.45,725.11,745.64,699.63,28.4,719.98,854.81,-68.03,-49.78,-36.49],["11-11",777.14,811.3,827.58,763.05,36.7,723.19,849.67,-61.98,-52.22,-19.51],["11-12",769.31,798.44,799.7,764.57,27.6,751.6,843.03,-57.55,-53.29,-8.53],["11-13",782.69,778.31,796.18,750.25,27.9,769.26,838.0,-55.04,-53.64,-2.8],["11-16",734.16,719.02,739.12,716.38,27.1,766.44,828.71,-57.17,-54.34,-5.66],["11-17",726.2,712.42,726.99,666.88,33.5,763.9,819.52,-58.72,-55.22,-7.0],["11-18",718.5,705.27,722.96,687.33,27.5,742.69,809.1,-59.83,-56.14,-7.38],["11-19",740.33,690.44,760.01,689.28,35.4,721.09,800.8,-61.2,-57.15,-8.1],["11-20",665.46,594.51,669.0,585.25,59.1,684.33,786.65,-69.23,-59.57,-19.33]]},
-      NVDA:{n:"英伟达 (NVDA) · 盘前$161.97 (+29%)",c:161.97,chg:29.03,vwap:168.41,wma5:null,note:"🚨21:55官宣黄仁勋即刻重回CEO！盘前暴拉+29.03%至$161.97，一举收复MA5($147)，上方看11/9丑闻缺口$175-$185，回踩支撑$148-$155！",b:[["11-02",207.53,202.06,209.98,201.66,119.3,210.74,219.62,-4.48,-2.66,-3.63],["11-03",207.96,206.69,209.14,205.93,91.9,208.49,217.99,-4.69,-3.07,-3.24],["11-04",203.5,200.13,206.79,199.68,149.0,205.44,216.12,-5.32,-3.52,-3.61],["11-05",196.07,181.6,196.25,181.46,306.1,199.02,213.68,-7.23,-4.26,-5.95],["11-06",191.1,186.64,194.9,185.22,180.2,195.42,211.55,-8.25,-5.06,-6.38],["11-09",173.07,178.67,179.92,170.24,462.7,190.75,209.16,-9.59,-5.96,-7.25],["11-10",173.97,168.89,174.69,165.89,429.3,183.19,206.18,-11.3,-7.03,-8.54],["11-11",172.8,173.73,177.54,170.77,339.2,177.91,203.81,-12.13,-8.05,-8.17],["11-12",151.01,166.19,167.14,148.8,747.7,174.82,201.25,-13.25,-9.09,-8.32],["11-13",169.91,162.85,170.0,158.39,365.8,170.07,198.69,-14.24,-10.12,-8.23],["11-16",159.02,156.14,163.2,155.01,333.8,165.56,195.64,-15.39,-11.17,-8.42],["11-17",156.9,155.46,158.19,150.33,407.0,162.87,192.59,-16.16,-12.17,-7.98],["11-18",159.19,150.96,159.7,150.4,349.8,158.32,189.04,-16.95,-13.13,-7.64],["11-19",152.92,145.98,158.13,145.71,322.9,154.28,185.73,-17.77,-14.06,-7.42],["11-20",143.52,125.53,143.73,124.5,626.4,146.81,181.46,-19.84,-15.21,-9.25]]},
-      IXIC:{n:"纳斯达克综合 (IXIC)",c:22617.73,chg:-5.28,vwap:25076.61,wma5:null,note:"纳指期货受黄仁勋复职催化飙升+2.92%至25,865，今晚望强势反攻MA5(23,953)！",b:[["11-02",25600.17,25164.31,25799.46,25145.95,914.6,25962.74,26560.0,-282.63,-136.69,-291.88],["11-03",25246.63,25372.01,25474.46,25246.63,834.7,25741.58,26448.61,-321.07,-173.57,-295.01],["11-04",25652.78,25736.51,26048.83,25602.14,995.3,25578.91,26358.5,-318.46,-202.55,-231.82],["11-05",25558.11,24315.0,25559.03,24262.14,1283.4,25204.97,26214.59,-426.17,-247.27,-357.8],["11-06",24602.48,24579.43,24825.55,24507.63,1062.2,25033.45,26075.25,-484.62,-294.74,-379.75],["11-09",24777.44,25253.14,25354.3,24762.57,918.8,25051.22,25975.61,-471.14,-330.02,-282.24],["11-10",25047.45,25065.87,25286.83,24816.1,814.6,24989.99,25868.69,-470.15,-358.05,-224.21],["11-11",25448.8,25466.19,25649.85,25326.69,1121.1,24935.93,25807.35,-432.08,-372.85,-118.46],["11-12",25092.11,25366.09,25597.22,25068.28,1033.7,25146.14,25740.01,-405.32,-379.35,-51.94],["11-13",25408.0,25136.27,25423.09,24872.41,869.1,25257.51,25689.82,-398.06,-383.09,-29.95],["11-16",24853.35,24509.76,24882.04,24460.28,920.9,25108.84,25593.76,-437.82,-394.04,-87.57],["11-17",24528.06,24328.38,24547.66,23989.09,967.9,24961.34,25488.94,-478.45,-410.92,-135.06],["11-18",24486.18,24429.88,24538.78,24225.3,826.1,24754.08,25375.29,-496.73,-428.08,-137.3],["11-19",24809.05,23879.2,24939.62,23870.7,1055.9,24456.7,25268.81,-549.33,-452.33,-193.99],["11-20",23592.67,22617.73,23837.76,22513.01,1247.0,23952.99,25101.93,-684.9,-498.84,-372.11]]},
-      LLY:{n:"礼来制药 (LLY)",c:1347.11,chg:-0.3,vwap:1390.68,wma5:null,note:"20日逆势+5.78%的医药防御真神，缩量回踩$1,340止跌，2027看$1,650~$1,800。",b:[["11-02",1393.15,1410.99,1421.99,1382.02,37.3,1354.49,1259.4,51.63,34.52,34.22],["11-03",1399.63,1409.38,1437.0,1393.47,28.4,1379.98,1272.0,55.29,38.68,33.23],["11-04",1440.0,1417.99,1445.96,1401.59,36.4,1405.92,1283.46,58.22,42.59,31.26],["11-05",1434.0,1364.73,1453.0,1364.73,48.8,1404.13,1293.22,55.59,45.19,20.81],["11-06",1350.45,1354.0,1377.28,1333.22,38.0,1391.42,1301.95,52.05,46.56,10.98],["11-09",1365.4,1411.95,1419.67,1364.58,40.3,1391.61,1313.42,53.3,47.91,10.79],["11-10",1408.49,1432.29,1438.88,1400.0,30.2,1396.19,1326.71,55.3,49.38,11.82],["11-11",1418.08,1437.29,1440.47,1414.37,18.7,1400.05,1338.14,56.63,50.83,11.59],["11-12",1446.55,1427.28,1460.0,1427.28,24.1,1412.56,1346.92,56.23,51.91,8.63],["11-13",1429.91,1443.5,1449.64,1419.77,20.8,1430.46,1356.24,56.57,52.84,7.45],["11-16",1453.75,1431.67,1475.25,1427.66,32.1,1434.41,1365.81,55.25,53.33,3.85],["11-17",1416.0,1415.55,1432.28,1401.66,26.4,1431.06,1372.41,52.3,53.12,-1.65],["11-18",1407.93,1382.75,1423.11,1380.0,28.8,1420.15,1378.01,46.77,51.85,-10.16],["11-19",1369.38,1351.12,1382.0,1341.46,32.0,1404.92,1380.23,39.39,49.36,-19.94],["11-20",1362.38,1347.11,1372.05,1341.76,35.4,1385.64,1383.91,32.83,46.05,-26.44]]},
-      GOLD:{n:"COMEX黄金 (GC=F)",c:3621.7,chg:3.02,vwap:3928.64,wma5:null,note:"今日暴涨+3.02%反包，12/9 FOMC落地后开启2027主升，高盛/小摩看$5,000~$6,600。",b:[["11-03",3960.5,3940.4,3981.7,3904.1,16.3,3978.38,4093.34,-87.55,-80.23,-14.64],["11-04",3940.8,4073.0,4081.2,3928.2,23.3,3982.66,4089.96,-77.71,-79.73,4.03],["11-05",4075.4,4113.5,4155.8,4067.0,21.6,3999.08,4087.78,-65.89,-76.96,22.14],["11-06",4098.5,4074.9,4116.2,4035.1,17.8,4034.28,4080.72,-58.95,-73.36,28.81],["11-09",4074.3,4114.5,4157.7,4062.5,19.1,4063.26,4076.91,-49.69,-68.62,37.87],["11-10",4149.0,4030.2,4156.2,4020.8,19.6,4081.22,4069.55,-48.59,-64.62,32.06],["11-11",4043.7,4000.5,4074.7,3989.6,13.2,4066.72,4064.18,-49.54,-61.6,24.12],["11-12",3994.0,3885.3,4005.9,3856.7,22.9,4021.08,4049.95,-58.91,-61.06,4.3],["11-13",3883.3,3886.3,3927.2,3871.1,15.6,3983.36,4035.2,-65.51,-61.95,-7.11],["11-16",3869.7,3853.0,3904.3,3835.2,16.4,3931.06,4019.85,-72.58,-64.08,-17.0],["11-17",3859.5,3864.2,3894.0,3839.2,16.0,3897.86,4005.93,-76.4,-66.54,-19.72],["11-18",3855.2,3741.9,3859.3,3721.8,24.4,3846.14,3985.53,-88.28,-70.89,-34.78],["11-19",3730.3,3685.5,3759.5,3620.6,20.4,3806.18,3966.78,-101.08,-76.93,-48.31],["11-20",3633.8,3515.4,3638.1,3502.9,20.4,3732.0,3942.16,-123.53,-86.25,-74.56],["11-23",3570.5,3621.7,3636.4,3552.3,10.0,3685.74,3921.32,-131.23,-95.25,-71.97]]}
+      NVDA:{n:"英伟达 (NVDA) · 11/23收盘",c:165.05,chg:31.48,vwap:167.27,wma5:null,note:"🚀 复职首日 +31.48% 收 $165.05、成交7.76亿股天量，一举站上MA5($148.6)、贴近20日成本$167.3；上方 $171.5(昨高)/$178.9(MA20) 是两道压力，回踩 $156.9–$160 不破就是健康换手。",b:[["11-03", 207.96, 206.69, 209.14, 205.93, 91.9, 208.49, 217.99, -4.56, -2.89, -3.35], ["11-04", 203.5, 200.13, 206.79, 199.68, 149.0, 205.44, 216.12, -5.21, -3.35, -3.71], ["11-05", 196.07, 181.6, 196.25, 181.46, 306.1, 199.02, 213.68, -7.13, -4.11, -6.04], ["11-06", 191.1, 186.64, 194.9, 185.22, 180.2, 195.42, 211.55, -8.15, -4.92, -6.47], ["11-09", 173.07, 178.67, 179.92, 170.24, 462.7, 190.75, 209.16, -9.5, -5.83, -7.33], ["11-10", 173.97, 168.89, 174.69, 165.89, 429.3, 183.19, 206.18, -11.22, -6.91, -8.62], ["11-11", 172.8, 173.73, 177.54, 170.77, 339.2, 177.91, 203.8, -12.06, -7.94, -8.24], ["11-12", 151.01, 166.19, 167.14, 148.8, 747.7, 174.82, 201.25, -13.18, -8.99, -8.38], ["11-13", 169.91, 162.85, 170.0, 158.39, 365.8, 170.07, 198.69, -14.17, -10.02, -8.3], ["11-16", 159.02, 156.14, 163.2, 155.01, 333.8, 165.56, 195.64, -15.33, -11.08, -8.48], ["11-17", 156.9, 155.46, 158.19, 150.33, 407.0, 162.87, 192.59, -16.11, -12.09, -8.04], ["11-18", 159.19, 150.96, 159.7, 150.4, 349.8, 158.32, 189.04, -16.9, -13.05, -7.69], ["11-19", 152.92, 145.98, 158.13, 145.71, 322.9, 154.28, 185.73, -17.72, -13.98, -7.47], ["11-20", 143.52, 125.53, 143.73, 124.5, 626.4, 146.81, 181.46, -19.79, -15.15, -9.29], ["11-23", 167.04, 165.05, 171.5, 156.93, 776.2, 148.6, 178.91, -18.04, -15.72, -4.63]]},
+      MU:{n:"美光科技 (MU) · 11/23收盘",c:707.7,chg:19.04,vwap:759.41,wma5:null,note:"💾 +19.04% 收 $707.70，成交较3月均量+72%，站上MA5($682)；压力 $759(20日成本)/$777(MA20)，支撑 $682/$667。2027年3–6月看 $900–$1,050。",b:[["11-03", 859.93, 855.1, 871.49, 845.25, 21.3, 898.19, 929.57, -32.44, -26.27, -12.34], ["11-04", 823.0, 795.23, 853.34, 782.0, 35.9, 860.59, 914.93, -38.64, -28.74, -19.8], ["11-05", 752.69, 656.39, 761.81, 650.0, 77.9, 805.01, 895.96, -54.13, -33.82, -40.63], ["11-06", 708.35, 690.0, 724.8, 676.0, 44.9, 766.06, 879.01, -62.97, -39.65, -46.65], ["11-09", 703.18, 733.15, 744.74, 689.65, 32.2, 745.97, 866.21, -65.74, -44.87, -41.74], ["11-10", 717.45, 725.11, 745.64, 699.63, 28.4, 719.98, 854.81, -67.8, -49.46, -36.69], ["11-11", 777.14, 811.3, 827.58, 763.05, 36.7, 723.19, 849.67, -61.77, -51.92, -19.7], ["11-12", 769.31, 798.44, 799.7, 764.57, 27.6, 751.6, 843.03, -57.36, -53.01, -8.71], ["11-13", 782.69, 778.31, 796.18, 750.25, 27.9, 769.26, 838.0, -54.86, -53.38, -2.97], ["11-16", 734.16, 719.02, 739.12, 716.38, 27.1, 766.44, 828.71, -57.01, -54.1, -5.81], ["11-17", 726.2, 712.42, 726.99, 666.88, 33.5, 763.9, 819.52, -58.56, -55.0, -7.14], ["11-18", 718.5, 705.27, 722.96, 687.33, 27.5, 742.69, 809.1, -59.69, -55.93, -7.51], ["11-19", 740.33, 690.44, 760.01, 689.28, 35.4, 721.09, 800.8, -61.07, -56.96, -8.22], ["11-20", 665.46, 594.51, 669.0, 585.25, 59.1, 684.33, 786.65, -69.11, -59.39, -19.44], ["11-23", 690.72, 707.7, 720.69, 666.66, 49.4, 682.07, 776.85, -65.59, -60.63, -9.92]]},
+      IXIC:{n:"纳斯达克综合 (IXIC) · 11/23收盘",c:24089.56,chg:6.51,vwap:24984.45,wma5:null,note:"📈 +6.51% 收 24,089.56（2025年4月以来最佳单日），但开24,270收24,090属高开回落；仍在MA20(24,998)下方，站上25,000才确认反转。支撑 23,795/23,600。",b:[["11-03", 25246.63, 25372.01, 25474.46, 25246.63, 834.7, 25741.58, 26448.61, -317.16, -167.9, -298.53], ["11-04", 25652.78, 25736.51, 26048.83, 25602.14, 995.3, 25578.91, 26358.5, -314.83, -197.28, -235.09], ["11-05", 25558.11, 24315.0, 25559.03, 24262.14, 1283.4, 25204.97, 26214.59, -422.81, -242.39, -360.85], ["11-06", 24602.48, 24579.43, 24825.55, 24507.63, 1062.2, 25033.45, 26075.25, -481.5, -290.21, -382.58], ["11-09", 24777.44, 25253.14, 25354.3, 24762.57, 918.8, 25051.22, 25975.61, -468.25, -325.82, -284.87], ["11-10", 25047.45, 25065.87, 25286.83, 24816.1, 814.6, 24989.99, 25868.69, -467.48, -354.15, -226.65], ["11-11", 25448.8, 25466.19, 25649.85, 25326.69, 1121.1, 24935.93, 25807.35, -429.6, -369.24, -120.73], ["11-12", 25092.11, 25366.09, 25597.22, 25068.28, 1033.7, 25146.14, 25740.01, -403.02, -376.0, -54.05], ["11-13", 25408.0, 25136.27, 25423.09, 24872.41, 869.1, 25257.51, 25689.82, -395.94, -379.99, -31.9], ["11-16", 24853.35, 24509.76, 24882.04, 24460.28, 920.9, 25108.84, 25593.76, -435.85, -391.16, -89.39], ["11-17", 24528.06, 24328.38, 24547.66, 23989.09, 967.9, 24961.34, 25488.94, -476.63, -408.25, -136.75], ["11-18", 24486.18, 24429.88, 24538.78, 24225.3, 826.1, 24754.08, 25375.29, -495.04, -425.61, -138.87], ["11-19", 24809.05, 23879.2, 24939.62, 23870.7, 1055.9, 24456.7, 25268.81, -547.76, -450.04, -195.44], ["11-20", 23592.67, 22617.73, 23837.76, 22513.01, 1247.0, 23952.99, 25101.93, -683.45, -496.72, -373.46], ["11-23", 24269.75, 24089.56, 24353.65, 23794.96, 961.8, 23868.95, 24997.94, -664.56, -530.29, -268.54]]},
+      LLY:{n:"礼来制药 (LLY) · 11/23收盘",c:1364.6,chg:1.3,vwap:1392.95,wma5:null,note:"🛡️ 科技狂欢日照样 +1.30% 收 $1,364.6，20日逆势+6.7%；冲$1,381.7遇MA5回落，低吸区 $1,330–$1,345，2027看 $1,650~$1,800。",b:[["11-03", 1399.63, 1409.38, 1437.0, 1393.47, 28.4, 1379.98, 1272.0, 55.46, 38.92, 33.08], ["11-04", 1440.0, 1417.99, 1445.96, 1401.59, 36.4, 1405.92, 1283.46, 58.37, 42.81, 31.12], ["11-05", 1434.0, 1364.73, 1453.0, 1364.73, 48.8, 1404.13, 1293.22, 55.73, 45.39, 20.68], ["11-06", 1350.45, 1354.0, 1377.28, 1333.22, 38.0, 1391.42, 1301.95, 52.18, 46.75, 10.86], ["11-09", 1365.4, 1411.95, 1419.67, 1364.58, 40.3, 1391.61, 1313.42, 53.42, 48.09, 10.67], ["11-10", 1408.49, 1432.29, 1438.88, 1400.0, 30.2, 1396.19, 1326.71, 55.41, 49.55, 11.72], ["11-11", 1418.08, 1437.29, 1440.47, 1414.37, 18.7, 1400.05, 1338.14, 56.73, 50.99, 11.5], ["11-12", 1446.55, 1427.28, 1460.0, 1427.28, 24.1, 1412.56, 1346.92, 56.33, 52.06, 8.55], ["11-13", 1429.91, 1443.5, 1449.64, 1419.77, 20.8, 1430.46, 1356.24, 56.66, 52.98, 7.37], ["11-16", 1453.75, 1431.67, 1475.25, 1427.66, 32.1, 1434.41, 1365.81, 55.33, 53.45, 3.77], ["11-17", 1416.0, 1415.55, 1432.28, 1401.66, 26.4, 1431.06, 1372.41, 52.37, 53.23, -1.72], ["11-18", 1407.93, 1382.75, 1423.11, 1380.0, 28.8, 1420.15, 1378.01, 46.84, 51.96, -10.22], ["11-19", 1369.38, 1351.12, 1382.0, 1341.46, 32.0, 1404.92, 1380.23, 39.45, 49.46, -20.0], ["11-20", 1362.38, 1347.11, 1372.05, 1341.76, 35.4, 1385.64, 1383.91, 32.9, 46.14, -26.5], ["11-23", 1345.11, 1364.6, 1381.65, 1344.0, 29.3, 1372.23, 1388.18, 28.78, 42.67, -27.79]]},
+      BTC:{n:"比特币 (BTC-USD) · 日线",c:61162.0,chg:1.78,vwap:68153.73,wma5:null,note:"₿ 11/23 日线 +1.8% 收约 $61,162，盘中冲$62,641后回落；20日 -20%、远低于MA20($69,320)，MACD仍在零轴下。站回 $66,000 前只做轻仓，跌破 $55,150(20日低) 需止损。",b:[["11-08", 75748.0, 74585.0, 76097.0, 73692.0, 15.5, 76485.31, 78966.93, -1662.79, -1299.04, -727.5], ["11-09", 74585.0, 75223.0, 75505.0, 73665.0, 27.6, 75448.89, 78581.04, -1705.24, -1380.28, -649.92], ["11-10", 75223.0, 73720.0, 75321.0, 72689.0, 27.8, 75004.48, 78066.45, -1838.96, -1472.01, -733.9], ["11-11", 73720.0, 73964.0, 74703.0, 73142.0, 23.5, 74647.99, 77699.08, -1903.28, -1558.27, -690.03], ["11-12", 73964.0, 71343.0, 74115.0, 71084.0, 27.5, 73767.07, 77212.52, -2141.11, -1674.84, -932.55], ["11-13", 71343.0, 68249.0, 71429.0, 67653.0, 43.0, 72500.0, 76585.44, -2549.83, -1849.84, -1399.99], ["11-14", 68249.0, 64128.0, 68378.0, 63329.0, 44.0, 70280.98, 75790.64, -3169.76, -2113.82, -2111.87], ["11-15", 64128.0, 65305.0, 66055.0, 62018.0, 39.8, 68597.96, 75055.56, -3525.44, -2396.14, -2258.59], ["11-16", 65305.0, 64856.0, 65605.0, 63835.0, 31.8, 66776.24, 74258.1, -3799.76, -2676.87, -2245.79], ["11-17", 64856.0, 64894.0, 65365.0, 63284.0, 34.5, 65486.44, 73439.42, -3968.35, -2935.16, -2066.37], ["11-18", 64894.0, 62987.0, 64929.0, 62017.0, 30.4, 64434.03, 72700.02, -4207.31, -3189.59, -2035.43], ["11-19", 62987.0, 61902.0, 64017.0, 61381.0, 33.5, 63988.79, 71935.2, -4433.17, -3438.31, -1989.72], ["11-20", 61902.0, 58799.0, 62540.0, 57709.0, 60.7, 62687.57, 71003.42, -4807.13, -3712.07, -2190.11], ["11-21", 58799.0, 60094.0, 60844.0, 55150.0, 58.4, 61735.22, 70095.7, -4942.02, -3958.06, -1967.91], ["11-22", 60094.0, 61162.0, 61562.0, 58660.0, 26.2, 60988.81, 69319.93, -4906.2, -4147.69, -1517.02]]},
+      GOLD:{n:"COMEX黄金 (GC=F)",c:3644.2,chg:3.66,vwap:3936.43,wma5:null,note:"🥇 11/23 反弹 +3.7% 至 $3,644（20日仍 -9.8%），12/9 FOMC 落地后有望开启2027主升，高盛/小摩看 $5,000~$6,600。注：期货成交量数据仅供参考。",b:[["11-03", 3960.5, 3940.4, 3981.7, 3904.1, 163.0, 3978.38, 4093.34, -87.55, -80.23, -14.64], ["11-04", 3940.8, 4073.0, 4081.2, 3928.2, 232.6, 3982.66, 4089.96, -77.71, -79.73, 4.03], ["11-05", 4075.4, 4113.5, 4155.8, 4067.0, 215.6, 3999.08, 4087.78, -65.89, -76.96, 22.14], ["11-06", 4098.5, 4074.9, 4116.2, 4035.1, 178.0, 4034.28, 4080.71, -58.95, -73.36, 28.81], ["11-09", 4074.3, 4114.5, 4157.7, 4062.5, 190.6, 4063.26, 4076.91, -49.69, -68.62, 37.87], ["11-10", 4149.0, 4030.2, 4156.2, 4020.8, 196.2, 4081.22, 4069.55, -48.59, -64.62, 32.06], ["11-11", 4043.7, 4000.5, 4074.7, 3989.6, 132.4, 4066.72, 4064.18, -49.54, -61.6, 24.12], ["11-12", 3994.0, 3885.3, 4005.9, 3856.7, 229.4, 4021.08, 4049.94, -58.91, -61.06, 4.3], ["11-13", 3883.3, 3886.3, 3927.2, 3871.1, 156.0, 3983.36, 4035.2, -65.51, -61.95, -7.11], ["11-16", 3869.7, 3853.0, 3904.3, 3835.2, 164.0, 3931.06, 4019.85, -72.58, -64.08, -17.0], ["11-17", 3859.5, 3864.2, 3894.0, 3839.2, 160.4, 3897.86, 4005.93, -76.4, -66.54, -19.72], ["11-18", 3855.2, 3741.9, 3859.3, 3721.8, 244.3, 3846.14, 3985.52, -88.28, -70.89, -34.78], ["11-19", 3730.3, 3685.5, 3759.5, 3620.6, 203.7, 3806.18, 3966.78, -101.08, -76.93, -48.31], ["11-20", 3633.8, 3515.4, 3638.1, 3502.9, 203.7, 3732.0, 3942.15, -123.53, -86.25, -74.56], ["11-23", 3570.5, 3644.2, 3647.0, 3552.3, 16.1, 3690.24, 3922.44, -129.43, -94.89, -69.09]]}
     };
 
     const CN_INDICES = {
@@ -1224,7 +1252,7 @@
       {sym:"sh601398",n:"工商银行 ⚠️",cat:"双顶风向标",c:9.15,chg:-2.66,vwap:8.72,wma5:8.92,trap:2.3,vr:1.47,pat:["高位放量阴"],sup:"8.92 / 8.72",supRule:"破9.00确认双顶派发",res:"9.49",resLvl:"避险资金正在撤退",target:"短线回避",catText:"反向指标：银行弱=成长强",why:"11/20创9.49新高后今日量比1.47收-2.66%大阴线，避险资金换仓铁证！",b:[["11-03",8.75,8.59,8.77,8.32,648.4,8.67,8.44,0.18,0.17,0.01],["11-04",8.54,8.41,8.56,8.37,581.9,8.64,8.45,0.15,0.17,-0.03],["11-05",8.38,8.35,8.4,8.17,621.3,8.56,8.46,0.13,0.16,-0.07],["11-06",8.38,8.44,8.44,8.26,483.2,8.5,8.48,0.11,0.15,-0.08],["11-09",8.36,8.61,8.61,8.34,361.1,8.48,8.5,0.11,0.14,-0.06],["11-10",8.53,8.6,8.63,8.51,215.0,8.48,8.51,0.11,0.14,-0.05],["11-11",8.63,8.53,8.7,8.53,283.3,8.51,8.52,0.1,0.13,-0.05],["11-12",8.51,8.69,8.7,8.47,355.0,8.57,8.54,0.11,0.13,-0.04],["11-13",8.65,8.85,8.86,8.65,352.0,8.66,8.56,0.12,0.13,-0.0],["11-16",8.83,9.05,9.05,8.82,371.3,8.74,8.59,0.15,0.13,0.04],["11-17",9.05,9.06,9.07,8.93,347.9,8.84,8.63,0.17,0.14,0.06],["11-18",9.03,9.06,9.1,8.97,285.9,8.94,8.66,0.19,0.15,0.07],["11-19",9.07,9.1,9.1,9.0,241.9,9.02,8.68,0.2,0.16,0.08],["11-20",9.09,9.4,9.49,9.04,485.9,9.13,8.74,0.23,0.17,0.11],["11-23",9.28,9.15,9.37,9.08,566.4,9.15,8.76,0.23,0.18,0.09]]}
     ];
 
-    let currentMode = '1600', activeUsKey = 'NVDA', activeIdxKey = 'SH', activeStockIdx = 0, quizAnswers = {};
+    let currentMode = '0830', activeUsKey = 'NVDA', activeIdxKey = 'SH', activeStockIdx = 0, quizAnswers = {};
 
     function getThemeColors() {
       const cs = getComputedStyle(document.documentElement);
@@ -1465,7 +1493,7 @@
 
     function selectUsChart(key) {
       activeUsKey = key;
-      ['MU','NVDA','IXIC','LLY','GOLD'].forEach(k => { const b = document.getElementById('us-btn-' + k); if (b) b.classList.toggle('active', k === key); });
+      ['NVDA','MU','IXIC','LLY','BTC','GOLD'].forEach(k => { const b = document.getElementById('us-btn-' + k); if (b) b.classList.toggle('active', k === key); });
       const d = US_CHARTS[key];
       document.getElementById('us-chart-title').textContent = `${d.n} · 15日K线`;
       document.getElementById('us-chart-meta').textContent = `${d.c} (${d.chg>=0?'+':''}${d.chg}%)`;
