@@ -321,6 +321,7 @@
         <a href="#s-tldr" class="chip">⚡核心观点</a>
         <a href="#s-futures" class="chip">🛢️期货涨价</a>
         <a href="#s-index" class="chip">📊大盘/券商</a>
+        <a href="#s-4beacons" class="chip" style="background:var(--up-bg);color:var(--up);">🧭四大风向标</a>
         <a href="#s-aquant" class="chip">🤖A股量化资金</a>
         <a href="#s-boards" class="chip">⭐板块龙头</a>
         <a href="#s-top20" class="chip">🏆主力TOP20</a>
@@ -868,7 +869,8 @@
         </div>
         <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;">
           <button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-weight:600;padding:0;cursor:pointer;">← 回看 08:30 美股收盘深度</button>
-          <button onclick="switchMode('1600')" style="border:0;background:none;color:var(--blue);font-weight:600;padding:0;cursor:pointer;">查看 16:00 累积全景/TOP20/教学 →</button>
+          <button onclick="switchMode('1600');setTimeout(()=>document.getElementById('s-4beacons').scrollIntoView({behavior:'smooth'}),120);" style="border:0;background:none;color:var(--up);font-weight:600;padding:0;cursor:pointer;">🧭 查看四大风向标(3红1中性) →</button>
+          <button onclick="switchMode('1600')" style="border:0;background:none;color:var(--blue);font-weight:600;padding:0;cursor:pointer;">查看 16:00 全景/价格行为学/做T课 →</button>
         </div>
       </section>
     </div>
@@ -1062,6 +1064,89 @@
       </section>
 
       <!-- 二B、A股量化资金全景监控 & 盘口防割教学 -->
+      <!-- 永久新增：🧭 A股大势四大风向标监控（上市公司回购 · 中石油 · 中央汇金ETF · 社保基金） -->
+      <section id="s-4beacons">
+        <div class="sec-header">
+          <div class="sec-eyebrow">A-SHARE 4 MACRO BELLWETHERS · 判断大势顶底的四大风向标</div>
+          <h2 class="sec-h2">🧭 A股大势四大风向标实时追踪（11/24 最新信号）</h2>
+        </div>
+
+        <!-- 综合信号总评卡 -->
+        <div class="card" style="margin-bottom:12px;border:1.5px solid var(--up);">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+            <span class="tag t-up">综合判定：3红亮底 · 1中性 → 战略底部区域！</span>
+            <span class="mono muted" style="font-size:11.5px;">2026-11-24 更新</span>
+          </div>
+          <div class="grid cols-4 cols-2-mob">
+            <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>① 回购增持潮</span><span class="tag t-up">强底</span></div><div class="idx-val mono up">229.6亿</div><div class="idx-sub">111家拿专项贷</div></div>
+            <div class="idx-card"><div class="idx-name"><span>② 中石油</span><span class="tag t-warn">中性</span></div><div class="idx-val mono down">12.35元</div><div class="idx-sub">-1.44% · 暂无新增持</div></div>
+            <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>③ 汇金/国家队</span><span class="tag t-up">猛护盘</span></div><div class="idx-val mono up">+1,908亿</div><div class="idx-sub">上周宽基ETF扫货</div></div>
+            <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>④ 社保基金</span><span class="tag t-up">稳加仓</span></div><div class="idx-val mono up">594只</div><div class="idx-sub">Q3新进148·增持190</div></div>
+          </div>
+        </div>
+
+        <!-- 四大风向标逐一深度追踪卡片流 -->
+        <div class="card card-tight">
+          <div class="ios-list">
+            <!-- 1. 上市公司买卖股票时机 -->
+            <div class="ios-row">
+              <div class="row-top">
+                <div class="row-left"><span class="tag t-up">风向标① · 亮底</span><b>上市公司买卖股票的时机（回购 / 增持 vs 减持）</b></div>
+                <span class="mono up" style="font-weight:700;">产业资本播种期</span>
+              </div>
+              <div class="row-metrics mono">
+                <div><span class="muted">专项回购贷款</span><br/><b class="up">111家 / 229.6亿</b></div>
+                <div><span class="muted">近期单日公告</span><br/><b class="up">日均 25~30+ 家</b></div>
+                <div><span class="muted">深市年内上限</span><br/><b class="up">超 1,735 亿</b></div>
+              </div>
+              <div class="row-note"><b>最新实况（11/24）</b>：产业资本大举抄底自家股票！洛阳钼业获批 18 亿回购贷居首、青鸟智控 12 亿、捷佳伟创 4.5 亿；中际旭创推最高 40 亿回购、摩尔线程拟最高 10 亿回购、中国核电首次回购，年内已有 8 家券商回购/4 家增持；今日(11/24)润丰/新农/阳光股份等继续密集公告回购。<b>信号：大股东满意当前低估位置，属典型底部播种信号！</b></div>
+            </div>
+
+            <!-- 2. 中石油 -->
+            <div class="ios-row">
+              <div class="row-top">
+                <div class="row-left"><span class="tag t-warn">风向标② · 中性</span><b>中国石油 (601857 · 央企能源锚与集团增持)</b></div>
+                <span class="mono down" style="font-weight:700;">12.35元 (-1.44%)</span>
+              </div>
+              <div class="row-metrics mono">
+                <div><span class="muted">11/24 收盘/额</span><br/><b>12.35 / 25.2亿</b></div>
+                <div><span class="muted">上轮集团增持</span><br/><b>28.01亿(4月收官)</b></div>
+                <div><span class="muted">2026中期派息</span><br/><b class="up">475.85 亿元</b></div>
+              </div>
+              <div class="row-note"><b>最新实况（11/24）</b>：受国际原油回落至 $80.5 影响，今日三桶油走弱（中石油 -1.44%、中石化 -2.20%、中海油 -1.46%）。控股股东中石油集团上一轮增持已于 2026 年 4 月 7 日完成（累计 3.09 亿股、28.01 亿），<b>11 月暂未发新一轮增持公告</b>。<b>信号：目前是结构性深调而非极度恐慌底；若后续中石油集团再出手增持，即触发“史诗级铁底”共振！</b></div>
+            </div>
+
+            <!-- 3. 汇金公司 / 国家队 -->
+            <div class="ios-row">
+              <div class="row-top">
+                <div class="row-left"><span class="tag t-up">风向标③ · 超强护盘</span><b>中央汇金 / 国家队（金融国资委 · 宽基ETF扫货）</b></div>
+                <span class="mono up" style="font-weight:700;">单日狂买 918亿</span>
+              </div>
+              <div class="row-metrics mono">
+                <div><span class="muted">9/28–11/12 流入</span><br/><b class="up">+5,938 亿元</b></div>
+                <div><span class="muted">11/20暴跌日申购</span><br/><b class="up">+917.6 亿元</b></div>
+                <div><span class="muted">今日沪深300ETF</span><br/><b class="up">+0.25% (55.7亿)</b></div>
+              </div>
+              <div class="row-note"><b>最新实况（11/24）</b>：中央汇金等稳市资金已把护盘主战场升级为<b>宽基 ETF</b>！上周股票 ETF 净流入 <b>1,908 亿</b>，11/20 杀跌当天宽基 ETF 单日净申购高达 <b>922 亿</b>（嘉实沪深300 +226亿、华夏上证50 +217亿、华泰柏瑞沪深300 +147亿），科创50ETF年内吸金超 700 亿；叠加 11/23 首批 18 只主动 ETF 上市建仓。<b>信号：国家队在 3,480–3,550 焊死铁底！</b></div>
+            </div>
+
+            <!-- 4. 社保基金 -->
+            <div class="ios-row">
+              <div class="row-top">
+                <div class="row-left"><span class="tag t-up">风向标④ · 超级风向标</span><b>全国社保基金（政策周期王 · 2026 Q3 持仓追踪）</b></div>
+                <span class="mono up" style="font-weight:700;">新进+增持 56.9%</span>
+              </div>
+              <div class="row-metrics mono">
+                <div><span class="muted">Q3 重仓个股</span><br/><b class="up">594 只 A股</b></div>
+                <div><span class="muted">新进 / 增持</span><br/><b class="up">148只 / 190只</b></div>
+                <div><span class="muted">持股超5%重仓</span><br/><b class="up">21 只核心股</b></div>
+              </div>
+              <div class="row-note"><b>最新实况（2026 Q3 终版）</b>：社保基金现身 594 只个股前十大流通股东，其中<b>新进 148 只 + 增持 190 只（合计占 56.9%）</b>，重仓方向集中在高分红央国企与业绩过硬的硬科技龙头，<b>完全没有出现“悄然撤退/见顶清仓”迹象</b>。<b>信号：社保买的是底部区域而非单日最低点——只要社保仍在积极加仓，中长线就处于安全播种区！</b></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="s-aquant">
         <div class="sec-header">
           <div class="sec-eyebrow">A-SHARE QUANT FLOWS · 程序化交易与百亿量化私募追踪</div>
