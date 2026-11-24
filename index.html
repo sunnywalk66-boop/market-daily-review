@@ -322,6 +322,7 @@
         <a href="#s-futures" class="chip">🛢️期货涨价</a>
         <a href="#s-index" class="chip">📊大盘/券商</a>
         <a href="#s-4beacons" class="chip" style="background:var(--up-bg);color:var(--up);">🧭四大风向标</a>
+        <a href="#s-ssf-watch" class="chip">🛡️社保24股</a>
         <a href="#s-aquant" class="chip">🤖A股量化资金</a>
         <a href="#s-boards" class="chip">⭐板块龙头</a>
         <a href="#s-top20" class="chip">🏆主力TOP20</a>
@@ -1153,6 +1154,31 @@
               </details>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- 永久每日追踪：🛡️ 社保基金2026 Q3 五大核心方向 & 24只核心重仓股每日追踪雷达 -->
+      <section id="s-ssf-watch">
+        <div class="sec-header">
+          <div class="sec-eyebrow">SSF DAILY WATCHLIST · 每日收盘自动追踪</div>
+          <h2 class="sec-h2">🛡️ 社保5大方向 &amp; 24只核心股每日追踪（11/24收盘）</h2>
+        </div>
+
+        <div class="card card-tight">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+            <span class="tag t-up">今日强星：安培龙+20% · 新雷能+11.1% · 超颖电子+6.9%</span>
+            <span class="mono muted" style="font-size:11.5px;">含 MA20 位置自动信号</span>
+          </div>
+          <div id="ssf-filters" class="chip-scroller" style="padding:0 0 10px;">
+            <button data-sf="ALL" onclick="filterSsf('ALL')" class="chip active">全部 (24)</button>
+            <button data-sf="BUY" onclick="filterSsf('BUY')" class="chip" style="color:var(--up);">⭐MA20低吸区 (7)</button>
+            <button data-sf="AI硬件PCB" onclick="filterSsf('AI硬件PCB')" class="chip">AI硬件PCB (7)</button>
+            <button data-sf="机器人制造" onclick="filterSsf('机器人制造')" class="chip">机器人制造 (6)</button>
+            <button data-sf="电网能源" onclick="filterSsf('电网能源')" class="chip">电网能源 (3)</button>
+            <button data-sf="有色特钢" onclick="filterSsf('有色特钢')" class="chip">有色特钢 (5)</button>
+            <button data-sf="防御医药车" onclick="filterSsf('防御医药车')" class="chip">防御医药车 (3)</button>
+          </div>
+          <div class="ios-list" id="ssf-list"></div>
         </div>
       </section>
 
@@ -2060,6 +2086,36 @@
       `).join('');
     }
 
+
+    const SSF_WATCHLIST = [{"sym": "sh603175", "n": "超颖电子", "sec": "AI硬件PCB", "tag": "持股20.03%第1", "ssf": "流通比20.03%全A最高", "date": "2026-11-24", "c": 95.45, "chg": 6.86, "chg20": 4.89, "ma5": 87.66, "ma20": 87.63, "dist20": 8.92, "sig": "📈多头沿MA5运行"}, {"sym": "sz002938", "n": "鹏鼎控股", "sec": "AI硬件PCB", "tag": "重仓>20亿", "ssf": "社保组合前4大重仓(>20亿)", "date": "2026-11-24", "c": 46.0, "chg": 2.56, "chg20": -29.79, "ma5": 44.82, "ma20": 49.96, "dist20": -7.93, "sig": "🔍MA20下方磨底"}, {"sym": "sz300814", "n": "中富电路", "sec": "AI硬件PCB", "tag": "Q3新进>5亿", "ssf": "Q3大额新进AI PCB", "date": "2026-11-24", "c": 81.27, "chg": 1.83, "chg20": -13.27, "ma5": 80.33, "ma20": 90.99, "dist20": -10.68, "sig": "❄️超跌等止跌信号"}, {"sym": "sh688820", "n": "盛合晶微", "sec": "AI硬件PCB", "tag": "Q3新进封测龙", "ssf": "社保005组合新进先进封装", "date": "2026-11-24", "c": 92.71, "chg": 3.73, "chg20": 7.53, "ma5": 94.42, "ma20": 85.11, "dist20": 8.93, "sig": "📈多头沿MA5运行"}, {"sym": "sz000725", "n": "京东方A", "sec": "AI硬件PCB", "tag": "新进1.55亿股", "ssf": "Q3新进股数全A第1(8.87亿)", "date": "2026-11-24", "c": 4.42, "chg": -1.12, "chg20": -6.55, "ma5": 4.39, "ma20": 4.45, "dist20": -0.67, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002947", "n": "恒铭达", "sec": "AI硬件PCB", "tag": "持股7.84%", "ssf": "流通比7.84%第3名", "date": "2026-11-24", "c": 43.81, "chg": 2.22, "chg20": -5.34, "ma5": 44.3, "ma20": 46.12, "dist20": -5.01, "sig": "🔍MA20下方磨底"}, {"sym": "sz300628", "n": "亿联网络", "sec": "AI硬件PCB", "tag": "持股6.90%", "ssf": "2家社保增持+21.1%", "date": "2026-11-24", "c": 39.71, "chg": 0.05, "chg20": 7.15, "ma5": 40.17, "ma20": 38.71, "dist20": 2.58, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002050", "n": "三花智控", "sec": "机器人制造", "tag": "Q3新进7.5亿", "ssf": "社保104组合新进2,101万股", "date": "2026-11-24", "c": 34.36, "chg": 1.42, "chg20": 0.88, "ma5": 32.89, "ma20": 33.97, "dist20": 1.15, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz301413", "n": "安培龙", "sec": "机器人制造", "tag": "社保涨幅第1", "ssf": "10月以来社保重仓涨幅王", "date": "2026-11-24", "c": 89.71, "chg": 20.0, "chg20": 47.82, "ma5": 73.27, "ma20": 74.68, "dist20": 20.13, "sig": "🔥涨停/加速(不追)"}, {"sym": "sz000680", "n": "山推股份", "sec": "机器人制造", "tag": "4家扎堆7.24%", "ssf": "4家社保9,522万股(+8.3%)", "date": "2026-11-24", "c": 7.92, "chg": -2.7, "chg20": -10.1, "ma5": 8.26, "ma20": 8.72, "dist20": -9.17, "sig": "❄️超跌等止跌信号"}, {"sym": "sz002444", "n": "巨星科技", "sec": "机器人制造", "tag": "4家扎堆5.05%", "ssf": "4家社保5,798万股(+7.0%)", "date": "2026-11-24", "c": 26.97, "chg": -0.52, "chg20": 6.94, "ma5": 27.08, "ma20": 27.46, "dist20": -1.78, "sig": "🔍贴近MA20下蓄势"}, {"sym": "sz300836", "n": "佰奥智能", "sec": "机器人制造", "tag": "持股8.75%", "ssf": "流通比8.75%第2名", "date": "2026-11-24", "c": 31.66, "chg": 2.13, "chg20": -23.17, "ma5": 31.76, "ma20": 37.62, "dist20": -15.84, "sig": "❄️超跌等止跌信号"}, {"sym": "sh600031", "n": "三一重工", "sec": "机器人制造", "tag": "重仓>20亿", "ssf": "2家社保2.20亿股", "date": "2026-11-24", "c": 18.28, "chg": -1.14, "chg20": 1.16, "ma5": 18.65, "ma20": 18.59, "dist20": -1.67, "sig": "🔍贴近MA20下蓄势"}, {"sym": "sz002028", "n": "思源电气", "sec": "电网能源", "tag": "Q3新进>5亿", "ssf": "特高压电网核心·Q3新进", "date": "2026-11-24", "c": 110.08, "chg": 3.22, "chg20": 4.42, "ma5": 106.49, "ma20": 109.4, "dist20": 0.62, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz300593", "n": "新雷能", "sec": "电网能源", "tag": "2家新进>3%", "ssf": "115+420组合新进特种电源", "date": "2026-11-24", "c": 20.78, "chg": 11.12, "chg20": -7.07, "ma5": 19.34, "ma20": 21.02, "dist20": -1.14, "sig": "🔥涨停/加速(不追)"}, {"sym": "sh600863", "n": "华能蒙电", "sec": "电网能源", "tag": "新进8,356万股", "ssf": "高股息公用事业Q3新进", "date": "2026-11-24", "c": 5.36, "chg": -0.19, "chg20": 8.28, "ma5": 5.48, "ma20": 5.35, "dist20": 0.19, "sig": "⭐回踩MA20低吸区"}, {"sym": "sh601899", "n": "紫金矿业", "sec": "有色特钢", "tag": "重仓25.6亿", "ssf": "社保106组合加仓至8,580万股", "date": "2026-11-24", "c": 23.21, "chg": -4.33, "chg20": -16.66, "ma5": 23.92, "ma20": 26.7, "dist20": -13.07, "sig": "❄️超跌等止跌信号"}, {"sym": "sh603993", "n": "洛阳钼业", "sec": "有色特钢", "tag": "新进+18亿回购", "ssf": "Q3新进5,700万股+18亿回购贷", "date": "2026-11-24", "c": 11.7, "chg": -3.62, "chg20": -16.79, "ma5": 11.91, "ma20": 13.07, "dist20": -10.48, "sig": "❄️超跌等止跌信号"}, {"sym": "sh601168", "n": "西部矿业", "sec": "有色特钢", "tag": "Q3新进>5亿", "ssf": "铜铅锌高股息资源Q3新进", "date": "2026-11-24", "c": 24.73, "chg": -2.06, "chg20": -18.78, "ma5": 24.83, "ma20": 27.45, "dist20": -9.91, "sig": "❄️超跌等止跌信号"}, {"sym": "sh600549", "n": "厦门钨业", "sec": "有色特钢", "tag": "Q3新进>5亿", "ssf": "战略钨稀土龙头Q3新进", "date": "2026-11-24", "c": 31.95, "chg": -0.28, "chg20": -8.95, "ma5": 31.97, "ma20": 34.5, "dist20": -7.39, "sig": "🔍MA20下方磨底"}, {"sym": "sz002318", "n": "久立特材", "sec": "有色特钢", "tag": "4家扎堆5.32%", "ssf": "4家社保5,071万股(+6.1%)", "date": "2026-11-24", "c": 16.56, "chg": 2.22, "chg20": 0.79, "ma5": 16.42, "ma20": 17.02, "dist20": -2.7, "sig": "🔍贴近MA20下蓄势"}, {"sym": "sz002714", "n": "牧原股份", "sec": "防御医药车", "tag": "新进>3,000万股", "ssf": "生猪防御绝对龙头Q3新进", "date": "2026-11-24", "c": 45.31, "chg": -0.15, "chg20": 9.31, "ma5": 45.11, "ma20": 43.95, "dist20": 3.09, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002594", "n": "比亚迪", "sec": "防御医药车", "tag": "第1重仓45.6亿", "ssf": "社保114组合加仓至5,470万股", "date": "2026-11-24", "c": 75.96, "chg": -2.67, "chg20": -7.38, "ma5": 78.84, "ma20": 81.97, "dist20": -7.33, "sig": "🔍MA20下方磨底"}, {"sym": "sz002262", "n": "恩华药业", "sec": "防御医药车", "tag": "持股5.72%", "ssf": "2家社保增持+15.6%", "date": "2026-11-24", "c": 22.43, "chg": -1.41, "chg20": 4.52, "ma5": 22.63, "ma20": 22.39, "dist20": 0.18, "sig": "⭐回踩MA20低吸区"}];
+
+    function filterSsf(cat) {
+      document.querySelectorAll('#ssf-filters button').forEach(b => b.classList.toggle('active', b.dataset.sf === cat));
+      const list = cat === 'ALL' ? SSF_WATCHLIST
+        : (cat === 'BUY' ? SSF_WATCHLIST.filter(x => x.sig.includes('低吸区')) : SSF_WATCHLIST.filter(x => x.sec === cat));
+      document.getElementById('ssf-list').innerHTML = list.map(x => `
+        <div class="ios-row">
+          <div class="row-top">
+            <div class="row-left">
+              <b style="font-size:14.5px;">${x.n}</b>
+              <span class="mono muted" style="font-size:11.5px;">${x.sym.slice(2)}</span>
+              <span class="tag t-blue">${x.tag}</span>
+            </div>
+            <div class="row-right mono">
+              <span style="font-weight:700;margin-right:6px;">${x.c.toFixed(2)}</span>
+              <span class="price-pill ${x.chg>=0?'t-up':'t-down'}">${x.chg>=0?'+':''}${x.chg.toFixed(2)}%</span>
+            </div>
+          </div>
+          <div class="row-metrics mono">
+            <div><span class="muted">20日涨跌</span><br/><b class="${x.chg20>=0?'up':'down'}">${x.chg20>=0?'+':''}${x.chg20.toFixed(1)}%</b></div>
+            <div><span class="muted">MA20支撑(偏离)</span><br/><b>${x.ma20.toFixed(2)} (${x.dist20>=0?'+':''}${x.dist20.toFixed(1)}%)</b></div>
+            <div><span class="muted">赛道方向</span><br/><b>${x.sec}</b></div>
+          </div>
+          <div class="row-note"><span class="tag ${x.sig.includes('低吸')||x.sig.includes('多头')?'t-up':(x.sig.includes('不追')?'t-warn':'t-gray')}" style="margin-right:5px;">${x.sig}</span>${x.ssf} · 日MA5 ${x.ma5.toFixed(2)}</div>
+        </div>
+      `).join('');
+    }
+
     function renderUsStocksList() {
       document.getElementById('us-stocks-list').innerHTML = US_STOCKS_LIST.map(u => `
         <div class="ios-row">
@@ -2195,6 +2251,7 @@
       renderUsStocksList();
       renderLiveFlowStocks('IN');
       filterTop20('ALL');
+      filterSsf('ALL');
       renderStockChips();
       redrawAll();
     });
