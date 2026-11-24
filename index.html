@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="theme-color" content="#f5f5f7" id="metaTheme" />
-  <title>大师复盘 · 2026-11-24 10:35 盘中实盘</title>
+  <title>大师复盘 · 2026-11-24 13:49 实时资金与盘面</title>
   <style>
     /* ================ Apple / iPhone 原生级设计体系（零外链 · 手机零溢出 · 极致清晰） ================ */
     :root, [data-theme="light"] {
@@ -283,7 +283,7 @@
       <div class="nav-top">
         <div class="nav-title-wrap">
           <h1 class="nav-title">大师复盘终端</h1>
-          <div class="nav-sub">2026-11-24 10:35 盘中实盘 · 第2期 · 红涨绿跌</div>
+          <div class="nav-sub">2026-11-24 13:49 实盘+资金流 · 第2期</div>
         </div>
         <button id="themeBtn" onclick="toggleTheme()" class="icon-btn">🌙 深色</button>
       </div>
@@ -292,7 +292,7 @@
       <div class="seg-wrap">
         <div class="seg-control">
           <button id="seg-0830" onclick="switchMode('0830')" class="seg-btn">08:30 美股深度</button>
-          <button id="seg-1200" onclick="switchMode('1200')" class="seg-btn active">🔴 10:35 盘中</button>
+          <button id="seg-1200" onclick="switchMode('1200')" class="seg-btn active">🔴 13:49 实盘</button>
           <button id="seg-1600" onclick="switchMode('1600')" class="seg-btn">16:00 收盘全景</button>
         </div>
       </div>
@@ -309,10 +309,11 @@
         <a href="#us-gurus" class="chip">🧠大咖与映射</a>
       </div>
       <div id="chips-1200" class="chip-scroller">
-        <a href="#live-cn-top" class="chip accent">🔴10:35结论</a>
-        <a href="#live-cn-sectors" class="chip">📊A股强弱榜</a>
-        <a href="#live-hk" class="chip">🇭🇰港股冰火</a>
-        <a href="#live-plan" class="chip">🎯盘中指令</a>
+        <a href="#live-cn-top" class="chip accent">🔴13:49结论</a>
+        <a href="#live-moneyflow" class="chip" style="background:var(--up-bg);color:var(--up);">💰实时资金流</a>
+        <a href="#live-cn-sectors" class="chip">📊A股强弱</a>
+        <a href="#live-hk" class="chip">🇭🇰港股午后</a>
+        <a href="#live-plan" class="chip">🎯尾盘指令</a>
       </div>
       <div id="chips-1600" class="chip-scroller hidden">
         <a href="#s-sentiment" class="chip accent">🌡️情绪 34分</a>
@@ -668,151 +669,200 @@
     <!-- ==================== 12:00 午盘精简观点视图 ==================== -->
     <!-- ====================================================================== -->
     <div id="view-1200" class="view-pane">
-      <!-- 置顶：🔴 10:35 盘中实时直击（A股+港股） -->
+      <!-- 置顶：🔴 13:49 午后盘中实时直击（A股+港股） -->
       <section id="live-cn-top" class="card" style="border:1.5px solid var(--up);">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-          <span class="tag t-up">🔴 A股/港股盘中实盘 · 11/24 10:35 更新</span>
-          <span class="mono muted" style="font-size:11.5px;">开盘1小时两市 8,936亿 · 放量换手</span>
+          <span class="tag t-up">🔴 A股/港股午后实盘 · 11/24 13:49 更新</span>
+          <span class="mono muted" style="font-size:11.5px;">沪深成交 13,112亿 · 全市场净流出 -286亿</span>
         </div>
-        <h2 style="font-size:17.5px;margin:0 0 8px;line-height:1.35;">早盘警告全部应验！CPO/存储/金银<b>高开猛兑现</b>，真主线切换至<b>「科创50国产芯片 + 人形机器人 + 工业富联/胜宏」</b>，港股恒科冲 3,604 未过 MA5 回落！</h2>
-        <p style="font-size:13px;color:var(--text-2);margin:0 0 12px;">截至 10:35：沪深两市 1 小时狂成交 <b>8,936 亿</b>（沪 4,060 亿 + 深 4,876 亿，全天剑指 <b>1.8~2.0 万亿</b>）。指数普遍高开后消化获利盘，唯独 <b>科创50 (+3.36%)</b> 低开高走全场最强；<b>券商 (-0.92%)</b> 拖后腿，说明今天是<b>纯硬科技结构行情，切忌盲目追高！</b></p>
+        <h2 style="font-size:17.5px;margin:0 0 8px;line-height:1.35;">午后资金剧烈分化！易中天三兄弟被主力狂砸 <span class="down mono">-103亿</span>，真钱猛攻<b>「寒武纪/中芯/工业富联/机器人」</b>；港股恒指/恒科双双由涨转跌！</h2>
+        <p style="font-size:13px;color:var(--text-2);margin:0 0 12px;">截至 13:49：沪深成交 <b>13,112 亿</b>（沪 6,043 亿 + 深 7,068 亿，全天剑指 <b>1.8~1.9 万亿</b>）。<b>科创50 (+3.44%)</b> 继续领跑全场，但创业板回吐至 +1.64%、<b>证券公司跌 -1.09%</b>；全市场主力借高开净流出 <b>-286.3 亿</b>，港股恒科从高开 +2.05% 砸至 <b>-1.05%（较开盘 -3.04%）</b>！</p>
 
-        <!-- 核心宽基 4 宫格 -->
         <div class="grid cols-4 cols-2-mob" style="margin-bottom:12px;">
-          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>科创50</span><span class="tag t-up">全场最强</span></div><div class="idx-val mono up">1,269.1</div><div class="idx-sub mono up"><b>+3.36%</b> · 较开盘+0.1%</div></div>
-          <div class="idx-card"><div class="idx-name"><span>创业板指</span><span class="tag t-warn">冲高回落</span></div><div class="idx-val mono up">2,343.8</div><div class="idx-sub mono"><b class="up">+2.79%</b> · 开+3.88%</div></div>
-          <div class="idx-card"><div class="idx-name"><span>上证指数</span><span class="tag t-blue">踩稳MA5</span></div><div class="idx-val mono up">3,565.9</div><div class="idx-sub mono"><b class="up">+0.76%</b> · 高3,585</div></div>
-          <div class="idx-card" style="background:var(--surface-2);"><div class="idx-name"><span>恒生科技</span><span class="tag t-warn">高开低走</span></div><div class="idx-val mono up">3,523.6</div><div class="idx-sub mono"><b class="up">+0.44%</b> · 开+2.05%回吐</div></div>
+          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>科创50</span><span class="tag t-up">真主线</span></div><div class="idx-val mono up">1,270.1</div><div class="idx-sub mono up"><b>+3.44%</b> · 寒武纪+8.2%</div></div>
+          <div class="idx-card"><div class="idx-name"><span>上证指数</span><span class="tag t-blue">护盘稳</span></div><div class="idx-val mono up">3,558.3</div><div class="idx-sub mono"><b class="up">+0.55%</b> · 茅台工行翻红</div></div>
+          <div class="idx-card" style="background:var(--down-bg);"><div class="idx-name"><span>全市场资金</span><span class="tag t-down">高开派发</span></div><div class="idx-val mono down">-286.3亿</div><div class="idx-sub mono down">流入3009 · 流出3295</div></div>
+          <div class="idx-card" style="background:var(--down-bg);"><div class="idx-name"><span>恒生科技</span><span class="tag t-down">由涨转跌</span></div><div class="idx-val mono down">3,471.0</div><div class="idx-sub mono down"><b>-1.05%</b> · 较开盘-3.04%</div></div>
         </div>
 
         <div class="grid cols-3">
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">✅ 真强承接（钱真正在买的）</div>
-            <div style="font-size:12.5px;color:var(--text-2);"><b>① 国产芯片/科创50</b>：中芯国际低开拉 <b>+4.14%</b>、寒武纪 <b>+4.65%</b>、中微 <b>+3.90%</b>；<b>② 人形机器人</b>：安培龙 <b>20CM 2连板</b>、汉威 +8.4%、拓普 +4.3%、宇树 +4.1%；<b>③ 算力硬件绝对核</b>：工业富联 <b>+10% 封死涨停</b>、胜宏 <b>+10.6%</b> 冲破 122 压力！</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">✅ 午后真金白银净流入</div>
+            <div style="font-size:12.5px;color:var(--text-2);"><b>工业富联 (+17.8亿)</b>、<b>华胜天成 (+15.1亿)</b>、<b>寒武纪 (+11.3亿 逼近千元!)</b>、<b>中芯国际 (+6.4亿)</b>、<b>茅台 (+6.3亿)</b>、<b>安培龙 (+4.9亿 2连20CM)</b>、<b>工行 (+3.5亿 V反翻红)</b>、<b>三花 (+3.0亿)</b>、<b>国电南瑞 (跌着买+1.6亿!)</b>。</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--orange);">⚠️ 兑现重灾区（追竞价就吃面）</div>
-            <div style="font-size:12.5px;color:var(--text-2);"><b>① 光模块 CPO</b>：中际旭创开 +11% 回至 +4.6%（较开盘 -5.8%，1小时砸 184 亿）、新易盛开 +8.6% 回至 +4.5%（166 亿）、剑桥科技一字炸板！<b>② 存储</b>：兆易/澜起/江波龙较开盘全回吐 -4.2%；<b>③ 金银矿全翻绿</b>：盛达 -3.7%、中金黄金 -2.2%、紫金 -1.4%！</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">❄️ 午后主力狂砸净流出</div>
+            <div style="font-size:12.5px;color:var(--text-2);"><b>中际旭创 (-51.3亿)</b>、<b>新易盛 (-33.8亿)</b>、<b>天孚通信 (-18.1亿)</b> ——光模块三巨头合计砸出 <b>-103.1 亿</b>！此外 <b>长鑫 (-17.7亿)、沪电 (-12.5亿)、东方财富 (-7.7亿)、胜宏 (-7.2亿)、紫金 (-6.9亿)</b> 遭主力大举派发！</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">🏦 权重警报（为什么涨不动了）</div>
-            <div style="font-size:12.5px;color:var(--text-2);"><b>证券公司指数 -0.92%</b>（东方财富 -1.83% 至 18.28、同花顺 -1.62%），券商不搭台意味着指数很难逼空；同时 <b>工商银行</b> 低开 -2.73% 后被托回 9.13 (-0.22%)、<b>茅台</b> 翻红 +0.49%，大盘转为<b>震荡分化格局</b>。</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--orange);">⚠️ 午后盘面本质（小白必懂）</div>
+            <div style="font-size:12.5px;color:var(--text-2);">指数红着但全市场净流出 -286 亿，这就是<b>「借外围利好高开大换血」</b>：主力把昨天低吸的高开 CPO/PCB/存储筹码砸给追高散户，腾出钱去买<b>国产芯片、机器人、AI应用漫剧、船舶与低位权重大票</b>！</div>
           </div>
         </div>
       </section>
 
-      <!-- A股盘中板块全景雷达 -->
+      <!-- 💰 永久新增核心板块：A股实时资金面流向追踪（大盘 + 细分板块 + 代表个股） -->
+      <section id="live-moneyflow">
+        <div class="sec-header">
+          <div class="sec-eyebrow">REAL-TIME CAPITAL FLOW · 永久追踪板块</div>
+          <h2 class="sec-h2">💰 A股实时资金面流向追踪（大盘 · 板块 · 代表股）</h2>
+        </div>
+
+        <!-- Layer 1: 大盘总资金仪表盘 -->
+        <div class="card" style="margin-bottom:12px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+            <strong style="font-size:15px;">1. 大盘实时资金总览（13:49 新浪全行业口径）</strong>
+            <span class="tag t-down mono">净流出 -286.29 亿</span>
+          </div>
+
+          <!-- 流入 vs 流出 直观比例条 -->
+          <div style="margin-bottom:12px;">
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px;" class="mono">
+              <span class="up"><b>总流入 3,008.8 亿 (47.7%)</b></span>
+              <span class="down"><b>总流出 3,295.1 亿 (52.3%)</b></span>
+            </div>
+            <div style="height:10px;border-radius:999px;background:var(--down);overflow:hidden;display:flex;">
+              <div style="width:47.7%;background:var(--up);height:100%;"></div>
+            </div>
+          </div>
+
+          <div class="grid cols-4 cols-2-mob">
+            <div class="inset-box"><div class="muted" style="font-size:11.5px;">沪深实时成交</div><div class="mono" style="font-size:16px;font-weight:700;margin-top:2px;">13,112 亿</div><div style="font-size:11px;color:var(--text-2);">全天预计 1.8~1.9万亿</div></div>
+            <div class="inset-box"><div class="muted" style="font-size:11.5px;">ETF 午间成交</div><div class="mono up" style="font-size:16px;font-weight:700;margin-top:2px;">3,813 亿</div><div style="font-size:11px;color:var(--text-2);">较昨日增 +724 亿</div></div>
+            <div class="inset-box"><div class="muted" style="font-size:11.5px;">南向资金(港股通)</div><div class="mono up" style="font-size:16px;font-weight:700;margin-top:2px;">+50亿HKD+</div><div style="font-size:11px;color:var(--text-2);">港股越跌南向越买</div></div>
+            <div class="inset-box"><div class="muted" style="font-size:11.5px;">两融余额(11/23)</div><div class="mono down" style="font-size:16px;font-weight:700;margin-top:2px;">2.14 万亿</div><div style="font-size:11px;color:var(--text-2);">连降7日 · 等11/30松绑</div></div>
+          </div>
+        </div>
+
+        <!-- Layer 2: 细分板块资金净流向可视化 -->
+        <div class="card" style="margin-bottom:12px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
+            <strong style="font-size:15px;">2. 细分板块实时资金净流向（红=净流入 · 绿=净流出）</strong>
+            <span class="mono muted" style="font-size:11.5px;">单位：亿元 · 13:49 实时</span>
+          </div>
+          <div class="chart-box"><canvas id="liveFlowCanvas"></canvas></div>
+          <div class="inset-box" style="margin-top:10px;font-size:12.5px;color:var(--text-2);">
+            <b>🎓 小白看资金流第一课（量价背离警报）</b>：看上图——<b>电子器件(+1.85%)、机械(+0.81%)、电子信息(+0.51%)</b> 表面红盘上涨，主力资金却分别狂流出 <b>-66.5亿 / -40.0亿 / -34.0亿</b>！这就是典型的<b>「高开派发」</b>：散户追高接盘、主力趁机出货。而 <b>农林牧渔(+10.7亿)、家电(+10.4亿)、纺织传媒(+6.5亿)、船舶(+1.9亿)</b> 则是真资金净流入承接！
+          </div>
+        </div>
+
+        <!-- Layer 3: 市场最具代表性个股实时资金流向追踪 -->
+        <div class="card card-tight">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+            <strong style="font-size:15px;">3. 市场最具代表性个股主力资金追踪（24只核心股）</strong>
+            <span class="mono muted" style="font-size:11.5px;">新浪超大单/主力实时净额</span>
+          </div>
+          <div id="live-flow-tabs" class="chip-scroller" style="padding:0 0 10px;">
+            <button data-ft="IN" onclick="renderLiveFlowStocks('IN')" class="chip active">🔥 主力净流入 (12)</button>
+            <button data-ft="OUT" onclick="renderLiveFlowStocks('OUT')" class="chip">❄️ 主力净流出 (12)</button>
+            <button data-ft="ALL" onclick="renderLiveFlowStocks('ALL')" class="chip">📊 全部24只对比</button>
+          </div>
+          <div class="ios-list" id="live-flow-stocks"></div>
+        </div>
+      </section>
+
+      <!-- A股 13:49 午后板块强弱雷达 -->
       <section id="live-cn-sectors">
         <div class="sec-header">
-          <div class="sec-eyebrow">A-SHARE INTRADAY RADAR · 10:35 实时资金流向</div>
-          <h2 class="sec-h2">A股盘中板块强弱榜（精确对比开盘 vs 现价）</h2>
+          <div class="sec-eyebrow">A-SHARE INTRADAY SECTORS · 13:49 午后分化</div>
+          <h2 class="sec-h2">A股午后核心板块强弱全景</h2>
         </div>
 
         <div class="card card-tight">
           <div class="ios-list">
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 最强主线</span><b>1. 人形机器人 &amp; 物理AI（唯一走出连板持续性！）</b></div><span class="tag t-up">低开高走</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 午后再拉</span><b>1. 人形机器人 + AI漫剧应用（午后情绪最火双主线！）</b></div><span class="tag t-up">涨停潮</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">安培龙 / 汉威</span><br/><b class="up">+20.0%(2连) / +8.4%</b></div>
-                <div><span class="muted">拓普 / 宇树</span><br/><b class="up">55.2(+4.3%) / 737(+4.1%)</b></div>
-                <div><span class="muted">三花智控</span><br/><b class="up">34.79 (+2.7% · 站稳34.3)</b></div>
+                <div><span class="muted">安培龙 / 汉威</span><br/><b class="up">+20%(2连) / +12.3%</b></div>
+                <div><span class="muted">拓普 / 宇树 / 三花</span><br/><b class="up">+3.3% / +3.1% / +2.5%</b></div>
+                <div><span class="muted">AI漫剧 / 龙版传媒</span><br/><b class="up">浙文/值得买板 · 龙版+4.4%</b></div>
               </div>
-              <div class="row-note"><b>盘中点评</b>：昨天涨停潮后今天<b>全部较开盘继续走高</b>，完全没被光模块高开抽血！拓普(0%套牢盘)踩稳 54 上攻，三花站稳 20 日成本 34.3——<b>机器人仍是当下 A 股最强人气主线</b>。</div>
+              <div class="row-note"><b>午后催化</b>：午后机器人再掀涨停潮（维宏 20CM 2连板、安培龙 20CM 2连、柯力/宁波东力涨停），同时 <b>AI漫剧/应用</b> 爆发（浙文影业+5.2亿封板、值得买/遥望/利欧涨停），成为资金从高开硬件撤出后的首选承接池！</div>
             </div>
 
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 科创旗手</span><b>2. 国产半导体 / 自主芯片（真资金逆势抢筹）</b></div><span class="tag t-up">低开高走</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 真金承接</span><b>2. 国产芯片 &amp; 算力服务器（寒武纪冲千元 · 富联居净流第1）</b></div><span class="tag t-up">主力净买</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">中芯国际 ⭐</span><br/><b class="up">126.64 (+4.14% · 开-0.4%)</b></div>
-                <div><span class="muted">寒武纪 / 中微</span><br/><b class="up">+4.65% / +3.90%</b></div>
-                <div><span class="muted">北方华创</span><br/><b class="up">555.9 (+2.74%)</b></div>
+                <div><span class="muted">寒武纪 ⭐</span><br/><b class="up">989.8 (+8.2% · +11.3亿)</b></div>
+                <div><span class="muted">中芯国际 ⭐</span><br/><b class="up">125.7 (+3.4% · +6.4亿)</b></div>
+                <div><span class="muted">工业富联</span><br/><b class="up">41.25 (+7.7% · +17.8亿)</b></div>
               </div>
-              <div class="row-note"><b>盘中点评</b>：市场最聪明的一批钱没去追高开 +10% 的达链，反而趁<b>中芯国际低开 -0.4% 一路买到 +4.1%（成交 51.7 亿）</b>，带动科创 50 成为全市场唯一高于开盘价的科技宽基！</div>
+              <div class="row-note"><b>午后点评</b>：工业富联炸板回踩但主力仍净买 <b>+17.79 亿（全场第一）</b>；寒武纪午后一度冲至 <b>997.98 元</b> 逼近千元大关、主力净买 +11.3 亿，牢牢扛住科创 50 (+3.44%)！</div>
             </div>
 
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★☆ 核心分化</span><b>3. PCB &amp; AI 算力服务器（前排封死 · 后排分化）</b></div><span class="tag t-warn">胜宏/富联强</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-down">⚠️ 天量出货</span><b>3. 光模块 CPO / PCB / 存储（易中天主力狂砸 -103 亿！）</b></div><span class="tag t-down">较开-5%~-7%</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">工业富联 ⭐</span><br/><b class="up">42.12 (+10.00% 封板)</b></div>
-                <div><span class="muted">胜宏科技 ⭐</span><br/><b class="up">127.32 (+10.62%)</b></div>
-                <div><span class="muted">沪电股份</span><br/><b style="color:var(--orange)">85.74 (+3.7% · 较开-5.4%)</b></div>
+                <div><span class="muted">中际 / 新易盛</span><br/><b class="down">+3.1%(-51.3亿) / +3.5%(-33.8亿)</b></div>
+                <div><span class="muted">天孚 / 沪电 / 胜宏</span><br/><b class="down">-18.1亿 / -12.5亿 / -7.2亿</b></div>
+                <div><span class="muted">长鑫 / 兆易 / 澜起</span><br/><b class="down">-17.7亿 / -5.3亿 / -3.6亿</b></div>
               </div>
-              <div class="row-note"><b>盘中点评</b>：工业富联一字涨停 60.6 亿封死定海神针；<b>胜宏科技</b> 放量突破我们早盘画的 <b>122 压力位</b> 冲到 127.3（早盘冲 134.8 后有承接），远强于沪电。持仓胜宏的按纪律冲高减 1/3 留底仓！</div>
+              <div class="row-note"><b>午后点评</b>：光模块与存储继续阴跌回吐早盘涨幅，中际成交 237 亿、新易盛 208 亿全在派发！<b>胜宏科技</b> 早盘冲 134.8 后回落至 124.5（主力 -7.2亿），庆幸按纪律冲破 122 先减仓。</div>
             </div>
 
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-warn">★★★☆☆ 天量分歧</span><b>4. 光模块 CPO &amp; 存储芯片（1小时狂砸 350 亿兑现！）</b></div><span class="tag t-down">较开-4%~-6%</span></div>
+              <div class="row-top"><div class="row-left"><span class="tag t-blue">★★★★☆ 护盘 &amp; 新催化</span><b>4. 权重托底 + 船舶军工崛起 + 有色大跌</b></div><span class="tag t-warn">冰火分化</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">中际 / 新易盛</span><br/><b style="color:var(--orange)">+4.6%(184亿) / +4.5%(166亿)</b></div>
-                <div><span class="muted">天孚 / 剑桥</span><br/><b style="color:var(--orange)">+9.6%(-4.4开) / +2.9%(炸板)</b></div>
-                <div><span class="muted">兆易 / 澜起 / 江波龙</span><br/><b style="color:var(--orange)">+2.1% / +3.6% / +2.8%</b></div>
+                <div><span class="muted">茅台 / 工行 / 农行</span><br/><b class="up">+0.9%(+6.3亿) / +0.6%(+3.5亿) / +0.5%</b></div>
+                <div><span class="muted">中国船舶 / 军工</span><br/><b class="up">35.03 (+2.1% · +2.6亿)</b></div>
+                <div><span class="muted">紫金 / 兴业 / 盛达</span><br/><b class="down">-4.0% / -3.6% / -5.4%</b></div>
               </div>
-              <div class="row-note"><b>盘中点评</b>：<b>完美印证我们早盘“严禁 9:30 追竞价”铁律！</b> 中际旭创高开 11%、剑桥一字炸板、新易盛高开 8.6% 冲 202 回落至 189.4。现在刚进入 <b>10:30–11:30 承接检验期</b>：新易盛盯 <b>185–186（分时支撑）</b>、不破且缩量止跌才考虑分批低吸，别在急跌中接飞刀！</div>
-            </div>
-
-            <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-down">★★☆☆☆ 避险抽血</span><b>5. 金银铜资源 / 券商 / 防御（资源全翻绿 · 银行托底）</b></div><span class="tag t-down">资金撤出</span></div>
-              <div class="row-metrics mono">
-                <div><span class="muted">金银矿（兴业/紫金/盛达）</span><br/><b class="down">-1.2% / -1.4% / -3.7%</b></div>
-                <div><span class="muted">券商（东财/同花顺）</span><br/><b class="down">-1.83% / -1.62%</b></div>
-                <div><span class="muted">工行 / 茅台 / 牧原 / 南瑞</span><br/><span>-0.2% / +0.5% / -0.04% / -0.8%</span></div>
-              </div>
-              <div class="row-note"><b>盘中点评</b>：昨晚 COMEX 黄金 +3.7%、白银 +5.9%，但 A 股金银股今天<b>全线高开翻绿</b>（资金借高开砸盘换去科技）；国电南瑞 (24.71)、牧原 (45.36) 缩量小踩，仍可作稳健底仓逢低接。</div>
+              <div class="row-note"><b>午后点评</b>：银行/茅台午后全部翻红稳住上证；<b>军工/船舶</b> 受 <b>12/7 珠海航展 30 周年</b> 催化异动（中国船舶主力 +2.56亿）；<b>国电南瑞</b> 虽微跌 -0.64%，但主力逆势净买入 <b>+1.61亿（占比+15.4%）</b>，典型洗盘吸筹！有色金银继续遭抛售。</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 🇭🇰 港股盘中直击 -->
+      <!-- 🇭🇰 港股 13:49 午后直击 -->
       <section id="live-hk">
         <div class="sec-header">
-          <div class="sec-eyebrow">HONG KONG MARKET LIVE · 10:35 盘中拆解</div>
-          <h2 class="sec-h2">🇭🇰 港股冰火两重天：恒科高开低走，硬科技独强！</h2>
+          <div class="sec-eyebrow">HONG KONG MARKET LIVE · 13:49 午后彻底转跌</div>
+          <h2 class="sec-h2">🇭🇰 港股午后全线跳水：恒指 -0.43%、恒科 -1.05% 失守 3,500！</h2>
         </div>
 
         <div class="card card-tight">
           <div class="ios-list">
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><b>恒生指数 22,453 (+0.31%) · 恒生科技 3,524 (+0.44%)</b></div><span class="tag t-warn">未过 MA5</span></div>
-              <div class="row-note">恒科早盘高开 <b>+2.05%</b> 最高冲到 <b>3,603.70</b>，刚好在早盘给出的 <b>MA5 企稳线 (3,633)</b> 下方遇阻回落至 3,524（较开盘 -1.57%），再次确认<b>港股老科网尚未企稳、仍属弱反抽</b>！</div>
+              <div class="row-top"><div class="row-left"><b>恒指 22,287 (-0.43%) · 恒生科技 3,471 (-1.05%) · 国企 -0.75%</b></div><span class="tag t-down">砸穿3500</span></div>
+              <div class="row-note">恒生科技早盘一度高开 <b>+2.05% 冲 3,604</b>，未触及 MA5(3,633) 即一路单边跳水，午后跌破 3,500 关口报 <b>3,471（较开盘暴吐 -3.04%）</b>！外资继续借反弹卖出港股老科网，仅靠 <b>南向资金净买超 +50 亿港元</b> 艰难托底。</div>
             </div>
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><b>❌ 拖累主力：老科网权重全线跳水</b></div><span class="tag t-down">高开翻绿</span></div>
+              <div class="row-top"><div class="row-left"><b>❌ 午后跌幅全面扩大（小米/阿里/智谱齐杀）</b></div><span class="tag t-down">普跌</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">腾讯 / 阿里</span><br/><b class="down">343(-0.3%)</b> / <b class="up">83.8(+0.9%·开+4.3%)</b></div>
-                <div><span class="muted">美团 / 小米</span><br/><b class="down">64.6 (-2.71%) / 26.9 (-2.18%)</b></div>
-                <div><span class="muted">网易 / 港交所</span><br/><b class="down">-1.07%</b> / <b class="up">+0.85%</b></div>
+                <div><span class="muted">小米 / 美团 / 网易</span><br/><b class="down">-4.58% / -2.41% / -2.19%</b></div>
+                <div><span class="muted">阿里 / 腾讯 / 比亚迪</span><br/><b class="down">-0.48%(开+4.3%) / -0.29% / -1.23%</b></div>
+                <div><span class="muted">紫金矿业(02899)</span><br/><b class="down">23.34 (-2.83%)</b></div>
               </div>
-              <div class="row-note">腾讯开 +2.3% 翻绿，阿里开 +4.3% 吐掉超 3%，美团/小米领跌——说明外资与南向对传统互联网电商依然逢高减仓。</div>
+              <div class="row-note">连早盘一度暴涨 +15% 的大模型新贵 <b>智谱</b> 盘中也大幅跳水翻绿 -3%（振幅近 20%）——港股流动性不足时，<b>千万不要追高开！</b></div>
             </div>
             <div class="ios-row">
-              <div class="row-top"><div class="row-left"><b>✅ 港股真主线：硬科技 + 恒科扩容新贵！</b></div><span class="tag t-up">结构换血</span></div>
+              <div class="row-top"><div class="row-left"><b>✅ 港股仅存火种（涨幅亦明显收窄）</b></div><span class="tag t-warn">缩量护盘</span></div>
               <div class="row-metrics mono">
-                <div><span class="muted">中芯(00981) / 华虹</span><br/><b class="up">+3.51% / +3.83%</b></div>
-                <div><span class="muted">长飞光纤(06869)</span><br/><b class="up">77.45 (+5.88% · 13.6亿)</b></div>
-                <div><span class="muted">小鹏 / 比亚迪</span><br/><b class="up">+4.84% / +1.31%</b></div>
+                <div><span class="muted">长飞光纤(06869)</span><br/><b class="up">75.35 (+3.01% · 开+9.4%)</b></div>
+                <div><span class="muted">小鹏 / 中芯(00981)</span><br/><b class="up">+2.51% / +1.85%</b></div>
+                <div><span class="muted">港交所 / 华虹</span><br/><b class="up">+0.91% / +0.67%</b></div>
               </div>
-              <div class="row-note">港股资金正剧烈换血：12/7 恒生科技扩容至 50 只（新纳入中际旭创、长飞光纤、胜宏、澜起、宁德时代等硬科技），叠加智谱/MiniMax 等 AI 新贵暴涨，<b>港股操作记住 8 个字：远离老科网、只盯半导体/光通信/新能车！</b></div>
+              <div class="row-note">港股企稳的唯一标准不变：<b>恒生科技必须放量站回 MA5 (3,633) + 港股全天成交破 1,800 亿港元</b>。没满足前，港股只做极轻仓观察！</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 🎯 10:35 → 15:00 接下来 3 小时实战指令 -->
+      <!-- 🎯 13:50 → 15:00 尾盘实战指令 -->
       <section id="live-plan" class="card" style="border:1.5px solid var(--blue);">
-        <strong style="display:block;font-size:15.5px;margin-bottom:10px;">🎯 10:35 → 15:00 盘中实战指令（小白直接照做）</strong>
+        <strong style="display:block;font-size:15.5px;margin-bottom:10px;">🎯 13:50 → 15:00 尾盘 1 小时实战指令</strong>
         <div class="grid cols-3">
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">1. 午盘前/午后走势预判</div>
-            <div style="font-size:12.5px;color:var(--text-2);">全天成交额将放量至 <b>1.8万亿+</b>，上证大概率在 <b>3,550–3,585</b> 区间震荡消化。若午后<b>东方财富能翻红带动券商止跌</b>，指数有望二次冲高；若券商继续躺平，则维持<b>科创50 + 机器人</b>结构轮动。</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">1. 尾盘看什么信号？</div>
+            <div style="font-size:12.5px;color:var(--text-2);">① 看<b>中际/新易盛</b>尾盘能否停止扩大净流出（若停止跳水则明天有反抽）；② 看<b>东方财富(-2.6%)</b>能否收窄跌幅；③ 明天（11/25）有 <b>5,600亿政府债净缴款 + 美10月PCE</b>，尾盘大概率平稳收十字星或小阳。</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="blue">2. 现在能看/低吸什么？</div>
-            <div style="font-size:12.5px;color:var(--text-2);">• <b>趋势低吸</b>：回踩分时均线不破的 <b>中芯国际、拓普集团(54附近)、三花智控(34.3附近)</b>；<br/>• <b>稳健补涨</b>：缩量微跌的 <b>国电南瑞(24.4–24.7)、牧原股份(44.5–45.2)</b>；<br/>• <b>CPO/存储</b>：等 <b>下午 13:30 后不再创新低</b> 再轻仓试错（新易盛看 185 承接）。</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="blue">2. 尾盘可低吸什么？</div>
+            <div style="font-size:12.5px;color:var(--text-2);">只选<b>「主力真净流入 + 没爆拉追高」</b>的票：<br/>• <b>稳健暗吸</b>：<b>国电南瑞(24.76 · 跌着净流+1.6亿)</b>、<b>牧原(45.5 · +1.0亿)</b>、<b>中国船舶(35.0 · +2.6亿)</b>；<br/>• <b>进攻核心</b>：<b>三花智控(34.7 · +3.0亿)</b>、<b>拓普(54.7 · +1.7亿)</b>、<b>中芯国际(125.7 · +6.4亿)</b> 尾盘回踩均线分批低吸。</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">3. 绝对别干的事</div>
-            <div style="font-size:12.5px;color:var(--text-2);">• <b>别追</b>已经高开回落、分时一路向下的 CPO 后排/剑桥科技与翻绿的金银矿；<br/>• <b>别抄底</b>走弱的港股美团/小米（恒科未站上 3,633 前不做大仓位）；<br/>• <b>记得留现金</b>：明天（11/25）有 5,600 亿政府债缴款+美国 PCE，仓位控制在 <b>5–7 成</b>最舒服！</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">3. 尾盘绝对别碰</div>
+            <div style="font-size:12.5px;color:var(--text-2);">• <b>别急抄</b>主力单日狂砸 -103 亿的 CPO（等明天回踩缩量企稳再看）；<br/>• <b>别接飞刀</b>主力净流出且跌破位的小米(-4.6%)、有色金银(-3%~-5%)与券商(-1.1%)；<br/>• <b>总仓位控在 5–6 成</b>，留足现金应对明天 PCE 波动！</div>
           </div>
         </div>
         <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;">
@@ -1309,7 +1359,7 @@
   <!-- iPhone 专属底部 Tab Bar -->
   <nav class="ios-tabbar">
     <button id="tab-0830" onclick="switchMode('0830')" class="tab-item"><span class="ico">🌅</span><span>08:30 美股</span></button>
-    <button id="tab-1200" onclick="switchMode('1200')" class="tab-item active"><span class="ico">🔴</span><span>10:35 盘中</span></button>
+    <button id="tab-1200" onclick="switchMode('1200')" class="tab-item active"><span class="ico">🔴</span><span>13:49 实盘</span></button>
     <button id="tab-1600" onclick="switchMode('1600')" class="tab-item"><span class="ico">🌆</span><span>16:00 全景</span></button>
   </nav>
 
@@ -1556,6 +1606,137 @@
       ctx.fillStyle = C.muted; dates.forEach((d, i) => { if (i === 0 || i === n - 1 || i === Math.floor(n / 2)) ctx.fillText(d, Math.min(w - 36, Math.max(padL, xAt(i) - 14)), h - 3); });
     }
 
+
+    // ==================== 永久新增：A股实时资金面流向数据（11/24 13:49 新浪实时） ====================
+    const LIVE_SECTOR_FLOW = [
+      {n:"农林牧渔", v:10.71, chg:0.46},
+      {n:"家电行业", v:10.44, chg:0.24},
+      {n:"纺织/传媒", v:6.45, chg:0.49},
+      {n:"汽车制造", v:4.70, chg:-0.18},
+      {n:"造纸行业", v:4.37, chg:0.27},
+      {n:"船舶制造", v:1.89, chg:1.32},
+      {n:"酿酒行业", v:1.60, chg:0.44},
+      {n:"房地产", v:-13.15, chg:-0.19},
+      {n:"生物制药", v:-18.46, chg:-0.97},
+      {n:"化工行业", v:-18.53, chg:-0.06},
+      {n:"电子信息", v:-33.97, chg:0.51},
+      {n:"机械行业", v:-40.04, chg:0.81},
+      {n:"有色金属", v:-45.73, chg:-2.47},
+      {n:"电子器件", v:-66.53, chg:1.85}
+    ];
+
+    const LIVE_STOCK_FLOW = [
+      // 主力净流入 TOP12 代表股
+      {sym:"601138",n:"工业富联",sec:"AI服务器",p:41.25,chg:7.73,net:17.79,ratio:18.4,dir:"IN",note:"全A主力净流入第1！盘中炸板回踩但大单承接极强。"},
+      {sym:"600410",n:"华胜天成",sec:"算力/软件",p:17.64,chg:5.95,net:15.06,ratio:28.0,dir:"IN",note:"主力净占比高达+28%，算力软件午后抢筹先锋。"},
+      {sym:"688256",n:"寒武纪",sec:"国产AI芯片",p:989.80,chg:8.20,net:11.30,ratio:9.7,dir:"IN",note:"午后逼近千元(高997.98)，科创50真总龙头！"},
+      {sym:"688981",n:"中芯国际",sec:"国产晶圆",p:125.70,chg:3.37,net:6.35,ratio:9.3,dir:"IN",note:"早盘低开-0.4%一路真金白银拉升，机构抢筹标杆。"},
+      {sym:"600519",n:"贵州茅台",sec:"白酒权重",p:1452.00,chg:0.90,net:6.26,ratio:15.9,dir:"IN",note:"护盘大单回流，低开翻红稳住上证大盘。"},
+      {sym:"301413",n:"安培龙",sec:"人形机器人",p:89.71,chg:20.00,net:4.89,ratio:35.2,dir:"IN",note:"20CM 2连板封死！主力净占比+35.2%情绪妖王。"},
+      {sym:"601398",n:"工商银行",sec:"银行护盘",p:9.20,chg:0.55,net:3.54,ratio:10.4,dir:"IN",note:"低开-2.7%后大单V反翻红，9元下方护盘坚决。"},
+      {sym:"002050",n:"三花智控",sec:"人形机器人",p:34.74,chg:2.54,net:3.00,ratio:13.3,dir:"IN",note:"站稳20日成本34.3，主力净占比+13.3%稳步推升。"},
+      {sym:"600150",n:"中国船舶",sec:"船舶/军工",p:35.03,chg:2.13,net:2.56,ratio:12.6,dir:"IN",note:"叠加12/7珠海航展30周年催化，资金稳健回流。"},
+      {sym:"601689",n:"拓普集团",sec:"人形机器人",p:54.67,chg:3.31,net:1.65,ratio:5.3,dir:"IN",note:"0%套牢盘趋势中军，回踩54附近承接扎实。"},
+      {sym:"600406",n:"国电南瑞",sec:"六张网电网",p:24.76,chg:-0.64,net:1.61,ratio:15.4,dir:"IN",note:"⭐经典「跌着买」！微跌-0.6%却主力净流+15.4%暗中吸筹。"},
+      {sym:"002714",n:"牧原股份",sec:"猪肉防御",p:45.52,chg:0.31,net:1.00,ratio:7.5,dir:"IN",note:"大盘剧烈震荡下主力继续稳步净流入，最佳防御底仓。"},
+      // 主力净流出 TOP12 代表股
+      {sym:"300308",n:"中际旭创",sec:"光模块CPO",p:430.10,chg:3.09,net:-51.33,ratio:-21.7,dir:"OUT",note:"全市场砸盘第1！高开+11%后主力狂甩-51.3亿兑现。"},
+      {sym:"300502",n:"新易盛",sec:"光模块CPO",p:187.67,chg:3.48,net:-33.75,ratio:-16.3,dir:"OUT",note:"高开+8.6%冲202回落，成交208亿主力大举派发。"},
+      {sym:"300394",n:"天孚通信",sec:"光模块CPO",p:125.45,chg:7.87,net:-18.05,ratio:-19.7,dir:"OUT",note:"易中天三兄弟合计净流出-103亿！典型借利好高开出货。"},
+      {sym:"688825",n:"长鑫科技",sec:"存储芯片",p:36.76,chg:2.40,net:-17.71,ratio:-18.3,dir:"OUT",note:"存储链最大获利盘兑现口，高开后资金持续撤出。"},
+      {sym:"002463",n:"沪电股份",sec:"AI PCB",p:85.47,chg:3.35,net:-12.49,ratio:-16.4,dir:"OUT",note:"高开+9.6%后回吐超5%，资金从后排PCB撤出。"},
+      {sym:"300059",n:"东方财富",sec:"券商哨兵",p:18.13,chg:-2.63,net:-7.72,ratio:-23.4,dir:"OUT",note:"主力净占比-23.4%砸盘，直接压制大盘无法普涨逼空。"},
+      {sym:"300476",n:"胜宏科技",sec:"AI PCB",p:124.50,chg:8.17,net:-7.16,ratio:-10.3,dir:"OUT",note:"早盘冲134.8后获利回吐，按早盘纪律122上方先减1/3极明智。"},
+      {sym:"601899",n:"紫金矿业",sec:"金铜资源",p:23.29,chg:-4.00,net:-6.94,ratio:-12.3,dir:"OUT",note:"外盘金银大涨反成逃命窗，主力借高开净砸-6.9亿。"},
+      {sym:"603986",n:"兆易创新",sec:"存储芯片",p:216.59,chg:0.92,net:-5.33,ratio:-8.6,dir:"OUT",note:"开+6.7%回吐至+0.9%，等待缩量踩稳再看。"},
+      {sym:"688008",n:"澜起科技",sec:"存储/互连",p:135.60,chg:2.57,net:-3.59,ratio:-9.3,dir:"OUT",note:"跟随存储板块高开回落，短线以消化浮筹为主。"},
+      {sym:"002594",n:"比亚迪",sec:"整车权重",p:76.23,chg:-2.32,net:-3.34,ratio:-14.5,dir:"OUT",note:"A/H股同步走弱，主力资金净流出-14.5%回避。"},
+      {sym:"000426",n:"兴业银锡",sec:"白银资源",p:18.94,chg:-3.61,net:-1.63,ratio:-12.8,dir:"OUT",note:"高开+3.9%砸至-3.6%，短线退回18.38支撑再观察。"}
+    ];
+
+    function drawLiveFlowChart() {
+      const canvas = document.getElementById('liveFlowCanvas');
+      if (!canvas || canvas.offsetParent === null) return;
+      const { ctx, w, h, isMobile } = setupCanvas(canvas, 355, 345);
+      const C = getThemeColors();
+      const rows = LIVE_SECTOR_FLOW;
+      const n = rows.length;
+      const padL = isMobile ? 66 : 82, padR = isMobile ? 54 : 68, padT = 12, padB = 12;
+      const rowH = (h - padT - padB) / n;
+      const barH = Math.max(10, rowH * 0.56);
+      const maxPos = Math.max(...rows.map(r => r.v > 0 ? r.v : 0), 12);
+      const maxNeg = Math.max(...rows.map(r => r.v < 0 ? -r.v : 0), 20);
+      const plotW = w - padL - padR;
+      // Split zero axis proportionally so both +10.7亿 and -66.5亿 are clearly legible
+      const zeroX = padL + plotW * 0.56;
+      const leftMaxW = zeroX - padL - 4;
+      const rightMaxW = (w - padR) - zeroX - 4;
+
+      // Zero vertical axis
+      ctx.strokeStyle = C.sep; ctx.lineWidth = 1.2;
+      ctx.beginPath(); ctx.moveTo(zeroX, padT - 4); ctx.lineTo(zeroX, h - padB + 4); ctx.stroke();
+
+      ctx.font = (isMobile ? '11px' : '12px') + ' -apple-system, BlinkMacSystemFont, sans-serif';
+      rows.forEach((r, i) => {
+        const cy = padT + i * rowH + rowH / 2;
+        // Sector name on left
+        ctx.fillStyle = C.muted;
+        ctx.textAlign = 'left';
+        ctx.fillText(r.n, 2, cy + 4);
+
+        const isUp = r.v >= 0;
+        const bw = isUp
+          ? Math.max(4, (r.v / maxPos) * rightMaxW)
+          : Math.max(4, (-r.v / maxNeg) * leftMaxW);
+        const bx = isUp ? zeroX : zeroX - bw;
+
+        ctx.fillStyle = isUp ? C.up : C.down;
+        ctx.beginPath();
+        const rad = 3;
+        ctx.roundRect ? ctx.roundRect(bx, cy - barH / 2, bw, barH, rad) : ctx.rect(bx, cy - barH / 2, bw, barH);
+        ctx.fill();
+
+        // Value label
+        ctx.font = '600 ' + (isMobile ? '10.5px' : '11px') + ' ui-monospace, SFMono-Regular, monospace';
+        const lbl = (r.v >= 0 ? '+' : '') + r.v.toFixed(1) + '亿';
+        if (isUp) {
+          ctx.textAlign = 'left';
+          ctx.fillText(lbl, Math.min(zeroX + bw + 5, w - 44), cy + 3.5);
+        } else {
+          ctx.textAlign = 'left';
+          ctx.fillText(lbl, zeroX + 5, cy + 3.5);
+        }
+        ctx.font = (isMobile ? '11px' : '12px') + ' -apple-system, BlinkMacSystemFont, sans-serif';
+      });
+      ctx.textAlign = 'left';
+    }
+
+    function renderLiveFlowStocks(tab) {
+      document.querySelectorAll('#live-flow-tabs button').forEach(b => b.classList.toggle('active', b.dataset.ft === tab));
+      const list = tab === 'ALL' ? LIVE_STOCK_FLOW : LIVE_STOCK_FLOW.filter(x => x.dir === tab);
+      document.getElementById('live-flow-stocks').innerHTML = list.map(x => `
+        <div class="ios-row">
+          <div class="row-top">
+            <div class="row-left">
+              <b style="font-size:14.5px;">${x.n}</b>
+              <span class="mono muted" style="font-size:11.5px;">${x.sym}</span>
+              <span class="tag t-gray">${x.sec}</span>
+            </div>
+            <div class="row-right mono">
+              <span style="font-weight:700;margin-right:6px;">${x.p.toFixed(2)}</span>
+              <span class="price-pill ${x.net>=0?'t-up':'t-down'}">${x.net>=0?'+':''}${x.net.toFixed(2)}亿</span>
+            </div>
+          </div>
+          <div class="row-metrics mono">
+            <div><span class="muted">实时涨跌</span><br/><b class="${x.chg>=0?'up':'down'}">${x.chg>=0?'+':''}${x.chg.toFixed(2)}%</b></div>
+            <div><span class="muted">主力净额</span><br/><b class="${x.net>=0?'up':'down'}">${x.net>=0?'+':''}${x.net.toFixed(2)}亿</b></div>
+            <div><span class="muted">主力净占比</span><br/><b class="${x.ratio>=0?'up':'down'}">${x.ratio>=0?'+':''}${x.ratio.toFixed(1)}%</b></div>
+          </div>
+          <div class="row-note">${x.note}</div>
+        </div>
+      `).join('');
+    }
+
     function renderUsStocksList() {
       document.getElementById('us-stocks-list').innerHTML = US_STOCKS_LIST.map(u => `
         <div class="ios-row">
@@ -1673,6 +1854,8 @@
     function redrawAll() {
       if (currentMode === '0830') {
         selectUsChart(activeUsKey);
+      } else if (currentMode === '1200') {
+        drawLiveFlowChart();
       } else if (currentMode === '1600') {
         drawSentimentChart();
         selectIndexChart(activeIdxKey);
@@ -1685,6 +1868,7 @@
 
     window.addEventListener('load', () => {
       renderUsStocksList();
+      renderLiveFlowStocks('IN');
       filterTop20('ALL');
       renderStockChips();
       redrawAll();
