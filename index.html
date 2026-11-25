@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="theme-color" content="#f5f5f7" id="metaTheme" />
-  <title>大师复盘 · 2026-11-25 12:00 午盘正式版</title>
+  <title>大师复盘 · 2026-11-25 16:00 收盘第3期</title>
   <style>
     /* ================ Apple / iPhone 原生级设计体系（零外链 · 手机零溢出 · 极致清晰） ================ */
     :root, [data-theme="light"] {
@@ -283,7 +283,7 @@
       <div class="nav-top">
         <div class="nav-title-wrap">
           <h1 class="nav-title">大师复盘终端</h1>
-          <div class="nav-sub">2026-11-25 周三 · 12:00 A/港股午盘 · 红涨绿跌</div>
+          <div class="nav-sub">2026-11-25 周三 · 累积第3期(16:00收盘) · 红涨绿跌</div>
         </div>
         <button id="themeBtn" onclick="toggleTheme()" class="icon-btn">🌙 深色</button>
       </div>
@@ -292,8 +292,8 @@
       <div class="seg-wrap">
         <div class="seg-control">
           <button id="seg-0830" onclick="switchMode('0830')" class="seg-btn">08:30 美股深度</button>
-          <button id="seg-1200" onclick="switchMode('1200')" class="seg-btn active">12:00 午盘/资金流</button>
-          <button id="seg-1600" onclick="switchMode('1600')" class="seg-btn">16:00 收盘全景</button>
+          <button id="seg-1200" onclick="switchMode('1200')" class="seg-btn">12:00 午盘/资金流</button>
+          <button id="seg-1600" onclick="switchMode('1600')" class="seg-btn active">16:00 收盘全景</button>
         </div>
       </div>
 
@@ -308,15 +308,15 @@
         <a href="#us-quant" class="chip">🤖Jane Street</a>
         <a href="#us-gurus" class="chip">🧠大咖与映射</a>
       </div>
-      <div id="chips-1200" class="chip-scroller">
-        <a href="#live-cn-top" class="chip accent">☀️12:00午评</a>
+      <div id="chips-1200" class="chip-scroller hidden">
+        <a href="#live-cn-top" class="chip accent">🔔15:00收盘</a>
         <a href="#live-moneyflow" class="chip" style="background:var(--up-bg);color:var(--up);">💰实时资金流</a>
         <a href="#live-cn-sectors" class="chip">📊A股强弱</a>
         <a href="#live-hk" class="chip">🇭🇰港股午盘</a>
         <a href="#live-plan" class="chip">🎯午后指令</a>
       </div>
-      <div id="chips-1600" class="chip-scroller hidden">
-        <a href="#s-sentiment" class="chip accent">🌡️情绪 34分</a>
+      <div id="chips-1600" class="chip-scroller">
+        <a href="#s-sentiment" class="chip accent">🌡️情绪 16分</a>
         <a href="#s-breaking-jensen" class="chip" style="background:var(--up-bg);color:var(--up);">🚨黄仁勋重回CEO</a>
         <a href="#s-tldr" class="chip">⚡核心观点</a>
         <a href="#s-futures" class="chip">🛢️期货涨价</a>
@@ -651,89 +651,85 @@
     <!-- ====================================================================== -->
     <!-- ==================== 12:00 午盘精简观点视图 ==================== -->
     <!-- ====================================================================== -->
-    <div id="view-1200" class="view-pane">
-      <!-- 置顶：☀️ 11/25 12:00 A股/港股午盘完整收盘直击 -->
-      <section id="live-cn-top" class="card" style="border:1.5px solid var(--up);">
+    <div id="view-1200" class="view-pane hidden">
+      <!-- 置顶：🔔 11/25 15:00 A股收盘资金面全景（午后跳水 vs 汇金扫货+129亿） -->
+      <section id="live-cn-top" class="card" style="border:1.5px solid var(--down);">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-          <span class="tag t-up">☀️ A股11:30 / 港股12:00 午盘正式版</span>
-          <span class="mono muted" style="font-size:11.5px;">半日7,631亿(缩量3000亿) · 2,824股红盘 · 净流入+151.5亿</span>
+          <span class="tag t-down">🔔 A股15:00全天资金终版 · 11/25 更新</span>
+          <span class="mono muted" style="font-size:11.5px;">全天成交 13,831亿(-2,770亿) · 净流出 -83.6亿 · 汇金ETF+129亿</span>
         </div>
-        <h2 style="font-size:17.5px;margin:0 0 8px;line-height:1.35;">缩量洗盘显底气！三大指数齐跌超1%，但 <span class="up mono">2,824股上涨</span>、60股涨停，全市场逆势净流入 <span class="up mono">+151.5亿</span> + 双科创ETF狂扫 <span class="up mono">+14.7亿</span>；港股冲高回落守红！</h2>
-        <p style="font-size:13px;color:var(--text-2);margin:0 0 12px;">截至 12:00 午盘：A股半日成交 <b>7,631 亿</b>（较昨日半日大幅缩量超 <b>3,000 亿</b>，全天预计 1.25~1.35 万亿），抛压显著衰竭！权重压指数（宁德 -4.8%、北方华创 -8.5%、寒武纪 -4.1%），但个股 <b>2,824 涨 vs 2,626 跌</b>，封板率高达 <b>81%</b>，48 个行业 <b>39 个净流入</b>！港股 11:00 后受中芯/壁仞/华虹拖累冲高回落，恒指收 <b>+0.26%</b>、恒科收 <b>+0.29%</b>（半日放量 1,049 亿港元）。</p>
+        <h2 style="font-size:17.5px;margin:0 0 8px;line-height:1.35;">午后风云突变！韩国暴跌 <span class="down mono">-6.2%</span> + 宁德破万亿砸穿双创，<b>中央汇金尾盘狂扫 <span class="up mono">+129.0亿</span> 宽基 ETF 暴力托底！</b></h2>
+        <p style="font-size:13px;color:var(--text-2);margin:0 0 12px;">全天收盘：沪指 <b>3,476.47 (-2.03%)</b>、深成指 <b>-3.24%</b>、创业板 <b>-4.19%</b>、科创50 <b>-5.12%</b>、中证1000 <b>-4.44%</b>；两市成交 <b>13,831 亿</b>（较昨缩量 2,770 亿）。午后受日韩股市崩盘（韩股 -6.16%、三星 -9.9%、海力士 -11.1%）与宁德时代暴跌 -8.33% 拖累全线回落，但<b>尾盘六大宽基 ETF 净买入高达 +129.0 亿</b>，金融/酿酒/医药逆势收红护盘！</p>
 
         <div class="grid cols-4 cols-2-mob" style="margin-bottom:12px;">
-          <div class="idx-card"><div class="idx-name"><span>上证指数</span><span class="tag t-blue">守3512</span></div><div class="idx-val mono down">3,512.7</div><div class="idx-sub mono"><b class="down">-1.01%</b> · 缩量3000亿</div></div>
-          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>全市场资金</span><span class="tag t-up">39/48流入</span></div><div class="idx-val mono up">+151.5亿</div><div class="idx-sub mono up">2,824股涨 · 60涨停</div></div>
-          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>科创双ETF</span><span class="tag t-up">大单狂扫</span></div><div class="idx-val mono up">+14.7亿</div><div class="idx-sub mono up">588080+8.8 / 588000+5.9</div></div>
-          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>恒生科技</span><span class="tag t-warn">冲高回落</span></div><div class="idx-val mono up">3,476.9</div><div class="idx-sub mono up"><b>+0.29%</b> · 高3554回吐</div></div>
+          <div class="idx-card" style="background:var(--down-bg);"><div class="idx-name"><span>上证指数</span><span class="tag t-down">破3500</span></div><div class="idx-val mono down">3,476.5</div><div class="idx-sub mono down"><b>-2.03%</b> · 低3468</div></div>
+          <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>六大宽基ETF</span><span class="tag t-up">汇金狂扫</span></div><div class="idx-val mono up">+129.0亿</div><div class="idx-sub mono up">300ETF+89/科创+27</div></div>
+          <div class="idx-card" style="background:var(--down-bg);"><div class="idx-name"><span>全市场净流</span><span class="tag t-down">午后转出</span></div><div class="idx-val mono down">-83.6亿</div><div class="idx-sub mono down">17/48行业净流入</div></div>
+          <div class="idx-card" style="background:var(--down-bg);"><div class="idx-name"><span>恒生科技</span><span class="tag t-down">失守3400</span></div><div class="idx-val mono down">3,395.1</div><div class="idx-sub mono down"><b>-2.07%</b> · 高3554跳水</div></div>
         </div>
 
         <div class="grid cols-3">
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">✅ 半日真金白银净流入</div>
-            <div style="font-size:12.5px;color:var(--text-2);"><b>天孚通信 (+16.4亿 · +10.1%)</b>、<b>新易盛 (+11.8亿 · +2.0%)</b>、<b>青山纸业 (+11.5亿 涨停)</b>、<b>科创50ETF易方达 (+8.8亿)</b>、<b>科创50ETF华夏 (+5.9亿)</b>、<b>胜宏科技 (+5.7亿 · +2.6%)</b>、<b>中际旭创 (+4.0亿)</b>、<b>工业富联 (+3.7亿 跌着买)</b>；<b>生物制药全行业净流入 +31.0 亿！</b></div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">✅ 全天真金白银净流入</div>
+            <div style="font-size:12.5px;color:var(--text-2);"><b>六大宽基ETF (+129.0亿!)</b>、<b>天孚通信 (+15.7亿 · +7.65%)</b>、<b>青山纸业 (+14.4亿 涨停)</b>、<b>贵州茅台 (+11.8亿 · +1.02%)</b>、<b>新易盛 (+10.4亿 · +0.72%)</b>、<b>工行 (+7.2亿)</b>、<b>海光信息 (+5.4亿 跌着买)</b>、<b>胜宏 (+4.8亿)</b>、<b>工业富联 (+4.4亿)</b>！</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">❄️ 半日主力净流出重灾区</div>
-            <div style="font-size:12.5px;color:var(--text-2);"><b>寒武纪 (-7.2亿 · -4.1%)</b>、<b>宁德时代 (-6.0亿 · -4.8%)</b>、<b>北方华创 (-5.3亿 · -8.5% 破500)</b>、<b>长鑫科技 (-5.2亿 · -4.3%)</b>、<b>阳光电源 (-4.2亿)</b>、<b>中芯国际 (-4.1亿)</b>；机器人中军 <b>三花智控 (-2.1亿 · -4.7%至32.74)</b>、<b>拓普 (-1.6亿 · -5.0%)</b>。</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">❄️ 全天主力砸盘重灾区</div>
+            <div style="font-size:12.5px;color:var(--text-2);"><b>寒武纪 (-13.0亿 · -6.40%)</b>、<b>宁德时代 (-11.4亿 · -8.33% 跌破万亿市值!)</b>、<b>长鑫科技 (-7.3亿 · -7.34%)</b>、<b>中芯国际 (-5.5亿 · -3.56%)</b>、<b>阳光电源 (-5.1亿)</b>、<b>北方华创 (-4.4亿 · -9.55%)</b>、<b>三花智控 (-3.4亿 · -7.13%)</b>。</div>
           </div>
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--orange);">⚠️ 午盘核心定调（看清真相！）</div>
-            <div style="font-size:12.5px;color:var(--text-2);">① 三大货币ETF半日流出 <b>-107.1 亿</b>，大资金直接扫货 <b>双科创50ETF (+14.7亿) + 国债ETF (+46亿)</b>；② 缩量 3,000 亿说明今晚 PCE 前场内筹码惜售，<b>指数砸不动、赚钱效应仍在医药/零售/CPO</b>；③ 港股冲高回落证明 3,550 压力仍在，午后切忌追高！</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--orange);">⚠️ 全天资金面本质（极重要！）</div>
+            <div style="font-size:12.5px;color:var(--text-2);">虽然指数暴跌 2%~5%，但<b>全市场 48 行业总净流出仅 -83.6 亿</b>（远小于昨日高开砸盘的 -286 亿），且<b>三大货基撤出 -98.3 亿流向国债(+54亿)+宽基ETF(+129亿)</b>——这是典型的<b>「外围黑天鹅触发恐慌缩量杀跌 + 国家队暴力接飞刀」</b>！</div>
           </div>
         </div>
       </section>
 
-      <!-- 💰 永久核心板块：A股实时资金面流向追踪（大盘 + 细分板块 + 代表个股） -->
+      <!-- 💰 永久核心板块：A股实时资金面流向追踪（15:00 全天最终口径） -->
       <section id="live-moneyflow">
         <div class="sec-header">
-          <div class="sec-eyebrow">REAL-TIME CAPITAL FLOW · 11/25 12:00 午盘定格</div>
-          <h2 class="sec-h2">💰 A股实时资金面流向追踪（大盘 · 板块 · 代表股）</h2>
+          <div class="sec-eyebrow">REAL-TIME CAPITAL FLOW · 11/25 15:00 全天最终版</div>
+          <h2 class="sec-h2">💰 A股全天资金面流向追踪（大盘 · 板块 · 代表股）</h2>
         </div>
 
-        <!-- Layer 1: 大盘总资金仪表盘 -->
         <div class="card" style="margin-bottom:12px;">
           <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-            <strong style="font-size:15px;">1. 大盘半日资金总览（11:30 新浪全行业口径）</strong>
-            <span class="tag t-up mono">逆势净流入 +151.5 亿</span>
+            <strong style="font-size:15px;">1. 大盘全天资金总览（15:00 新浪全行业口径）</strong>
+            <span class="tag t-down mono">小幅净流出 -83.6 亿</span>
           </div>
 
-          <!-- 流入 vs 流出 直观比例条 -->
           <div style="margin-bottom:12px;">
             <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px;" class="mono">
-              <span class="up"><b>总流入 1,911.0 亿 (52.1%)</b></span>
-              <span class="down"><b>总流出 1,759.5 亿 (47.9%)</b></span>
+              <span class="up"><b>总流入 3,379.3 亿 (49.4%)</b></span>
+              <span class="down"><b>总流出 3,463.0 亿 (50.6%)</b></span>
             </div>
             <div style="height:10px;border-radius:999px;background:var(--down);overflow:hidden;display:flex;">
-              <div style="width:52.1%;background:var(--up);height:100%;"></div>
+              <div style="width:49.4%;background:var(--up);height:100%;"></div>
             </div>
           </div>
 
           <div class="grid cols-4 cols-2-mob">
-            <div class="inset-box"><div class="muted" style="font-size:11.5px;">沪深半日成交</div><div class="mono" style="font-size:16px;font-weight:700;margin-top:2px;">7,631 亿</div><div style="font-size:11px;color:var(--text-2);">较昨缩量超3,000亿</div></div>
-            <div class="inset-box"><div class="muted" style="font-size:11.5px;">净流入行业占比</div><div class="mono up" style="font-size:16px;font-weight:700;margin-top:2px;">39 / 48</div><div style="font-size:11px;color:var(--text-2);">81% 行业获真金白银净买</div></div>
-            <div class="inset-box"><div class="muted" style="font-size:11.5px;">科创双ETF护盘</div><div class="mono up" style="font-size:16px;font-weight:700;margin-top:2px;">+14.7 亿</div><div style="font-size:11px;color:var(--text-2);">越跌越买托底硬科技</div></div>
-            <div class="inset-box"><div class="muted" style="font-size:11.5px;">货基半日大撤离</div><div class="mono up" style="font-size:16px;font-weight:700;margin-top:2px;">-107.1 亿</div><div style="font-size:11px;color:var(--text-2);">短融-65/银华-25/华宝-17</div></div>
+            <div class="inset-box"><div class="muted" style="font-size:11.5px;">沪深全天成交</div><div class="mono" style="font-size:16px;font-weight:700;margin-top:2px;">13,831 亿</div><div style="font-size:11px;color:var(--text-2);">较昨缩量 2,770 亿</div></div>
+            <div class="inset-box"><div class="muted" style="font-size:11.5px;">六大宽基ETF净买</div><div class="mono up" style="font-size:16px;font-weight:700;margin-top:2px;">+129.0 亿</div><div style="font-size:11px;color:var(--text-2);">尾盘国家队暴力托底</div></div>
+            <div class="inset-box"><div class="muted" style="font-size:11.5px;">医药+金融+酿酒</div><div class="mono up" style="font-size:16px;font-weight:700;margin-top:2px;">+59.5 亿</div><div style="font-size:11px;color:var(--text-2);">三大防御板块集体吸金</div></div>
+            <div class="inset-box"><div class="muted" style="font-size:11.5px;">电子器件单边砸</div><div class="mono down" style="font-size:16px;font-weight:700;margin-top:2px;">-49.0 亿</div><div style="font-size:11px;color:var(--text-2);">板块跌-5.05%拖垮双创</div></div>
           </div>
         </div>
 
-        <!-- Layer 2: 细分板块资金净流向可视化 -->
         <div class="card" style="margin-bottom:12px;">
           <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
-            <strong style="font-size:15px;">2. 细分板块半日资金净流向（红=净流入 · 绿=净流出）</strong>
-            <span class="mono muted" style="font-size:11.5px;">单位：亿元 · 11:30 午盘定格</span>
+            <strong style="font-size:15px;">2. 细分板块全天资金净流向（红=净流入 · 绿=净流出）</strong>
+            <span class="mono muted" style="font-size:11.5px;">单位：亿元 · 15:00 全天定格</span>
           </div>
           <div class="chart-box"><canvas id="liveFlowCanvas"></canvas></div>
           <div class="inset-box" style="margin-top:10px;font-size:12.5px;color:var(--text-2);">
-            <b>🎓 午盘资金流一眼看透市场</b>：全市场 48 个行业 <b>39 个净流入</b>！<b>生物制药 (+31.0亿 · +1.44%)</b> 一骑绝尘，<b>电子信息 (+23.5亿)、商业百货 (+18.0亿)、农林牧渔 (+14.0亿)、造纸 (+13.2亿)、有色 (+8.9亿)</b> 全面吸金；而唯独 <b>电子器件 (-15.7亿 · -2.59%)</b> 遭遇芯片/设备集中砸盘，把整个科创与创业板指数拖绿！
+            <b>🎓 全天资金流终局密码</b>：上午净流出 -8.2亿的 <b>金融行业</b>，午后在国家队托底下狂翻正至 <b>+17.8亿 (+0.06%)</b>；<b>生物制药 (+29.4亿 · +0.42%)、酿酒 (+12.2亿 · +1.01%)、石油 (+3.4亿)、煤炭 (+3.2亿)</b> 全面护盘；砸盘主力几乎全部集中在 <b>电子器件 (-49.0亿)、化工 (-14.6亿)、机械 (-13.2亿)、发电设备 (-10.7亿)</b>！
           </div>
         </div>
 
-        <!-- Layer 3: 市场最具代表性个股实时资金流向追踪 -->
         <div class="card card-tight">
           <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
             <strong style="font-size:15px;">3. 市场最具代表性个股主力资金追踪（24只核心股）</strong>
-            <span class="mono muted" style="font-size:11.5px;">新浪超大单/主力半日净额 · 11:30</span>
+            <span class="mono muted" style="font-size:11.5px;">新浪超大单/主力全天净额 · 15:00</span>
           </div>
           <div id="live-flow-tabs" class="chip-scroller" style="padding:0 0 10px;">
             <button data-ft="IN" onclick="renderLiveFlowStocks('IN')" class="chip active">🔥 主力净流入 (12)</button>
@@ -744,128 +740,22 @@
         </div>
       </section>
 
-      <!-- A股 11:30 午盘板块强弱全景 -->
-      <section id="live-cn-sectors">
-        <div class="sec-header">
-          <div class="sec-eyebrow">A-SHARE MIDDAY SECTORS · 11/25 11:30 午盘收盘</div>
-          <h2 class="sec-h2">A股午盘核心板块强弱全景（60涨停 · 封板率81%）</h2>
-        </div>
-
-        <div class="card card-tight">
-          <div class="ios-list">
-            <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★★ 半日最强主线</span><b>1. 生物医药/抗流感 + 商业零售/海南自贸 + 猪肉</b></div><span class="tag t-up">医药+31.0亿</span></div>
-              <div class="row-metrics mono">
-                <div><span class="muted">生物制药 / 迈瑞 / 恒瑞</span><br/><b class="up">+1.44%(+31亿) / +0.95亿 / +0.87亿</b></div>
-                <div><span class="muted">九阳 / 金新农 / 青山</span><br/><b class="up">3连板 / 4连板(+2.7亿) / 涨停(+11.5亿)</b></div>
-                <div><span class="muted">山东黄金 / 紫金 / 茅台</span><br/><b class="up">+1.14%(+1.1亿) / +1.6亿 / +0.32%</b></div>
-              </div>
-              <div class="row-note"><b>午盘点评</b>：赛诺菲 410 亿美元收购 + 冬季流感季共振，<b>康芝药业等十余只医药股涨停</b>，海南自贸板块飙升 +2.8%；大消费 <b>九阳股份 3 连板（6天4板，本月+74%）</b>、<b>金新农 4 连板</b>、零售百货全面开花！黄金有色与茅台五粮液海油稳住权重底线。</div>
-            </div>
-
-            <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-up">★★★★☆ 硬核反包</span><b>2. CPO 光模块 &amp; AI PCB（半日吸金超 +37 亿稳守红盘！）</b></div><span class="tag t-up">易中天全红</span></div>
-              <div class="row-metrics mono">
-                <div><span class="muted">天孚通信 / 新易盛</span><br/><b class="up">+10.08%(+16.4亿) / +2.04%(+11.8亿)</b></div>
-                <div><span class="muted">胜宏科技 / 中际旭创</span><br/><b class="up">+2.57%(+5.7亿) / +0.43%(+4.0亿)</b></div>
-                <div><span class="muted">工业富联 / 沪电</span><br/><b class="up">-1.7%(+3.7亿) / -2.2%(+2.5亿)</b></div>
-              </div>
-              <div class="row-note"><b>午盘点评</b>：中际旭创 40 亿回购 + 胜宏科技特别股息双利好护航，<b>天孚通信半日暴涨 +10.08%（盘中一度涨超 +13%）、新易盛半日成交 112 亿仍稳守 +2.04%</b>！对比昨日狂砸 -103 亿，今天是教科书级承接修复。</div>
-            </div>
-
-            <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-down">⚠️ 中军承压</span><b>3. 人形机器人严重分化（克来3连板 vs 三花/拓普跌近 -5%）</b></div><span class="tag t-down">三花32.74</span></div>
-              <div class="row-metrics mono">
-                <div><span class="muted">三花智控(002050)</span><br/><b class="down">32.74 (-4.71% · -2.10亿)</b></div>
-                <div><span class="muted">拓普集团(601689)</span><br/><b class="down">51.60 (-4.99% · -1.59亿)</b></div>
-                <div><span class="muted">克来机电 / 北纬科技</span><br/><b class="up">3连板一字</b> / <b class="down">一字跌停(异动)</b></div>
-              </div>
-              <div class="row-note"><b>午盘点评</b>：柯力传感、长华集团提示风险 + 人气股 <b>北纬科技触发严重异动一字跌停</b>，情绪向高位题材传导，拖累三花智控午盘收在低点 <b>32.74（半日仅成交 11.6 亿）</b>。午后继续盯 <b>32.5 附近 5 分钟缩量止跌 + MACD 底背离</b>，没信号绝不盲接飞刀！</div>
-            </div>
-
-            <div class="ios-row">
-              <div class="row-top"><div class="row-left"><span class="tag t-down">❄️ 指数拖累项</span><b>4. 半导体设备/芯片 &amp; 锂电领跌（但双科创ETF怒买 +14.7亿！）</b></div><span class="tag t-warn">大资金托底</span></div>
-              <div class="row-metrics mono">
-                <div><span class="muted">北方华创 / 寒武纪</span><br/><b class="down">-8.45%(-5.3亿) / -4.06%(-7.2亿)</b></div>
-                <div><span class="muted">宁德时代 / 长鑫</span><br/><b class="down">-4.78%(-6.0亿) / -4.27%(-5.2亿)</b></div>
-                <div><span class="muted">科创双ETF / 兆易 / 海光</span><br/><b class="up">+14.7亿 / +2.9亿 / +2.2亿</b></div>
-              </div>
-              <div class="row-note"><b>午盘点评</b>：全天最核心的「背离护盘信号」就在这里——芯片与锂电虽把双创指数砸绿，但 <b>科创50ETF易方达(+8.8亿) + 华夏(+5.9亿)、兆易创新(+2.9亿)、海光信息(+2.2亿)、澜起(+0.3亿翻正)</b> 全在逆势扫货！说明科创 50 午后大概率拒绝深跌、进入缩量筑底。</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 🇭🇰 港股 12:00 午盘完整收盘直击 -->
-      <section id="live-hk">
-        <div class="sec-header">
-          <div class="sec-eyebrow">HONG KONG MARKET MIDDAY · 11/25 12:00 冲高回落守红盘</div>
-          <h2 class="sec-h2">🇭🇰 港股午盘冲高回落：恒指 +0.26%、恒科 +0.29% 退守 3,477，半日放量 1,049 亿！</h2>
-        </div>
-
-        <div class="card card-tight">
-          <div class="ios-list">
-            <div class="ios-row">
-              <div class="row-top"><div class="row-left"><b>恒指 22,277 (+0.26%) · 恒生科技 3,477 (+0.29%) · 国企 7,491 (+0.52%)</b></div><span class="tag t-warn">冲高回吐</span></div>
-              <div class="row-note">港股早盘一度大爆发（恒科最高飙 <b>+2.5% 至 3,554.36</b>），但 11:00 后受 A 股芯片跳水及南向资金盘初净卖出拖累明显回落，恒科午盘退回 3,477（仍守红盘），<b>最大亮点是半日成交高达 1,048.5 亿港元</b>（全天有望冲破 1,800 亿企稳量能线！）。</div>
-            </div>
-            <div class="ios-row">
-              <div class="row-top"><div class="row-left"><b>🔥 午盘依然坚挺的真强主线（绩优科网 + 造车 + 创新药）</b></div><span class="tag t-up">强者恒强</span></div>
-              <div class="row-metrics mono">
-                <div><span class="muted">理想 / 京东 / 小米</span><br/><b class="up">+5.41% / +4.89% / +4.45%</b></div>
-                <div><span class="muted">蔚来 / 快手 / 网易</span><br/><b class="up">+3.10% / +2.58% / +1.28%</b></div>
-                <div><span class="muted">百济 / 康方 / 信达</span><br/><b class="up">+3.26% / +2.63% / +2.22%</b></div>
-              </div>
-              <div class="row-note"><b>小米 (+4.45%)</b> 业绩超预期+花旗维持 33.2 港元目标价，<b>哔哩哔哩</b>绩后飙逾 +10%，<b>金山云</b>受 Q3 营收+40%及 12/7 纳入恒科首次扩容大涨；<b>理想 (+5.41%)</b> 今日发财报领涨汽车；<b>百济/康方/信达/中生制药 (+2.0%)</b> 守住创新药主升浪！腾讯 (+0.12%)、阿里 (+0.61%)、美团 (+0.31%) 涨幅收窄。</div>
-            </div>
-            <div class="ios-row">
-              <div class="row-top"><div class="row-left"><b>❄️ 拖累港股冲高回落的元凶：芯片晶圆 &amp; AI 大模型暴跌</b></div><span class="tag t-down">重挫拖累</span></div>
-              <div class="row-metrics mono">
-                <div><span class="muted">壁仞科技 / 华虹半导体</span><br/><b class="down">-16.28% / -12.97%</b></div>
-                <div><span class="muted">智谱 / MINIMAX</span><br/><b class="down">-8.53% / -7.15%</b></div>
-                <div><span class="muted">长飞光纤 / 中芯H</span><br/><b class="down">-4.71% / -3.47%</b></div>
-              </div>
-              <div class="row-note">中芯国际 H 股从 10:47 的 +0.24% 翻绿砸至 <b>-3.47%</b>，港交所翻绿 -0.40%，说明外资对港股高弹性半导体/AI新股仍在抛压中。<b>午后观察</b>：恒科若能重返 <b>3,500+ 且全天成交破 1,800 亿</b>，则今日长上影阳十字星仍是底部放量换手信号！</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 🎯 13:00 → 15:00 午后实战指令 -->
       <section id="live-plan" class="card" style="border:1.5px solid var(--blue);">
-        <strong style="display:block;font-size:15.5px;margin-bottom:10px;">🎯 13:00 → 15:00 午后两小时实战指令</strong>
-        <div class="grid cols-3">
-          <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">1. 午后最核心看盘指标</div>
-            <div style="font-size:12.5px;color:var(--text-2);">① 看<b>双科创50ETF (+14.7亿)</b>午后是否继续护盘带动科创50翻升；② 看<b>全天成交</b>是否落在 1.25~1.35 万亿良性缩量区（地量止跌信号）；③ 看<b>港股恒科</b>午后能否重站 3,500 关口！</div>
-          </div>
-          <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="blue">2. 午后低吸 &amp; 做 T 名单</div>
-            <div style="font-size:12.5px;color:var(--text-2);">• <b>稳健主线</b>：<b>创新药/生物医药（A股恒瑞/迈瑞 + 港股创新药ETF）</b>、<b>山东黄金/紫金矿业（跌着买）</b>；<br/>• <b>科技暗吸</b>：<b>工业富联 (40.28 · +3.7亿)</b>、<b>兆易创新 (+2.9亿)</b>、<b>海光信息 (+2.2亿)</b>；<br/>• <b>三花智控 (32.74)</b>：等午后 <b>32.3–32.5 区间缩量止跌 + 5m 底背离</b> 再做正 T，不急抄底！</div>
-          </div>
-          <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">3. 午后避坑与仓位纪律</div>
-            <div style="font-size:12.5px;color:var(--text-2);">• <b>绝不追高</b>涨幅已大的连板高位股（北纬科技一字跌停已是警示）及早盘暴涨后的 CPO；<br/>• <b>暂避</b>主力加速砸盘的北方华创(-8.5%)、寒武纪(-4.1%)、宁德(-4.8%)、港股壁仞/华虹；<br/>• <b>总仓位控在 5–6 成</b>，静候今晚 <b>21:30 美国 10 月 PCE</b>！</div>
-          </div>
-        </div>
-        <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;">
-          <button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-weight:600;padding:0;cursor:pointer;">← 回看 08:30 美股收盘深度</button>
-          <button onclick="switchMode('1600');setTimeout(()=>document.getElementById('s-ssf-watch').scrollIntoView({behavior:'smooth'}),120);" style="border:0;background:none;color:var(--up);font-weight:600;padding:0;cursor:pointer;">🏛️ 查看社保24股每日雷达 →</button>
-          <button onclick="switchMode('1600');setTimeout(()=>document.getElementById('s-t0').scrollIntoView({behavior:'smooth'}),120);" style="border:0;background:none;color:var(--blue);font-weight:600;padding:0;cursor:pointer;">⚡ 回看盘中做T保姆级口诀 →</button>
-        </div>
+        <strong style="display:block;font-size:15.5px;margin-bottom:8px;">👉 完整 16:00 收盘深度复盘（含情绪16分新冰点、四大风向标、社保24股、价格行为学与做T实战）</strong>
+        <button onclick="switchMode('1600')" style="border:0;background:var(--blue);color:#fff;font-weight:700;padding:9px 16px;border-radius:10px;cursor:pointer;font-size:13px;">立即前往 16:00 全景收盘复盘 →</button>
       </section>
     </div>
 
     <!-- ====================================================================== -->
     <!-- ==================== 16:00 全市场收盘复盘 + 教学视图 ==================== -->
     <!-- ====================================================================== -->
-    <div id="view-1600" class="view-pane hidden">
+    <div id="view-1600" class="view-pane">
 
       <!-- ★★★ 最顶部第一位：全市场全平台股民情绪指数（0-100分 · 累积走势 · 极简观点） ★★★ -->
       <section id="s-sentiment" class="card">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
           <span class="tag t-up">🌡️ 全平台股民情绪指数（0–100 累积）</span>
-          <span class="tag t-blue">冰点初醒 · 左侧安全区</span>
+          <span class="tag t-down">16分新冰点 · 极端恐慌左侧区</span>
         </div>
 
         <div class="grid split-7-5" style="align-items:center;">
@@ -881,25 +771,25 @@
                   </linearGradient>
                 </defs>
                 <path d="M 14 70 A 54 54 0 0 1 122 70" fill="none" stroke="rgba(142,142,147,0.22)" stroke-width="12" stroke-linecap="round" />
-                <path d="M 14 70 A 54 54 0 0 1 122 70" fill="none" stroke="url(#gArc)" stroke-width="12" stroke-linecap="round" stroke-dasharray="170" stroke-dashoffset="112" />
-                <circle cx="42" cy="23" r="5.5" fill="var(--blue)" stroke="var(--surface)" stroke-width="2.5" />
-                <text x="68" y="56" text-anchor="middle" fill="currentColor" font-size="27" font-weight="800" class="mono">34</text>
-                <text x="68" y="74" text-anchor="middle" fill="var(--up)" font-size="11.5" font-weight="700" class="mono">较昨18 (+16)</text>
+                <path d="M 14 70 A 54 54 0 0 1 122 70" fill="none" stroke="url(#gArc)" stroke-width="12" stroke-linecap="round" stroke-dasharray="170" stroke-dashoffset="143" />
+                <circle cx="21" cy="44" r="5.5" fill="var(--down)" stroke="var(--surface)" stroke-width="2.5" />
+                <text x="68" y="56" text-anchor="middle" fill="currentColor" font-size="27" font-weight="800" class="mono">16</text>
+                <text x="68" y="74" text-anchor="middle" fill="var(--down)" font-size="11.5" font-weight="700" class="mono">较昨29 (-13)</text>
               </svg>
               <div style="min-width:0;">
-                <div style="font-size:14.5px;font-weight:700;line-height:1.35;">情绪刚从18分冰点爬出，散户仍在怀疑，恰是B浪最安全左侧区！</div>
-                <div style="font-size:12px;color:var(--muted);margin-top:3px;">逆向铁律：20以下买 · 30–50拿 · 80+狂热卖</div>
+                <div style="font-size:14.5px;font-weight:700;line-height:1.35;">击穿 11/20 的 18 分创本轮新冰点！中央汇金尾盘怒扫 +129 亿，绝不在 16 分地板割肉！</div>
+                <div style="font-size:12px;color:var(--muted);margin-top:3px;">逆向铁律：20以下买(此刻16分!) · 30–50拿 · 80+狂热卖</div>
               </div>
             </div>
 
             <div>
               <div style="display:flex;justify-content:space-between;font-size:11.5px;margin-bottom:5px;" class="mono">
-                <span class="down"><b>消极词 66%</b>（诱多/割肉/怕回踩）</span>
-                <span class="up"><b>积极词 34%</b>（V反/机器人起飞）</span>
+                <span class="down"><b>消极词 84%</b>（崩盘/宁德破万亿/天台/清仓）</span>
+                <span class="up"><b>积极词 16%</b>（汇金129亿/天孚新易盛）</span>
               </div>
               <div class="meter-bar">
-                <div style="width:66%;background:var(--down);"></div>
-                <div style="width:34%;background:var(--up);"></div>
+                <div style="width:84%;background:var(--down);"></div>
+                <div style="width:16%;background:var(--up);"></div>
               </div>
             </div>
           </div>
@@ -907,7 +797,7 @@
           <!-- 右侧：近15日累积情绪折线图 -->
           <div>
             <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:4px;">
-              <span>近15日全平台情绪累积走势</span>
+              <span>近15日全平台情绪累积走势（至11/25）</span>
               <span>80过热 · 20冰点</span>
             </div>
             <div class="chart-box"><canvas id="sentimentCanvas"></canvas></div>
@@ -916,33 +806,31 @@
       </section>
 
       <!-- ★★★ 晚间21:55突发重大利好加急更新：黄仁勋重回英伟达CEO ★★★ -->
-      <section id="s-breaking-jensen" class="card" style="border:1.5px solid var(--up);">
+      <section id="s-breaking-jensen" class="card" style="border:1.5px solid var(--down);">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
-          <span class="tag t-up">🚨 黄仁勋重回 CEO · 美股已收盘（NVDA +31.48%）</span>
-          <button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-size:12.5px;font-weight:600;cursor:pointer;padding:0;">查看美股完整拆解 →</button>
+          <span class="tag t-down">🚨 11/25 午后突发崩盘深度复盘 · 汇金尾盘狂扫 +129亿</span>
+          <button onclick="switchMode('1200')" style="border:0;background:none;color:var(--blue);font-size:12.5px;font-weight:600;cursor:pointer;padding:0;">查看全天资金流明细 →</button>
         </div>
-        <h2 style="font-size:16.5px;margin:0 0 8px;line-height:1.35;">英伟达董事会全票即刻复职黄仁勋！NVDA 盘前狂飙 <span class="up mono">+29.0%</span>，彻底焊死 A 股/港股「切回科技成长」B 浪主升！</h2>
+        <h2 style="font-size:16.5px;margin:0 0 8px;line-height:1.35;">上午 2,824 股上涨，为何午后突发暴跌？三大元凶浮出水面 + <span class="up">中央汇金尾盘 +129 亿暴力护盘</span>全拆解！</h2>
         <div style="font-size:12.5px;color:var(--text-2);margin-bottom:10px;">
-          <b>✅ 11/23 美股最终收盘（北京时间 11/24 05:00）</b>：<b>纳指 +6.51%</b>、<b>标普 +4.73%</b>、<b>费半 +14.03%</b>、<b>NVDA $165.05 (+31.48%)</b>、<b>美光 +19.04%</b>、<b>COHR +15.3%</b>、<b>特斯拉 +11.46%</b>、<b>ANT -1.43%</b>、<b>BTC $61,182</b>。<button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-weight:700;cursor:pointer;padding:0 2px;">点此看美股6大板块/加密/3日预测 →</button>
+          <b>✅ 11/25 15:00 全天最终收盘</b>：上证 <b>3,476.47 (-2.03%)</b>、深成指 <b>10,086 (-3.24%)</b>、创业板 <b>2,183.58 (-4.19%)</b>、科创50 <b>1,186.14 (-5.12%)</b>、中证1000 <b>-4.44%</b>；两市成交 <b>13,831 亿</b>（较昨日缩量 <b>2,770 亿</b>）。
         </div>
 
         <div class="grid cols-2" style="margin-bottom:10px;">
           <div class="inset-box">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">🔥 明日（11/24 周二）A股/港股直接映射</div>
-            <div style="font-size:12.5px;color:var(--text-2);display:flex;flex-direction:column;gap:4px;">
-              <div>• <b>T0 光模块 CPO（最直接对标 COHR +14.9%）</b>：<b>新易盛(300502)、中际旭创、天孚通信</b>（今日刚放量反包，明日高开溢价拉满）。</div>
-              <div>• <b>T0 AI 高端 PCB / 算力链</b>：<b>胜宏科技(300476)、沪电股份、工业富联</b>（叠加全球 PCB 缺货涨价）。</div>
-              <div>• <b>T1 人形机器人（黄仁勋 Physical AI 最大布道者）</b>：<b>拓普集团、三花智控</b>（今日涨停潮+老黄回归双重共振）。</div>
-              <div>• <b>T1 存储芯片 &amp; 港股恒科</b>：美光 +17% 映射 <b>兆易创新/澜起科技</b>；港股恒科明早望高开冲 <b>3600–3680</b>（盯紧大市能否放量破 1800 亿港元）。</div>
-              <div>• <b>⚠️ 承压方向</b>：<b>银行(工商银行)/白酒</b> 避险抱团将遭进一步抽血，高低切换彻底实锤！</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="down">🔥 午后崩盘的 3 个真凶</div>
+            <div style="font-size:12.5px;color:var(--text-2);">
+              ① <b>日韩股市午后突发大跳水</b>：今早还红盘的<b>韩国 KOSPI 收崩 -6.16%（三星 -9.87%、SK海力士 -11.05%）</b>、<b>日经 225 收跌 -2.78%</b>，外资亚太芯片无差别抛售！<br/>
+              ② <b>宁德时代砸穿 1 万亿市值</b>：碳酸锂期货日内暴跌超 -7%（报 83,500），<b>宁德暴跌 -8.33% 创 19 个月新低</b>（成交 157 亿），直接把创业板指砸出 -4.19% 光脚阴！<br/>
+              ③ <b>今晚 21:30 美国 10 月 PCE 避险</b>：叠加美股明日感恩节休市，量化与杠杆盘午后集中砍仓！
             </div>
           </div>
-          <div class="inset-box" style="border:1px solid rgba(255,149,0,0.35);">
-            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--orange);">🛡️ 给新手的 11/24 保命实战铁律（必读！）</div>
-            <div style="font-size:12.5px;color:var(--text-2);display:flex;flex-direction:column;gap:5px;">
-              <div><b>① 严禁 9:30 集合竞价无脑追高！</b> 今日 A 股刚深 V 反包，明早 CPO/PCB/AI 大概率一致高开 <b>+5%~+10%</b>，早盘前 15 分钟极易遭遇短线获利盘兑现砸出上影线。</div>
-              <div><b>② 持仓者怎么做？</b> 已有机器人/CPO/PCB 仓位的稳坐轿子，早盘冲高过猛可先兑现 1/3 做 T，留底仓吃 B 浪主升。</div>
-              <div><b>③ 空仓/轻仓怎么上车？</b> 耐心等 <b>10:00–10:30 第一波高开分歧回踩分时均线不破 + 量能承接</b> 时低吸核心中军（胜宏、新易盛、拓普回踩 5 日线），或埋伏尚未高开的 <b>六张网电网(国电南瑞) / 存储芯片</b> 补涨！</div>
+          <div class="inset-box">
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;" class="up">🛡️ 为什么绝不能在 16 分冰点割肉？</div>
+            <div style="font-size:12.5px;color:var(--text-2);">
+              ① <b>中央汇金尾盘狂买 +129.0 亿宽基 ETF</b>：300ETF华夏(+49.4亿)+易方达(+24.1亿)+华泰(+15.9亿)+科创双ETF(+27.2亿)+中证500(+12.4亿)，创业板ETF全天爆量 122 亿！<br/>
+              ② <b>权重与防御逆势翻红</b>：贵州茅台(+1.02% · +11.8亿)、中国神华(+1.79%)、中国海油(+0.71%)、生物制药(+29.4亿)、金融(+17.8亿)！<br/>
+              ③ <b>缩量 2,770 亿 + 3468 守住前低附近</b>：杀的是外围恐慌盘，明日 11/26 极易迎来冰点强反抽！
             </div>
           </div>
         </div>
@@ -951,14 +839,14 @@
       <!-- 置顶二：16:00 核心观点（30秒速览） -->
       <section id="s-tldr" class="card">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-          <span class="tag t-blue">⚡ 16:00 收盘核心观点（30秒看完）</span>
-          <button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-size:12.5px;font-weight:600;cursor:pointer;padding:0;">🇺🇸 美股/高盛/黄仁勋看08:30 →</button>
+          <span class="tag t-blue">⚡ 11/25 16:00 收盘核心观点（30秒看完）</span>
+          <button onclick="switchMode('0830')" style="border:0;background:none;color:var(--blue);font-size:12.5px;font-weight:600;cursor:pointer;padding:0;">🇺🇸 美股收盘/PCE前瞻看08:30 →</button>
         </div>
         <div class="grid cols-4 cols-2-mob">
-          <div class="inset-box"><div style="font-weight:700;font-size:13px;" class="up">1. 资金切换实锤</div><div style="font-size:12px;color:var(--text-2);margin-top:3px;">沪指探低<b>3476</b>后V反，创业板<b>+3.08%</b>底背离，放量1.55万亿，工行/茅台失血切科技！</div></div>
-          <div class="inset-box"><div style="font-weight:700;font-size:13px;" class="blue">2. 最看好3大主线</div><div style="font-size:12px;color:var(--text-2);margin-top:3px;">①<b>人形机器人</b>(拓普/三花)；②<b>PCB/CPO+六张网</b>(胜宏/国电南瑞)；③<b>猪肉+银矿</b>(牧原/兴业)。</div></div>
-          <div class="inset-box"><div style="font-weight:700;font-size:13px;color:var(--orange);">3. 港股恒科进展</div><div style="font-size:12px;color:var(--text-2);margin-top:3px;">恒科3508露底背离但缺量，右侧看<b>周MA5(3733)+美债破4.7%</b>；严选<b>小米/中芯/网易/腾讯</b>。</div></div>
-          <div class="inset-box"><div style="font-weight:700;font-size:13px;" class="down">4. 期货与3日策略</div><div style="font-size:12px;color:var(--text-2);margin-top:3px;">天然气(+35%)/金银(+3%)/PCB缺货催化；未来3天冲高不追，逢回踩提仓至5~6成！</div></div>
+          <div class="inset-box"><div style="font-weight:700;font-size:13px;" class="down">1. 16分新冰点缩量杀</div><div style="font-size:12px;color:var(--text-2);margin-top:3px;">韩股-6.2%+宁德-8.3%砸穿双创，成交缩至<b>1.38万亿</b>；汇金狂买<b>+129亿ETF</b>构筑政策底！</div></div>
+          <div class="inset-box"><div style="font-weight:700;font-size:13px;" class="up">2. 今日真金3大方向</div><div style="font-size:12px;color:var(--text-2);margin-top:3px;">①<b>生物医药</b>(+29.4亿/迈瑞恒瑞红)；②<b>CPO孤勇者</b>(天孚+7.65%/新易盛+0.72%)；③<b>高股息权重</b>(茅台/神华/工行)。</div></div>
+          <div class="inset-box"><div style="font-weight:700;font-size:13px;color:var(--orange);">3. 港股高开低走失3400</div><div style="font-size:12px;color:var(--text-2);margin-top:3px;">恒科冲3554后回落至<b>3,395(-2.07%)</b>，京东+3.8%/百济+2.8%抗跌，华虹-16.7%/壁仞-20.6%领跌。</div></div>
+          <div class="inset-box"><div style="font-weight:700;font-size:13px;" class="blue">4. 今晚与明日策略</div><div style="font-size:12px;color:var(--text-2);margin-top:3px;">盯今晚<b>21:30 美国10月PCE</b>！若PCE不爆雷，明早16分冰点+汇金托底将迎强修复，<b>绝不地板割肉！</b></div></div>
         </div>
       </section>
 
@@ -1002,16 +890,16 @@
       <!-- 二、A股大盘 + 早盘最大量能博弈 + 券商哨兵 -->
       <section id="s-index">
         <div class="sec-header">
-          <div class="sec-eyebrow">A-SHARE INDICES · 成交 1.55万亿 (+1307亿)</div>
-          <h2 class="sec-h2">大盘全景 · 早盘量能 &amp; 券商哨兵</h2>
+          <div class="sec-eyebrow">A-SHARE INDICES · 11/25 全天成交 1.38万亿 (-2,770亿)</div>
+          <h2 class="sec-h2">大盘全景 · 尾盘汇金爆量 &amp; 券商哨兵</h2>
         </div>
 
         <div class="grid cols-5 cols-2-mob" style="margin-bottom:12px;">
-          <div id="icard-SH" class="idx-card selected" onclick="selectIndexChart('SH')"><div class="idx-name"><span>上证指数</span><span class="blue">K线</span></div><div class="idx-val mono">3538.95</div><div class="idx-sub"><b class="up mono">+0.15%</b> 低3476</div></div>
-          <div id="icard-CYB" class="idx-card" onclick="selectIndexChart('CYB')"><div class="idx-name"><span>创业板指 ⭐</span><span class="tag t-up">最强</span></div><div class="idx-val mono">2280.20</div><div class="idx-sub"><b class="up mono">+3.08%</b> 底背离</div></div>
-          <div id="icard-CSI1000" class="idx-card" onclick="selectIndexChart('CSI1000')"><div class="idx-name"><span>中证1000</span><span class="blue">K线</span></div><div class="idx-val mono">5812.32</div><div class="idx-sub"><b class="up mono">+2.90%</b> 深V</div></div>
-          <div class="idx-card"><div class="idx-name"><span>沪深300</span><span class="tag t-up">底分型</span></div><div class="idx-val mono">3958.29</div><div class="idx-sub"><b class="up mono">+0.09%</b> 周MA5 3994</div></div>
-          <div class="idx-card"><div class="idx-name"><span>科创50</span><span class="muted">回升</span></div><div class="idx-val mono">1227.89</div><div class="idx-sub"><span class="down mono">-0.26%</span> 低1177</div></div>
+          <div id="icard-SH" class="idx-card selected" onclick="selectIndexChart('SH')"><div class="idx-name"><span>上证指数</span><span class="blue">K线</span></div><div class="idx-val mono down">3476.47</div><div class="idx-sub"><b class="down mono">-2.03%</b> 低3468</div></div>
+          <div id="icard-CYB" class="idx-card" onclick="selectIndexChart('CYB')"><div class="idx-name"><span>创业板指</span><span class="tag t-down">宁德砸</span></div><div class="idx-val mono down">2183.58</div><div class="idx-sub"><b class="down mono">-4.19%</b> 阶段新低</div></div>
+          <div id="icard-CSI1000" class="idx-card" onclick="selectIndexChart('CSI1000')"><div class="idx-name"><span>中证1000</span><span class="blue">K线</span></div><div class="idx-val mono down">5541.55</div><div class="idx-sub"><b class="down mono">-4.44%</b> 午后补跌</div></div>
+          <div class="idx-card"><div class="idx-name"><span>沪深300</span><span class="tag t-up">ETF+89亿</span></div><div class="idx-val mono down">3898.24</div><div class="idx-sub"><b class="down mono">-1.65%</b> 最抗跌</div></div>
+          <div class="idx-card"><div class="idx-name"><span>科创50</span><span class="tag t-down">ETF+27亿</span></div><div class="idx-val mono down">1186.14</div><div class="idx-sub"><b class="down mono">-5.12%</b> 芯片重挫</div></div>
         </div>
 
         <div class="grid split-7-5">
@@ -1026,19 +914,19 @@
 
           <div style="display:flex;flex-direction:column;gap:12px;">
             <div class="card">
-              <strong style="display:block;font-size:14.5px;margin-bottom:6px;">⏱️ 早盘最大成交量博弈复盘</strong>
-              <div style="font-size:12.5px;color:var(--text-2);">早盘9:30–10:30贡献全天超40%量能，恐慌盘砸出 <b>3476.65</b> 新低却放量承接不跌反拉，银行/白酒同步放量补跌——铁证<b>“主力借恐慌吃血筹+调仓换股”</b>！</div>
+              <strong style="display:block;font-size:14.5px;margin-bottom:6px;">⏱️ 11/25 全天量能与尾盘护盘博弈</strong>
+              <div style="font-size:12.5px;color:var(--text-2);">半日仅 7,631 亿（缩量 3,579 亿），午后 13:30 后随韩股暴跌放量至 13,831 亿；最关键的是 <b>14:00–15:00 尾盘 6 只宽基 ETF 集体爆量净买入 +129.0 亿</b>（创业板ETF单日成交 122 亿、科创50ETF 98.8 亿、300ETF华夏主力+49.4 亿），说明 <b>3,468 一线就是国家队明牌护盘线！</b></div>
             </div>
             <div class="card">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <strong style="font-size:14.5px;">🚨 券商哨兵监测</strong><span class="tag t-warn">左侧试盘</span>
+                <strong style="font-size:14.5px;">🚨 券商哨兵监测（11/25收盘）</strong><span class="tag t-up">逆势抗跌</span>
               </div>
               <div class="ios-list mono" style="font-size:12.5px;">
-                <div class="ios-row" style="padding:7px 0;"><div class="row-top"><span>东方财富 (300059)</span><span class="up"><b>18.62 (+1.14% · 量1.27)</b></span></div></div>
-                <div class="ios-row" style="padding:7px 0;"><div class="row-top"><span>中信证券 (600030)</span><span>25.26 <b class="up">金针探底</b></span></div></div>
-                <div class="ios-row" style="padding:7px 0;"><div class="row-top"><span>证券ETF (512880)</span><span class="up">0.984 (+0.31%)</span></div></div>
+                <div class="ios-row" style="padding:7px 0;"><div class="row-top"><span>东方财富 (300059)</span><span class="down"><b>17.72 (-1.61% · 强于创指)</b></span></div></div>
+                <div class="ios-row" style="padding:7px 0;"><div class="row-top"><span>中信证券 (600030)</span><span>24.80 <b class="up">(-1.20% 主力+0.3亿)</b></span></div></div>
+                <div class="ios-row" style="padding:7px 0;"><div class="row-top"><span>证券ETF (512880)</span><span class="down">0.950 (-1.44%)</span></div></div>
               </div>
-              <div style="font-size:12px;color:var(--muted);margin-top:6px;">全面进场确认：证券ETF ≥ +3%、东财量比 ≥ 1.8、两市 ≥ 1.7万亿。</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:6px;">创指跌-4.2%时东财仅跌-1.6%、中信翻正净流入，金融已现止跌韧性！右侧全面进场仍看证券ETF ≥ +3%。</div>
             </div>
           </div>
         </div>
@@ -1049,20 +937,20 @@
       <section id="s-4beacons">
         <div class="sec-header">
           <div class="sec-eyebrow">A-SHARE 4 MACRO BELLWETHERS · 判断大势顶底的四大风向标</div>
-          <h2 class="sec-h2">🧭 A股大势四大风向标实时追踪（11/24 最新信号）</h2>
+          <h2 class="sec-h2">🧭 A股大势四大风向标实时追踪（11/25 收盘强信号）</h2>
         </div>
 
         <!-- 综合信号总评卡 -->
         <div class="card" style="margin-bottom:12px;border:1.5px solid var(--up);">
           <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
             <span class="tag t-up">综合判定：3红亮底 · 1中性 → 战略底部区域！</span>
-            <span class="mono muted" style="font-size:11.5px;">2026-11-24 更新</span>
+            <span class="mono muted" style="font-size:11.5px;">2026-11-25 15:00 更新</span>
           </div>
           <div class="grid cols-4 cols-2-mob">
-            <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>① 回购增持潮</span><span class="tag t-up">强底</span></div><div class="idx-val mono up">229.6亿</div><div class="idx-sub">111家拿专项贷</div></div>
-            <div class="idx-card"><div class="idx-name"><span>② 中石油</span><span class="tag t-warn">中性</span></div><div class="idx-val mono down">12.35元</div><div class="idx-sub">-1.44% · 暂无新增持</div></div>
-            <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>③ 汇金/国家队</span><span class="tag t-up">猛护盘</span></div><div class="idx-val mono up">+1,908亿</div><div class="idx-sub">上周宽基ETF扫货</div></div>
-            <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>④ 社保基金</span><span class="tag t-up">稳加仓</span></div><div class="idx-val mono up">594只</div><div class="idx-sub">Q3新进148·增持190</div></div>
+            <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>① 回购增持潮</span><span class="tag t-up">强底</span></div><div class="idx-val mono up">1,615亿+</div><div class="idx-sub">中际旭创再抛40亿!</div></div>
+            <div class="idx-card"><div class="idx-name"><span>② 中石油</span><span class="tag t-up">逆势护盘</span></div><div class="idx-val mono down">12.30元</div><div class="idx-sub">-0.40% · 主力+1.4亿</div></div>
+            <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>③ 汇金/国家队</span><span class="tag t-up">今日狂扫</span></div><div class="idx-val mono up">+129.0亿</div><div class="idx-sub">今日六大ETF暴力护盘</div></div>
+            <div class="idx-card" style="background:var(--up-bg);"><div class="idx-name"><span>④ 社保基金</span><span class="tag t-up">6股低吸区</span></div><div class="idx-val mono up">594只</div><div class="idx-sub">今日6只回踩MA20区</div></div>
           </div>
         </div>
 
@@ -1141,17 +1029,17 @@
       <section id="s-ssf-watch">
         <div class="sec-header">
           <div class="sec-eyebrow">SSF DAILY WATCHLIST · 每日收盘自动追踪</div>
-          <h2 class="sec-h2">🛡️ 社保5大方向 &amp; 24只核心股每日追踪（11/24收盘）</h2>
+          <h2 class="sec-h2">🛡️ 社保5大方向 &amp; 24只核心股每日追踪（11/25收盘）</h2>
         </div>
 
         <div class="card card-tight">
           <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
-            <span class="tag t-up">今日强星：安培龙+20% · 新雷能+11.1% · 超颖电子+6.9%</span>
+            <span class="tag t-up">今日抗跌星：恩华药业+0.98% · 鹏鼎控股+0.43% · 京东方A+0.23% · 亿联网络+0.10%</span>
             <span class="mono muted" style="font-size:11.5px;">含 MA20 位置自动信号</span>
           </div>
           <div id="ssf-filters" class="chip-scroller" style="padding:0 0 10px;">
             <button data-sf="ALL" onclick="filterSsf('ALL')" class="chip active">全部 (24)</button>
-            <button data-sf="BUY" onclick="filterSsf('BUY')" class="chip" style="color:var(--up);">⭐MA20低吸区 (7)</button>
+            <button data-sf="BUY" onclick="filterSsf('BUY')" class="chip" style="color:var(--up);">⭐MA20低吸区 (6)</button>
             <button data-sf="AI硬件PCB" onclick="filterSsf('AI硬件PCB')" class="chip">AI硬件PCB (7)</button>
             <button data-sf="机器人制造" onclick="filterSsf('机器人制造')" class="chip">机器人制造 (6)</button>
             <button data-sf="电网能源" onclick="filterSsf('电网能源')" class="chip">电网能源 (3)</button>
@@ -1359,36 +1247,30 @@
       <!-- 七、🇭🇰 港股 & 恒生科技企稳专题 -->
       <section id="s-hk">
         <div class="sec-header">
-          <div class="sec-eyebrow">HONG KONG &amp; HANG SENG TECH</div>
-          <h2 class="sec-h2">港股恒生科技低位企稳专题</h2>
+          <div class="sec-eyebrow">HONG KONG &amp; HANG SENG TECH · 11/25 14:48 实盘</div>
+          <h2 class="sec-h2">港股恒生科技冲高回落失守 3,400 专题</h2>
         </div>
 
         <div class="grid split-7-5">
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
               <strong style="font-size:14.5px;">恒生科技 (HSTECH) · 15日K线</strong>
-              <span class="mono muted" style="font-size:12px;">3508.00 (-0.09%) · 周MA5 3733</span>
+              <span class="mono down" style="font-size:12px;">3395.07 (-2.07%) · 高3554</span>
             </div>
             <div class="chart-box"><canvas id="hstechCanvas"></canvas></div>
-            <p style="font-size:12.5px;color:var(--text-2);margin:8px 0 0;">恒指刺穿22,000屠尽重牛街货，恒科探低3395收下影且现日线底背离萌芽，但受美债近5%压制流动性偏弱，仍属左侧磨底。</p>
+            <p style="font-size:12.5px;color:var(--text-2);margin:8px 0 0;">早盘借 <b>12/7 恒生科技首次大扩容</b> + 小米/B站超预期财报大涨冲 3,554，但午后受韩股 -6.2% 与 A 股跳水冲击回吐失守 3,400（成交放量至 1,651 亿港元），<b>华虹 -16.7%、壁仞 -20.6%、智谱 -12.1%、中芯H -6.5%</b> 成最大拖累，仅 <b>京东 +3.8%、百济 +2.8%、理想 +2.6%、中生制药 +1.9%、小米 +1.4%</b> 逆势红盘！</p>
           </div>
 
           <div class="card">
-            <strong style="display:block;font-size:14.5px;margin-bottom:8px;">🚦 恒生科技“真正企稳”4条硬标准</strong>
+            <strong style="display:block;font-size:14.5px;margin-bottom:8px;">🚦 恒生科技“真正企稳”4条硬标准（11/25进度）</strong>
             <div style="font-size:12.5px;color:var(--text-2);display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
-              <div><b>① 放量</b>：主板成交重回 <b>1,600–1,800亿港元+</b>，南向连3日净买。</div>
-              <div><b>② 站稳</b>：放量收复 <b>MA5(3633)</b> 与 <b>周MA5(3733)</b>，3日不破3395。</div>
-              <div><b>③ 美债</b>：10Y美债有效跌破 <b>4.70%</b>（盯11/25 PCE）。</div>
-              <div><b>④ 权重</b>：腾讯/小米/网易/中芯共振领涨，不再出旺旺(-10%)式财报雷。</div>
+              <div><b>① 放量</b>：主板成交今日已达 <b>1,651亿+港元</b>（全天望破1,800亿），✅ 量能开始释放。</div>
+              <div><b>② 站稳</b>：尚未达标！需放量收复 <b>MA5(3,506)</b> 并站稳 3,550 上方（今日冲3554未果）。</div>
+              <div><b>③ 宏观</b>：紧盯今晚 <b>21:30 美国 10 月 PCE</b> 能否压低 10Y 美债回落 4.80% 下方。</div>
+              <div><b>④ 选股</b>：严选业绩/催化硬核的 <b>创新药(百济/信达/中生) + 科网绩优(京东/小米/网易)</b>，远离暴跌 AI 次新股！</div>
             </div>
-            <strong style="display:block;font-size:13.5px;margin-bottom:8px;">💎 严选 6 只核心看好港股</strong>
-            <div class="grid cols-2 cols-2-mob" style="gap:8px;font-size:12px;">
-              <div class="inset-box" style="padding:9px;"><b>小米-W ⭐</b> <span class="mono">27.52</span><div class="muted" style="font-size:11px;">套牢仅39%·AI汽车</div></div>
-              <div class="inset-box" style="padding:9px;"><b>中芯HK ⭐</b> <span class="mono">48.74</span><div class="muted" style="font-size:11px;">20日+6%·踩MA20</div></div>
-              <div class="inset-box" style="padding:9px;"><b>网易-S</b> <span class="mono up">+3.6%</span><div class="muted" style="font-size:11px;">159.5·高现金流</div></div>
-              <div class="inset-box" style="padding:9px;"><b>腾讯控股</b> <span class="mono">344.0</span><div class="muted" style="font-size:11px;">千亿回购定海神针</div></div>
-              <div class="inset-box" style="padding:9px;"><b>美团-W</b> <span class="mono">66.40</span><div class="muted" style="font-size:11px;">今日收金针探底</div></div>
-              <div class="inset-box" style="padding:9px;"><b>紫金HK</b> <span class="mono up">+4.2%</span><div class="muted" style="font-size:11px;">24.02·折价+金铜</div></div>
+            <div class="inset-box" style="font-size:12px;color:var(--text-2);">
+              <b>11/25 港股强弱快照</b>：恒指 <b>22,039 (-0.81%)</b>、国企 <b>-0.64%</b>；京东 +3.76% / 百济 +2.76% / 理想 +2.56% / 小米 +1.36%；腾讯 -0.82% / 阿里 -0.79% / 美团 -4.05% / 华虹 -16.68%。
             </div>
           </div>
         </div>
@@ -1397,22 +1279,22 @@
       <!-- 八、跨月主线（2026.11 → 2027.03） & 未来3天推演 -->
       <section id="s-plan">
         <div class="sec-header">
-          <div class="sec-eyebrow">ROADMAP 2026.11 – 2027.03 &amp; 3-DAY OUTLOOK</div>
-          <h2 class="sec-h2">跨月主线日历 &amp; 未来3天情景推演</h2>
+          <div class="sec-eyebrow">ROADMAP 2026.11 – 2027.03 &amp; 11/26–11/30 OUTLOOK</div>
+          <h2 class="sec-h2">跨月主线日历 &amp; 明日(11/26)起3天情景推演</h2>
         </div>
 
         <div class="grid cols-5 cols-2-mob" style="margin-bottom:12px;">
-          <div class="card card-tight"><span class="tag t-up">2026.11 筑底</span><div style="font-size:12px;color:var(--text-2);margin-top:6px;">ETF托底/PCE → 机器人(拓普/三花)、PCB/CPO、猪肉。</div></div>
-          <div class="card card-tight"><span class="tag t-warn">2026.12 定调</span><div style="font-size:12px;color:var(--text-2);margin-top:6px;">12/1听证/FOMC/经济会议 → 券商、六张网、金银拐点。</div></div>
+          <div class="card card-tight"><span class="tag t-up">11/25–11/30 筑底</span><div style="font-size:12px;color:var(--text-2);margin-top:6px;">今晚PCE + 汇金+129亿托底 + 11/30两融松绑(80%) → 医药/CPO/社保MA20股。</div></div>
+          <div class="card card-tight"><span class="tag t-warn">2026.12 定调</span><div style="font-size:12px;color:var(--text-2);margin-top:6px;">12/1黄仁勋听证/12/7恒科扩容/12/9FOMC → 券商、六张网、金银拐点。</div></div>
           <div class="card card-tight"><span class="tag t-blue">2027.01 躁动</span><div style="font-size:12px;color:var(--text-2);margin-top:6px;">CES/年报预告/社融 → AI硬件、机器人、造船、小米。</div></div>
           <div class="card card-tight"><span class="tag t-warn">2027.02 春节</span><div style="font-size:12px;color:var(--text-2);margin-top:6px;">春节传媒/美Q4财报 → AI应用传媒、黄金主升、猪肉。</div></div>
           <div class="card card-tight"><span class="tag t-up">2027.03 两会</span><div style="font-size:12px;color:var(--text-2);margin-top:6px;">全国两会预算/联储转鸽 → 六张网、军工、国产芯片。</div></div>
         </div>
 
         <div class="grid cols-3">
-          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><b>基准：B浪确认与回踩蓄势</b><span class="tag t-up">60%</span></div><div style="font-size:12.5px;color:var(--text-2);">周二冲高测3565后回踩3510~3525确认底分型，银行继续回落，周三周四攻周MA5(3591)与成本3626。策略：回踩低吸至5~6成。</div></div>
-          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><b>强势：券商点火放量逼空</b><span class="tag t-warn">25%</span></div><div style="font-size:12.5px;color:var(--text-2);">放量破1.75万亿、东财+5%/证券ETF+3%吞没3591直指3680~3700。策略：沿5日线坚定持股。</div></div>
-          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><b>弱势：外盘反复二次W底</b><span class="tag t-down">15%</span></div><div style="font-size:12.5px;color:var(--text-2);">若11/25 PCE爆雷，回踩3476~3490构筑扎实W双底（右底缩量最佳）。策略：留3成现金分批接筹。</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><b>基准：16分冰点强修复（W双底）</b><span class="tag t-up">60%</span></div><div style="font-size:12.5px;color:var(--text-2);">今晚PCE符合预期 + 明日美股休市无外盘扰动 + 汇金+129亿护盘托底，周四沪指守3,468反抽3,510–3,535，双创超跌反弹！策略：早盘回踩分批低吸至5–6成，绝不割在16分地板。</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><b>强势：PCE大低于预期·逼空反包</b><span class="tag t-warn">25%</span></div><div style="font-size:12.5px;color:var(--text-2);">若PCE降温带动美债跌破4.8% + 纳指暴涨，明日券商/AI硬件/医药共振放量破1.6万亿，一键收复3,535！策略：持有CPO/医药/社保核心股不动。</div></div>
+          <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><b>弱势：PCE爆雷·惯性探3430</b><span class="tag t-down">15%</span></div><div style="font-size:12.5px;color:var(--text-2);">若PCE超预期令10Y冲破5.0%，明早惯性下探3,430–3,450，但国家队护盘线就在脚下，下杀即黄金坑！策略：严控5成仓，留足现金等放量底分型再加。</div></div>
         </div>
       </section>
 
@@ -1456,8 +1338,8 @@
             <span id="pa-meta" class="mono muted" style="font-size:12px;"></span>
           </div>
           <div id="pa-tabs" class="chip-scroller" style="padding:0 0 10px;">
-            <button onclick="selectPaCase(0)" id="pa-btn-0" class="chip active">⭐ 案例1：三花智控(十字星守MA20)</button>
-            <button onclick="selectPaCase(1)" id="pa-btn-1" class="chip">⚠️ 案例2：新易盛(放量高开光脚大阴)</button>
+            <button onclick="selectPaCase(0)" id="pa-btn-0" class="chip active">⭐ 案例1：天孚通信(冰点放量反包+7.7%)</button>
+            <button onclick="selectPaCase(1)" id="pa-btn-1" class="chip">⚠️ 案例2：三花智控(十字星破MA20失败)</button>
           </div>
           <div class="chart-box"><canvas id="paCanvas"></canvas></div>
           <div class="grid cols-2" style="margin-top:10px;">
@@ -1529,8 +1411,8 @@
             <span id="t0-meta" class="mono muted" style="font-size:11.5px;"></span>
           </div>
           <div id="t0-tabs" class="chip-scroller" style="padding:0 0 8px;">
-            <button onclick="selectT0Case(0)" id="t0-btn-0" class="chip active">⚡ 三花智控(正T+2.9%/反T+2%)</button>
-            <button onclick="selectT0Case(1)" id="t0-btn-1" class="chip">🔥 胜宏科技(高开反T+9.3%!)</button>
+            <button onclick="selectT0Case(0)" id="t0-btn-0" class="chip active">⚡ 新易盛(低开正T+7.4%!)</button>
+            <button onclick="selectT0Case(1)" id="t0-btn-1" class="chip">🔥 三花智控(破位反T降本-7.7%)</button>
           </div>
           <div class="chart-box"><canvas id="t0Canvas"></canvas></div>
           <div id="t0-steps" class="inset-box" style="margin-top:10px;font-size:12.5px;color:var(--text-2);line-height:1.6;"></div>
@@ -1574,15 +1456,15 @@
   <!-- iPhone 专属底部 Tab Bar -->
   <nav class="ios-tabbar">
     <button id="tab-0830" onclick="switchMode('0830')" class="tab-item"><span class="ico">🌅</span><span>08:30 美股</span></button>
-    <button id="tab-1200" onclick="switchMode('1200')" class="tab-item active"><span class="ico">☀️</span><span>12:00 午盘</span></button>
-    <button id="tab-1600" onclick="switchMode('1600')" class="tab-item"><span class="ico">🌆</span><span>16:00 全景</span></button>
+    <button id="tab-1200" onclick="switchMode('1200')" class="tab-item"><span class="ico">☀️</span><span>12:00 午盘</span></button>
+    <button id="tab-1600" onclick="switchMode('1600')" class="tab-item active"><span class="ico">🌆</span><span>16:00 全景</span></button>
   </nav>
 
   <script>
     const SENTIMENT_HISTORY = [
-      ["11-03",52],["11-04",64],["11-05",68],["11-06",55],["11-09",58],
-      ["11-10",60],["11-11",65],["11-12",56],["11-13",46],["11-16",38],
-      ["11-17",31],["11-18",29],["11-19",24],["11-20",18],["11-23",34]
+      ["11-05",68],["11-06",55],["11-09",58],["11-10",60],["11-11",65],
+      ["11-12",56],["11-13",46],["11-16",38],["11-17",31],["11-18",29],
+      ["11-19",24],["11-20",18],["11-23",34],["11-24",29],["11-25",16]
     ];
 
     const US_STOCKS_LIST = [
@@ -1609,12 +1491,7 @@
       GOLD:{n:"COMEX黄金 (GC=F) · 11/24收盘",c:3542.4,chg:-2.99,vwap:3893.11,wma5:null,note:"🥇 受 12/9 加息概率飙至 95% 压制，大跌 -2.99% 收 $3,542.4 逼近 $3,500 强支撑；小摩仍看 2027 Q4 反弹至 $4,500+。",b:[["11-04", 3940.8, 4073.0, 4081.2, 3928.2, 232.6, 3982.66, 4089.96, -77.71, -79.73, 4.03], ["11-05", 4075.4, 4113.5, 4155.8, 4067.0, 215.6, 3999.08, 4087.78, -65.89, -76.96, 22.14], ["11-06", 4098.5, 4074.9, 4116.2, 4035.1, 178.0, 4034.28, 4080.71, -58.95, -73.36, 28.81], ["11-09", 4074.3, 4114.5, 4157.7, 4062.5, 190.6, 4063.26, 4076.91, -49.69, -68.62, 37.87], ["11-10", 4149.0, 4030.2, 4156.2, 4020.8, 196.2, 4081.22, 4069.55, -48.59, -64.62, 32.06], ["11-11", 4043.7, 4000.5, 4074.7, 3989.6, 132.4, 4066.72, 4064.18, -49.54, -61.6, 24.12], ["11-12", 3994.0, 3885.3, 4005.9, 3856.7, 229.4, 4021.08, 4049.94, -58.91, -61.06, 4.3], ["11-13", 3883.3, 3886.3, 3927.2, 3871.1, 156.0, 3983.36, 4035.2, -65.51, -61.95, -7.11], ["11-16", 3869.7, 3853.0, 3904.3, 3835.2, 164.0, 3931.06, 4019.85, -72.58, -64.08, -17.0], ["11-17", 3859.5, 3864.2, 3894.0, 3839.2, 160.4, 3897.86, 4005.93, -76.4, -66.54, -19.72], ["11-18", 3855.2, 3741.9, 3859.3, 3721.8, 244.3, 3846.14, 3985.52, -88.28, -70.89, -34.78], ["11-19", 3730.3, 3685.5, 3759.5, 3620.6, 203.7, 3806.18, 3966.78, -101.08, -76.93, -48.31], ["11-20", 3633.8, 3515.4, 3638.1, 3502.9, 336.5, 3732.0, 3942.15, -123.53, -86.25, -74.56], ["11-23", 3570.5, 3651.4, 3691.0, 3552.3, 336.5, 3691.68, 3922.8, -128.86, -94.77, -68.17], ["11-24", 3559.3, 3542.4, 3566.8, 3538.4, 5.8, 3627.32, 3896.19, -140.26, -103.87, -72.78]]}
     };
 
-    const CN_INDICES = {
-      SH:{n:"上证指数",c:3538.95,chg:0.15,vwap:3625.91,wma5:3591.06,note:"探新低3476.65后V反收3538.95，构成日线MACD底背离；上方看MA5(3565)、周MA5(3591)与成本(3626)。",b:[["11-03",3624.58,3608.1,3624.58,3580.38,536.8,3635.61,3715.43,-65.32,-60.24,-10.15],["11-04",3605.39,3686.17,3686.17,3590.8,599.4,3636.55,3707.63,-59.23,-60.04,1.62],["11-05",3646.57,3689.91,3701.59,3646.57,571.3,3644.25,3701.53,-53.49,-58.73,10.48],["11-06",3612.15,3649.18,3660.49,3610.2,477.0,3654.28,3693.3,-51.63,-57.31,11.36],["11-09",3659.02,3660.79,3679.09,3653.05,427.7,3658.83,3686.48,-48.66,-55.58,13.85],["11-10",3682.04,3663.72,3683.73,3660.72,404.9,3669.95,3679.62,-45.54,-53.57,16.06],["11-11",3655.66,3680.64,3689.65,3650.31,433.1,3668.85,3675.29,-41.23,-51.1,19.75],["11-12",3673.06,3655.83,3699.58,3647.44,496.5,3662.03,3672.71,-39.36,-48.76,18.79],["11-13",3658.72,3634.35,3669.44,3623.84,472.3,3659.07,3668.61,-39.16,-46.84,15.35],["11-16",3611.54,3602.57,3623.12,3586.57,461.6,3647.42,3662.2,-41.1,-45.69,9.18],["11-17",3585.67,3584.58,3604.98,3565.59,444.1,3631.59,3654.66,-43.58,-45.27,3.38],["11-18",3596.55,3587.83,3596.55,3560.45,423.9,3613.03,3648.4,-44.77,-45.17,0.8],["11-19",3583.12,3577.62,3584.28,3547.94,412.9,3597.39,3644.38,-46.0,-45.34,-1.34],["11-20",3527.3,3533.79,3538.27,3500.83,499.7,3577.28,3636.54,-49.94,-46.26,-7.37],["11-23",3503.52,3538.95,3544.6,3476.65,512.2,3564.55,3628.61,-52.05,-47.41,-9.27]]},
-      CYB:{n:"创业板指",c:2280.2,chg:3.08,vwap:2448.79,wma5:2359.45,note:"今日最强旗手！+3.08%放量反包站上MA5(2278)，日线MACD红柱翻红+底背离，下看周MA5(2359)。",b:[["11-03",2429.77,2391.65,2471.9,2376.39,182.8,2483.27,2730.18,-207.24,-192.36,-29.76],["11-04",2399.46,2544.73,2559.09,2376.28,223.2,2465.26,2700.66,-195.58,-193.0,-5.15],["11-05",2493.73,2566.8,2625.98,2493.67,225.3,2475.1,2677.16,-182.45,-190.89,16.87],["11-06",2438.72,2465.23,2506.97,2438.72,181.7,2485.42,2648.26,-178.19,-188.35,20.31],["11-09",2494.63,2458.56,2511.71,2458.01,165.4,2485.39,2622.99,-173.36,-185.35,23.99],["11-10",2518.44,2494.4,2520.01,2487.56,174.5,2505.94,2599.8,-164.74,-181.23,32.99],["11-11",2490.1,2572.07,2580.34,2490.1,184.1,2511.41,2585.06,-149.91,-174.97,50.12],["11-12",2559.16,2509.43,2620.25,2508.29,196.9,2499.94,2571.38,-141.58,-168.29,53.42],["11-13",2525.39,2426.08,2528.99,2417.22,170.4,2492.11,2554.06,-140.09,-162.65,45.12],["11-16",2395.52,2320.02,2398.19,2308.9,152.9,2464.4,2532.75,-145.78,-159.28,26.98],["11-17",2299.97,2292.2,2343.15,2263.74,157.9,2423.96,2510.4,-150.81,-157.58,13.55],["11-18",2306.12,2311.62,2329.91,2265.76,148.4,2371.87,2491.24,-151.47,-156.36,9.78],["11-19",2290.21,2293.34,2315.78,2271.99,140.0,2328.65,2477.06,-151.72,-155.43,7.42],["11-20",2244.06,2212.13,2263.3,2212.13,165.2,2285.86,2453.47,-156.67,-155.68,-1.99],["11-23",2195.52,2280.2,2297.73,2188.45,188.3,2277.9,2435.56,-153.34,-155.21,3.75]]},
-      CSI1000:{n:"中证1000",c:5812.32,chg:2.9,vwap:6331.02,wma5:6096.96,note:"中小盘深V狂拉+2.90%，放量吞没恐慌抛压。",b:[["11-09",6540,6565,6590,6510,19233,6477.65,6587.05,-212.4,-247.72,70.63],["11-10",6590.4,6579.36,6625.52,6560.59,19579,6549.28,6564.85,-192.18,-236.61,88.86],["11-11",6555.14,6669.55,6681.87,6541.34,20378,6580.83,6553.07,-166.96,-222.68,111.45],["11-12",6662.67,6537.84,6723.8,6537.84,23049,6558.37,6546.03,-155.8,-209.31,107.01],["11-13",6554.06,6357.26,6581.35,6341.45,20313,6528.75,6529.8,-159.69,-199.38,79.39],["11-16",6310.58,6164.62,6310.58,6136.83,18398,6461.73,6503.11,-176.28,-194.76,36.97],["11-17",6111.05,6092.39,6225.56,6055.73,18590,6364.33,6469.39,-193.03,-194.41,2.77],["11-18",6124.1,6052.82,6144.68,5975.36,17721,6240.99,6433.02,-207.11,-196.96,-20.32],["11-19",6033.49,5938.9,6033.49,5913.05,16668,6121.2,6401.05,-224.87,-202.54,-44.67],["11-20",5826.37,5648.63,5841.42,5648.63,19678,5979.47,6346.75,-259.38,-213.91,-90.95],["11-23",5563.29,5812.32,5841.18,5541.97,21350,5909.01,6305.83,-270.4,-225.21,-90.39]]},
-      HSTECH:{n:"恒生科技指数",c:3508.0,chg:-0.09,vwap:3842.6,wma5:3733.09,b:[["11-03",3853.17,3867.73,3898.71,3832.93,46982,3811.98,3988.14,-135.9,-134.84,-2.14],["11-04",3848.21,3936.02,3939.53,3796.23,50390,3828.44,3973.79,-122.07,-132.28,20.43],["11-05",3992.39,4154.29,4168.42,3988.81,104186,3910.47,3971.78,-92.42,-124.31,63.77],["11-06",4025.22,4078.23,4147.64,4014.72,70309,3975.14,3972.02,-74.21,-114.29,80.16],["11-09",4119.98,4040.73,4158.88,4033.87,42126,4015.4,3964.16,-62.09,-103.85,83.52],["11-10",4072.44,4084.45,4109.03,4055.1,47509,4058.74,3959.91,-48.4,-92.76,88.72],["11-11",4045.3,4027.06,4057.47,4014.87,48399,4076.95,3954.43,-41.7,-82.55,81.7],["11-12",3995.0,3931.93,3998.36,3918.42,65491,4032.48,3942.3,-43.56,-74.75,62.38],["11-13",3918.21,3813.19,3938.39,3802.84,66286,3979.47,3929.91,-54.0,-70.6,33.21],["11-16",3828.81,3801.64,3851.36,3797.08,46024,3931.65,3914.58,-62.48,-68.98,12.99],["11-17",3760.33,3758.17,3799.52,3715.15,66711,3866.4,3900.2,-71.88,-69.56,-4.65],["11-18",3751.58,3736.33,3762.44,3695.0,50222,3808.25,3887.28,-80.17,-71.68,-16.98],["11-19",3699.93,3649.14,3699.93,3630.46,87496,3751.69,3880.03,-92.7,-75.89,-33.64],["11-20",3541.5,3511.14,3551.77,3482.41,72568,3691.28,3862.01,-112.48,-83.2,-58.55],["11-23",3443.76,3508.0,3524.74,3395.38,68678,3632.56,3844.53,-126.94,-91.95,-69.98]]}
-    };
+    const CN_INDICES = {"SH": {"n": "上证指数", "c": 3476.47, "chg": -2.03, "vwap": 3611.84, "wma5": 3613.37, "note": "11/25收3476.47(-2.03%)精准回测11/23前低3476.65（最低3468.65），尾盘300ETF净买+89.4亿构筑W双底雏形！上方看MA5(3535)与成本(3612)。", "b": [["11-05", 3646.57, 3689.91, 3701.59, 3646.57, 57129.2, 3644.25, 3701.53, -47.31, -50.19, 5.77], ["11-06", 3612.15, 3649.18, 3660.49, 3610.2, 47704.3, 3654.28, 3693.3, -45.88, -49.33, 6.9], ["11-09", 3659.02, 3660.79, 3679.09, 3653.05, 42772.2, 3658.83, 3686.48, -43.32, -48.13, 9.62], ["11-10", 3682.04, 3663.72, 3683.73, 3660.72, 40486.5, 3669.95, 3679.62, -40.58, -46.62, 12.08], ["11-11", 3655.66, 3680.64, 3689.65, 3650.31, 43312.0, 3668.85, 3675.29, -36.62, -44.62, 16.0], ["11-12", 3673.06, 3655.83, 3699.58, 3647.44, 49653.3, 3662.03, 3672.71, -35.08, -42.71, 15.26], ["11-13", 3658.72, 3634.35, 3669.44, 3623.84, 47229.4, 3659.07, 3668.61, -35.19, -41.21, 12.03], ["11-16", 3611.54, 3602.57, 3623.12, 3586.57, 46164.3, 3647.42, 3662.2, -37.41, -40.45, 6.08], ["11-17", 3585.67, 3584.58, 3604.98, 3565.59, 44407.5, 3631.59, 3654.66, -40.16, -40.39, 0.46], ["11-18", 3596.55, 3587.83, 3596.55, 3560.45, 42393.5, 3613.03, 3648.4, -41.59, -40.63, -1.93], ["11-19", 3583.12, 3577.62, 3584.28, 3547.94, 41291.3, 3597.39, 3644.38, -43.06, -41.12, -3.88], ["11-20", 3527.3, 3533.79, 3538.27, 3500.83, 49971.2, 3577.28, 3636.54, -47.21, -42.34, -9.75], ["11-23", 3503.52, 3538.95, 3544.6, 3476.65, 51219.3, 3564.55, 3628.61, -49.52, -43.77, -11.49], ["11-24", 3567.84, 3548.37, 3585.22, 3539.01, 49352.6, 3557.31, 3623.62, -50.01, -45.02, -9.98], ["11-25", 3522.59, 3476.47, 3526.34, 3468.65, 47256.1, 3535.04, 3613.37, -55.56, -47.13, -16.86]]}, "CYB": {"n": "创业板指", "c": 2183.58, "chg": -4.19, "vwap": 2416.25, "wma5": 2399.55, "note": "受宁德时代-8.33%拖累收2183.58(-4.19%)创阶段新低，但创业板ETF全天爆量122亿托底+天孚/新易盛逆势收红，明日盯宁德止跌与2200收复。", "b": [["11-05", 2493.73, 2566.8, 2625.98, 2493.67, 22532.2, 2475.1, 2677.16, -165.41, -166.87, 2.93], ["11-06", 2438.72, 2465.23, 2506.97, 2438.72, 18168.1, 2485.42, 2648.26, -162.37, -165.97, 7.21], ["11-09", 2494.63, 2458.56, 2511.71, 2458.01, 16543.5, 2485.39, 2622.99, -158.67, -164.51, 11.69], ["11-10", 2518.44, 2494.4, 2520.01, 2487.56, 17449.8, 2505.94, 2599.8, -151.1, -161.83, 21.46], ["11-11", 2490.1, 2572.07, 2580.34, 2490.1, 18407.5, 2511.41, 2585.06, -137.25, -156.91, 39.32], ["11-12", 2559.16, 2509.43, 2620.25, 2508.29, 19692.7, 2499.94, 2571.38, -129.84, -151.5, 43.32], ["11-13", 2525.39, 2426.08, 2528.99, 2417.22, 17043.7, 2492.11, 2554.06, -129.2, -147.04, 35.68], ["11-16", 2395.52, 2320.02, 2398.19, 2308.9, 15293.2, 2464.4, 2532.75, -135.69, -144.77, 18.16], ["11-17", 2299.97, 2292.2, 2343.15, 2263.74, 15789.4, 2423.96, 2510.4, -141.44, -144.1, 5.32], ["11-18", 2306.12, 2311.62, 2329.91, 2265.76, 14845.0, 2371.87, 2491.24, -142.79, -143.84, 2.1], ["11-19", 2290.21, 2293.34, 2315.78, 2271.99, 13999.2, 2328.65, 2477.06, -143.68, -143.81, 0.26], ["11-20", 2244.06, 2212.13, 2263.3, 2212.13, 16523.5, 2285.86, 2453.47, -149.21, -144.89, -8.65], ["11-23", 2195.52, 2280.2, 2297.73, 2188.45, 18825.1, 2277.9, 2435.56, -146.42, -145.19, -2.45], ["11-24", 2368.7, 2278.99, 2376.34, 2278.99, 18350.1, 2275.26, 2422.11, -142.66, -144.69, 4.06], ["11-25", 2233.18, 2183.58, 2274.18, 2183.58, 16065.3, 2249.65, 2399.55, -145.7, -144.89, -1.62]]}, "CSI1000": {"n": "中证1000", "c": 5541.55, "chg": -4.44, "vwap": 6257.61, "wma5": 6222.59, "note": "早盘一度最抗跌(-0.24%)，午后随日韩崩盘与量化砍仓收跌-4.44%至5541.55，中证1000ETF尾盘放量57.4亿承接。", "b": [["11-05", 6462.29, 6650.14, 6700.84, 6460.45, 25244.4, 6374.75, 6645.66, -223.45, -236.62, 26.35], ["11-06", 6413.94, 6505.35, 6597.06, 6413.94, 21831.4, 6443.57, 6613.13, -208.92, -231.08, 44.33], ["11-09", 6580.17, 6499.74, 6612.02, 6499.74, 19233.4, 6477.65, 6587.05, -195.6, -223.99, 56.77], ["11-10", 6590.4, 6579.36, 6625.52, 6560.59, 19578.8, 6549.28, 6564.85, -176.59, -214.51, 75.84], ["11-11", 6555.14, 6669.55, 6681.87, 6541.34, 20377.5, 6580.83, 6553.07, -152.48, -202.1, 99.24], ["11-12", 6662.67, 6537.84, 6723.8, 6537.84, 23049.3, 6558.37, 6546.03, -142.37, -190.15, 95.58], ["11-13", 6554.06, 6357.26, 6581.35, 6341.45, 20313.0, 6528.75, 6529.8, -147.22, -181.57, 68.69], ["11-16", 6310.58, 6164.62, 6310.58, 6136.83, 18398.4, 6461.73, 6503.11, -164.72, -178.2, 26.96], ["11-17", 6111.05, 6092.39, 6225.56, 6055.73, 18590.2, 6364.33, 6469.39, -182.31, -179.02, -6.58], ["11-18", 6124.1, 6052.82, 6144.68, 5975.36, 17721.1, 6240.99, 6433.02, -197.17, -182.65, -29.04], ["11-19", 6033.49, 5938.9, 6033.49, 5913.05, 16668.0, 6121.2, 6401.05, -215.66, -189.25, -52.81], ["11-20", 5826.37, 5648.63, 5841.42, 5648.63, 19677.8, 5979.47, 6346.75, -250.84, -201.57, -98.53], ["11-23", 5563.29, 5812.32, 5841.18, 5541.97, 21350.3, 5909.01, 6305.83, -262.48, -213.75, -97.46], ["11-24", 5958.43, 5799.01, 5997.58, 5777.42, 19984.0, 5850.34, 6274.42, -269.68, -224.94, -89.48], ["11-25", 5723.92, 5541.55, 5817.84, 5541.55, 18391.6, 5748.08, 6222.59, -292.78, -238.5, -108.55]]}, "HSTECH": {"n": "恒生科技", "c": 3395.07, "chg": -2.07, "vwap": 3823.28, "wma5": 3804.92, "note": "早盘受12/7扩容利好大涨冲3554，午后随韩股/A股回落收3395(-2.07%)，京东/百济/理想仍红盘，企稳看放量重返MA5(3506)。", "b": [["11-05", 3992.39, 4154.29, 4168.42, 3988.81, 10418589.2, 3910.47, 3971.78, -85.79, -114.4, 57.21], ["11-06", 4025.22, 4078.23, 4147.64, 4014.72, 7030922.5, 3975.14, 3972.02, -68.08, -105.14, 74.11], ["11-09", 4119.98, 4040.73, 4158.88, 4033.87, 4212639.4, 4015.4, 3964.16, -56.42, -95.39, 77.94], ["11-10", 4072.44, 4084.45, 4109.03, 4055.1, 4750920.3, 4058.74, 3959.91, -43.16, -84.95, 83.58], ["11-11", 4045.3, 4027.06, 4057.47, 4014.87, 4839883.8, 4076.95, 3954.43, -36.85, -75.33, 76.96], ["11-12", 3995.0, 3931.93, 3998.36, 3918.42, 6549079.0, 4032.48, 3942.3, -39.08, -68.08, 58.0], ["11-13", 3918.21, 3813.19, 3938.39, 3802.84, 6628641.4, 3979.47, 3929.91, -49.85, -64.43, 29.17], ["11-16", 3828.81, 3801.64, 3851.36, 3797.08, 4602407.9, 3931.65, 3914.58, -58.64, -63.27, 9.27], ["11-17", 3760.33, 3758.17, 3799.52, 3715.15, 6671132.8, 3866.4, 3900.2, -68.33, -64.28, -8.09], ["11-18", 3751.58, 3736.33, 3762.44, 3695.0, 5022194.0, 3808.25, 3887.27, -76.88, -66.8, -20.16], ["11-19", 3699.93, 3649.14, 3699.93, 3630.46, 8749551.6, 3751.69, 3880.03, -89.66, -71.38, -36.58], ["11-20", 3541.5, 3511.14, 3551.77, 3482.41, 7256809.2, 3691.28, 3862.01, -109.66, -79.03, -61.26], ["11-23", 3443.76, 3508.0, 3524.74, 3395.38, 6867748.7, 3632.56, 3844.53, -124.33, -88.09, -72.48], ["11-24", 3579.83, 3466.87, 3603.7, 3439.34, 6514825.8, 3574.3, 3827.85, -137.69, -98.01, -79.36], ["11-25", 3452.73, 3395.07, 3554.36, 3388.66, 520.4, 3506.04, 3804.92, -152.32, -108.87, -86.89]]}};
 
     const TOP20 = [
       {r:1,sym:"sh605577",n:"龙版传媒",m:"AI应用+传媒",s:"出版传媒",c:17.81,chg:10.01,chg20:40.9,netR:48.4,netYi:61.5,trap:10.2,pat:"量价齐升·3日异动",note:"AI+传媒空间标杆"},
@@ -1639,25 +1516,15 @@
       {r:20,sym:"sz300502",n:"新易盛",m:"科技板块",s:"光模块CPO",c:181.36,chg:9.92,chg20:-27.94,netR:-4.1,netYi:-122.0,trap:75.6,pat:"205亿反包",note:"成交第2·收复周MA5"}
     ];
 
-    const STOCKS = [
-      {sym:"sh601689",n:"拓普集团",cat:"人形机器人",c:52.92,chg:10.0,vwap:47.76,wma5:47.82,trap:0.0,vr:1.46,pat:["多方炮","放量反包"],sup:"49.44 / 47.82",supRule:"日MA5回踩；周MA5+成本47.8铁底",res:"55.0 / 60.0",resLvl:"套牢盘 0.0% 极轻",target:"62 ~ 68",catText:"12月会议+1月CES",why:"大盘暴跌半月逆势沿20日线爬升、20日净流+73亿，11/19阳→11/20缩阴→11/23放量涨停成教科书多方炮！",b:[["11-03",43.9,43.42,44.75,43.2,17.8,44.32,42.7,-0.12,-0.44,0.64],["11-04",43.5,45.51,45.69,42.76,31.2,44.14,42.65,0.04,-0.34,0.77],["11-05",44.99,45.79,46.58,44.27,30.5,44.4,42.79,0.19,-0.24,0.85],["11-06",43.8,44.71,45.62,43.51,21.8,44.73,42.87,0.22,-0.15,0.73],["11-09",45.4,46.7,47.7,45.38,33.7,45.23,43.13,0.4,-0.04,0.87],["11-10",47.33,48.42,49.44,47.33,38.4,46.23,43.52,0.67,0.1,1.13],["11-11",48.4,51.25,51.7,48.25,61.3,47.37,44.1,1.1,0.3,1.59],["11-12",51.5,50.55,52.5,50.26,46.2,48.33,44.74,1.37,0.52,1.71],["11-13",50.6,50.28,51.86,49.88,26.8,49.44,45.26,1.54,0.72,1.65],["11-16",49.7,49.65,50.82,48.31,33.7,50.03,45.72,1.61,0.9,1.43],["11-17",49.36,48.6,49.81,47.7,28.2,50.07,46.04,1.56,1.03,1.06],["11-18",48.8,48.11,49.48,47.19,23.1,49.44,46.33,1.47,1.12,0.7],["11-19",48.7,49.44,51.29,48.15,45.3,49.22,46.68,1.48,1.19,0.58],["11-20",48.96,48.11,49.98,47.89,34.5,48.78,46.85,1.37,1.23,0.29],["11-23",48.5,52.92,52.92,47.75,54.3,49.44,47.29,1.65,1.31,0.68]]},
-      {sym:"sz002050",n:"三花智控",cat:"人形机器人",c:33.88,chg:7.9,vwap:34.28,wma5:33.41,trap:65.0,vr:1.64,pat:["多方炮","放量反包"],sup:"33.41 / 32.60",supRule:"回踩周MA5缩量企稳有效",res:"34.3 / 36.7",resLvl:"34.3为20日成本线",target:"39.5 ~ 43",catText:"Optimus执行器双龙",why:"量比1.64一阳吞四阴重站周MA5，20日净流+115.7亿，与拓普同日触发多方炮！",b:[["11-03",33.45,33.02,34.06,32.85,40.4,33.99,33.34,-0.29,-0.41,0.24],["11-04",33.03,34.57,34.6,32.41,81.1,33.77,33.28,-0.2,-0.37,0.34],["11-05",34.0,34.88,35.3,33.83,68.7,33.85,33.33,-0.1,-0.31,0.43],["11-06",33.4,33.67,34.4,33.4,44.8,33.93,33.33,-0.12,-0.27,0.32],["11-09",34.2,34.24,35.55,34.1,61.8,34.08,33.4,-0.08,-0.23,0.3],["11-10",34.66,35.35,36.47,34.61,94.7,34.54,33.55,0.03,-0.18,0.43],["11-11",35.1,36.35,36.7,35.03,107.5,34.9,33.8,0.2,-0.1,0.61],["11-12",36.25,34.61,36.27,34.44,91.1,34.84,34.0,0.19,-0.04,0.48],["11-13",34.6,34.87,35.85,34.6,62.1,35.08,34.18,0.21,0.01,0.4],["11-16",34.69,33.63,34.69,33.21,52.4,34.96,34.23,0.11,0.03,0.17],["11-17",33.35,32.88,34.07,32.58,49.0,34.47,34.22,-0.02,0.02,-0.07],["11-18",33.2,32.29,33.3,31.95,39.2,33.66,34.19,-0.17,-0.02,-0.3],["11-19",32.3,32.54,33.34,31.96,44.7,33.24,34.17,-0.27,-0.07,-0.4],["11-20",31.9,31.4,32.45,31.4,48.4,32.55,33.98,-0.43,-0.14,-0.58],["11-23",31.01,33.88,34.29,31.01,88.5,32.6,33.96,-0.36,-0.18,-0.34]]},
-      {sym:"sh600406",n:"国电南瑞",cat:"中国六张网",c:24.92,chg:-0.08,vwap:23.87,wma5:24.03,trap:2.8,vr:0.86,pat:["缩量横盘","多头"],sup:"24.03 / 23.82",supRule:"周MA5+MA20+成本三线合一",res:"25.2 / 27.5",resLvl:"套牢盘仅 2.8% 极轻",target:"28.5 ~ 31",catText:"特高压+AI供电",why:"大盘暴跌时逆势突破后沿5日线缩量洗盘，上方套牢盘仅2.8%，最适合小白的稳健底仓！",b:[["11-03",23.48,23.87,23.87,23.36,50.8,23.44,23.03,0.29,0.23,0.14],["11-04",23.97,23.7,23.98,23.57,44.6,23.51,23.09,0.3,0.24,0.12],["11-05",23.65,23.53,23.78,23.32,51.2,23.56,23.12,0.29,0.25,0.08],["11-06",23.68,23.86,24.0,23.33,68.2,23.7,23.19,0.31,0.26,0.09],["11-09",23.89,23.68,23.95,23.58,31.3,23.73,23.24,0.3,0.27,0.06],["11-10",23.61,23.4,23.68,23.37,27.1,23.63,23.28,0.27,0.27,0.0],["11-11",23.42,23.1,23.48,23.05,38.9,23.51,23.33,0.22,0.26,-0.08],["11-12",23.08,23.18,23.18,22.82,42.6,23.44,23.36,0.19,0.25,-0.12],["11-13",23.0,23.26,23.44,22.93,27.5,23.32,23.39,0.16,0.23,-0.14],["11-16",23.18,24.19,24.28,23.01,113.1,23.43,23.45,0.21,0.23,-0.02],["11-17",24.39,24.5,24.59,24.19,96.1,23.65,23.53,0.28,0.24,0.09],["11-18",24.85,24.6,24.85,24.34,69.6,23.95,23.62,0.34,0.26,0.16],["11-19",24.44,24.84,24.9,24.41,59.8,24.28,23.7,0.39,0.28,0.22],["11-20",24.61,24.94,24.94,24.38,72.5,24.61,23.77,0.44,0.32,0.25],["11-23",24.81,24.92,24.92,24.4,61.9,24.76,23.82,0.47,0.35,0.25]]},
-      {sym:"sz002714",n:"牧原股份",cat:"猪肉防御",c:45.38,chg:1.18,vwap:43.58,wma5:44.17,trap:7.5,vr:0.98,pat:["回踩周MA5"],sup:"44.17 / 43.58",supRule:"周MA5+成本双重防线",res:"46.6 / 50.0",resLvl:"套牢仅 7.5% 极轻",target:"52 ~ 58",catText:"产能出清+通威并购",why:"20日净流比+46.9%(+173亿)，银行白酒补跌时逆势连收两阳，最佳逆周期防御！",b:[["11-03",41.41,43.01,43.16,41.0,66.3,41.27,41.3,0.06,-0.03,0.18],["11-04",43.0,43.13,43.5,42.68,44.3,41.82,41.34,0.19,0.01,0.35],["11-05",43.1,43.75,43.85,42.78,40.9,42.34,41.47,0.34,0.08,0.52],["11-06",43.43,44.4,44.98,43.4,50.1,43.14,41.63,0.5,0.16,0.68],["11-09",44.41,44.55,45.05,44.12,33.9,43.77,41.77,0.64,0.26,0.76],["11-10",44.29,44.57,44.69,44.1,21.9,44.08,41.95,0.74,0.35,0.77],["11-11",44.5,44.11,44.78,44.02,31.2,44.28,42.11,0.77,0.44,0.67],["11-12",43.91,44.61,44.78,43.71,37.4,44.45,42.36,0.83,0.52,0.63],["11-13",44.6,45.84,46.0,44.23,59.1,44.74,42.59,0.96,0.61,0.71],["11-16",45.9,46.3,46.59,45.62,52.8,45.09,42.85,1.09,0.7,0.78],["11-17",45.99,45.82,46.18,45.41,33.7,45.34,43.1,1.15,0.79,0.71],["11-18",45.81,45.57,45.81,45.08,31.7,45.63,43.28,1.15,0.86,0.58],["11-19",45.37,44.45,45.57,44.04,43.0,45.6,43.4,1.06,0.9,0.31],["11-20",44.15,44.85,44.99,43.8,40.9,45.4,43.56,1.0,0.92,0.16],["11-23",44.52,45.38,45.5,44.29,36.4,45.21,43.76,0.99,0.94,0.1]]},
-      {sym:"sz300476",n:"胜宏科技",cat:"PCB缺货",c:115.1,chg:6.36,vwap:131.97,wma5:121.98,trap:88.4,vr:1.28,pat:["多方炮","平底双针"],sup:"111.4 / 105.0",supRule:"日MA5有效；105双针铁底",res:"122 / 132",resLvl:"周MA5上方看波段",target:"135 ~ 148",catText:"全球PCB短缺预警",why:"11/17与今日双踩105.0构筑平底双针+MACD金叉+多方炮，缺货涨价与双底共振！",b:[["11-03",132.0,122.71,134.99,121.65,45.6,147.49,179.44,-21.63,-16.78,-9.7],["11-04",125.77,135.24,135.99,118.67,54.0,138.48,175.68,-22.21,-17.86,-8.69],["11-05",128.01,135.0,139.3,128.01,42.8,133.4,172.12,-22.43,-18.78,-7.31],["11-06",122.4,124.31,126.8,119.0,38.1,130.46,168.2,-23.2,-19.66,-7.08],["11-09",128.25,131.42,137.48,126.8,43.1,129.74,164.93,-22.98,-20.32,-5.3],["11-10",138.0,132.8,138.9,131.61,33.1,131.75,161.62,-22.43,-20.75,-3.36],["11-11",132.45,145.97,148.32,132.45,51.1,133.9,159.16,-20.69,-20.73,0.09],["11-12",142.26,137.8,151.9,137.31,56.1,134.46,156.75,-19.75,-20.54,1.58],["11-13",137.0,123.24,139.18,122.0,55.1,134.25,153.81,-19.94,-20.42,0.95],["11-16",118.04,109.02,120.36,108.5,43.5,129.77,150.42,-21.0,-20.53,-0.94],["11-17",107.14,106.88,111.96,105.0,36.1,124.58,146.53,-21.76,-20.78,-1.97],["11-18",113.91,113.74,115.55,109.87,42.5,118.14,142.82,-21.57,-20.94,-1.26],["11-19",111.5,112.96,114.5,110.33,26.8,113.17,139.57,-21.23,-21.0,-0.46],["11-20",110.1,108.22,112.8,108.22,27.7,110.16,135.81,-21.1,-21.02,-0.17],["11-23",106.62,115.1,116.2,105.0,45.8,111.38,132.16,-20.21,-20.86,1.29]]},
-      {sym:"sz300502",n:"新易盛",cat:"光模块CPO",c:181.36,chg:9.92,vwap:188.89,wma5:180.41,trap:75.6,vr:1.26,pat:["205亿反包"],sup:"180.4 / 166.3",supRule:"回踩172-176不破MA5有效",res:"190.2 / 225",resLvl:"190元附近20日线压力",target:"220 ~ 245",catText:"Coherent回购+NVDA+8%",why:"11/19创低152时MACD底背离，今日205亿成交全市场第2暴力收复周MA5！",b:[["11-03",185.0,173.36,190.19,171.6,96.8,209.21,286.75,-52.9,-43.53,-18.73],["11-04",176.0,196.5,199.98,172.0,114.2,197.15,277.12,-52.63,-45.35,-14.56],["11-05",184.0,185.61,192.4,177.64,117.9,188.59,267.48,-52.7,-46.82,-11.75],["11-06",166.0,172.1,178.0,161.16,90.4,183.81,257.57,-53.22,-48.1,-10.24],["11-09",175.0,176.0,184.12,169.01,77.4,180.71,248.99,-52.72,-49.02,-7.38],["11-10",188.01,183.8,191.51,183.04,87.1,182.8,240.62,-51.1,-49.44,-3.32],["11-11",187.3,215.0,216.35,187.3,124.9,186.5,234.83,-46.76,-48.9,4.29],["11-12",212.5,205.58,225.0,204.9,119.2,190.5,229.81,-43.58,-47.84,8.52],["11-13",209.96,187.58,212.5,186.0,100.8,193.59,223.84,-42.02,-46.68,9.3],["11-16",182.77,166.8,183.7,165.0,90.5,191.75,216.78,-41.99,-45.74,7.5],["11-17",163.62,160.0,167.46,155.24,87.6,186.99,209.87,-42.02,-44.99,5.95],["11-18",162.01,158.21,163.35,155.3,80.4,175.63,203.07,-41.71,-44.34,5.25],["11-19",153.05,167.06,171.08,152.0,90.2,167.93,198.53,-40.29,-43.53,6.48],["11-20",160.01,165.0,170.96,158.31,89.0,163.41,193.73,-38.88,-42.6,7.44],["11-23",165.24,181.36,183.6,165.24,117.4,166.33,190.21,-36.02,-41.28,10.52]]},
-      {sym:"sz300059",n:"东方财富",cat:"券商哨兵",c:18.62,chg:1.14,vwap:18.51,wma5:18.34,trap:45.7,vr:1.27,pat:["均线粘合"],sup:"18.34 / 17.91",supRule:"周MA5有效，17.91铁底",res:"19.5 / 21.0",resLvl:"19.50前高为中等压力",target:"22.5 ~ 25",catText:"1.55万亿+12月旗手",why:"日线MA5/MA20极度粘合+20日主力净流+258亿，破19.50鸣枪主升！",b:[["11-03",18.5,18.86,18.98,18.5,328.2,18.23,18.07,-0.01,-0.11,0.2],["11-04",18.85,19.2,19.5,18.61,379.3,18.47,18.14,0.06,-0.08,0.28],["11-05",19.05,18.98,19.17,18.88,262.8,18.67,18.23,0.11,-0.04,0.29],["11-06",18.66,18.78,19.04,18.63,172.9,18.91,18.27,0.12,-0.01,0.26],["11-09",18.9,18.78,19.0,18.75,109.5,18.92,18.31,0.13,0.02,0.23],["11-10",18.94,18.78,18.98,18.65,128.5,18.9,18.35,0.14,0.04,0.19],["11-11",18.7,18.56,18.75,18.5,142.1,18.78,18.38,0.13,0.06,0.13],["11-12",18.54,18.23,18.61,18.23,165.5,18.63,18.38,0.09,0.07,0.04],["11-13",18.22,18.29,18.42,18.16,149.4,18.53,18.38,0.06,0.07,-0.01],["11-16",18.27,18.33,18.42,18.12,149.8,18.44,18.4,0.04,0.06,-0.03],["11-17",18.3,18.37,18.42,18.08,161.9,18.36,18.42,0.03,0.06,-0.05],["11-18",18.3,18.38,18.42,18.17,132.4,18.32,18.44,0.02,0.05,-0.05],["11-19",18.37,18.37,18.41,18.22,122.1,18.35,18.47,0.02,0.04,-0.05],["11-20",18.21,18.41,18.49,17.91,224.6,18.37,18.46,0.01,0.04,-0.05],["11-23",18.45,18.62,18.67,18.38,218.3,18.43,18.47,0.03,0.04,-0.01]]},
-      {sym:"sz000426",n:"兴业银锡",cat:"白银周期",c:19.65,chg:5.53,vwap:22.85,wma5:21.75,trap:95.9,vr:1.14,pat:["放量反包"],sup:"18.38 / 18.80",supRule:"18.38针尖底",res:"21.75 / 22.9",resLvl:"周MA5上方看波段",target:"24.5 ~ 27",catText:"白银+3.38%+FOMC",why:"白银深蹲20%后放量+5.53%阳包阴，A股最纯正高弹性银矿，埋伏明年Q1主升！",b:[["11-03",23.06,21.75,23.2,21.69,61.0,23.45,27.54,-2.93,-2.54,-0.78],["11-04",21.91,23.94,23.94,21.53,81.1,23.13,27.16,-2.83,-2.6,-0.47],["11-05",25.2,25.83,26.34,24.9,115.8,23.44,26.93,-2.57,-2.59,0.04],["11-06",24.53,24.68,25.68,24.53,65.3,23.78,26.57,-2.43,-2.56,0.26],["11-09",25.17,24.32,25.39,24.25,48.5,24.1,26.27,-2.32,-2.51,0.38],["11-10",24.88,24.6,25.05,24.4,42.3,24.67,26.0,-2.19,-2.45,0.52],["11-11",23.9,24.9,24.92,23.78,45.1,24.87,25.78,-2.03,-2.36,0.67],["11-12",24.39,23.68,24.89,23.65,49.8,24.44,25.57,-1.99,-2.29,0.61],["11-13",23.81,22.84,23.98,22.73,42.9,24.07,25.29,-1.99,-2.23,0.47],["11-16",22.22,20.89,22.28,20.78,66.3,23.38,24.9,-2.13,-2.21,0.16],["11-17",20.74,21.07,21.7,20.05,57.7,22.68,24.53,-2.2,-2.21,0.01],["11-18",20.8,20.12,20.8,19.58,67.9,21.72,24.09,-2.31,-2.23,-0.16],["11-19",19.99,19.81,20.2,19.34,51.0,20.95,23.7,-2.39,-2.26,-0.26],["11-20",19.0,18.62,19.08,18.45,58.9,20.1,23.25,-2.52,-2.31,-0.42],["11-23",18.68,19.65,19.79,18.38,69.2,19.85,22.9,-2.51,-2.35,-0.32]]},
-      {sym:"sh601398",n:"工商银行 ⚠️",cat:"双顶风向标",c:9.15,chg:-2.66,vwap:8.72,wma5:8.92,trap:2.3,vr:1.47,pat:["高位放量阴"],sup:"8.92 / 8.72",supRule:"破9.00确认双顶派发",res:"9.49",resLvl:"避险资金正在撤退",target:"短线回避",catText:"反向指标：银行弱=成长强",why:"11/20创9.49新高后今日量比1.47收-2.66%大阴线，避险资金换仓铁证！",b:[["11-03",8.75,8.59,8.77,8.32,648.4,8.67,8.44,0.18,0.17,0.01],["11-04",8.54,8.41,8.56,8.37,581.9,8.64,8.45,0.15,0.17,-0.03],["11-05",8.38,8.35,8.4,8.17,621.3,8.56,8.46,0.13,0.16,-0.07],["11-06",8.38,8.44,8.44,8.26,483.2,8.5,8.48,0.11,0.15,-0.08],["11-09",8.36,8.61,8.61,8.34,361.1,8.48,8.5,0.11,0.14,-0.06],["11-10",8.53,8.6,8.63,8.51,215.0,8.48,8.51,0.11,0.14,-0.05],["11-11",8.63,8.53,8.7,8.53,283.3,8.51,8.52,0.1,0.13,-0.05],["11-12",8.51,8.69,8.7,8.47,355.0,8.57,8.54,0.11,0.13,-0.04],["11-13",8.65,8.85,8.86,8.65,352.0,8.66,8.56,0.12,0.13,-0.0],["11-16",8.83,9.05,9.05,8.82,371.3,8.74,8.59,0.15,0.13,0.04],["11-17",9.05,9.06,9.07,8.93,347.9,8.84,8.63,0.17,0.14,0.06],["11-18",9.03,9.06,9.1,8.97,285.9,8.94,8.66,0.19,0.15,0.07],["11-19",9.07,9.1,9.1,9.0,241.9,9.02,8.68,0.2,0.16,0.08],["11-20",9.09,9.4,9.49,9.04,485.9,9.13,8.74,0.23,0.17,0.11],["11-23",9.28,9.15,9.37,9.08,566.4,9.15,8.76,0.23,0.18,0.09]]}
-    ];
+    const STOCKS = [{"sym": "sh601689", "n": "拓普集团", "cat": "人形机器人", "c": 49.15, "chg": -9.5, "vwap": 48.87, "wma5": 47.22, "trap": 15.2, "vr": 0.85, "pat": ["回踩MA20", "缩量洗盘"], "sup": "47.93(MA20) / 47.0", "supRule": "精准回踩20日线+20日成本48.87铁底区", "res": "52.0 / 55.0", "resLvl": "短线套牢盘转轻", "target": "60 ~ 65", "catText": "SpaceX-TSLA合并+1月CES", "why": "11/25随大盘重挫-9.5%精准砸回MA20(47.93)与20日成本(48.87)交汇处，明日盯是否放量止跌收下影阳！", "b": [["11-05", 44.99, 45.79, 46.58, 44.27, 30.5, 44.4, 42.79, 0.58, 0.3, 0.55], ["11-06", 43.8, 44.71, 45.62, 43.51, 21.8, 44.73, 42.87, 0.58, 0.36, 0.44], ["11-09", 45.4, 46.7, 47.7, 45.38, 33.7, 45.23, 43.13, 0.73, 0.43, 0.6], ["11-10", 47.33, 48.42, 49.44, 47.33, 38.4, 46.23, 43.52, 0.98, 0.54, 0.88], ["11-11", 48.4, 51.25, 51.7, 48.25, 61.3, 47.37, 44.1, 1.39, 0.71, 1.36], ["11-12", 51.5, 50.55, 52.5, 50.26, 46.2, 48.33, 44.74, 1.64, 0.9, 1.48], ["11-13", 50.6, 50.28, 51.86, 49.88, 26.8, 49.44, 45.26, 1.79, 1.07, 1.44], ["11-16", 49.7, 49.65, 50.82, 48.31, 33.7, 50.03, 45.72, 1.84, 1.23, 1.23], ["11-17", 49.36, 48.6, 49.81, 47.7, 28.2, 50.07, 46.04, 1.78, 1.34, 0.88], ["11-18", 48.8, 48.11, 49.48, 47.19, 23.1, 49.44, 46.33, 1.67, 1.4, 0.53], ["11-19", 48.7, 49.44, 51.29, 48.15, 45.3, 49.22, 46.68, 1.67, 1.46, 0.42], ["11-20", 48.96, 48.11, 49.98, 47.89, 34.5, 48.78, 46.85, 1.54, 1.47, 0.14], ["11-23", 48.5, 52.92, 52.92, 47.75, 54.3, 49.44, 47.29, 1.81, 1.54, 0.54], ["11-24", 54.84, 54.31, 56.3, 53.91, 70.3, 50.58, 47.8, 2.11, 1.66, 0.91], ["11-25", 53.92, 49.15, 54.18, 49.08, 49.9, 50.79, 47.93, 1.91, 1.71, 0.41]]}, {"sym": "sz002050", "n": "三花智控", "cat": "人形机器人", "c": 31.91, "chg": -7.13, "vwap": 34.13, "wma5": 33.79, "trap": 38.5, "vr": 0.78, "pat": ["十字星破位", "缩量补跌"], "sup": "31.5 / 30.8", "supRule": "跌穿MA20(33.79)，等5分钟底背离企稳", "res": "33.79(MA20) / 35.2", "resLvl": "昨日34.0成反压", "target": "38 ~ 42", "catText": "特斯拉Optimus核心链", "why": "11/24十字星今日向下破位收31.91(-7.13%)，但量能较昨日缩量-22%(63.6万手 vs 81.5万手)，属情绪错杀，等止跌阳确认。", "b": [["11-05", 34.0, 34.88, 35.3, 33.83, 68.7, 33.85, 33.33, 0.12, -0.01, 0.26], ["11-06", 33.4, 33.67, 34.4, 33.4, 44.8, 33.93, 33.33, 0.09, 0.01, 0.16], ["11-09", 34.2, 34.24, 35.55, 34.1, 61.8, 34.08, 33.4, 0.1, 0.03, 0.15], ["11-10", 34.66, 35.35, 36.47, 34.61, 94.7, 34.54, 33.55, 0.21, 0.06, 0.29], ["11-11", 35.1, 36.35, 36.7, 35.03, 107.5, 34.9, 33.8, 0.36, 0.12, 0.48], ["11-12", 36.25, 34.61, 36.27, 34.44, 91.1, 34.84, 34.0, 0.34, 0.17, 0.35], ["11-13", 34.6, 34.87, 35.85, 34.6, 62.1, 35.08, 34.18, 0.34, 0.2, 0.28], ["11-16", 34.69, 33.63, 34.69, 33.21, 52.4, 34.96, 34.23, 0.24, 0.21, 0.06], ["11-17", 33.35, 32.88, 34.07, 32.58, 49.0, 34.47, 34.22, 0.1, 0.19, -0.18], ["11-18", 33.2, 32.29, 33.3, 31.95, 39.2, 33.66, 34.19, -0.06, 0.14, -0.4], ["11-19", 32.3, 32.54, 33.34, 31.96, 44.7, 33.24, 34.17, -0.16, 0.08, -0.48], ["11-20", 31.9, 31.4, 32.45, 31.4, 48.4, 32.55, 33.98, -0.33, -0.0, -0.66], ["11-23", 31.01, 33.88, 34.29, 31.01, 88.5, 32.6, 33.96, -0.27, -0.06, -0.42], ["11-24", 34.49, 34.36, 35.2, 34.01, 81.5, 32.89, 33.97, -0.17, -0.08, -0.19], ["11-25", 33.79, 31.91, 34.6, 31.78, 63.6, 32.82, 33.79, -0.29, -0.12, -0.34]]}, {"sym": "sh600406", "n": "国电南瑞", "cat": "六张网电网", "c": 24.6, "chg": -0.49, "vwap": 23.97, "wma5": 23.86, "trap": 8.0, "vr": 0.74, "pat": ["极致抗跌", "站稳MA20"], "sup": "23.94(MA20) / 23.5", "supRule": "大盘暴跌仍稳稳站上MA20与成本线", "res": "25.5 / 26.8", "resLvl": "筹码极稳", "target": "28 ~ 31", "catText": "特高压+十五五六张网", "why": "创指暴跌-4.2%今日仅微跌-0.49%且主力逆势净买+0.46亿，稳健防守中军典范！", "b": [["11-05", 23.65, 23.53, 23.78, 23.32, 51.2, 23.56, 23.12, 0.36, 0.35, 0.03], ["11-06", 23.68, 23.86, 24.0, 23.33, 68.2, 23.7, 23.19, 0.37, 0.35, 0.04], ["11-09", 23.89, 23.68, 23.95, 23.58, 31.3, 23.73, 23.24, 0.36, 0.35, 0.02], ["11-10", 23.61, 23.4, 23.68, 23.37, 27.1, 23.63, 23.28, 0.33, 0.35, -0.04], ["11-11", 23.42, 23.1, 23.48, 23.05, 38.9, 23.51, 23.33, 0.27, 0.33, -0.12], ["11-12", 23.08, 23.18, 23.18, 22.82, 42.6, 23.44, 23.36, 0.23, 0.31, -0.16], ["11-13", 23.0, 23.26, 23.44, 22.93, 27.5, 23.32, 23.39, 0.21, 0.29, -0.17], ["11-16", 23.18, 24.19, 24.28, 23.01, 113.1, 23.43, 23.45, 0.26, 0.29, -0.06], ["11-17", 24.39, 24.5, 24.59, 24.19, 96.1, 23.65, 23.53, 0.32, 0.29, 0.05], ["11-18", 24.85, 24.6, 24.85, 24.34, 69.6, 23.95, 23.62, 0.37, 0.31, 0.13], ["11-19", 24.44, 24.84, 24.9, 24.41, 59.8, 24.28, 23.7, 0.43, 0.33, 0.19], ["11-20", 24.61, 24.94, 24.94, 24.38, 72.5, 24.61, 23.77, 0.47, 0.36, 0.23], ["11-23", 24.81, 24.92, 24.92, 24.4, 61.9, 24.76, 23.82, 0.5, 0.39, 0.23], ["11-24", 24.85, 24.72, 24.93, 24.4, 59.6, 24.8, 23.88, 0.5, 0.41, 0.19], ["11-25", 24.6, 24.6, 24.78, 24.42, 45.0, 24.8, 23.94, 0.49, 0.43, 0.13]]}, {"sym": "sz002714", "n": "牧原股份", "cat": "猪肉防御", "c": 44.1, "chg": -2.67, "vwap": 43.95, "wma5": 43.58, "trap": 18.0, "vr": 0.82, "pat": ["回踩MA20", "社保新进"], "sup": "44.14(MA20) / 43.2", "supRule": "精准回踩MA20+20日成本43.95低吸区", "res": "46.0 / 48.5", "resLvl": "压力温和", "target": "52 ~ 56", "catText": "生猪止跌回升+腌腊季", "why": "猪价结束6连跌+社保Q3新进超3,000万股，今日缩量回踩MA20(44.14)恰好进入低吸观察区！", "b": [["11-05", 43.1, 43.75, 43.85, 42.78, 40.9, 42.34, 41.47, 0.26, -0.04, 0.59], ["11-06", 43.43, 44.4, 44.98, 43.4, 50.1, 43.14, 41.63, 0.43, 0.06, 0.75], ["11-09", 44.41, 44.55, 45.05, 44.12, 33.9, 43.77, 41.77, 0.57, 0.16, 0.82], ["11-10", 44.29, 44.57, 44.69, 44.1, 21.9, 44.08, 41.95, 0.68, 0.26, 0.83], ["11-11", 44.5, 44.11, 44.78, 44.02, 31.2, 44.28, 42.11, 0.71, 0.35, 0.72], ["11-12", 43.91, 44.61, 44.78, 43.71, 37.4, 44.45, 42.36, 0.78, 0.44, 0.68], ["11-13", 44.6, 45.84, 46.0, 44.23, 59.1, 44.74, 42.59, 0.91, 0.53, 0.76], ["11-16", 45.9, 46.3, 46.59, 45.62, 52.8, 45.09, 42.85, 1.05, 0.64, 0.82], ["11-17", 45.99, 45.82, 46.18, 45.41, 33.7, 45.34, 43.1, 1.1, 0.73, 0.75], ["11-18", 45.81, 45.57, 45.81, 45.08, 31.7, 45.63, 43.28, 1.11, 0.81, 0.61], ["11-19", 45.37, 44.45, 45.57, 44.04, 43.0, 45.6, 43.4, 1.02, 0.85, 0.34], ["11-20", 44.15, 44.85, 44.99, 43.8, 40.9, 45.4, 43.56, 0.97, 0.87, 0.19], ["11-23", 44.52, 45.38, 45.5, 44.29, 36.4, 45.21, 43.76, 0.95, 0.89, 0.13], ["11-24", 45.0, 45.31, 45.88, 44.5, 36.0, 45.11, 43.95, 0.93, 0.9, 0.07], ["11-25", 45.2, 44.1, 45.48, 43.87, 39.8, 44.82, 44.14, 0.8, 0.88, -0.15]]}, {"sym": "sz300476", "n": "胜宏科技", "cat": "AI PCB", "c": 121.49, "chg": -0.68, "vwap": 128.43, "wma5": 126.63, "trap": 32.0, "vr": 0.73, "pat": ["特别股息", "逆势抗跌"], "sup": "116.5(今低) / 116.0(MA5)", "supRule": "缩量站稳MA5且主力全天净买+4.78亿", "res": "126.6(MA20) / 129.0", "resLvl": "冲击MA20阻力", "target": "142 ~ 155", "catText": "特别股息+NVDA核心板", "why": "宣布派发特别股息，创指跌-4.2%时仅微跌-0.68%且主力狂买+4.78亿，AI硬件中最强抗跌标杆！", "b": [["11-05", 128.01, 135.0, 139.3, 128.01, 42.8, 133.4, 172.12, -21.06, -16.83, -8.47], ["11-06", 122.4, 124.31, 126.8, 119.0, 38.1, 130.46, 168.2, -21.93, -17.85, -8.17], ["11-09", 128.25, 131.42, 137.48, 126.8, 43.1, 129.74, 164.93, -21.8, -18.64, -6.32], ["11-10", 138.0, 132.8, 138.9, 131.61, 33.1, 131.75, 161.62, -21.33, -19.18, -4.31], ["11-11", 132.45, 145.97, 148.32, 132.45, 51.1, 133.9, 159.16, -19.68, -19.28, -0.8], ["11-12", 142.26, 137.8, 151.9, 137.31, 56.1, 134.46, 156.75, -18.8, -19.18, 0.75], ["11-13", 137.0, 123.24, 139.18, 122.0, 55.1, 134.25, 153.81, -19.07, -19.16, 0.18], ["11-16", 118.04, 109.02, 120.36, 108.5, 43.5, 129.77, 150.42, -20.19, -19.37, -1.65], ["11-17", 107.14, 106.88, 111.96, 105.0, 36.1, 124.58, 146.53, -21.02, -19.7, -2.64], ["11-18", 113.91, 113.74, 115.55, 109.87, 42.5, 118.14, 142.82, -20.87, -19.93, -1.88], ["11-19", 111.5, 112.96, 114.5, 110.33, 26.8, 113.17, 139.57, -20.58, -20.06, -1.04], ["11-20", 110.1, 108.22, 112.8, 108.22, 27.7, 110.16, 135.81, -20.5, -20.15, -0.7], ["11-23", 106.62, 115.1, 116.2, 105.0, 45.8, 111.38, 132.16, -19.66, -20.05, 0.79], ["11-24", 130.0, 122.32, 134.8, 121.0, 65.7, 114.47, 129.57, -18.19, -19.68, 2.97], ["11-25", 116.55, 121.49, 128.99, 116.55, 47.9, 116.02, 126.63, -16.9, -19.12, 4.44]]}, {"sym": "sz300502", "n": "新易盛", "cat": "光模块CPO", "c": 181.3, "chg": 0.72, "vwap": 185.17, "wma5": 183.56, "trap": 28.0, "vr": 0.69, "pat": ["逆势翻红", "主力+10.4亿"], "sup": "175.0(MA5) / 170.0", "supRule": "精准低开175.10拉起收181.30(+0.72%)", "res": "185.2(成本) / 188.6(今高)", "resLvl": "逼近MA20(183.6)", "target": "210 ~ 230", "catText": "中际40亿回购+800G/1.6T", "why": "昨日被砸-33.8亿今日反手净买+10.4亿逆势翻红！创指暴跌-4.2%下走出教科书级强势承接。", "b": [["11-05", 184.0, 185.61, 192.4, 177.64, 117.9, 188.59, 267.48, -51.07, -44.54, -13.06], ["11-06", 166.0, 172.1, 178.0, 161.16, 90.4, 183.81, 257.57, -51.71, -45.98, -11.47], ["11-09", 175.0, 176.0, 184.12, 169.01, 77.4, 180.71, 248.99, -51.32, -47.04, -8.54], ["11-10", 188.01, 183.8, 191.51, 183.04, 87.1, 182.8, 240.62, -49.8, -47.6, -4.4], ["11-11", 187.3, 215.0, 216.35, 187.3, 124.9, 186.5, 234.83, -45.55, -47.19, 3.27], ["11-12", 212.5, 205.58, 225.0, 204.9, 119.2, 190.5, 229.81, -42.46, -46.24, 7.57], ["11-13", 209.96, 187.58, 212.5, 186.0, 100.8, 193.59, 223.84, -40.98, -45.19, 8.41], ["11-16", 182.77, 166.8, 183.7, 165.0, 90.5, 191.75, 216.78, -41.02, -44.36, 6.67], ["11-17", 163.62, 160.0, 167.46, 155.24, 87.6, 186.99, 209.87, -41.13, -43.71, 5.17], ["11-18", 162.01, 158.21, 163.35, 155.3, 80.4, 175.63, 203.07, -40.88, -43.14, 4.53], ["11-19", 153.05, 167.06, 171.08, 152.0, 90.2, 167.93, 198.53, -39.52, -42.42, 5.8], ["11-20", 160.01, 165.0, 170.96, 158.31, 89.0, 163.41, 193.73, -38.16, -41.57, 6.81], ["11-23", 165.24, 181.36, 183.6, 165.24, 117.4, 166.33, 190.21, -35.36, -40.33, 9.93], ["11-24", 197.0, 180.01, 201.99, 180.01, 130.3, 170.33, 187.33, -32.87, -38.84, 11.93], ["11-25", 175.1, 181.3, 188.56, 175.1, 90.2, 174.95, 183.56, -30.44, -37.16, 13.43]]}, {"sym": "sz300059", "n": "东方财富", "cat": "券商哨兵", "c": 17.72, "chg": -1.61, "vwap": 18.49, "wma5": 18.4, "trap": 44.0, "vr": 0.76, "pat": ["抗跌哨兵", "缩量磨底"], "sup": "17.5 / 17.2", "supRule": "创指跌-4.2%东财仅跌-1.6%现企稳雏形", "res": "18.45(MA20) / 19.2", "resLvl": "放量阳线方可确认", "target": "21.5 ~ 24", "catText": "11/30融资保证金下调至80%", "why": "11/30两融松绑倒计时仅剩3个交易日，今日显著抗跌于创业板，静待放量中阳点火信号！", "b": [["11-05", 19.05, 18.98, 19.17, 18.88, 262.8, 18.67, 18.23, 0.18, 0.06, 0.24], ["11-06", 18.66, 18.78, 19.04, 18.63, 172.9, 18.91, 18.27, 0.19, 0.08, 0.21], ["11-09", 18.9, 18.78, 19.0, 18.75, 109.5, 18.92, 18.31, 0.19, 0.11, 0.18], ["11-10", 18.94, 18.78, 18.98, 18.65, 128.5, 18.9, 18.35, 0.2, 0.12, 0.15], ["11-11", 18.7, 18.56, 18.75, 18.5, 142.1, 18.78, 18.38, 0.18, 0.14, 0.09], ["11-12", 18.54, 18.23, 18.61, 18.23, 165.5, 18.63, 18.37, 0.14, 0.14, 0.0], ["11-13", 18.22, 18.29, 18.42, 18.16, 149.4, 18.53, 18.38, 0.11, 0.13, -0.04], ["11-16", 18.27, 18.33, 18.42, 18.12, 149.8, 18.44, 18.4, 0.09, 0.12, -0.07], ["11-17", 18.3, 18.37, 18.42, 18.08, 161.9, 18.36, 18.42, 0.07, 0.11, -0.08], ["11-18", 18.3, 18.38, 18.42, 18.17, 132.4, 18.32, 18.44, 0.06, 0.1, -0.08], ["11-19", 18.37, 18.37, 18.41, 18.22, 122.1, 18.35, 18.47, 0.05, 0.09, -0.08], ["11-20", 18.21, 18.41, 18.49, 17.91, 224.6, 18.37, 18.46, 0.04, 0.08, -0.07], ["11-23", 18.45, 18.62, 18.67, 18.38, 218.3, 18.43, 18.47, 0.06, 0.08, -0.04], ["11-24", 18.61, 18.01, 18.62, 17.95, 250.2, 18.36, 18.46, 0.02, 0.06, -0.1], ["11-25", 17.89, 17.72, 17.94, 17.71, 161.4, 18.23, 18.45, -0.04, 0.04, -0.16]]}, {"sym": "sz000426", "n": "兴业银锡", "cat": "白银资源", "c": 17.77, "chg": -4.62, "vwap": 22.21, "wma5": 23.05, "trap": 55.0, "vr": 0.75, "pat": ["外盘传导", "超跌筑底"], "sup": "17.5 / 17.0", "supRule": "隔夜白银-5.7%砸出低点17.66", "res": "18.9(MA5) / 20.5", "resLvl": "等COMEX白银止跌", "target": "23 ~ 26", "catText": "高弹性银锡龙头", "why": "受隔夜COMEX白银大跌-5.7%拖累补跌，缩量等待今晚PCE落地与美债拐点催化贵金属反攻。", "b": [["11-05", 25.2, 25.83, 26.34, 24.9, 115.8, 23.44, 26.93, -2.35, -2.29, -0.13], ["11-06", 24.53, 24.68, 25.68, 24.53, 65.3, 23.78, 26.57, -2.22, -2.27, 0.1], ["11-09", 25.17, 24.32, 25.39, 24.25, 48.5, 24.1, 26.27, -2.13, -2.25, 0.23], ["11-10", 24.88, 24.6, 25.05, 24.4, 42.3, 24.67, 25.99, -2.01, -2.2, 0.38], ["11-11", 23.9, 24.9, 24.92, 23.78, 45.1, 24.87, 25.78, -1.87, -2.13, 0.53], ["11-12", 24.39, 23.68, 24.89, 23.65, 49.8, 24.44, 25.57, -1.83, -2.07, 0.48], ["11-13", 23.81, 22.84, 23.98, 22.73, 42.9, 24.07, 25.29, -1.85, -2.03, 0.35], ["11-16", 22.22, 20.89, 22.28, 20.78, 66.3, 23.38, 24.9, -2.0, -2.02, 0.04], ["11-17", 20.74, 21.07, 21.7, 20.05, 57.7, 22.68, 24.53, -2.08, -2.03, -0.09], ["11-18", 20.8, 20.12, 20.8, 19.58, 67.9, 21.72, 24.09, -2.19, -2.07, -0.26], ["11-19", 19.99, 19.81, 20.2, 19.34, 51.0, 20.95, 23.7, -2.28, -2.11, -0.35], ["11-20", 19.0, 18.62, 19.08, 18.45, 58.9, 20.1, 23.25, -2.42, -2.17, -0.5], ["11-23", 18.68, 19.65, 19.79, 18.38, 69.2, 19.85, 22.9, -2.42, -2.22, -0.4], ["11-24", 20.41, 18.63, 20.5, 18.6, 80.1, 19.37, 22.54, -2.47, -2.27, -0.4], ["11-25", 17.66, 17.77, 18.83, 17.66, 61.7, 18.9, 22.15, -2.56, -2.33, -0.45]]}, {"sym": "sh601398", "n": "工商银行", "cat": "大盘压舱石", "c": 9.2, "chg": -0.22, "vwap": 8.78, "wma5": 8.83, "trap": 5.0, "vr": 0.94, "pat": ["国家队护盘", "主力+7.2亿"], "sup": "9.05(今低) / 8.83(MA20)", "supRule": "9元关口铁底+主力大买+7.2亿", "res": "9.37 / 9.55", "resLvl": "前高微压", "target": "9.6 ~ 10.0", "catText": "高股息+险资/汇金压舱石", "why": "尾盘大单拉回至9.20(-0.22%)，全天主力狂买+7.20亿，是沪指3,476守底最硬核压舱石！", "b": [["11-05", 8.38, 8.35, 8.4, 8.17, 621.3, 8.56, 8.46, 0.11, 0.14, -0.05], ["11-06", 8.38, 8.44, 8.44, 8.26, 483.2, 8.5, 8.48, 0.1, 0.13, -0.06], ["11-09", 8.36, 8.61, 8.61, 8.34, 361.1, 8.48, 8.5, 0.1, 0.12, -0.05], ["11-10", 8.53, 8.6, 8.63, 8.51, 215.0, 8.48, 8.51, 0.1, 0.12, -0.04], ["11-11", 8.63, 8.53, 8.7, 8.53, 283.3, 8.51, 8.52, 0.09, 0.11, -0.04], ["11-12", 8.51, 8.69, 8.7, 8.47, 355.0, 8.57, 8.54, 0.1, 0.11, -0.02], ["11-13", 8.65, 8.85, 8.86, 8.65, 352.0, 8.66, 8.56, 0.11, 0.11, 0.01], ["11-16", 8.83, 9.05, 9.05, 8.82, 371.3, 8.74, 8.59, 0.14, 0.12, 0.05], ["11-17", 9.05, 9.06, 9.07, 8.93, 347.9, 8.84, 8.63, 0.16, 0.13, 0.07], ["11-18", 9.03, 9.06, 9.1, 8.97, 285.9, 8.94, 8.66, 0.18, 0.14, 0.08], ["11-19", 9.07, 9.1, 9.1, 9.0, 241.9, 9.02, 8.68, 0.19, 0.15, 0.08], ["11-20", 9.09, 9.4, 9.49, 9.04, 485.9, 9.13, 8.74, 0.22, 0.16, 0.12], ["11-23", 9.28, 9.15, 9.37, 9.08, 566.4, 9.15, 8.76, 0.22, 0.17, 0.1], ["11-24", 8.9, 9.22, 9.27, 8.85, 523.3, 9.19, 8.79, 0.23, 0.19, 0.09], ["11-25", 9.22, 9.2, 9.27, 9.05, 490.4, 9.21, 8.83, 0.23, 0.19, 0.07]]}];
 
-    let currentMode = '1200', activeUsKey = 'NVDA', activeIdxKey = 'SH', activeStockIdx = 0, quizAnswers = {};
+    let currentMode = '1600', activeUsKey = 'NVDA', activeIdxKey = 'SH', activeStockIdx = 0, quizAnswers = {};
 
-    const PA_CASES = [{"n": "⭐ 案例1：三花智控 (002050) · 缩量十字星站上 MA20", "c": 34.36, "chg": 1.42, "vwap": 34.29, "wma5": 33.41, "meta": "11/24收 34.36 (+1.42%) · MA20 33.97 · 较昨缩量 0.92x", "ctx": "<b>裸K特征</b>：开34.49 / 高35.20 / 低<b>34.01</b> / 收<b>34.36 (+1.42%)</b>，实体仅占振幅 <b>11%</b>，量能 81.5万手（较昨日 88.5万手缩量 -8%）。<br/><b>关键位置</b>：昨日放量+7.9%突破阳线后，今日最低 34.01 <b>精准踩在 MA20(33.97) 上方止跌</b>，收盘牢牢站稳 <b>20日成本(34.29) + MA20</b> 双重支撑！", "plan": "<b>结论（65%偏多良性蓄势）</b>：大盘与CPO今日高开暴砸，三花却抗跌收红+主力净流入，属教科书级<b>「突破后回测 / 牛旗空中加油（Bull Flag）」</b>。<br/>• <b style='color:var(--up)'>做多触发</b>：明日放量突破今日高点 <b>35.20</b>，或回踩 <b>33.97–34.10</b> 缩量收下影阳线确认（上看 36.70 前高）；<br/>• <b style='color:var(--down)'>防守底线</b>：跌破今日低点 <b>34.01</b> 且收不回 MA20(33.97)，则转假突破减仓等 MA5(32.89)。", "b": [["11-04", 33.03, 34.57, 34.6, 32.41, 81.1, 33.77, 33.28, -0.13, -0.28, 0.29], ["11-05", 34.0, 34.88, 35.3, 33.83, 68.7, 33.85, 33.33, -0.04, -0.23, 0.38], ["11-06", 33.4, 33.67, 34.4, 33.4, 44.8, 33.93, 33.33, -0.06, -0.2, 0.27], ["11-09", 34.2, 34.24, 35.55, 34.1, 61.8, 34.08, 33.4, -0.03, -0.16, 0.26], ["11-10", 34.66, 35.35, 36.47, 34.61, 94.7, 34.54, 33.55, 0.08, -0.11, 0.39], ["11-11", 35.1, 36.35, 36.7, 35.03, 107.5, 34.9, 33.8, 0.24, -0.04, 0.58], ["11-12", 36.25, 34.61, 36.27, 34.44, 91.1, 34.84, 34.0, 0.23, 0.01, 0.44], ["11-13", 34.6, 34.87, 35.85, 34.6, 62.1, 35.08, 34.18, 0.24, 0.06, 0.37], ["11-16", 34.69, 33.63, 34.69, 33.21, 52.4, 34.96, 34.23, 0.15, 0.08, 0.14], ["11-17", 33.35, 32.88, 34.07, 32.58, 49.0, 34.47, 34.22, 0.01, 0.06, -0.1], ["11-18", 33.2, 32.29, 33.3, 31.95, 39.2, 33.66, 34.19, -0.14, 0.02, -0.33], ["11-19", 32.3, 32.54, 33.34, 31.96, 44.7, 33.24, 34.17, -0.24, -0.03, -0.42], ["11-20", 31.9, 31.4, 32.45, 31.4, 48.4, 32.55, 33.98, -0.41, -0.1, -0.6], ["11-23", 31.01, 33.88, 34.29, 31.01, 88.5, 32.6, 33.96, -0.33, -0.15, -0.36], ["11-24", 34.49, 34.36, 35.2, 34.01, 81.5, 32.89, 33.97, -0.23, -0.17, -0.13]]}, {"n": "⚠️ 案例2：新易盛 (300502) · 放量高开光脚大阴线", "c": 180.01, "chg": -0.74, "vwap": 187.45, "wma5": 180.41, "meta": "11/24收 180.01 (-0.74%) · 额249.8亿 · 较昨放量 1.11x", "ctx": "<b>裸K特征</b>：借老黄复职利好跳空高开 <b>197.00 (+8.6%)</b> 冲 201.99，全天单边砸至绝对最低点 <b>180.01 (-0.74%)</b> 收盘，阴线实体占振幅高达 <b>77%</b>，成交暴增至 <b>249.8亿（换手10.4%）</b>。<br/><b>关键位置</b>：高开冲破 MA20(187.33) 与成本线(187.45) 后被彻底砸回下方！", "plan": "<b>结论（经典高开派发 / Failed Gap Up）</b>：与三花的“缩量十字星守均线”形成极致反差！这是 Al Brooks 体系中的<b>强劲看跌反转棒（Bear Reversal Bar）</b>，主力单日狂甩超 33 亿。<br/>• <b style='color:var(--down)'>次日铁律</b>：光脚放量大阴线后，次日大概率还有<b>第二腿下探（Second Leg Down）</b>测试 <b>MA5(170.3)–174</b>；<br/>• <b style='color:var(--blue)'>何时才能看？</b>绝不在急跌中接飞刀，必须等回踩 170–174 缩量收出<b>看涨信号棒（下影阳线）</b>后再低吸！", "b": [["11-04", 176.0, 196.5, 199.98, 172.0, 114.2, 197.15, 277.12, -51.78, -44.12, -15.32], ["11-05", 184.0, 185.61, 192.4, 177.64, 117.9, 188.59, 267.48, -51.9, -45.68, -12.46], ["11-06", 166.0, 172.1, 178.0, 161.16, 90.4, 183.81, 257.57, -52.49, -47.04, -10.9], ["11-09", 175.0, 176.0, 184.12, 169.01, 77.4, 180.71, 248.99, -52.04, -48.04, -8.0], ["11-10", 188.01, 183.8, 191.51, 183.04, 87.1, 182.8, 240.62, -50.47, -48.52, -3.89], ["11-11", 187.3, 215.0, 216.35, 187.3, 124.9, 186.5, 234.83, -46.17, -48.05, 3.76], ["11-12", 212.5, 205.58, 225.0, 204.9, 119.2, 190.5, 229.81, -43.04, -47.05, 8.03], ["11-13", 209.96, 187.58, 212.5, 186.0, 100.8, 193.59, 223.84, -41.52, -45.95, 8.85], ["11-16", 182.77, 166.8, 183.7, 165.0, 90.5, 191.75, 216.78, -41.52, -45.06, 7.08], ["11-17", 163.62, 160.0, 167.46, 155.24, 87.6, 186.99, 209.87, -41.59, -44.37, 5.55], ["11-18", 162.01, 158.21, 163.35, 155.3, 80.4, 175.63, 203.07, -41.31, -43.76, 4.89], ["11-19", 153.05, 167.06, 171.08, 152.0, 90.2, 167.93, 198.53, -39.92, -42.99, 6.14], ["11-20", 160.01, 165.0, 170.96, 158.31, 89.0, 163.41, 193.73, -38.53, -42.1, 7.13], ["11-23", 165.24, 181.36, 183.6, 165.24, 117.4, 166.33, 190.21, -35.71, -40.82, 10.22], ["11-24", 197.0, 180.01, 201.99, 180.01, 130.3, 170.33, 187.33, -33.19, -39.29, 12.2]]}];
+    const PA_CASES = [{"n": "⭐ 案例1：天孚通信 (300394 · 11/25) · 冰点日逆势放量反包大阳", "c": 130.87, "chg": 7.65, "vwap": 128.62, "wma5": 126.3, "meta": "11/25收 130.87 (+7.65%) · MA20 126.3 · 放量 1.03x · 主力 +15.72亿", "ctx": "<b>裸K特征（Outside Reversal Bull Bar）</b>：受隔夜美股光模块 COHR/LITE 暴跌 -10% 冲击，天孚低开 <b>119.23</b>、下探 <b>117.00</b> 后暴力拉起最高冲 <b>138.00</b>，收盘 <b>130.87 (+7.65%)</b>，成交 89.3万手（高于昨日 86.9万手），全天主力净买入 <b>+15.72 亿（全A个股第1！）</b>。<br/><b>关键位置与上下文</b>：今天创业板暴跌 <b>-4.19%</b>、科创50暴跌 <b>-5.12%</b>，天孚却一举突破并牢牢站稳 <b>MA20 (126.30) + 20日成本 (128.62)</b> 双线，收出极其罕见的「大盘暴跌我大涨」相对强度领袖阳线！", "plan": "<b>价格行为学结论（强多头信号 · 忌追高宜回踩）</b>：大盘16分极端冰点中敢逆势放量吞没前日上影并站上MA20的股票，就是大资金明牌锁定的<b>「冰点活口总龙头」</b>。<br/>• <b style='color:var(--up)'>低吸买点</b>：明日若随早盘震荡回踩 <b>126.3–128.6（MA20与成本区）</b>缩量止跌，是极高赔率顺势买点；<br/>• <b style='color:var(--down)'>风控警示</b>：今日已留 7 元上影（138→130.87），若明早直接高开 >+4% 切忌追高，防早盘获利盘砸回分时均线！", "b": [["11-05", 128.2, 129.5, 134.89, 126.01, 58.5, 135.77, 191.23, -30.02, -23.34, -13.36], ["11-06", 116.28, 122.0, 125.86, 113.36, 53.3, 130.57, 185.57, -31.14, -24.9, -12.49], ["11-09", 124.01, 122.82, 127.5, 119.5, 38.4, 126.79, 180.24, -31.6, -26.24, -10.72], ["11-10", 130.0, 126.41, 131.32, 126.17, 40.6, 127.35, 174.22, -31.32, -27.26, -8.12], ["11-11", 129.09, 144.06, 144.61, 128.0, 74.9, 128.96, 169.98, -29.33, -27.67, -3.31], ["11-12", 143.5, 140.34, 152.17, 140.0, 67.2, 131.13, 165.83, -27.73, -27.68, -0.1], ["11-13", 141.39, 124.99, 143.58, 123.55, 78.3, 131.72, 161.44, -27.39, -27.62, 0.47], ["11-16", 122.0, 110.2, 122.5, 109.66, 58.0, 129.2, 156.78, -27.99, -27.7, -0.58], ["11-17", 107.62, 104.61, 110.2, 102.48, 55.2, 124.84, 151.79, -28.58, -27.87, -1.42], ["11-18", 108.01, 109.42, 111.6, 106.2, 49.7, 117.91, 146.51, -28.34, -27.97, -0.75], ["11-19", 106.15, 109.68, 111.52, 104.66, 41.0, 111.78, 142.14, -27.81, -27.94, 0.25], ["11-20", 104.01, 102.18, 106.48, 102.18, 39.9, 107.22, 137.21, -27.67, -27.88, 0.42], ["11-23", 99.9, 116.3, 117.8, 99.9, 77.6, 108.44, 133.18, -26.12, -27.53, 2.81], ["11-24", 133.3, 121.57, 134.23, 121.0, 86.9, 111.83, 129.82, -24.19, -26.86, 5.34], ["11-25", 119.23, 130.87, 138.0, 117.0, 89.3, 116.12, 126.3, -21.66, -25.82, 8.32]]}, {"n": "⚠️ 案例2：三花智控 (002050 · 11/25) · 十字星向下破位（昨日续集！）", "c": 31.91, "chg": -7.13, "vwap": 34.13, "wma5": 33.79, "meta": "11/25收 31.91 (-7.13%) · 破MA20(33.79) · 较昨缩量 0.78x", "ctx": "<b>裸K特征（Failed Breakout / 突破失败大阴线）</b>：完美跟踪昨日案例1！昨日三花收出守住 MA20(34.01) 的缩量十字星，我们明确写下两条机械触发线：<b>「过 35.20 做多，跌破 34.01 减仓观望」</b>。今天早盘三花最高只反抽到 <b>34.60</b>（未触发 35.20！），09:45 跌破 <b>34.01</b> 确认突破失败，午后随大盘一路收光脚大阴 <b>31.91 (-7.13%)</b>！<br/><b>亮点细节</b>：虽然跌幅达 -7.13%，但成交量仅 <b>63.6 万手（较昨日 81.5 万手缩量 -22%！）</b>，属于大盘暴跌触发的「缩量止损洗盘」而非主力天量出逃！", "plan": "<b>价格行为学结论（纪律救命教科书！）</b>：这就是 Al Brooks 强调的<b>「永远不在十字星当天猜方向，而是等次日破高/破低触发」</b>！严格按 34.01 止损/不抄底纪律的人，今天完美躲过 -7% 大面！<br/>• <b style='color:var(--down)'>绝对铁律</b>：今日收光脚大阴（低31.78 / 收31.91），明早必防惯性下探「第二腿」测试 <b>31.2–31.5</b>；<br/>• <b style='color:var(--up)'>右侧接回信号</b>：因为今日缩量 -22% 且大盘处 16 分冰点，明日若探 <b>31.3–31.6</b> 后放量收出长下影或 5 分钟 MACD 底背离，就是极佳的左侧低吸/反T接回点！", "b": [["11-05", 34.0, 34.88, 35.3, 33.83, 68.7, 33.85, 33.33, 0.12, -0.01, 0.26], ["11-06", 33.4, 33.67, 34.4, 33.4, 44.8, 33.93, 33.33, 0.09, 0.01, 0.16], ["11-09", 34.2, 34.24, 35.55, 34.1, 61.8, 34.08, 33.4, 0.1, 0.03, 0.15], ["11-10", 34.66, 35.35, 36.47, 34.61, 94.7, 34.54, 33.55, 0.21, 0.06, 0.29], ["11-11", 35.1, 36.35, 36.7, 35.03, 107.5, 34.9, 33.8, 0.36, 0.12, 0.48], ["11-12", 36.25, 34.61, 36.27, 34.44, 91.1, 34.84, 34.0, 0.34, 0.17, 0.35], ["11-13", 34.6, 34.87, 35.85, 34.6, 62.1, 35.08, 34.18, 0.34, 0.2, 0.28], ["11-16", 34.69, 33.63, 34.69, 33.21, 52.4, 34.96, 34.23, 0.24, 0.21, 0.06], ["11-17", 33.35, 32.88, 34.07, 32.58, 49.0, 34.47, 34.22, 0.1, 0.19, -0.18], ["11-18", 33.2, 32.29, 33.3, 31.95, 39.2, 33.66, 34.19, -0.06, 0.14, -0.4], ["11-19", 32.3, 32.54, 33.34, 31.96, 44.7, 33.24, 34.17, -0.16, 0.08, -0.48], ["11-20", 31.9, 31.4, 32.45, 31.4, 48.4, 32.55, 33.98, -0.33, -0.0, -0.66], ["11-23", 31.01, 33.88, 34.29, 31.01, 88.5, 32.6, 33.96, -0.27, -0.06, -0.42], ["11-24", 34.49, 34.36, 35.2, 34.01, 81.5, 32.89, 33.97, -0.17, -0.08, -0.19], ["11-25", 33.79, 31.91, 34.6, 31.78, 63.6, 32.82, 33.79, -0.29, -0.12, -0.34]]}];
     let activePaIdx = 0;
 
 
-    const T0_CASES = [{"n": "⚡ 实盘做T图解1：三花智控 (002050 · 11/24)", "meta": "震荡十字星 · 正T +2.9% / 反T +2.0% 教科书", "prev": 33.88, "pts": [["09:30", 34.49, 34.49, 11417.0], ["09:31", 34.07, 34.33, 31727.0], ["09:33", 34.33, 34.28, 14954.0], ["09:36", 34.52, 34.34, 13606.0], ["09:39", 34.7, 34.39, 12574.0], ["09:42", 34.83, 34.45, 8977.0], ["09:45", 34.78, 34.49, 8075.0], ["09:48", 35.1, 34.57, 14849.0], ["09:49", 35.16, 34.59, 11946.0], ["09:51", 34.96, 34.63, 7879.0], ["09:54", 34.77, 34.65, 9254.0], ["09:57", 34.98, 34.66, 4111.0], ["10:00", 34.87, 34.66, 3268.0], ["10:03", 34.67, 34.67, 5252.0], ["10:06", 34.58, 34.67, 5266.0], ["10:09", 34.68, 34.67, 2613.0], ["10:12", 34.84, 34.67, 3343.0], ["10:15", 34.72, 34.67, 2408.0], ["10:18", 34.88, 34.68, 2524.0], ["10:21", 34.8, 34.68, 1266.0], ["10:24", 34.75, 34.68, 1635.0], ["10:27", 34.71, 34.68, 1310.0], ["10:30", 34.61, 34.68, 2254.0], ["10:33", 34.72, 34.68, 1517.0], ["10:36", 34.86, 34.68, 1172.0], ["10:39", 35.01, 34.69, 9605.0], ["10:42", 34.92, 34.7, 2435.0], ["10:45", 35.04, 34.7, 2967.0], ["10:48", 35.01, 34.71, 2356.0], ["10:51", 34.88, 34.71, 1353.0], ["10:54", 34.82, 34.71, 1536.0], ["10:57", 34.84, 34.71, 915.0], ["11:00", 34.79, 34.72, 911.0], ["11:03", 34.83, 34.72, 975.0], ["11:06", 34.76, 34.72, 1274.0], ["11:09", 34.71, 34.72, 1723.0], ["11:12", 34.76, 34.72, 1458.0], ["11:15", 34.74, 34.72, 1011.0], ["11:18", 34.75, 34.72, 867.0], ["11:21", 34.72, 34.72, 1990.0], ["11:24", 34.67, 34.72, 1732.0], ["11:27", 34.61, 34.72, 1721.0], ["11:30", 34.68, 34.72, 984.0], ["13:00", 34.68, 34.72, 0.0], ["13:02", 34.93, 34.72, 3046.0], ["13:05", 34.9, 34.72, 2109.0], ["13:08", 34.96, 34.72, 1664.0], ["13:11", 35.04, 34.74, 7348.0], ["13:14", 34.91, 34.74, 1173.0], ["13:17", 35.03, 34.75, 2572.0], ["13:20", 34.96, 34.75, 1397.0], ["13:23", 34.88, 34.75, 1445.0], ["13:26", 34.79, 34.75, 1790.0], ["13:29", 34.76, 34.75, 1102.0], ["13:32", 34.71, 34.75, 2222.0], ["13:35", 34.78, 34.75, 817.0], ["13:38", 34.96, 34.75, 1892.0], ["13:41", 34.85, 34.75, 777.0], ["13:44", 34.8, 34.75, 996.0], ["13:47", 34.73, 34.75, 2241.0], ["13:50", 34.77, 34.75, 1249.0], ["13:53", 34.68, 34.75, 2320.0], ["13:56", 34.6, 34.75, 3191.0], ["13:59", 34.65, 34.75, 1422.0], ["14:02", 34.54, 34.75, 2297.0], ["14:05", 34.48, 34.74, 2283.0], ["14:08", 34.5, 34.74, 1773.0], ["14:11", 34.43, 34.74, 2027.0], ["14:14", 34.38, 34.74, 2660.0], ["14:17", 34.43, 34.73, 945.0], ["14:20", 34.47, 34.73, 2900.0], ["14:23", 34.37, 34.73, 1399.0], ["14:26", 34.4, 34.73, 1726.0], ["14:29", 34.42, 34.73, 727.0], ["14:32", 34.42, 34.72, 2459.0], ["14:35", 34.58, 34.72, 2066.0], ["14:38", 34.4, 34.72, 1178.0], ["14:41", 34.42, 34.72, 2321.0], ["14:44", 34.47, 34.71, 2786.0], ["14:47", 34.44, 34.71, 1948.0], ["14:50", 34.41, 34.71, 1805.0], ["14:53", 34.32, 34.7, 3211.0], ["14:56", 34.34, 34.7, 5181.0], ["14:59", 34.37, 34.7, 0.0], ["15:00", 34.36, 34.69, 6104.0]], "marks": [{"t": "09:31", "typ": "BUY", "lbl": "🟢正T买 34.07"}, {"t": "09:49", "typ": "SELL", "lbl": "🔴卖T点 35.16"}, {"t": "14:29", "typ": "BUY", "lbl": "🟢反T接回 34.42"}], "steps": "<b>① 09:31 正T买点(34.07)</b>：开盘第1分钟急砸到 MA20(33.97) 上方止跌，向下偏离黄线 -0.76% + 放量 3.17 万手承接，可买 1/3 仓；<br/><b>② 09:49 卖T点(35.16)</b>：18分钟急拉偏离黄线 <b>+1.65%</b>，冲到 35.20 压力区量能尖刺后萎缩 + 5m MACD 红柱缩短 → <b>果断卖出 1/3</b>！<br/><b>③ 14:29 反T买回(34.42)</b>：午后缩量缓跌破黄线 -0.9% 至 20日成本(34.29)附近、分钟量枯竭至 700 手 → <b>稳稳接回，白捡 +2.0% 降本！</b>"}, {"n": "🔥 实盘做T图解2：胜宏科技 (300476 · 11/24)", "meta": "高开回落股 · 反T 单日降本 +9.3% 救命课", "prev": 115.1, "pts": [["09:30", 130.0, 130.0, 22455.0], ["09:33", 132.04, 131.22, 18379.0], ["09:35", 134.5, 131.49, 13484.0], ["09:36", 133.93, 131.73, 15717.0], ["09:39", 132.99, 131.93, 7455.0], ["09:42", 130.25, 131.93, 8097.0], ["09:45", 129.81, 131.75, 9651.0], ["09:48", 130.11, 131.6, 7806.0], ["09:51", 130.81, 131.56, 5925.0], ["09:54", 129.86, 131.51, 1563.0], ["09:57", 130.31, 131.45, 4341.0], ["10:00", 130.11, 131.42, 1659.0], ["10:03", 129.87, 131.39, 2759.0], ["10:06", 129.0, 131.32, 4579.0], ["10:09", 128.72, 131.27, 3298.0], ["10:12", 128.8, 131.22, 1933.0], ["10:15", 128.99, 131.17, 2322.0], ["10:18", 128.47, 131.13, 2189.0], ["10:21", 127.98, 131.07, 4558.0], ["10:24", 127.45, 131.02, 1794.0], ["10:27", 127.76, 130.97, 1545.0], ["10:30", 127.18, 130.92, 1683.0], ["10:33", 127.62, 130.87, 2719.0], ["10:36", 127.42, 130.8, 2113.0], ["10:39", 127.51, 130.76, 1324.0], ["10:42", 125.92, 130.69, 4169.0], ["10:45", 126.48, 130.63, 1334.0], ["10:48", 126.07, 130.57, 2333.0], ["10:51", 125.78, 130.54, 1238.0], ["10:54", 125.63, 130.47, 3364.0], ["10:57", 125.68, 130.41, 1066.0], ["11:00", 125.03, 130.33, 3510.0], ["11:03", 125.74, 130.29, 1137.0], ["11:06", 125.4, 130.23, 1514.0], ["11:09", 125.22, 130.2, 673.0], ["11:12", 125.13, 130.15, 1106.0], ["11:15", 125.03, 130.13, 549.0], ["11:18", 124.83, 130.09, 1338.0], ["11:21", 124.9, 130.04, 2762.0], ["11:24", 124.7, 130.01, 877.0], ["11:27", 124.7, 129.98, 1360.0], ["11:30", 124.87, 129.95, 1213.0], ["13:00", 124.87, 129.95, 0.0], ["13:02", 124.55, 129.86, 1227.0], ["13:05", 124.72, 129.81, 2301.0], ["13:08", 126.13, 129.75, 2125.0], ["13:11", 125.31, 129.72, 586.0], ["13:14", 124.76, 129.69, 815.0], ["13:17", 124.79, 129.66, 1020.0], ["13:20", 124.45, 129.64, 830.0], ["13:23", 123.94, 129.6, 1523.0], ["13:26", 123.52, 129.56, 1270.0], ["13:29", 123.8, 129.53, 674.0], ["13:32", 123.87, 129.5, 1048.0], ["13:35", 124.07, 129.47, 1181.0], ["13:38", 124.56, 129.45, 979.0], ["13:41", 124.83, 129.42, 734.0], ["13:44", 124.35, 129.4, 699.0], ["13:47", 124.59, 129.39, 474.0], ["13:50", 124.31, 129.36, 656.0], ["13:53", 123.99, 129.33, 996.0], ["13:56", 123.41, 129.31, 670.0], ["13:59", 123.54, 129.27, 1974.0], ["14:02", 123.2, 129.23, 939.0], ["14:05", 122.86, 129.17, 1189.0], ["14:08", 122.8, 129.13, 1081.0], ["14:11", 122.4, 129.08, 1995.0], ["14:14", 121.99, 128.96, 4511.0], ["14:17", 122.09, 128.86, 772.0], ["14:20", 122.17, 128.81, 1258.0], ["14:23", 121.81, 128.75, 1476.0], ["14:26", 121.83, 128.69, 1945.0], ["14:29", 121.21, 128.65, 1947.0], ["14:32", 121.56, 128.6, 1761.0], ["14:35", 122.53, 128.54, 1235.0], ["14:38", 121.61, 128.48, 973.0], ["14:41", 122.1, 128.44, 1538.0], ["14:44", 122.7, 128.4, 1668.0], ["14:47", 122.68, 128.36, 1574.0], ["14:50", 122.3, 128.32, 722.0], ["14:53", 122.3, 128.26, 2634.0], ["14:56", 122.45, 128.19, 2160.0], ["14:59", 122.33, 128.16, 0.0], ["15:00", 122.32, 128.12, 4489.0]], "marks": [{"t": "09:35", "typ": "SELL", "lbl": "🔴反T卖 134.5"}, {"t": "09:45", "typ": "WARN", "lbl": "⚠️破黄线别抄底"}, {"t": "14:29", "typ": "BUY", "lbl": "🟢反T接回 121.2"}], "steps": "<b>① 09:35 反T卖点(134.50)</b>：借美股利好高开 +13% 后 5 分钟急拉至 134.8，向上偏离黄线 <b>+2.29%</b> 且冲过 122 强压力区 → <b>先卖 1/3 落袋</b>！<br/><b>② 09:45–13:30 管住手不接飞刀</b>：09:45 跌破分时黄线(131.75)后一路反抽不过黄线，按铁律<b>「黄线下不抄正T」</b>死忍不动！<br/><b>③ 14:29 买回点(121.21)</b>：偏离黄线高达 <b>-5.78%</b> + 精准回踩 122 突破位 + 5m MACD 底背离缩量止跌 → <b>接回筹码，单日反T净降本 +9.3%！</b>"}];
+    const T0_CASES = [{"n": "⚡ 实盘做T图解1：新易盛 (300502 · 11/25)", "meta": "低开暴力V反 · 正T +7.37% + 尾盘反T接回教科书！", "prev": 180.0, "pts": [["09:30", 175.1, 175.1, 15152.0], ["09:33", 179.0, 177.99, 15021.0], ["09:36", 180.6, 178.44, 20778.0], ["09:39", 179.51, 178.8, 9421.0], ["09:42", 181.6, 179.11, 12754.0], ["09:45", 182.95, 179.79, 12401.0], ["09:48", 186.81, 180.6, 17369.0], ["09:50", 188.0, 181.31, 16520.0], ["09:51", 185.8, 181.46, 12137.0], ["09:54", 186.43, 181.8, 7733.0], ["09:57", 186.32, 182.11, 7017.0], ["10:00", 185.0, 182.27, 3900.0], ["10:03", 185.61, 182.35, 3942.0], ["10:06", 184.97, 182.42, 2995.0], ["10:09", 186.82, 182.5, 3495.0], ["10:12", 186.22, 182.6, 3243.0], ["10:15", 186.12, 182.66, 2231.0], ["10:18", 186.58, 182.71, 2493.0], ["10:21", 185.16, 182.74, 1618.0], ["10:24", 185.13, 182.77, 1560.0], ["10:27", 183.5, 182.8, 5837.0], ["10:30", 183.05, 182.81, 4297.0], ["10:33", 182.19, 182.8, 3702.0], ["10:36", 182.89, 182.79, 2357.0], ["10:39", 182.94, 182.8, 1404.0], ["10:42", 182.95, 182.8, 1248.0], ["10:45", 183.14, 182.81, 1743.0], ["10:48", 182.87, 182.81, 1772.0], ["10:51", 182.92, 182.81, 768.0], ["10:54", 183.0, 182.81, 1596.0], ["10:57", 183.12, 182.82, 572.0], ["11:00", 183.6, 182.82, 1583.0], ["11:03", 183.66, 182.83, 1141.0], ["11:06", 183.93, 182.84, 916.0], ["11:09", 184.4, 182.86, 1128.0], ["11:12", 184.4, 182.88, 983.0], ["11:15", 184.01, 182.89, 1824.0], ["11:18", 184.11, 182.89, 834.0], ["11:21", 184.33, 182.9, 1124.0], ["11:24", 184.48, 182.91, 514.0], ["11:27", 184.31, 182.92, 1248.0], ["11:30", 183.68, 182.92, 1114.0], ["13:02", 182.58, 182.92, 2031.0], ["13:05", 181.87, 182.91, 4102.0], ["13:08", 182.57, 182.91, 1321.0], ["13:11", 181.72, 182.9, 4346.0], ["13:14", 182.02, 182.89, 1312.0], ["13:17", 180.79, 182.87, 3744.0], ["13:20", 180.95, 182.82, 7598.0], ["13:23", 180.18, 182.8, 1663.0], ["13:26", 180.59, 182.78, 1272.0], ["13:29", 179.8, 182.76, 1732.0], ["13:32", 180.2, 182.72, 2070.0], ["13:35", 180.32, 182.7, 1278.0], ["13:38", 180.38, 182.69, 1136.0], ["13:41", 180.48, 182.67, 2183.0], ["13:44", 180.4, 182.66, 1190.0], ["13:47", 180.49, 182.64, 2819.0], ["13:50", 180.56, 182.63, 1096.0], ["13:53", 181.49, 182.63, 1340.0], ["13:56", 181.01, 182.62, 1031.0], ["13:59", 180.95, 182.61, 1122.0], ["14:02", 180.11, 182.6, 1272.0], ["14:05", 179.72, 182.58, 1377.0], ["14:08", 179.03, 182.54, 1515.0], ["14:11", 178.77, 182.5, 3358.0], ["14:14", 180.68, 182.47, 3115.0], ["14:17", 179.34, 182.45, 1063.0], ["14:20", 179.15, 182.43, 1084.0], ["14:23", 178.51, 182.41, 2023.0], ["14:26", 178.38, 182.38, 2316.0], ["14:29", 178.43, 182.35, 3077.0], ["14:32", 178.71, 182.3, 2200.0], ["14:35", 177.55, 182.25, 2180.0], ["14:38", 177.14, 182.2, 3029.0], ["14:41", 178.38, 182.18, 1732.0], ["14:44", 178.39, 182.15, 1465.0], ["14:47", 179.16, 182.12, 4254.0], ["14:50", 179.19, 182.09, 2906.0], ["14:53", 181.5, 182.08, 5667.0], ["14:56", 181.52, 182.07, 5804.0], ["14:59", 181.49, 182.07, 0.0], ["15:00", 181.3, 182.06, 7852.0]], "marks": [{"t": "09:30", "typ": "BUY", "lbl": "🟢正T买 175.10"}, {"t": "09:50", "typ": "SELL", "lbl": "🔴卖T点 188.00"}, {"t": "14:44", "typ": "BUY", "lbl": "🟢反T接回 178.39"}], "steps": "<b>① 09:30 正T买点（175.10）</b>：隔夜美股光模块大跌但中际旭创抛40亿回购，新易盛精确低开 <b>175.10（-2.72%）</b>，紧贴早盘提示的 170–174 低吸区上沿且竞价承接极强 → <b>底仓果断正T加买 1/3！</b><br/><b>② 09:50 卖T落袋（188.00 · 20分钟狂赚 +7.37%！）</b>：白线20分钟暴冲 <b>188.00</b>，此时分时黄线仅 181.2，<b>乖离率高达 +3.75%（远超 +2.5% 卖T警戒线！）</b>且量柱由增转缩 → <b>严格按口诀高抛卖出 T 仓，瞬间锁定 +7.37% 超额利润！</b><br/><b>③ 14:44 尾盘接回（178.39）</b>：午后随创业板暴跌 -4.2% 回踩至黄线（182.15）下方 <b>-2.1%</b> 缩量止跌，尾盘 15 分钟拉回 181.30 收红，全天反手再降本 +1.6%！"}, {"n": "⚡ 实盘做T图解2：三花智控 (002050 · 11/25)", "meta": "单边破位日 · 坚决不做正T！早盘反T卖+尾盘接回降本 -7.67%", "prev": 34.36, "pts": [["09:30", 33.79, 33.79, 4785.0], ["09:33", 34.21, 34.08, 6640.0], ["09:35", 34.44, 34.17, 8567.0], ["09:36", 34.29, 34.18, 7202.0], ["09:39", 34.2, 34.2, 3168.0], ["09:42", 34.19, 34.19, 2552.0], ["09:45", 34.01, 34.16, 3138.0], ["09:48", 33.82, 34.13, 5163.0], ["09:51", 33.64, 34.06, 9960.0], ["09:54", 33.58, 34.02, 3782.0], ["09:57", 33.55, 33.96, 3573.0], ["10:00", 33.5, 33.94, 1613.0], ["10:03", 33.72, 33.93, 2087.0], ["10:06", 33.57, 33.91, 3011.0], ["10:09", 33.57, 33.9, 1981.0], ["10:12", 33.54, 33.89, 2429.0], ["10:15", 33.35, 33.86, 2455.0], ["10:18", 33.23, 33.83, 2468.0], ["10:21", 33.12, 33.79, 3327.0], ["10:24", 33.0, 33.74, 4009.0], ["10:27", 33.1, 33.72, 1956.0], ["10:30", 33.08, 33.7, 1577.0], ["10:33", 33.1, 33.68, 1745.0], ["10:36", 32.97, 33.66, 1744.0], ["10:39", 32.92, 33.64, 2408.0], ["10:42", 32.96, 33.63, 1219.0], ["10:45", 33.0, 33.62, 1355.0], ["10:48", 32.89, 33.61, 3235.0], ["10:51", 32.86, 33.59, 1363.0], ["10:54", 32.88, 33.59, 1222.0], ["10:57", 32.85, 33.58, 1130.0], ["11:00", 32.91, 33.57, 1065.0], ["11:03", 32.85, 33.56, 1227.0], ["11:06", 32.83, 33.55, 1287.0], ["11:09", 32.82, 33.54, 1763.0], ["11:12", 32.82, 33.53, 567.0], ["11:15", 32.82, 33.52, 795.0], ["11:18", 32.89, 33.51, 1818.0], ["11:21", 32.85, 33.51, 1407.0], ["11:24", 32.78, 33.49, 3962.0], ["11:27", 32.8, 33.49, 898.0], ["11:30", 32.74, 33.48, 1179.0], ["13:02", 32.6, 33.46, 2089.0], ["13:05", 32.54, 33.44, 3286.0], ["13:08", 32.61, 33.43, 1487.0], ["13:11", 32.48, 33.41, 5887.0], ["13:14", 32.53, 33.4, 1365.0], ["13:17", 32.45, 33.39, 3596.0], ["13:20", 32.48, 33.37, 1787.0], ["13:23", 32.47, 33.36, 1968.0], ["13:26", 32.47, 33.35, 1144.0], ["13:29", 32.37, 33.34, 3143.0], ["13:32", 32.35, 33.32, 3753.0], ["13:35", 32.31, 33.31, 1574.0], ["13:38", 32.22, 33.29, 3091.0], ["13:41", 32.22, 33.28, 1272.0], ["13:44", 32.18, 33.27, 1813.0], ["13:47", 32.22, 33.25, 2152.0], ["13:50", 32.14, 33.24, 2289.0], ["13:53", 32.13, 33.23, 987.0], ["13:56", 32.07, 33.21, 2445.0], ["13:59", 32.07, 33.2, 1306.0], ["14:02", 32.0, 33.19, 2588.0], ["14:05", 32.02, 33.16, 1327.0], ["14:08", 31.95, 33.14, 1179.0], ["14:11", 31.96, 33.13, 1790.0], ["14:14", 32.04, 33.11, 2693.0], ["14:17", 31.9, 33.09, 2206.0], ["14:20", 31.92, 33.08, 1753.0], ["14:23", 31.88, 33.06, 3578.0], ["14:25", 31.8, 33.05, 3174.0], ["14:26", 31.8, 33.05, 1816.0], ["14:29", 31.96, 33.03, 2655.0], ["14:32", 32.02, 33.01, 1748.0], ["14:35", 31.87, 32.99, 1837.0], ["14:38", 31.89, 32.98, 1577.0], ["14:41", 31.91, 32.97, 2161.0], ["14:44", 31.86, 32.96, 2324.0], ["14:47", 32.03, 32.94, 4626.0], ["14:50", 31.96, 32.92, 3867.0], ["14:53", 32.22, 32.9, 5787.0], ["14:56", 32.0, 32.88, 4399.0], ["14:59", 31.92, 32.87, 0.0], ["15:00", 31.91, 32.86, 6987.0]], "marks": [{"t": "09:35", "typ": "SELL", "lbl": "🔴反T卖 34.44"}, {"t": "09:45", "typ": "WARN", "lbl": "⚠️破MA20禁买"}, {"t": "14:25", "typ": "BUY", "lbl": "🟢尾盘接回 31.80"}], "steps": "<b>① 09:35 反T卖点（34.44）</b>：昨日十字星高点是 35.20，今日早盘急拉 5 分钟最高仅摸 <b>34.44</b>（远未过前高且量能不及昨日），立刻滞涨回落 → <b>老手果断先卖 1/3 底仓做「反 T」！</b><br/><b>② 09:45 救命禁买线（破 34.01 MA20）</b>：白线砸穿分时黄线（34.16）并跌破昨日低点 <b>34.01</b>，此后全天被黄线死死压制（典型单边弱势图）→ <b>严格遵守做T保命铁律：单边下坡路绝不半山腰做正T抄底！</b><br/><b>③ 14:25 尾盘接回（31.80 · 单日降本 -7.67%！）</b>：直到 14:25 缩量探全天最低 <b>31.80</b>（偏离分时黄线 33.03 达 -3.7%，全天缩量 -22% 抛压枯竭）才接回反T筹码，大跌日反而大幅降低持仓成本！"}];
     let activeT0Idx = 0;
 
     function selectT0Case(idx) {
@@ -1938,49 +1805,49 @@
 
     // ==================== 永久新增：A股实时资金面流向数据（11/24 13:49 新浪实时） ====================
     const LIVE_SECTOR_FLOW = [
-      {n:"生物制药", v:30.97, chg:1.44},
-      {n:"电子信息", v:23.53, chg:-0.24},
-      {n:"商业百货", v:18.01, chg:0.85},
-      {n:"农林牧渔", v:13.95, chg:-0.31},
-      {n:"造纸行业", v:13.23, chg:0.91},
-      {n:"有色金属", v:8.90, chg:-0.54},
-      {n:"房地产", v:7.60, chg:0.72},
-      {n:"机械行业", v:6.15, chg:-1.13},
-      {n:"建筑建材", v:5.66, chg:0.05},
-      {n:"飞机制造", v:-2.14, chg:-1.07},
-      {n:"发电设备", v:-2.93, chg:-1.64},
-      {n:"金融行业", v:-2.95, chg:-0.72},
-      {n:"电器行业", v:-3.15, chg:-1.31},
-      {n:"电子器件", v:-15.73, chg:-2.59}
+      {n:"生物制药", v:29.44, chg:0.42},
+      {n:"金融行业", v:17.82, chg:0.06},
+      {n:"造纸行业", v:14.26, chg:-1.07},
+      {n:"酿酒行业", v:12.22, chg:1.01},
+      {n:"商业百货", v:9.73, chg:-0.96},
+      {n:"农林牧渔", v:7.04, chg:-1.53},
+      {n:"家电行业", v:4.49, chg:-0.22},
+      {n:"石油煤炭", v:3.43, chg:0.05},
+      {n:"有色金属", v:-5.58, chg:-2.45},
+      {n:"电器行业", v:-7.81, chg:-3.86},
+      {n:"汽车制造", v:-8.14, chg:-2.62},
+      {n:"发电设备", v:-10.67, chg:-4.01},
+      {n:"机械化工", v:-14.63, chg:-3.23},
+      {n:"电子器件", v:-49.01, chg:-5.05}
     ];
 
     const LIVE_STOCK_FLOW = [
-      // 主力净流入 TOP12 代表股（11/25 11:30 午盘定格）
-      {sym:"300394",n:"天孚通信",sec:"光模块CPO",p:133.83,chg:10.08,net:16.38,ratio:19.8,dir:"IN",note:"全A个股净流入第1！盘中涨超+13%，半日死守+10.1%引领CPO反包。"},
-      {sym:"300502",n:"新易盛",sec:"光模块CPO",p:183.68,chg:2.04,net:11.76,ratio:10.5,dir:"IN",note:"半日成交112亿稳守+2.0%，低开175.10低吸资金大获全胜！"},
-      {sym:"600103",n:"青山纸业",sec:"光芯片/造纸",p:3.78,chg:9.88,net:11.46,ratio:60.6,dir:"IN",note:"主力净占比高达+60.6%封死涨停，短线资金抱团情绪标杆。"},
-      {sym:"588080",n:"科创50ETF易方达",sec:"宽基护盘",p:1.25,chg:-2.35,net:8.78,ratio:23.4,dir:"IN",note:"⭐国家队/机构护盘重磅信号！科创大跌时净占比+23.4%狂扫8.8亿！"},
-      {sym:"588000",n:"科创50ETF华夏",sec:"宽基护盘",p:1.29,chg:-2.27,net:5.92,ratio:10.8,dir:"IN",note:"⭐双科创ETF半日联手净买入+14.7亿，强力托底硬科技筹码！"},
-      {sym:"300476",n:"胜宏科技",sec:"AI PCB",p:125.46,chg:2.57,net:5.65,ratio:13.9,dir:"IN",note:"派发特别股息催化，半日主力净买+5.65亿，走势稳健领跑PCB。"},
-      {sym:"300308",n:"中际旭创",sec:"光模块CPO",p:418.79,chg:0.43,net:4.04,ratio:3.7,dir:"IN",note:"40亿重磅回购护航，低开400.88稳步翻红，半日成交108亿。"},
-      {sym:"601138",n:"工业富联",sec:"AI服务器",p:40.28,chg:-1.66,net:3.67,ratio:11.7,dir:"IN",note:"⭐经典「跌着买」！连续两日获主力大单吸筹，午盘跌幅收窄。"},
-      {sym:"603986",n:"兆易创新",sec:"存储芯片",p:205.64,chg:-3.23,net:2.86,ratio:10.0,dir:"IN",note:"⭐「跌着买」！隔夜MU暴跌反成国内机构205一线低吸窗口。"},
-      {sym:"002548",n:"金新农",sec:"猪肉4连板",p:5.01,chg:10.11,net:2.71,ratio:32.3,dir:"IN",note:"8天5板一字封死，猪价止跌回升带动农林牧渔半日净流入+14亿。"},
-      {sym:"688041",n:"海光信息",sec:"国产算力",p:160.72,chg:-1.40,net:2.22,ratio:11.4,dir:"IN",note:"芯片板块唯一持续加码净流入的权重龙头，显著抗跌于寒武纪。"},
-      {sym:"601899",n:"紫金矿业",sec:"金铜资源",p:23.18,chg:-0.13,net:1.57,ratio:5.9,dir:"IN",note:"隔夜金跌-3%却主力逆势回流+1.57亿！山东黄金同步翻红+1.14%。"},
-      // 主力净流出 TOP12 代表股（11/25 11:30 午盘定格）
-      {sym:"688256",n:"寒武纪",sec:"国产AI芯片",p:930.60,chg:-4.06,net:-7.15,ratio:-12.5,dir:"OUT",note:"全A个股半日净流出第1！昨日逼近千元后获利盘集中兑现。"},
-      {sym:"300750",n:"宁德时代",sec:"锂电权重",p:216.50,chg:-4.78,net:-5.97,ratio:-9.5,dir:"OUT",note:"碳酸锂期价跌超-7%重挫锂电，光脚收半日最低点领砸创业板。"},
-      {sym:"002371",n:"北方华创",sec:"半导体设备",p:500.98,chg:-8.45,net:-5.25,ratio:-12.3,dir:"OUT",note:"盘中一度砸穿500整数关(低498)，费半-7.9%最大重灾区勿急抄底。"},
-      {sym:"688825",n:"长鑫科技",sec:"存储芯片",p:34.71,chg:-4.27,net:-5.23,ratio:-12.2,dir:"OUT",note:"连续两日获利盘流出，短线等待缩量止跌信号。"},
-      {sym:"300274",n:"阳光电源",sec:"光储权重",p:71.44,chg:-2.96,net:-4.24,ratio:-15.9,dir:"OUT",note:"跟随宁德承压，主力净占比-15.9%继续回避。"},
-      {sym:"688981",n:"中芯国际",sec:"国产晶圆",p:123.90,chg:-2.06,net:-4.08,ratio:-10.4,dir:"OUT",note:"港股中芯午盘跳水至-3.5%叠加华虹-13%，晶圆情绪午后仍承压。"},
-      {sym:"002579",n:"中京电子",sec:"PCB连板",p:16.61,chg:2.53,net:-2.74,ratio:-9.3,dir:"OUT",note:"⚠️4板高位派发！红盘下主力出货-2.74亿，午后严防炸板。"},
-      {sym:"600150",n:"中国船舶",sec:"船舶军工",p:34.89,chg:-1.27,net:-2.26,ratio:-20.6,dir:"OUT",note:"昨日拉升后短线获利回吐，净占比-20.6%回踩观察。"},
-      {sym:"600036",n:"招商银行",sec:"金融权重",p:43.12,chg:-0.92,net:-2.14,ratio:-11.7,dir:"OUT",note:"银行板块内部分化（工行净流入+1.8亿，招行净流出-2.1亿）。"},
-      {sym:"002050",n:"三花智控",sec:"人形机器人",p:32.74,chg:-4.71,net:-2.10,ratio:-18.1,dir:"OUT",note:"⚠️半日收在低点32.74（破MA20 34.01），午后盯32.3-32.5止跌信号！"},
-      {sym:"601689",n:"拓普集团",sec:"人形机器人",p:51.60,chg:-4.99,net:-1.59,ratio:-11.9,dir:"OUT",note:"北纬科技跌停+柯力/长华提示风险，机器人中军同步退潮补跌。"},
-      {sym:"603259",n:"药明康德",sec:"CXO医药",p:142.40,chg:-1.32,net:-1.39,ratio:-8.0,dir:"OUT",note:"医药+31亿大爆发但资金偏爱低位创新药/流感/港股药，CXO落后。"}
+      // 全天主力净流入 TOP12（11/25 15:00 收盘定格）
+      {sym:"510330",n:"沪深300ETF华夏",sec:"国家队护盘",p:4.14,chg:-1.43,net:49.37,ratio:39.3,dir:"IN",note:"⭐中央汇金尾盘疯狂托底第1名！净占比高达+39.3%狂买49.4亿！"},
+      {sym:"510310",n:"沪深300ETF易方达",sec:"国家队护盘",p:3.86,chg:-1.58,net:24.13,ratio:25.3,dir:"IN",note:"⭐与华夏/华泰三只300ETF合计单日扫货+89.4亿，铁底护盘！"},
+      {sym:"300394",n:"天孚通信",sec:"光模块CPO",p:130.87,chg:7.65,net:15.72,ratio:13.4,dir:"IN",note:"⭐全场最强孤勇者！创业板暴跌-4.2%仍逆势大涨+7.65%，主力狂买15.7亿！"},
+      {sym:"588000",n:"科创50ETF华夏",sec:"国家队护盘",p:1.25,chg:-4.93,net:13.87,ratio:14.2,dir:"IN",note:"与易方达科创ETF(+13.3亿)联手托底科创50共+27.2亿！"},
+      {sym:"510500",n:"中证500ETF南方",sec:"国家队护盘",p:5.92,chg:-3.31,net:12.41,ratio:13.1,dir:"IN",note:"尾盘异动爆量护盘中小盘，六大宽基ETF合计净买入+129.0亿！"},
+      {sym:"600519",n:"贵州茅台",sec:"白酒护盘",p:1474.84,chg:1.02,net:11.83,ratio:18.5,dir:"IN",note:"逆势大涨+1.02%！大资金借大盘暴跌抢筹核心权重稳住沪指。"},
+      {sym:"300502",n:"新易盛",sec:"光模块CPO",p:181.30,chg:0.72,net:10.42,ratio:6.4,dir:"IN",note:"昨日狂砸-33.8亿今日反手净买+10.4亿逆势收红，成交164亿换手充分！"},
+      {sym:"601398",n:"工商银行",sec:"银行护盘",p:9.20,chg:-0.22,net:7.20,ratio:16.0,dir:"IN",note:"尾盘大单拉回平盘，金融行业全天从-8亿惊天逆转至净流入+17.8亿！"},
+      {sym:"688041",n:"海光信息",sec:"国产算力",p:157.95,chg:-3.10,net:5.44,ratio:14.4,dir:"IN",note:"⭐经典「跌着买」！芯片普跌中逆势净买入+5.44亿，明显强于寒武纪。"},
+      {sym:"300476",n:"胜宏科技",sec:"AI PCB",p:121.49,chg:-0.68,net:4.78,ratio:8.1,dir:"IN",note:"特别股息护航，大盘崩盘下仅微跌-0.68%且主力净买+4.78亿！"},
+      {sym:"601138",n:"工业富联",sec:"AI服务器",p:39.61,chg:-3.30,net:4.40,ratio:8.8,dir:"IN",note:"连续两日主力逆势净买入，今日缩量至49.8亿洗盘特征明显。"},
+      {sym:"300760",n:"迈瑞/恒瑞",sec:"医药防御",p:181.00,chg:0.44,net:2.64,ratio:18.1,dir:"IN",note:"生物制药全天净流入+29.4亿居48行业第1，迈瑞+2.6亿/恒瑞+2.2亿双双收红！"},
+      // 全天主力净流出 TOP12（11/25 15:00 收盘定格）
+      {sym:"688256",n:"寒武纪",sec:"国产AI芯片",p:907.90,chg:-6.40,net:-13.01,ratio:-12.7,dir:"OUT",note:"全A个股净流出第1！昨日逼近千元后获利盘集中出逃，跌至MA20(893)上方。"},
+      {sym:"300750",n:"宁德时代",sec:"锂电权重",p:208.42,chg:-8.33,net:-11.35,ratio:-7.3,dir:"OUT",note:"⚠️创19个月新低、A+H市值跌破1万亿！成交157亿成砸穿创业板最大元凶。"},
+      {sym:"688825",n:"长鑫科技",sec:"存储芯片",p:33.60,chg:-7.34,net:-7.30,ratio:-7.7,dir:"OUT",note:"韩国海力士暴跌-11.1%+美光-11%双重传导，存储链全线承压。"},
+      {sym:"688981",n:"中芯国际",sec:"国产晶圆",p:122.00,chg:-3.56,net:-5.49,ratio:-7.7,dir:"OUT",note:"港股华虹暴跌-16.7%、中芯H跌-6.5%拖累，A股相对抗跌仍守MA20(111.7)。"},
+      {sym:"300274",n:"阳光电源",sec:"光储权重",p:70.49,chg:-4.25,net:-5.07,ratio:-11.8,dir:"OUT",note:"跟随宁德时代与碳酸锂期货-7%联动下挫，短线规避新能源权重。"},
+      {sym:"002371",n:"北方华创",sec:"半导体设备",p:495.00,chg:-9.55,net:-4.38,ratio:-6.6,dir:"OUT",note:"收盘失守500大关逼近跌停，半导体设备成今日电子器件(-49亿)重灾区。"},
+      {sym:"603893",n:"瑞芯微",sec:"端侧芯片",p:193.69,chg:-6.65,net:-4.17,ratio:-11.3,dir:"OUT",note:"高弹性芯片随科创50暴跌-5.1%遭到集中止损盘抛出。"},
+      {sym:"002050",n:"三花智控",sec:"人形机器人",p:31.91,chg:-7.13,net:-3.44,ratio:-16.5,dir:"OUT",note:"⚠️十字星向下破位确认！跌穿MA20(33.79)，但全天缩量-22%，等止跌底分型。"},
+      {sym:"600118",n:"中国卫星",sec:"商业航天",p:45.63,chg:-7.26,net:-2.88,ratio:-19.4,dir:"OUT",note:"神舟二十四号发射利好兑现，主力净占比-19.4%获利了结。"},
+      {sym:"601689",n:"拓普集团",sec:"人形机器人",p:49.15,chg:-9.50,net:-2.56,ratio:-10.0,dir:"OUT",note:"逼近跌停回踩MA20(47.93)与20日成本(48.87)交汇铁底区，明日重点看承接！"},
+      {sym:"002475",n:"立讯精密",sec:"果链硬件",p:46.47,chg:-3.39,net:-1.48,ratio:-5.3,dir:"OUT",note:"受电子板块普跌拖累，但跌幅远小于半导体，属被动跟跌。"},
+      {sym:"002714",n:"牧原股份",sec:"猪肉防御",p:44.10,chg:-2.67,net:-1.11,ratio:-6.3,dir:"OUT",note:"精准回踩MA20(44.14)一线，落入社保核心股⭐MA20低吸观察区。"}
     ];
 
     function drawLiveFlowChart() {
@@ -2067,7 +1934,7 @@
     }
 
 
-    const SSF_WATCHLIST = [{"sym": "sh603175", "n": "超颖电子", "sec": "AI硬件PCB", "tag": "持股20.03%第1", "ssf": "流通比20.03%全A最高", "date": "2026-11-24", "c": 95.45, "chg": 6.86, "chg20": 4.89, "ma5": 87.66, "ma20": 87.63, "dist20": 8.92, "sig": "📈多头沿MA5运行"}, {"sym": "sz002938", "n": "鹏鼎控股", "sec": "AI硬件PCB", "tag": "重仓>20亿", "ssf": "社保组合前4大重仓(>20亿)", "date": "2026-11-24", "c": 46.0, "chg": 2.56, "chg20": -29.79, "ma5": 44.82, "ma20": 49.96, "dist20": -7.93, "sig": "🔍MA20下方磨底"}, {"sym": "sz300814", "n": "中富电路", "sec": "AI硬件PCB", "tag": "Q3新进>5亿", "ssf": "Q3大额新进AI PCB", "date": "2026-11-24", "c": 81.27, "chg": 1.83, "chg20": -13.27, "ma5": 80.33, "ma20": 90.99, "dist20": -10.68, "sig": "❄️超跌等止跌信号"}, {"sym": "sh688820", "n": "盛合晶微", "sec": "AI硬件PCB", "tag": "Q3新进封测龙", "ssf": "社保005组合新进先进封装", "date": "2026-11-24", "c": 92.71, "chg": 3.73, "chg20": 7.53, "ma5": 94.42, "ma20": 85.11, "dist20": 8.93, "sig": "📈多头沿MA5运行"}, {"sym": "sz000725", "n": "京东方A", "sec": "AI硬件PCB", "tag": "新进1.55亿股", "ssf": "Q3新进股数全A第1(8.87亿)", "date": "2026-11-24", "c": 4.42, "chg": -1.12, "chg20": -6.55, "ma5": 4.39, "ma20": 4.45, "dist20": -0.67, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002947", "n": "恒铭达", "sec": "AI硬件PCB", "tag": "持股7.84%", "ssf": "流通比7.84%第3名", "date": "2026-11-24", "c": 43.81, "chg": 2.22, "chg20": -5.34, "ma5": 44.3, "ma20": 46.12, "dist20": -5.01, "sig": "🔍MA20下方磨底"}, {"sym": "sz300628", "n": "亿联网络", "sec": "AI硬件PCB", "tag": "持股6.90%", "ssf": "2家社保增持+21.1%", "date": "2026-11-24", "c": 39.71, "chg": 0.05, "chg20": 7.15, "ma5": 40.17, "ma20": 38.71, "dist20": 2.58, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002050", "n": "三花智控", "sec": "机器人制造", "tag": "Q3新进7.5亿", "ssf": "社保104组合新进2,101万股", "date": "2026-11-24", "c": 34.36, "chg": 1.42, "chg20": 0.88, "ma5": 32.89, "ma20": 33.97, "dist20": 1.15, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz301413", "n": "安培龙", "sec": "机器人制造", "tag": "社保涨幅第1", "ssf": "10月以来社保重仓涨幅王", "date": "2026-11-24", "c": 89.71, "chg": 20.0, "chg20": 47.82, "ma5": 73.27, "ma20": 74.68, "dist20": 20.13, "sig": "🔥涨停/加速(不追)"}, {"sym": "sz000680", "n": "山推股份", "sec": "机器人制造", "tag": "4家扎堆7.24%", "ssf": "4家社保9,522万股(+8.3%)", "date": "2026-11-24", "c": 7.92, "chg": -2.7, "chg20": -10.1, "ma5": 8.26, "ma20": 8.72, "dist20": -9.17, "sig": "❄️超跌等止跌信号"}, {"sym": "sz002444", "n": "巨星科技", "sec": "机器人制造", "tag": "4家扎堆5.05%", "ssf": "4家社保5,798万股(+7.0%)", "date": "2026-11-24", "c": 26.97, "chg": -0.52, "chg20": 6.94, "ma5": 27.08, "ma20": 27.46, "dist20": -1.78, "sig": "🔍贴近MA20下蓄势"}, {"sym": "sz300836", "n": "佰奥智能", "sec": "机器人制造", "tag": "持股8.75%", "ssf": "流通比8.75%第2名", "date": "2026-11-24", "c": 31.66, "chg": 2.13, "chg20": -23.17, "ma5": 31.76, "ma20": 37.62, "dist20": -15.84, "sig": "❄️超跌等止跌信号"}, {"sym": "sh600031", "n": "三一重工", "sec": "机器人制造", "tag": "重仓>20亿", "ssf": "2家社保2.20亿股", "date": "2026-11-24", "c": 18.28, "chg": -1.14, "chg20": 1.16, "ma5": 18.65, "ma20": 18.59, "dist20": -1.67, "sig": "🔍贴近MA20下蓄势"}, {"sym": "sz002028", "n": "思源电气", "sec": "电网能源", "tag": "Q3新进>5亿", "ssf": "特高压电网核心·Q3新进", "date": "2026-11-24", "c": 110.08, "chg": 3.22, "chg20": 4.42, "ma5": 106.49, "ma20": 109.4, "dist20": 0.62, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz300593", "n": "新雷能", "sec": "电网能源", "tag": "2家新进>3%", "ssf": "115+420组合新进特种电源", "date": "2026-11-24", "c": 20.78, "chg": 11.12, "chg20": -7.07, "ma5": 19.34, "ma20": 21.02, "dist20": -1.14, "sig": "🔥涨停/加速(不追)"}, {"sym": "sh600863", "n": "华能蒙电", "sec": "电网能源", "tag": "新进8,356万股", "ssf": "高股息公用事业Q3新进", "date": "2026-11-24", "c": 5.36, "chg": -0.19, "chg20": 8.28, "ma5": 5.48, "ma20": 5.35, "dist20": 0.19, "sig": "⭐回踩MA20低吸区"}, {"sym": "sh601899", "n": "紫金矿业", "sec": "有色特钢", "tag": "重仓25.6亿", "ssf": "社保106组合加仓至8,580万股", "date": "2026-11-24", "c": 23.21, "chg": -4.33, "chg20": -16.66, "ma5": 23.92, "ma20": 26.7, "dist20": -13.07, "sig": "❄️超跌等止跌信号"}, {"sym": "sh603993", "n": "洛阳钼业", "sec": "有色特钢", "tag": "新进+18亿回购", "ssf": "Q3新进5,700万股+18亿回购贷", "date": "2026-11-24", "c": 11.7, "chg": -3.62, "chg20": -16.79, "ma5": 11.91, "ma20": 13.07, "dist20": -10.48, "sig": "❄️超跌等止跌信号"}, {"sym": "sh601168", "n": "西部矿业", "sec": "有色特钢", "tag": "Q3新进>5亿", "ssf": "铜铅锌高股息资源Q3新进", "date": "2026-11-24", "c": 24.73, "chg": -2.06, "chg20": -18.78, "ma5": 24.83, "ma20": 27.45, "dist20": -9.91, "sig": "❄️超跌等止跌信号"}, {"sym": "sh600549", "n": "厦门钨业", "sec": "有色特钢", "tag": "Q3新进>5亿", "ssf": "战略钨稀土龙头Q3新进", "date": "2026-11-24", "c": 31.95, "chg": -0.28, "chg20": -8.95, "ma5": 31.97, "ma20": 34.5, "dist20": -7.39, "sig": "🔍MA20下方磨底"}, {"sym": "sz002318", "n": "久立特材", "sec": "有色特钢", "tag": "4家扎堆5.32%", "ssf": "4家社保5,071万股(+6.1%)", "date": "2026-11-24", "c": 16.56, "chg": 2.22, "chg20": 0.79, "ma5": 16.42, "ma20": 17.02, "dist20": -2.7, "sig": "🔍贴近MA20下蓄势"}, {"sym": "sz002714", "n": "牧原股份", "sec": "防御医药车", "tag": "新进>3,000万股", "ssf": "生猪防御绝对龙头Q3新进", "date": "2026-11-24", "c": 45.31, "chg": -0.15, "chg20": 9.31, "ma5": 45.11, "ma20": 43.95, "dist20": 3.09, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002594", "n": "比亚迪", "sec": "防御医药车", "tag": "第1重仓45.6亿", "ssf": "社保114组合加仓至5,470万股", "date": "2026-11-24", "c": 75.96, "chg": -2.67, "chg20": -7.38, "ma5": 78.84, "ma20": 81.97, "dist20": -7.33, "sig": "🔍MA20下方磨底"}, {"sym": "sz002262", "n": "恩华药业", "sec": "防御医药车", "tag": "持股5.72%", "ssf": "2家社保增持+15.6%", "date": "2026-11-24", "c": 22.43, "chg": -1.41, "chg20": 4.52, "ma5": 22.63, "ma20": 22.39, "dist20": 0.18, "sig": "⭐回踩MA20低吸区"}];
+    const SSF_WATCHLIST = [{"sym": "sh603175", "n": "超颖电子", "sec": "AI硬件PCB", "tag": "持股20.03%第1", "ssf": "流通比20.03%全A最高", "date": "2026-11-25", "c": 90.49, "chg": -5.2, "chg20": -2.6, "ma5": 88.51, "ma20": 87.51, "dist20": 3.41, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002938", "n": "鹏鼎控股", "sec": "AI硬件PCB", "tag": "重仓>20亿", "ssf": "社保组合前4大重仓(>20亿)", "date": "2026-11-25", "c": 46.2, "chg": 0.43, "chg20": -32.07, "ma5": 44.99, "ma20": 48.87, "dist20": -5.46, "sig": "🔍MA20下方磨底"}, {"sym": "sz300814", "n": "中富电路", "sec": "AI硬件PCB", "tag": "Q3新进>5亿", "ssf": "Q3大额新进AI PCB", "date": "2026-11-25", "c": 76.95, "chg": -5.32, "chg20": -25.15, "ma5": 79.2, "ma20": 89.69, "dist20": -14.2, "sig": "❄️超跌等止跌信号"}, {"sym": "sh688820", "n": "盛合晶微", "sec": "AI硬件PCB", "tag": "Q3新进封测龙", "ssf": "社保005组合新进先进封装", "date": "2026-11-25", "c": 85.0, "chg": -8.32, "chg20": -3.3, "ma5": 91.54, "ma20": 84.97, "dist20": 0.04, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz000725", "n": "京东方A", "sec": "AI硬件PCB", "tag": "新进1.55亿股", "ssf": "Q3新进股数全A第1(8.87亿)", "date": "2026-11-25", "c": 4.43, "chg": 0.23, "chg20": -8.28, "ma5": 4.41, "ma20": 4.43, "dist20": 0.0, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002947", "n": "恒铭达", "sec": "AI硬件PCB", "tag": "持股7.84%", "ssf": "流通比7.84%第3名", "date": "2026-11-25", "c": 39.43, "chg": -10.0, "chg20": -17.08, "ma5": 42.67, "ma20": 45.71, "dist20": -13.74, "sig": "❄️超跌等止跌信号"}, {"sym": "sz300628", "n": "亿联网络", "sec": "AI硬件PCB", "tag": "持股6.90%", "ssf": "2家社保增持+21.1%", "date": "2026-11-25", "c": 39.75, "chg": 0.1, "chg20": 8.49, "ma5": 40.05, "ma20": 38.87, "dist20": 2.26, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002050", "n": "三花智控", "sec": "机器人制造", "tag": "Q3新进7.5亿", "ssf": "社保104组合新进2,101万股", "date": "2026-11-25", "c": 31.91, "chg": -7.13, "chg20": -10.47, "ma5": 32.82, "ma20": 33.79, "dist20": -5.56, "sig": "🔍MA20下方磨底"}, {"sym": "sz301413", "n": "安培龙", "sec": "机器人制造", "tag": "社保涨幅第1", "ssf": "10月以来社保重仓涨幅王", "date": "2026-11-25", "c": 82.0, "chg": -8.59, "chg20": 18.33, "ma5": 75.16, "ma20": 75.32, "dist20": 8.87, "sig": "📈多头沿MA5运行"}, {"sym": "sz000680", "n": "山推股份", "sec": "机器人制造", "tag": "4家扎堆7.24%", "ssf": "4家社保9,522万股(+8.3%)", "date": "2026-11-25", "c": 7.62, "chg": -3.79, "chg20": -13.01, "ma5": 8.08, "ma20": 8.66, "dist20": -12.01, "sig": "❄️超跌等止跌信号"}, {"sym": "sz002444", "n": "巨星科技", "sec": "机器人制造", "tag": "4家扎堆5.05%", "ssf": "4家社保5,798万股(+7.0%)", "date": "2026-11-25", "c": 25.74, "chg": -4.56, "chg20": 2.47, "ma5": 26.83, "ma20": 27.49, "dist20": -6.37, "sig": "🔍MA20下方磨底"}, {"sym": "sz300836", "n": "佰奥智能", "sec": "机器人制造", "tag": "持股8.75%", "ssf": "流通比8.75%第2名", "date": "2026-11-25", "c": 29.23, "chg": -7.68, "chg20": -30.78, "ma5": 30.84, "ma20": 36.97, "dist20": -20.94, "sig": "❄️超跌等止跌信号"}, {"sym": "sh600031", "n": "三一重工", "sec": "机器人制造", "tag": "重仓>20亿", "ssf": "2家社保2.20亿股", "date": "2026-11-25", "c": 18.18, "chg": -0.55, "chg20": 1.79, "ma5": 18.59, "ma20": 18.6, "dist20": -2.26, "sig": "🔍贴近MA20下蓄势"}, {"sym": "sz002028", "n": "思源电气", "sec": "电网能源", "tag": "Q3新进>5亿", "ssf": "特高压电网核心·Q3新进", "date": "2026-11-25", "c": 102.67, "chg": -6.73, "chg20": -3.81, "ma5": 105.38, "ma20": 109.2, "dist20": -5.98, "sig": "🔍MA20下方磨底"}, {"sym": "sz300593", "n": "新雷能", "sec": "电网能源", "tag": "2家新进>3%", "ssf": "115+420组合新进特种电源", "date": "2026-11-25", "c": 19.54, "chg": -5.97, "chg20": -14.0, "ma5": 19.25, "ma20": 20.86, "dist20": -6.33, "sig": "🔍MA20下方磨底"}, {"sym": "sh600863", "n": "华能蒙电", "sec": "电网能源", "tag": "新进8,356万股", "ssf": "高股息公用事业Q3新进", "date": "2026-11-25", "c": 5.15, "chg": -3.92, "chg20": 0.39, "ma5": 5.43, "ma20": 5.36, "dist20": -3.92, "sig": "🔍MA20下方磨底"}, {"sym": "sh601899", "n": "紫金矿业", "sec": "有色特钢", "tag": "重仓25.6亿", "ssf": "社保106组合加仓至8,580万股", "date": "2026-11-25", "c": 22.97, "chg": -1.03, "chg20": -17.82, "ma5": 23.61, "ma20": 26.45, "dist20": -13.16, "sig": "❄️超跌等止跌信号"}, {"sym": "sh603993", "n": "洛阳钼业", "sec": "有色特钢", "tag": "新进+18亿回购", "ssf": "Q3新进5,700万股+18亿回购贷", "date": "2026-11-25", "c": 11.6, "chg": -0.85, "chg20": -17.5, "ma5": 11.81, "ma20": 12.95, "dist20": -10.42, "sig": "❄️超跌等止跌信号"}, {"sym": "sh601168", "n": "西部矿业", "sec": "有色特钢", "tag": "Q3新进>5亿", "ssf": "铜铅锌高股息资源Q3新进", "date": "2026-11-25", "c": 24.16, "chg": -2.3, "chg20": -21.56, "ma5": 24.72, "ma20": 27.12, "dist20": -10.91, "sig": "❄️超跌等止跌信号"}, {"sym": "sh600549", "n": "厦门钨业", "sec": "有色特钢", "tag": "Q3新进>5亿", "ssf": "战略钨稀土龙头Q3新进", "date": "2026-11-25", "c": 30.27, "chg": -5.26, "chg20": -14.85, "ma5": 31.48, "ma20": 34.24, "dist20": -11.59, "sig": "❄️超跌等止跌信号"}, {"sym": "sz002318", "n": "久立特材", "sec": "有色特钢", "tag": "4家扎堆5.32%", "ssf": "4家社保5,071万股(+6.1%)", "date": "2026-11-25", "c": 16.21, "chg": -2.11, "chg20": 0.56, "ma5": 16.32, "ma20": 17.03, "dist20": -4.82, "sig": "🔍MA20下方磨底"}, {"sym": "sz002714", "n": "牧原股份", "sec": "防御医药车", "tag": "新进>3,000万股", "ssf": "生猪防御绝对龙头Q3新进", "date": "2026-11-25", "c": 44.1, "chg": -2.67, "chg20": 9.27, "ma5": 44.82, "ma20": 44.14, "dist20": -0.09, "sig": "⭐回踩MA20低吸区"}, {"sym": "sz002594", "n": "比亚迪", "sec": "防御医药车", "tag": "第1重仓45.6亿", "ssf": "社保114组合加仓至5,470万股", "date": "2026-11-25", "c": 74.45, "chg": -1.99, "chg20": -10.02, "ma5": 77.7, "ma20": 81.55, "dist20": -8.71, "sig": "❄️超跌等止跌信号"}, {"sym": "sz002262", "n": "恩华药业", "sec": "防御医药车", "tag": "持股5.72%", "ssf": "2家社保增持+15.6%", "date": "2026-11-25", "c": 22.65, "chg": 0.98, "chg20": 6.19, "ma5": 22.6, "ma20": 22.46, "dist20": 0.85, "sig": "⭐回踩MA20低吸区"}];
 
     function filterSsf(cat) {
       document.querySelectorAll('#ssf-filters button').forEach(b => b.classList.toggle('active', b.dataset.sf === cat));
