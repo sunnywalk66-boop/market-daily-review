@@ -1667,7 +1667,7 @@
           ctx.fillStyle = i === n - 2 ? C.down : C.up;
           ctx.beginPath(); ctx.arc(x, y, 3.8, 0, Math.PI * 2); ctx.fill();
           ctx.font = 'bold 10px -apple-system, monospace';
-          ctx.fillText(p[1] + (i === n - 2 ? '冰' : '今'), Math.min(w - 28, x - 12), y - 6);
+          ctx.fillText(p[1] + (i === n - 2 ? '昨' : '今'), Math.min(w - 28, x - 12), y - 6);
         }
         if (i === 0 || i === n - 1 || i === Math.floor(n / 2)) {
           ctx.fillStyle = C.muted; ctx.font = '10px monospace';
